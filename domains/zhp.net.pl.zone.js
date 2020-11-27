@@ -14,6 +14,10 @@ D("zhp.net.pl", REG_OVH,
 	AAAA('ipv6', '2a02:25a9:20:376::1'),
 	CNAME('poczta', 'login.microsoftonline.com.'),
 
+	CNAME("autodiscover", "autodiscover.outlook.com."),
+	TXT("@", "v=spf1 ip4:89.161.251.118 ip4:89.161.251.119 ip4:89.161.251.120 ip4:89.161.251.115 ip4:89.161.251.116 include:spf.protection.outlook.com ~all"),
+	MX("@", 0, "zhp-net-pl.mail.protection.outlook.com."),
+
 	Delegacja_NS("14gzrafiki", ["ns1.cba.pl.", "ns2.cba.pl."]),
 
 	Delegacja_NS("347", ["ns1.atthost.pl.", "ns2.atthost.pl."]),
@@ -47,4 +51,5 @@ D("zhp.net.pl", REG_OVH,
 	MS365("zhp.net.pl"),
 
 	MS365("grupy.zhp.net.pl")
+
 )
