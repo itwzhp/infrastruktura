@@ -2,9 +2,10 @@ require("./functions/office.js");
 require("./functions/delegacja.js");
 
 var REG_OVH = NewRegistrar("ovh", "OVH");
+var REG_NONE = NewRegistrar('none', 'NONE');
 var CLOUDFLARE = NewDnsProvider('cloudflare','CLOUDFLAREAPI');
 
-D("zhp.net.pl", REG_OVH,
+D("zhp.net.pl", REG_NONE,
 	DnsProvider(CLOUDFLARE),
 	DefaultTTL(3600),
 
