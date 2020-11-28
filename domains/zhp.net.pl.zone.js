@@ -48,8 +48,6 @@ D("zhp.net.pl", REG_OVH,
 
 	Delegacja_CNAME("adrenalinazgierz", "dyskadrenalina.wix.com."),
 
-	MS365("zhp.net.pl"),
-
 	MS365("grupy.zhp.net.pl")
 
 )
