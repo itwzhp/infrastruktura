@@ -1,4 +1,4 @@
-function Delegacja_A(domain, record) {
+function Delegation_A(domain, record) {
     var output = [
         A(domain, record),
         CNAME("www." + domain, domain)
@@ -6,7 +6,7 @@ function Delegacja_A(domain, record) {
     return output;
 }
 
-function Delegacja_CNAME(domain, record) {
+function Delegation_CNAME(domain, record) {
     var output = [
         CNAME(domain, record),
         CNAME("www." + domain, domain)
@@ -14,7 +14,7 @@ function Delegacja_CNAME(domain, record) {
     return output;
 }
 
-function Delegacja_NS(domain, nameservers) {
+function Delegation_NS(domain, nameservers) {
     var output = nameservers.map(function (el) {
         return NS(domain, el);
     });
