@@ -1,5 +1,5 @@
 function Ms365_Subdomain(domainPrefix, domainRoot) {
-    domain = `${domainPrefix}.${domainRoot}`
+    domain = domainPrefix + "." + domainRoot
 
     return [
         CNAME("autodiscover." + domainPrefix, "autodiscover.outlook.com."),
