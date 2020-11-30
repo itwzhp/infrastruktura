@@ -15,24 +15,24 @@ D("zhp.net.pl", REG_NONE,
     AAAA('ipv6', '2a02:25a9:20:376::1'),
     CNAME('poczta', 'login.microsoftonline.com.'),
 
-    Delegation.NS("14gzrafiki", ["ns1.cba.pl.", "ns2.cba.pl."]),
-    Delegation.NS("347", ["ns1.atthost.pl.", "ns2.atthost.pl."]),
-    Delegation.NS("4szczep", ["dns1.slaskdatacenter.pl.", "dns2.slaskdatacenter.pl.", "dns3.slaskdatacenter.pl."]),
-    Delegation.NS("czarna5", ["ns1.dhosting.pl.", "ns2.dhosting.pl."]),
-    Delegation.NS("hgrgorzow", ["ns1.atthost.pl.", "ns2.atthost.pl."]), // TODO not working
-    Delegation.NS("lapmyduchy", ["ns1.atthost.pl.", "ns2.atthost.pl."]),
-    Delegation.NS("poszukiwaczeprzygod", ["ns1.cba.pl.", "ns2.cba.pl."]),
-    Delegation.NS("rajdpozazasiegiem", ["ns1.atthost.pl.", "ns2.atthost.pl."]),
+    Delegation_NS("14gzrafiki", ["ns1.cba.pl.", "ns2.cba.pl."]),
+    Delegation_NS("347", ["ns1.atthost.pl.", "ns2.atthost.pl."]),
+    Delegation_NS("4szczep", ["dns1.slaskdatacenter.pl.", "dns2.slaskdatacenter.pl.", "dns3.slaskdatacenter.pl."]),
+    Delegation_NS("czarna5", ["ns1.dhosting.pl.", "ns2.dhosting.pl."]),
+    Delegation_NS("hgrgorzow", ["ns1.atthost.pl.", "ns2.atthost.pl."]), // TODO not working
+    Delegation_NS("lapmyduchy", ["ns1.atthost.pl.", "ns2.atthost.pl."]),
+    Delegation_NS("poszukiwaczeprzygod", ["ns1.cba.pl.", "ns2.cba.pl."]),
+    Delegation_NS("rajdpozazasiegiem", ["ns1.atthost.pl.", "ns2.atthost.pl."]),
 
-    Delegation.A("157pdh", "91.227.123.80"),
-    Delegation.A("1szdw", "188.49.77.144"),                          // TODO not working
-    Delegation.A("21", "185.255.40.24"),                             // TODO not working
-    Delegation.A("5czarna", "185.54.184.244"),                       // TODO ISPConfig, possibly not working
-    Delegation.A("zlotaosemka", "185.54.184.244"),
+    Delegation_A("157pdh", "91.227.123.80"),
+    Delegation_A("1szdw", "188.49.77.144"),                          // TODO not working
+    Delegation_A("21", "185.255.40.24"),                             // TODO not working
+    Delegation_A("5czarna", "185.54.184.244"),                       // TODO ISPConfig, possibly not working
+    Delegation_A("zlotaosemka", "185.54.184.244"),
 
-    Delegation.CNAME("40sgz", "40sgz.pe.hu."),                       // TODO not working
-    Delegation.CNAME("adrenalinazgierz", "dyskadrenalina.wix.com."), // TODO not working
+    Delegation_CNAME("40sgz", "40sgz.pe.hu."),                       // TODO not working
+    Delegation_CNAME("adrenalinazgierz", "dyskadrenalina.wix.com."), // TODO not working
 
-    MS365.Subdomain("grupy", "zhp.net.pl"),
-    MS365.Root("zhp.net.pl")
+    Ms365_Subdomain("grupy", "zhp.net.pl"),
+    Ms365_Root("zhp.net.pl")
 )
