@@ -12,6 +12,8 @@ function Ms365_Root(domain) {
     return [
         CNAME("autodiscover", "autodiscover.outlook.com."),
         TXT("@", "v=spf1 include:spf.protection.outlook.com -all"),
-        MX("@", 0, domain.replace(/\./g, "-") + ".mail.protection.outlook.com.")
+        MX("@", 0, domain.replace(/\./g, "-") + ".mail.protection.outlook.com."),
+        CNAME("enterpriseregistration", "enterpriseregistration.windows.net."),
+        CNAME("enterpriseenrollment", "enterpriseenrollment.manage.microsoft.com.")
     ];
 };
