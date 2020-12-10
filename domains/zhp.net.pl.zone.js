@@ -24,6 +24,8 @@ D("zhp.net.pl", REG_NONE,
     Delegation_NS("poszukiwaczeprzygod", ["ns1.cba.pl.", "ns2.cba.pl."]),
     Delegation_NS("rajdpozazasiegiem", ["ns1.atthost.pl.", "ns2.atthost.pl."]),
     Delegation_NS("5shbrzask", ["ns1.cba.pl.", "ns2.cba.pl.", "ns3.cba.pl."]), // MS365-4643
+    Delegation_NS("4shfeniks", ["ns1.atthost.pl.", "ns2.atthost.pl."]), // MS365-4651
+
 
     Delegation_A("157pdh", "91.227.123.80"),
     Delegation_A("1szdw", "188.49.77.144"),                          // TODO not working
