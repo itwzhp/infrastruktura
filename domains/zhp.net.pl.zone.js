@@ -15,6 +15,8 @@ D("zhp.net.pl", REG_NONE,
     AAAA('ipv6', '2a02:25a9:20:376::1'),
     CNAME('poczta', 'login.microsoftonline.com.'),
 
+    CF_TEMP_REDIRECT("aktywacja.zhp.net.pl/*", "https://helpdesk.zhp.pl"),
+
     Delegation_NS("14gzrafiki", ["ns1.cba.pl.", "ns2.cba.pl."]),
     Delegation_NS("347", ["ns1.atthost.pl.", "ns2.atthost.pl."]),
     Delegation_NS("4szczep", ["dns1.slaskdatacenter.pl.", "dns2.slaskdatacenter.pl.", "dns3.slaskdatacenter.pl."]),
