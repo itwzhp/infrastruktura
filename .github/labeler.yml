@@ -1,0 +1,4 @@
+# Add 'component/DNS' label to any change within the DNS zones
+# TODO after moving it to separate (DNS) folder: change it to - dns/domains/**/*
+component/DNS:
+- domains/**/*
