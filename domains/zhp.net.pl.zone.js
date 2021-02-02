@@ -28,6 +28,7 @@ D('zhp.net.pl', REG_NONE,
 
     Delegation_A('157pdh', '91.227.123.80'),
     Delegation_A('zlotaosemka', '185.54.184.244'),
+    Delegation_A('1szdw', '188.40.77.144'), // MS365-5563
 
     Ms365_Subdomain('grupy', 'zhp.net.pl'),
     Ms365_Root('zhp.net.pl')
