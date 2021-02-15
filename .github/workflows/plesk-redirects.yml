@@ -1,0 +1,19 @@
+name: Configure redirects on Plesk
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  plesk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+    - name: Deploy redirects to Plesk
+      shell: pwsh
+      run: ./domains/redirects/deploy-redirects.ps1
+      env:
+        PLESK_API_KEY: ${{ secrets.PLESK_API_KEY }}
+
