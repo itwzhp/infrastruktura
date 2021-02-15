@@ -11,9 +11,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+        #TODO update to v3.5 and reorganize directories
       - name: Deploy DNS zone
-        uses: koenrh/dnscontrol-action@v3
+        uses: koenrh/dnscontrol-action@51da3a98b54bb4c86af661fa79b5984eba60c3b9 #v3
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         with:
           args: push
+
+      - name: Deploy redirects to Plesk
+        shell: pwsh
+        run: ./domains/redirects/deploy-redirects.ps1
+        env:
+            PLESK_API_KEY: ${{ secrets.PLESK_API_KEY }}
