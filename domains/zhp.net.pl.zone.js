@@ -1,19 +1,19 @@
 require('./functions/ms365.js');
 require('./functions/delegation.js');
+require('./functions/redirects.js')
 
 var REG_OVH = NewRegistrar('ovh', 'OVH');
 var REG_NONE = NewRegistrar('none', 'NONE');
-var CLOUDFLARE = NewDnsProvider('cloudflare', 'CLOUDFLAREAPI', {'manage_redirects': true});
+var CLOUDFLARE = NewDnsProvider('cloudflare', 'CLOUDFLAREAPI');
 
 D('zhp.net.pl', REG_NONE,
     DnsProvider(CLOUDFLARE),
     DefaultTTL(3600),
 
-    A('@', '89.161.251.118'),
+    A('@', '89.161.251.118'), // TODO it won't work after home.pl is down
     CNAME('www', 'zhp.net.pl.'),
     CNAME('*', 'zhp.net.pl.'),
     AAAA('ipv6', '2a02:25a9:20:376::1'),
-    CNAME('poczta', 'login.microsoftonline.com.'),
 
     Delegation_NS('14gzrafiki', ['ns1.cba.pl.', 'ns2.cba.pl.']),
     Delegation_NS('347', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
@@ -31,5 +31,7 @@ D('zhp.net.pl', REG_NONE,
     Delegation_A('1szdw', '188.40.77.144'), // MS365-5563
 
     Ms365_Subdomain('grupy', 'zhp.net.pl'),
-    Ms365_Root('zhp.net.pl')
+    Ms365_Root('zhp.net.pl'),
+
+    Redirects(require('./redirects/zhp.net.pl.json'))
 )
