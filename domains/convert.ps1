@@ -2,7 +2,9 @@
 # do not merge this file
 $inputPath = 'domains\zhp.pl.csv'
 Set-Content -Path $inputPath -Value ((Get-Content $inputPath) -replace "`t", ', ')
-$data = Import-Csv $inputPath | sort-object -Property host | Where-Object {$_.type -ne 'NS' -or $_.host -ne 'zhp.pl' }
+$data = Import-Csv $inputPath |
+        sort-object -Property host |
+        Where-Object {-not ($_.type -eq 'NS' -and $_.content -match '.home.pl') }
 
 function Remove-Suffix($in){
     if($in -eq 'zhp.pl')
