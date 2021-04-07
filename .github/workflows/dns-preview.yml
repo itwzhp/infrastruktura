@@ -19,7 +19,7 @@ jobs:
           args: preview
 
       - name: Preview pull request comment
-        uses: unsplash/comment-on-pr@v1.2.0
+        uses: unsplash/comment-on-pr@85a56be792d927ac4bfa2f4326607d38e80e6e60 # 25.05.2020 commit
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -27,4 +27,3 @@ jobs:
             ```
             ${{ steps.dnscontrol_preview.outputs.output }}
             ```
-          check_for_duplicate_msg: true
