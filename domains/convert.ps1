@@ -21,10 +21,10 @@ function Remove-Suffix($in){
 require('./functions/delegation.js');
 
 var REG_NONE = NewRegistrar('none', 'NONE');
-var CLOUDFLARE = NewDnsProvider('cloudflare', 'CLOUDFLAREAPI');
+var AZURE = NewDnsProvider('azuredns_main', 'AZURE_DNS');
 
 D('zhp.pl', REG_NONE,
-    DnsProvider(CLOUDFLARE),
+    DnsProvider(AZURE),
     DefaultTTL(3600),"
 
 ($data | foreach-object {

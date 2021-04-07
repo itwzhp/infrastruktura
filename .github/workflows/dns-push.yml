@@ -16,6 +16,7 @@ jobs:
         uses: koenrh/dnscontrol-action@51da3a98b54bb4c86af661fa79b5984eba60c3b9 #v3
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          AZURE_DNS_MANAGEMENT_CREDENTIALS: ${{ secrets.AZURE_DNS_MANAGEMENT_CREDENTIALS }}
         with:
           args: push
 
@@ -23,4 +24,4 @@ jobs:
         shell: pwsh
         run: ./domains/redirects/deploy-redirects.ps1
         env:
-            PLESK_API_KEY: ${{ secrets.PLESK_API_KEY }}
+          PLESK_API_KEY: ${{ secrets.PLESK_API_KEY }}
