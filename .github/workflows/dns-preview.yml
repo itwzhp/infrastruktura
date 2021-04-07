@@ -27,4 +27,3 @@ jobs:
             ```
             ${{ steps.dnscontrol_preview.outputs.output }}
             ```
-          check_for_duplicate_msg: true
