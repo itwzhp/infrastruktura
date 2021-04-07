@@ -10,10 +10,11 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Preview DNS zone
-        uses: koenrh/dnscontrol-action@v3
+        uses: koenrh/dnscontrol-action@51da3a98b54bb4c86af661fa79b5984eba60c3b9 #v3
         id: dnscontrol_preview
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          AZURE_DNS_MANAGEMENT_CREDENTIALS: ${{ secrets.AZURE_DNS_MANAGEMENT_CREDENTIALS }}
         with:
           args: preview
 
