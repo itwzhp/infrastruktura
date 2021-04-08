@@ -29,8 +29,8 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: `
-                \`\`\`
-                    ${{ steps.dnscontrol_preview.outputs.output }}
-                \`\`\`
+              \`\`\`
+              ${{ steps.dnscontrol_preview.outputs.output }}
+              \`\`\`
               `
             })
