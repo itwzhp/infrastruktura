@@ -23,11 +23,11 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
+            const fs = require('fs')
+            const issueBody = fs.readFileSync(".github/pr_comments/dnscontrol_preview.md", "utf8")
             github.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '```\
-                ${{ steps.dnscontrol_preview.outputs.output }}\
-              ```'
+              body: issueBody
             })
