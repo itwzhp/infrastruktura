@@ -28,19 +28,9 @@ D_EXTEND('zhp.pl',
 	MX('stargard', 0, 'stargard-zhp-pl.mail.protection.outlook.com.'),
 	
 	CNAME('autodiscover.szczecinpogodno', 'autodiscover.outlook.com.'),
-	CNAME('enterpriseenrollment.szczecinpogodno', 'enterpriseenrollment.manage.microsoft.com.'),
-	CNAME('enterpriseregistration.szczecinpogodno', 'enterpriseregistration.windows.net.'),
-	CNAME('lyncdiscover.szczecinpogodno', 'webdir.online.lync.com.'),
-	CNAME('msoid.szczecinpogodno', 'clientconfig.microsoftonline-p.net.'),
-	CNAME('sip.szczecinpogodno', 'sipdir.online.lync.com.'),
 	
 	CNAME('autodiscover.stargard', 'autodiscover.outlook.com.'),
-	CNAME('enterpriseenrollment.stargard', 'enterpriseenrollment.manage.microsoft.com.'),
-	CNAME('enterpriseregistration.stargard', 'enterpriseregistration.windows.net.'),
-	CNAME('lyncdiscover.stargard', 'webdir.online.lync.com.'),
-	CNAME('msoid.stargard', 'clientconfig.microsoftonline-p.net.'),
-	CNAME('sip.stargard', 'sipdir.online.lync.com.'),
-	
+
     TXT('stargard', 'v=spf1 include:spf.protection.outlook.com -a'),
     TXT('mysliborz', 'v=spf1 include:spf.protection.outlook.com -all'),	
 	TXT('szczecin', 'v=spf1 include:spf.protection.outlook.com -all'),
