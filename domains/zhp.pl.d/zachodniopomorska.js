@@ -14,16 +14,16 @@ D_EXTEND('zhp.pl',
 	
 	Delegation_NS('slawno', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
 	
-	MX('stargard', 0, 'stargard-zhp-pl.mail.protection.outlook.com.'),
-	
-	CNAME('autodiscover.szczecinpogodno', 'autodiscover.outlook.com.'),
-	
-	CNAME('autodiscover.stargard', 'autodiscover.outlook.com.'),
-
-    TXT('stargard', 'v=spf1 include:spf.protection.outlook.com -a'),
-    TXT('mysliborz', 'v=spf1 include:spf.protection.outlook.com -all'),	
-	TXT('szczecin', 'v=spf1 include:spf.protection.outlook.com -all'),
-    TXT('szczecindabie', 'v=spf1 include:spf.protection.outlook.com -all'),
-    TXT('szczecinek', 'v=spf1 include:spf.protection.outlook.com -all'),
-	TXT('swinoujscie', 'v=spf1 include:spf.protection.outlook.com -all'),
-	TXT('koszalin', 'v=spf1 include:spf.protection.outlook.com -all'))
+	Ms365_Subdomain('swinoujscie','zhp.pl'),
+	Ms365_Subdomain('szczecin','zhp.pl'),
+	Ms365_Subdomain('szczecindabie','zhp.pl'),
+	Ms365_Subdomain('szczecinek','zhp.pl'),
+	Ms365_Subdomain('szczecinpogodno','zhp.pl'),
+	Ms365_Subdomain('kolobrzeg','zhp.pl'),
+	Ms365_Subdomain('koszalin','zhp.pl'),
+	Ms365_Subdomain('goleniow','zhp.pl'),
+	Ms365_Subdomain('police','zhp.pl'),
+	Ms365_Subdomain('zachpom','zhp.pl'),
+	Ms365_Subdomain('stargard','zhp.pl'),
+	Ms365_Subdomain('mysliborz','zhp.pl'),
+	Ms365_Subdomain('slawno','zhp.pl'))
