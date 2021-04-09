@@ -14,17 +14,6 @@ D_EXTEND('zhp.pl',
 	
 	Delegation_NS('slawno', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
 	
-	AAAA('ipv6.zlot.zachpom', '2a02:25a9:20:720::1'),	
-	AAAA('ipv6.zachodniopomorska', '2a02:25a9:20:721::1'),
-	
-    A('zlot.zachpom', '89.161.255.32'),
-	A('zachodniopomorska', '89.161.255.33'),
-
-	CNAME('*.zlot.zachpom', 'zlot.zachpom.zhp.pl.'),
-	CNAME('*.zachodniopomorska', 'zachodniopomorska.zhp.pl.'),
-	
-	MX('zlot.zachpom', 10, 'zlot.zachpom.zhp.pl.'),
-	MX('zachodniopomorska', 10, 'zachodniopomorska-zhp-pl.mail.protection.outlook.com.'),
 	MX('stargard', 0, 'stargard-zhp-pl.mail.protection.outlook.com.'),
 	
 	CNAME('autodiscover.szczecinpogodno', 'autodiscover.outlook.com.'),
