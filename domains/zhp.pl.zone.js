@@ -4,18 +4,17 @@ require('./functions/delegation.js');
 var REG_NONE = NewRegistrar('none', 'NONE');
 var AZURE = NewDnsProvider('azuredns_main', 'AZURE_DNS');
 
-D('zhp.pl', REG_NONE, DnsProvider(AZURE), DefaultTTL(3600));
+D('zhp.pl', REG_NONE, DnsProvider(AZURE), DefaultTTL(3600),
+    A('@', '51.75.54.175'),
+    Ms365_Root('zhp.pl'),
+    CNAME('selector1._domainkey', 'selector1-zhp-pl._domainkey.gkzhp.onmicrosoft.com.'),
+    CNAME('selector2._domainkey', 'selector2-zhp-pl._domainkey.gkzhp.onmicrosoft.com.')
+);
 
 require_glob('zhp.pl.d/');
 
 // TODO lines below require clean-up
 D_EXTEND('zhp.pl',
-    MX('@', 10, 'zhp-pl.mail.protection.outlook.com.'),
-    A('@', '51.75.54.175'),
-    TXT('@', 'v=spf1 include:spf.protection.outlook.com -all'),
-    CNAME('selector1._domainkey', 'selector1-zhp-pl._domainkey.gkzhp.onmicrosoft.com.'),
-    CNAME('selector2._domainkey', 'selector2-zhp-pl._domainkey.gkzhp.onmicrosoft.com.'),
-
     TXT('_acme-challenge.haliz', 'jd-YDJYrtRp7nynl5NEJyNrHqwrtfpm7j1H-rOJ5LfQ'),
     TXT('_github-challenge-bialostockazhp.bialostocka', '871ae7c463'),
     TXT('_github-challenge-itwzhp.gk', 'e9917cb777'),
