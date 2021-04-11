@@ -1,6 +1,6 @@
 function Ms365_Subdomain(domainPrefix, domainRoot) {
-    const domain = domainPrefix + "." + domainRoot
-    const domainSingleLabel = domain.replace(/\./g, "-")
+    domain = domainPrefix + "." + domainRoot
+    domainSingleLabel = domain.replace(/\./g, "-")
 
     return [
         // Echange Online records
@@ -15,7 +15,7 @@ function Ms365_Subdomain(domainPrefix, domainRoot) {
 };
 
 function Ms365_Root(domain) {
-    const domainKey = domain.replace(/\./g, "-")
+    domainKey = domain.replace(/\./g, "-")
 
     return [
         // Echange Online records 
