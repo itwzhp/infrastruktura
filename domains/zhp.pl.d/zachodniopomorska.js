@@ -1,29 +1,16 @@
 D_EXTEND('zhp.pl',
+	Delegation_NS('zachpom', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+	
 	Delegation_NS('swinoujscie', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	Delegation_NS('szczecin', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	Delegation_NS('szczecindabie', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	Delegation_NS('szczecinek', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('szczecinpogodno', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+	Delegation_NS('szczecinpogodno', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	Delegation_NS('kolobrzeg', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	Delegation_NS('koszalin', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	Delegation_NS('goleniow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	Delegation_NS('police', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-	Delegation_NS('zachpom', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	Delegation_NS('stargard', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	Delegation_NS('mysliborz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	
-	Delegation_NS('slawno', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
-	
-	Ms365_Subdomain('swinoujscie','zhp.pl'),
-	Ms365_Subdomain('szczecin','zhp.pl'),
-	Ms365_Subdomain('szczecindabie','zhp.pl'),
-	Ms365_Subdomain('szczecinek','zhp.pl'),
-	Ms365_Subdomain('szczecinpogodno','zhp.pl'),
-	Ms365_Subdomain('kolobrzeg','zhp.pl'),
-	Ms365_Subdomain('koszalin','zhp.pl'),
-	Ms365_Subdomain('goleniow','zhp.pl'),
-	Ms365_Subdomain('police','zhp.pl'),
-	Ms365_Subdomain('zachpom','zhp.pl'),
-	Ms365_Subdomain('stargard','zhp.pl'),
-	Ms365_Subdomain('mysliborz','zhp.pl'),
-	Ms365_Subdomain('slawno','zhp.pl'))
+	Delegation_NS('slawno', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']))
