@@ -15,7 +15,7 @@ function Ms365_Subdomain(domainPrefix, domainRoot) {
 };
 
 function Ms365_Root(domain) {
-    domainKey = domain.replace(/\./g, "-")
+    domainSingleLabel = domain.replace(/\./g, "-")
 
     return [
         // Echange Online records 
