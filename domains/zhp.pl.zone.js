@@ -7,6 +7,7 @@ var AZURE = NewDnsProvider('azuredns_main', 'AZURE_DNS');
 D('zhp.pl', REG_NONE, DnsProvider(AZURE), DefaultTTL(3600),
     A('@', '51.75.54.175'),
     Ms365_Root('zhp.pl'),
+    A('*', '51.75.54.175'),
     CNAME('selector1._domainkey', 'selector1-zhp-pl._domainkey.gkzhp.onmicrosoft.com.'),
     CNAME('selector2._domainkey', 'selector2-zhp-pl._domainkey.gkzhp.onmicrosoft.com.')
 );
