@@ -3,7 +3,6 @@ D_EXTEND('zhp.pl',
     A('redirect', '51.75.54.175'),
 
     CNAME('42zjazd', 'redirect'),
-    // TXT('42zjazd', 'v=spf1 mx a ip4:redirect ~all'),
     CNAME('arch.papiez', 'redirect'),
     CNAME('arch.pogranicze', 'redirect'),
     CNAME('arch.rajdgrunwaldzki', 'redirect'),
@@ -73,7 +72,6 @@ D_EXTEND('zhp.pl',
     CNAME('zawisza.grunwald', 'redirect'),
     CNAME('zlot.grunwald', 'redirect'),
     CNAME('zuchy', 'redirect')
-    // TXT('zuchy', 'v=spf1 mx a ip4:redirect ~all')
 );
 
 
