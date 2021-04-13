@@ -29,6 +29,7 @@ function Ms365_Root(domain) {
         
         // Basic Mobility + Security records
         CNAME("enterpriseregistration", "enterpriseregistration.windows.net."),
-        CNAME("enterpriseenrollment", "enterpriseenrollment.manage.microsoft.com.")
+        CNAME("enterpriseenrollment", "enterpriseenrollment.manage.microsoft.com."),
+        TXT("_dmarc", "v=DMARC1; p=none; rua=mailto:dmarc_agg@vali.email;")
     ];
 };
