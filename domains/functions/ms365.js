@@ -14,6 +14,7 @@ function Ms365_Root(domain) {
         TXT("@", "v=spf1 include:spf.protection.outlook.com -all"),
         MX("@", 0, domain.replace(/\./g, "-") + ".mail.protection.outlook.com."),
         CNAME("enterpriseregistration", "enterpriseregistration.windows.net."),
-        CNAME("enterpriseenrollment", "enterpriseenrollment.manage.microsoft.com.")
+        CNAME("enterpriseenrollment", "enterpriseenrollment.manage.microsoft.com."),
+        TXT("_dmarc", "v=DMARC1; p=none; rua=mailto:dmarc_agg@vali.email;")
     ];
 };
