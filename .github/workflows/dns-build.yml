@@ -13,6 +13,7 @@ jobs:
 
       - name: Generate DNS config
         run: |
+            mkdir dns-config
             dnscontrol print-ir --config domains/dnsconfig.js --out dns-config/dns-config.json
             ${{ github.event.number }} > dns-config/pr-number
 
