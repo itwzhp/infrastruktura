@@ -44,8 +44,8 @@ jobs:
       - name: Preview DNS changes
         id: dnscontrol_preview
         run: |
-            unzip dns-config.json.zip -q
-            dnscontrol preview --config domains/dnsconfig.js --ir dns-config.json | head -n 250
+            unzip ${{github.workspace}}/dns-config.json.zip -q
+            dnscontrol preview --config domains/dnsconfig.js --ir ${{github.workspace}}/dns-config.json | head -n 250
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           AZURE_DNS_MANAGEMENT_CREDENTIALS: ${{ secrets.AZURE_DNS_MANAGEMENT_CREDENTIALS }}
