@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Download build DNS config
+      - name: Download built DNS config
         uses: actions/github-script@v3
         with:
           script: |

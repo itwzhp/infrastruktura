@@ -1,0 +1,24 @@
+name: Build DNS config
+
+on: pull_request
+
+jobs:
+  dnscontrol:
+    name: DNSControl
+    runs-on: ubuntu-latest
+    container:
+      image: stackexchange/dnscontrol
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Generate DNS config
+        run: |
+            mkdir dns-config
+            dnscontrol print-ir --config domains/dnsconfig.js --out dns-config/dns-config.json
+            echo ${{ github.event.number }} > dns-config/pr-number
+
+      - name: Publish DNS zone as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: dns-config
+          path: dns-config
