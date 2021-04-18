@@ -1,6 +1,6 @@
 {
     "cloudflare": {
-        "apitoken": "TODO"
+        "apitoken": "$CLOUDFLARE_API_TOKEN"
     },
     "azuredns_main": {
         "SubscriptionID": "69111246-db23-463c-82b2-7815ed5f8a1a",
