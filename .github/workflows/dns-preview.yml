@@ -39,13 +39,13 @@ jobs:
             });
             var fs = require('fs');
             fs.mkdirSync('${{github.workspace}}', { recursive: true } );
-            fs.writeFileSync('${{github.workspace}}/dns-config.json.zip', Buffer.from(download.data));
+            fs.writeFileSync('${{github.workspace}}/dns-config.zip', Buffer.from(download.data));
 
       - name: Preview DNS changes
         id: dnscontrol_preview
         run: |
-            unzip ${{github.workspace}}/dns-config.json.zip -q
-            dnscontrol preview --config domains/dnsconfig.js --ir dns-config.json | head -n 250
+            unzip ${{github.workspace}}/dns-config.zip -q
+            dnscontrol preview --config domains/dnsconfig.js --ir dns-config/dns-config.json | head -n 250
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           AZURE_DNS_MANAGEMENT_CREDENTIALS: ${{ secrets.AZURE_DNS_MANAGEMENT_CREDENTIALS }}
@@ -55,8 +55,11 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
+            var fs = require('fs');
+            var issue_number = Number(fs.readFileSync('dns-config/pr-number'));
+
             github.issues.createComment({
-              issue_number: context.issue.number,
+              issue_number: issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: `

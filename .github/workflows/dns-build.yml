@@ -12,10 +12,12 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Generate DNS config
-        run: dnscontrol print-ir --config domains/dnsconfig.js --out dns-config.json
+        run: |
+            dnscontrol print-ir --config domains/dnsconfig.js --out dns-config/dns-config.json
+            ${{ github.event.number }} > dns-config/pr-number
 
       - name: Publish DNS zone as artifact
         uses: actions/upload-artifact@v2
         with:
           name: dns-config
-          path: dns-config.json
+          path: dns-config
