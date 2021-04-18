@@ -48,7 +48,7 @@ jobs:
 
             # This is github environment file output: https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#environment-files
             echo 'dnscontrol_output<<EOF' >> $GITHUB_ENV
-            dnscontrol preview --config domains/dnsconfig.js --ir dns-config.json | head -n 250 >> $GITHUB_ENV
+            dnscontrol preview --config domains/dnsconfig.js --creds domains/creds.json --ir dns-config.json | head -n 250 >> $GITHUB_ENV
             echo 'EOF' >> $GITHUB_ENV
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

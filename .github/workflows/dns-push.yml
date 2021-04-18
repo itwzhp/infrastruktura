@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Deploy DNS config
-        run: dnscontrol push --config domains/dnsconfig.js
+        run: dnscontrol push --config domains/dnsconfig.js --creds domains/creds.json
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           AZURE_DNS_MANAGEMENT_CREDENTIALS: ${{ secrets.AZURE_DNS_MANAGEMENT_CREDENTIALS }}
