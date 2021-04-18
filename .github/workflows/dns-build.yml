@@ -13,5 +13,5 @@ jobs:
 
       - name: Generate DNS zone
         run: |
-            dnscontrol print-ir --config /domains/dnsconfig.js --out dns-output.json
+            dnscontrol print-ir --config domains/dnsconfig.js --out dns-output.json
             cat dns-output.json
