@@ -7,6 +7,6 @@
         "ResourceGroup": "zhp-dns",
         "TenantID": "e1368d1e-3975-4ce6-893d-fc351fd44dcd",
         "ClientID": "e5bcc5f9-8cab-4fac-8278-ac2a7c77f02e",
-        "ClientSecret": "lv2_zljw~ROT0s38Yp2g6JbeV7CXkbq7.v"
+        "ClientSecret": "$AZURE_DNS_MANAGEMENT_CREDENTIALS"
     }
 }
