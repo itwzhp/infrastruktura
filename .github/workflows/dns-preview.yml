@@ -45,7 +45,7 @@ jobs:
         id: dnscontrol_preview
         run: |
             unzip ${{github.workspace}}/dns-config.zip -q
-            dnscontrol preview --config domains/dnsconfig.js --ir dns-config/dns-config.json | head -n 250
+            dnscontrol preview --config domains/dnsconfig.js --ir dns-config.json | head -n 250
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           AZURE_DNS_MANAGEMENT_CREDENTIALS: ${{ secrets.AZURE_DNS_MANAGEMENT_CREDENTIALS }}
@@ -56,7 +56,7 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             var fs = require('fs');
-            var issue_number = Number(fs.readFileSync('dns-config/pr-number'));
+            var issue_number = Number(fs.readFileSync('pr-number'));
 
             github.issues.createComment({
               issue_number: issue.number,
