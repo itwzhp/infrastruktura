@@ -1,0 +1,17 @@
+name: Build DNS config
+
+on: pull_request
+
+jobs:
+  dnscontrol:
+    name: DNSControl
+    runs-on: ubuntu-latest
+    container:
+      image: stackexchange/dnscontrol
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Generate DNS zone
+        run: |
+            dnscontrol print-ir --config /domains/dnsconfig.js --out dns-output.json
+            cat dns-output.json
