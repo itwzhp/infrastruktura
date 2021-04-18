@@ -41,7 +41,7 @@ jobs:
             fs.mkdirSync('${{github.workspace}}', { recursive: true } );
             fs.writeFileSync('${{github.workspace}}/dns-config.zip', Buffer.from(download.data));
 
-      - name: Preview DNS changes
+      - name: Generate DNS changes
         id: dnscontrol_preview
         run: |
             unzip ${{github.workspace}}/dns-config.zip -q
