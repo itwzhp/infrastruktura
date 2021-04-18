@@ -19,8 +19,9 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           AZURE_DNS_MANAGEMENT_CREDENTIALS: ${{ secrets.AZURE_DNS_MANAGEMENT_CREDENTIALS }}
 
-      - name: Deploy redirects to Plesk
-        shell: pwsh
-        run: ./domains/redirects/deploy-redirects.ps1
-        env:
-          PLESK_API_KEY: ${{ secrets.PLESK_API_KEY }}
+# TODO when this works based on some other engine, move to separate workflow, where pwsh is available
+    #   - name: Deploy redirects to Plesk
+    #     shell: pwsh
+    #     run: ./domains/redirects/deploy-redirects.ps1
+    #     env:
+    #       PLESK_API_KEY: ${{ secrets.PLESK_API_KEY }}
