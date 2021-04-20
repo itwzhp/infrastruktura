@@ -466,7 +466,7 @@ D_EXTEND('zhp.pl',
     CNAME('lyncdiscover.tluszcz', 'webdir.online.lync.com.'),
     CNAME('enterpriseenrollment.tluszcz', 'enterpriseenrollment.manage.microsoft.com.'),
     CNAME('enterpriseregistration.tluszcz', 'enterpriseregistration.windows.net.'),
-    CNAME('msoid.tluszcz', 'clientconfig.microsoftonline-p.net.'),
+    CNAME('msoid.tluszcz', 'clientconfig.microsoftonline-p.net.')
 
 
 );
