@@ -4,5 +4,5 @@ D_EXTEND('zhp.pl',
          CNAME('www.polkowice', 'www118.wixdns.net.'),
          CNAME('de.polkowice', 'www118.wixdns.net.'),
          CNAME('en.polkowice', 'www118.wixdns.net.'),
-         CNAME('pl.polkowice', 'www118.wixdns.net.'),
+         CNAME('pl.polkowice', 'www118.wixdns.net.')
 );
