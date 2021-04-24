@@ -2,47 +2,41 @@ D_EXTEND('zhp.pl',
 
     Delegation_NS('stoleczna', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     
-    // ogolnopolskie
+    // Ogólnopolskie
     Delegation_NS('abc', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('arsenal', ['ns1.unixstorm.org.', 'ns2.unixstorm.org.']),
 
 
-    // hufiec blonie (s)
+    // Hufiec Błonie (s)
     Delegation_NS('blonie', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     
 
-    // hufiec celestynow (s)
+    // Hufiec Celestynów (s)
     Delegation_NS('celestynow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     
 
-    //hufiec garwolin (s)
+    // Hufiec Garwolin (s)
     Delegation_NS('garwolin', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     
-    // hufiec grodzisk mazowiecki (s)
+    // Hufiec Grodzisk Mazowiecki (s)
     Delegation_NS('grodziskmazowiecki', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
 
-    // hufiec legionowo
+    // Hufiec Legionowo
     Delegation_NS('legionowo', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
 
-    // hufiec milanowek 
+    // Hufiec Milanowek 
     Delegation_NS('milanowek', ['ns5.webd.pl.', 'ns7.webd.pl.']),
+    Ms365_Subdomain('milanowek', 'zhp.pl'),
 
 
-    // hufiec nowy dwor mazowiecki
+    // Hufiec Nowy Dwór Mazowiecki
     AAAA('ipv6.nowydwormazowiecki', '2a02:25a9:0:4893::1'),
     A('nowydwormazowiecki', '62.129.232.147'),
-    TXT('nowydwormazowiecki', 'v=spf1 include:spf.protection.outlook.com -all'),
-    MX('nowydwormazowiecki', 10, 'nowydwormazowiecki-zhp-pl.mail.protection.outlook.com.'),
-    CNAME('enterpriseregistration.nowydwormazowiecki', 'enterpriseregistration.windows.net.'),
-    CNAME('lyncdiscover.nowydwormazowiecki', 'webdir.online.lync.com.'),
-    CNAME('msoid.nowydwormazowiecki', 'clientconfig.microsoftonline-p.net.'),
-    CNAME('sip.nowydwormazowiecki', 'sipdir.online.lync.com.'),
     CNAME('*.nowydwormazowiecki', 'nowydwormazowiecki.zhp.pl.'),
-    CNAME('autodiscover.nowydwormazowiecki', 'autodiscover.outlook.com.'),
-    CNAME('enterpriseenrollment.nowydwormazowiecki', 'enterpriseenrollment.manage.microsoft.com.'),
+    Ms365_Subdomain('nowydwormazowiecki', 'zhp.pl'),
 
     AAAA('ipv6.nowydwormaz', '2a02:25a9:0:4893::1'),
     A('nowydwormaz', '62.129.232.147'),
@@ -112,7 +106,7 @@ D_EXTEND('zhp.pl',
     CNAME('*.jas2010.nowydwormaz', 'jas2010.nowydwormaz.zhp.pl.'),
 
 
-    // hufiec otwock
+    // Hufiec Otwock
     Delegation_NS('gazeta.otwock', ['ns3.clientnshosting.net.', 'ns4.clientnshosting.net.']),
     Delegation_NS('hiks.otwock', ['ns3.clientnshosting.net.', 'ns4.clientnshosting.net.']),
     Delegation_NS('hix.otwock', ['ns3.clientnshosting.net.', 'ns4.clientnshosting.net.']),
@@ -125,15 +119,8 @@ D_EXTEND('zhp.pl',
     
     AAAA('ipv6.otwock', '2a02:25a9:0:2637::1'),
     A('otwock', '62.129.198.55'),
-    MX('otwock', 10, 'otwock-zhp-pl.mail.protection.outlook.com.'),
-    TXT('otwock', 'v=spf1 include:spf.protection.outlook.com -all'),
     CNAME('*.otwock', 'otwock.zhp.pl.'),
-    CNAME('autodiscover.otwock', 'autodiscover.outlook.com.'),
-    CNAME('lyncdiscover.otwock', 'webdir.online.lync.com.'),
-    CNAME('sip.otwock', 'sipdir.online.lync.com.'),
-    CNAME('enterpriseregistration.otwock', 'enterpriseregistration.windows.net.'),
-    CNAME('enterpriseenrollment.otwock', 'enterpriseenrollment.manage.microsoft.com.'),
-    CNAME('msoid.otwock', 'clientconfig.microsoftonline-p.net.'),
+    Ms365_Subdomain('otwock', 'zhp.pl'),
     
     AAAA('ipv6.30plus.otwock', '2a02:25a9:0:2637::1'),
     A('30plus.otwock', '62.129.198.55'),
@@ -193,33 +180,21 @@ D_EXTEND('zhp.pl',
     CNAME('dokumenty.otwock', 'ghs.google.com.'),
 
 
-    // hufiec piaseczno
+    // Hufiec Piaseczno
     A('piaseczno', '178.32.203.125'),
-    MX('piaseczno', 0, 'piaseczno-zhp-pl.mail.protection.outlook.com.'),
-    TXT('piaseczno', 'v=spf1 include:spf.protection.outlook.com -all'),
     CNAME('www.piaseczno', 'piaseczno.zhp.pl.'),
-    CNAME('enterpriseenrollment.piaseczno', 'enterpriseenrollment.manage.microsoft.com.'),
-    CNAME('enterpriseregistration.piaseczno', 'enterpriseregistration.windows.net.'),
-    CNAME('sip.piaseczno', 'sipdir.online.lync.com.'),
-    CNAME('lyncdiscover.piaseczno', 'webdir.online.lync.com.'),
-    CNAME('autodiscover.piaseczno', 'autodiscover.outlook.com.'),
+    Ms365_Subdomain('piaseczno', 'zhp.pl'),
 
 
-    // hufiec piastow
+    // Hufiec Piastów
     Delegation_NS('piastow', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']),
+    Ms365_Subdomain('piastow', 'zhp.pl'),
 
-
-    // hufiec pruszkow
+    // Hufiec Pruszków
     AAAA('ipv6.pruszkow', '2a02:25a9:0:5888::1'),
     A('pruszkow', '89.161.136.136'),
-    MX('pruszkow', 10, 'pruszkow-zhp-pl.mail.protection.outlook.com.'),
     CNAME('*.pruszkow', 'pruszkow.zhp.pl.'),
-    CNAME('sip.pruszkow', 'sipdir.online.lync.com.'),
-    CNAME('lyncdiscover.pruszkow', 'webdir.online.lync.com.'),
-    CNAME('autodiscover.pruszkow', 'autodiscover.outlook.com.'),
-    CNAME('enterpriseenrollment.pruszkow', 'enterpriseenrollment.manage.microsoft.com.'),
-    CNAME('enterpriseregistration.pruszkow', 'enterpriseregistration.windows.net.'),
-    CNAME('msoid.pruszkow', 'clientconfig.microsoftonline-p.net.'),
+    Ms365_Subdomain('pruszkow', 'zhp.pl'),
 
     AAAA('ipv6.14.pruszkow', '2a02:25a9:0:5888::1'),
     A('14.pruszkow', '89.161.136.136'),
@@ -280,93 +255,72 @@ D_EXTEND('zhp.pl',
     CNAME('*.paderewski.pruszkow', 'paderewski.pruszkow.zhp.pl.'),
 
     
-    // hufiec sulejowek (s)
+    // Hufiec Sulejówek (s)
     Delegation_NS('sulejowek', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
 
-    // hufiec warszawa centrum
+    // Hufiec Warszawa-Centrum
     Delegation_NS('warszawacentrum', ['dns10.linuxpl.com.', 'ns10.linuxpl.com.']),
-    MX('warszawacentrum', 0, 'warszawacentrum-zhp-pl.mail.protection.outlook.com.'),
-    TXT('warszawacentrum', 'v=spf1 include:spf.protection.outlook.com -all'),
-    CNAME('sip.warszawacentrum', 'sipdir.online.lync.com.'),
-    CNAME('lyncdiscover.warszawacentrum', 'webdir.online.lync.com.'),
-    CNAME('autodiscover.warszawacentrum', 'autodiscover.outlook.com.'),
-    CNAME('enterpriseenrollment.warszawacentrum', 'enterpriseenrollment.manage.microsoft.com.'),
-    CNAME('enterpriseregistration.warszawacentrum', 'enterpriseregistration.windows.net.'),
-    CNAME('msoid.warszawacentrum', 'clientconfig.microsoftonline-p.net.'),
+    Ms365_Subdomain('warszawacentrum', 'zhp.pl'),
     
-    MX('centrum', 0, 'centrum-zhp-pl.mail.protection.outlook.com.'),
-    TXT('centrum', 'v=spf1 include:spf.protection.outlook.com -all'),
-    CNAME('sip.centrum', 'sipdir.online.lync.com.'),
-    CNAME('lyncdiscover.centrum', 'webdir.online.lync.com.'),
-    CNAME('autodiscover.centrum', 'autodiscover.outlook.com.'),
-    CNAME('enterpriseenrollment.centrum', 'enterpriseenrollment.manage.microsoft.com.'),
-    CNAME('enterpriseregistration.centrum', 'enterpriseregistration.windows.net.'),
-    CNAME('msoid.centrum', 'clientconfig.microsoftonline-p.net.'),
+    Ms365_Subdomain('centrum', 'zhp.pl'),
 
 
-    // hufiec warszawa mokotow
+    // Hufiec Warszawa-Mokotów
     Delegation_NS('mokotow', ['ns1.unixstorm.org.', 'ns2.unixstorm.org.']),
 
 
-    // hufiec warszawa ochota
+    // Hufiec Warszawa-Ochota
     Delegation_NS('warszawaochota', ['ns100.ovh.net.', 'dns100.ovh.net.']),
 
 
-    // hufiec warszawa praga poludnie (s)
+    // Hufiec Warszawa-Praga-Południe (s)
     Delegation_NS('pragapoludnie', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     
-    // hufiec warszawa praga polnoc
+    // Hufiec Warszawa-Praga-Północ
     Delegation_NS('pragapolnoc', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
 
 
-    // hufiec warszawa ursus wlochy (s)
+    // Hufiec Warszawa-Ursus-Włochy (s)
     Delegation_NS('ursuswlochy', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
 
-    // hufiec warszawa ursynow (s)
+    // Hufiec Warszawa-Ursynów (s)
     Delegation_NS('ursynow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     
-    // hufiec warszawa wawer
+    // Hufiec Warszawa-Wawer
     Delegation_NS('wawer', ['ns1.x14.eu.', 'ns3.x25.pl.']),
 
     
-    // hufiec warszawa wola (s)
+    // Hufiec Warszawa-Wola (s)
     Delegation_NS('wola', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
 
-    // hufiec warszawa zoliborz (s)
+    // Hufiec Warszawa-Żoliborz (s)
     Delegation_NS('warszawazoliborz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Ms365_Subdomain('warszawazoliborz', 'zhp.pl'),
 
     Delegation_NS('zoliborz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
 
-    // hufiec wolomin (s)
+    // Hufiec Wołomin (s)
     Delegation_NS('wolomin', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     
-    // hufiec zabki (s)
+    // Hufiec Ząbki (s)
     Delegation_NS('zabki', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     
-    // hufiec zielonka
+    // Hufiec Zielonka
     Delegation_NS('zielonka', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     
-    // hufiec konstancin (s)
+    // Hufiec Konstancin (s)
     Delegation_NS('konstancin', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     
-    
-    TXT('tluszcz', 'v=spf1 include:spf.protection.outlook.com -all'),
-    MX('tluszcz', 0, 'tluszcz-zhp-pl.mail.protection.outlook.com.'),
-    CNAME('sip.tluszcz', 'sipdir.online.lync.com.'),
-    CNAME('autodiscover.tluszcz', 'autodiscover.outlook.com.'),
-    CNAME('lyncdiscover.tluszcz', 'webdir.online.lync.com.'),
-    CNAME('enterpriseenrollment.tluszcz', 'enterpriseenrollment.manage.microsoft.com.'),
-    CNAME('enterpriseregistration.tluszcz', 'enterpriseregistration.windows.net.'),
-    CNAME('msoid.tluszcz', 'clientconfig.microsoftonline-p.net.')
+    Ms365_Subdomain('tluszcz', 'zhp.pl'),
 
 );
