@@ -321,6 +321,6 @@ D_EXTEND('zhp.pl',
     Delegation_NS('konstancin', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     
-    Ms365_Subdomain('tluszcz', 'zhp.pl'),
+    Ms365_Subdomain('tluszcz', 'zhp.pl')
 
 );
