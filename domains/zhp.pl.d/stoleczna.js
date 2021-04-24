@@ -280,7 +280,7 @@ D_EXTEND('zhp.pl',
     
     // Hufiec Warszawa-Praga-Północ
     Delegation_NS('pragapolnoc', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
-
+    Ms365_Subdomain('pragapolnoc', 'zhp.pl'),
 
     // Hufiec Warszawa-Ursus-Włochy (s)
     Delegation_NS('ursuswlochy', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
