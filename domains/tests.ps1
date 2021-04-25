@@ -1,5 +1,5 @@
 BeforeAll {
-    $dnsConfig = Get-Content dns-config/dns-config.json | ConvertFrom-Json
+    $dnsConfig = Get-Content dns-config.json | ConvertFrom-Json
     $allEntries = $dnsConfig.domains | ForEach-Object {$_}
 }
 
