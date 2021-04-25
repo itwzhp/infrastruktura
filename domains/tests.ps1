@@ -1,14 +1,46 @@
-BeforeAll {
+BeforeDiscovery {
     $dnsConfig = Get-Content dns-config.json | ConvertFrom-Json
-    $allEntries = $dnsConfig.domains | ForEach-Object {$_}
+    $zones = $dnsConfig.domains
 }
 
-Describe "DNS Config" {
+Describe "DNS Zone <zone.name>" -ForEach $zones {
+    BeforeAll {
+        $zone = $_
+        $allEntries = $zone.records
+    }
 
-    It "shouldn't have any MX outside MS 365"{
+    It "should have no MX outside MS 365" -Skip {
         $allEntries |
             Where-Object {$_.type -eq 'MX' } |
             Where-Object {$_.target -notlike '*.mail.protection.outlook.com.'} |
             Should -BeNullOrEmpty
     }
+
+    Context "NS Entries" {
+        BeforeAll {
+            $delegatedDomains = $allEntries |
+                Where-Object {$_.type -eq 'NS'} |
+                ForEach-Object {$_.name} |
+                Select-Object -Unique
+        }
+
+        It "should there be no entries conflicting NS record" -Skip {
+            $allEntries |
+                Where-Object {$_.type -ne 'NS' } |
+                Where-Object {$_.name -in $delegatedDomains} |
+                Should -BeNullOrEmpty
+        }
+
+        It "Should there be no entries below NS record" -Skip {
+            $allEntries |
+                ForEach-Object {$_.name} | Select-Object -Unique |
+                Where-Object {
+                    $domain = $_
+                    $delegatedDomains.Where({ $domain.EndsWith(".$_") }, 'First').Count -gt 0
+                } |
+                Should -BeNullOrEmpty
+        }
+    }
+
+
 }
