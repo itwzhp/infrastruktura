@@ -22,3 +22,19 @@ jobs:
         with:
           name: dns-config
           path: dns-config
+
+  test:
+    name: Test DNS settings
+    needs: dnscontrol
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get DNS zone artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: dns-config
+
+      - name: Perform a Pester test from the Tests.ps1 file
+        shell: pwsh
+        run: Invoke-Pester domains/tests.ps1 -Passthru
