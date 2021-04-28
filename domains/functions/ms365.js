@@ -3,7 +3,7 @@ function Ms365_Subdomain(domainPrefix, domainRoot) {
     domainSingleLabel = domain.replace(/\./g, "-")
 
     return [
-        // Echange Online records
+        // Exchange Online records
         CNAME("autodiscover." + domainPrefix, "autodiscover.outlook.com."),
         TXT(domainPrefix, "v=spf1 include:spf.protection.outlook.com -all"),
         MX(domainPrefix, 0, domainSingleLabel + ".mail.protection.outlook.com."),
@@ -18,7 +18,7 @@ function Ms365_Root(domain) {
     domainSingleLabel = domain.replace(/\./g, "-")
 
     return [
-        // Echange Online records 
+        // Exchange Online records 
         CNAME("autodiscover", "autodiscover.outlook.com."),
         TXT("@", "v=spf1 include:spf.protection.outlook.com -all"),
         MX("@", 0, domainSingleLabel + ".mail.protection.outlook.com."),
