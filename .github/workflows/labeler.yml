@@ -9,3 +9,4 @@ jobs:
       name: Label the pull request
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        configuration-path: .github/actions-config/labeler.yml
