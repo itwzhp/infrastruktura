@@ -758,6 +758,5 @@ D_EXTEND('zhp.pl',
     Delegation_NS('zychlin', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.']),
     Delegation_NS('zyrardow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('zywiec', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    TXT('zywiec', 'v=spf1 include:spf.protection.outlook.com -all'),
-    Delegation_NS('kolbuszowa', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']) // MS365-7389
+    TXT('zywiec', 'v=spf1 include:spf.protection.outlook.com -all')
 );
