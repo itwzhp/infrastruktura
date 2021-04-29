@@ -1,5 +1,5 @@
 BeforeDiscovery {
-    $dnsConfig = Get-Content dns-config.json | ConvertFrom-Json
+    $dnsConfig = Get-Content ../dns-config.json | ConvertFrom-Json
     $zones = $dnsConfig.domains
 }
 
@@ -24,14 +24,14 @@ Describe "DNS Zone <zone.name>" -ForEach $zones {
                 Select-Object -Unique
         }
 
-        It "should there be no entries conflicting NS record" -Skip {
+        It "should have no other entries with the same domain" -Skip {
             $allEntries |
                 Where-Object {$_.type -ne 'NS' } |
                 Where-Object {$_.name -in $delegatedDomains} |
                 Should -BeNullOrEmpty
         }
 
-        It "Should there be no entries below NS record" -Skip {
+        It "should have no other entries with subdomain" -Skip {
             $allEntries |
                 ForEach-Object {$_.name} | Select-Object -Unique |
                 Where-Object {
