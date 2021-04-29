@@ -35,6 +35,6 @@ jobs:
         with:
           name: dns-config
 
-      - name: Rin tests
+      - name: Run tests
         shell: pwsh
         run: Invoke-Pester .github/tests.ps1 -Passthru
