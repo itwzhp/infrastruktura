@@ -1,4 +1,4 @@
-const ogicom = ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.'];
+var ogicom = ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.'];
 
 D_EXTEND('zhp.pl',
     // Chorągiew
