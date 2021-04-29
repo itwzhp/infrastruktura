@@ -27,7 +27,5 @@ D_EXTEND('zhp.pl',
 	Ms365_Subdomain('zary','zhp.pl'),
 
 	//domena chorągwi
-	Delegation_NS('lubuska', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']),
-
-	
+	Delegation_NS('lubuska', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.'])	
 );
