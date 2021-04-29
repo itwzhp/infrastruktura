@@ -37,4 +37,4 @@ jobs:
 
       - name: Perform a Pester test from the Tests.ps1 file
         shell: pwsh
-        run: Invoke-Pester domains/tests.ps1 -Passthru
+        run: Invoke-Pester .github/tests.ps1 -Passthru
