@@ -1,10 +1,4 @@
-require('./functions/ms365.js');
-require('./functions/delegation.js');
-
-var REG_NONE = NewRegistrar('none', 'NONE');
-var AZURE = NewDnsProvider('azuredns_main', 'AZURE_DNS');
-
-D('zhp.pl', REG_NONE, DnsProvider(AZURE), DefaultTTL(3600),
+D('zhp.pl', noneRegistrar, DnsProvider(azureProvider), DefaultTTL(3600),
     A('@', '51.75.54.175'),
     Ms365_Root('zhp.pl')
 );
