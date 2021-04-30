@@ -1,15 +1,4 @@
-require('./functions/ms365.js');
-require('./functions/delegation.js');
-require('./functions/redirects.js')
-
-var REG_OVH = NewRegistrar('ovh', 'OVH');
-var REG_NONE = NewRegistrar('none', 'NONE');
-var CLOUDFLARE = NewDnsProvider('cloudflare', 'CLOUDFLAREAPI');
-
-D('zhp.net.pl', REG_NONE,
-    DnsProvider(CLOUDFLARE),
-    DefaultTTL(3600),
-
+D('zhp.net.pl', noneRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600),
     A('@', '89.161.251.118'), // TODO it won't work after home.pl is down
     CNAME('www', 'zhp.net.pl.'),
     CNAME('*', 'zhp.net.pl.'),
