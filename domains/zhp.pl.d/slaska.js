@@ -4,7 +4,7 @@ D_EXTEND('zhp.pl',
          
          
     Delegation_NS('slaska', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    Ms365_Subdomain('slaska','zhp.pl') // MS365-8065
+    Ms365_Subdomain('slaska','zhp.pl')
     
         
      // Hufce (hosting chorągwi)
