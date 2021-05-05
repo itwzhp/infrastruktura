@@ -135,6 +135,7 @@ D_EXTEND('zhp.pl',
     A('amonit', '109.95.158.82'),
     A('bazapajak', '91.211.221.203'),
          
+        
     // Domenny pomocnicze _techniczne na serwery
     Delegation_NS('sl', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Delegation_NS('sl1', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
