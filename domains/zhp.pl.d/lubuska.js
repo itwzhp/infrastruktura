@@ -17,6 +17,9 @@ D_EXTEND('zhp.pl',
 	Delegation_A('strzelce','185.135.90.126'),
 	A('*.strzelce', '185.135.90.126'), 
 
+    // Delegacja domeny hufca Sulęcin
+    Ms365_Subdomain('sulecin','zhp.pl'),
+    
 	//Delegacja domeny hufca Szprotawa
 	Delegation_NS('szprotawa', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']), 
 
