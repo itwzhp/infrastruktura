@@ -72,7 +72,7 @@ D_EXTEND('zhp.pl',
     Ms365_Subdomain('rydultowy','zhp.pl'),
     
     Delegation_NS('siemianowice', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    Ms365_Subdomain('siemianowice','zhp.pl') 
+    Ms365_Subdomain('siemianowice','zhp.pl'),
 
     Delegation_NS('sosnowiec', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Ms365_Subdomain('sosnowiec','zhp.pl'),      
