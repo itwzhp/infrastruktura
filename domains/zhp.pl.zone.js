@@ -664,6 +664,6 @@ D_EXTEND('zhp.pl',
     Delegation_NS('zuchy.pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('zuromin', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('zychlin', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.']),
-    Delegation_NS('zyrardow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_NS('zyrardow', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])
     
 );
