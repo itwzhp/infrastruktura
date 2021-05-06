@@ -4,24 +4,20 @@ D_EXTEND('zhp.pl',
          
          
     Delegation_NS('slaska', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    Ms365_Subdomain('slaska','zhp.pl')
-    
+    Ms365_Subdomain('slaska','zhp.pl'),    
         
      // Hufce (hosting chorągwi)
    Delegation_NS('bedzin', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
    Ms365_Subdomain('bedzin','zhp.pl'), 
-
     
     Delegation_NS('beskidzki', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Ms365_Subdomain('beskidzki','zhp.pl'),
     
     Delegation_NS('bytom', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Ms365_Subdomain('bytom','zhp.pl'),
-
     
     Delegation_NS('chorzow', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Ms365_Subdomain('chorzow','zhp.pl'), 
-
     
     Delegation_NS('chrzanow', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Ms365_Subdomain('chrzanow','zhp.pl'),
@@ -43,7 +39,6 @@ D_EXTEND('zhp.pl',
     
     Delegation_NS('jaworzno', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Ms365_Subdomain('jaworzno','zhp.pl'),
-
     
     Delegation_NS('katowice', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Ms365_Subdomain('katowice','zhp.pl'),
@@ -66,21 +61,15 @@ D_EXTEND('zhp.pl',
     
     Delegation_NS('piekary', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Ms365_Subdomain('piekary','zhp.pl'),
-
-    
-    Delegation_NS('piekaryslaskie', ['fns1.42.pl.', 'fns2.42.pl.']),
     
     Delegation_NS('rudaslaska', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Ms365_Subdomain('rudaslaska','zhp.pl'),
-
     
     Delegation_NS('rybnik', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Ms365_Subdomain('rybnik','zhp.pl'),
-
     
     Delegation_NS('rydultowy', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Ms365_Subdomain('rydultowy','zhp.pl'),
-
     
     Delegation_NS('siemianowice', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Ms365_Subdomain('siemianowice','zhp.pl') 
@@ -126,17 +115,17 @@ D_EXTEND('zhp.pl',
     
     // Bazy
     Delegation_NS('kucoby', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    A('amonit', '109.95.158.82'),
-    A('bazapajak', '91.211.221.203'),
+    Delegation_A('amonit', '109.95.158.82'),
+    Delegation_A('bazapajak', '91.211.221.203'),
         
     // Harcerskie Muzeum Etnograficzne
     Delegation_A('hme', '109.95.157.35'),
-    Ms365_Subdomain('hme','zhp.pl') // MS365-8065
+    Ms365_Subdomain('hme','zhp.pl'), // MS365-8065
          
         
     // Domenny pomocnicze _techniczne na serwery
     Delegation_NS('sl', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Delegation_NS('sl1', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    Delegation_NS('sl2', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
+    Delegation_NS('sl2', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.'])
          
 );
