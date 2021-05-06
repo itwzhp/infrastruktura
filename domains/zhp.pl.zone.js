@@ -659,11 +659,8 @@ D_EXTEND('zhp.pl',
     Delegation_NS('zkk.lodzpolesie', ['ns-pl.1and1-dns.pl.', 'ns-pl.1and1-dns.biz.']),
     Delegation_NS('zlotow', ['ns1.interian.pl.', 'ns3.tomkii.net.', 'jasmin.bracz.edu.pl.']),
     Delegation_NS('zmigrod', ['ns.lh.pl.', 'ns2.lighthosting.net.']),
-    TXT('zory', 'v=spf1 include:spf.protection.outlook.com -all'),
-    Delegation_NS('zory', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Delegation_NS('zuchy.pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('zuromin', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('zychlin', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.']),
     Delegation_NS('zyrardow', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])
-    
 );
