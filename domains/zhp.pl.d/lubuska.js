@@ -5,7 +5,10 @@ D_EXTEND('zhp.pl',
     
     // Delegacja domeny hufca Międzychód
     Delegation_NS('miedzychod', ['ns1.hostinghouse.pl.', 'ns2.hostinghouse.pl.']), 
-
+	
+	// Delegacja domeny hufca Międzyrzecz
+    Ms365_Subdomain('miedzyrzecz','zhp.pl'), 
+	
     //Delegacja domeny hufca Nowa Sól
     Delegation_CNAME('nowasol', 'ghs.google.com.'),
     
