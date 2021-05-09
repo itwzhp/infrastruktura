@@ -28,7 +28,7 @@ module.exports = async function(context, req) {
     let base = endsWithAny(basedomains, hostname);
 
     if(base === false) {
-        context.log(`Basedomain ${hostname} not supported. Redirecting to ${defaultURL}...`)
+        context.log(`Basedomain ${hostname} not supported. Redirecting to ${defaultURL}...`);
         context.res = {
             status:  302,
             body:    `Redirecting to ${defaultURL}...`,
@@ -43,8 +43,9 @@ module.exports = async function(context, req) {
     let subdomain    = hostname.substring(0, hostname.lastIndexOf(base) - 1), // -1 to include the dot before
         redirectData = redirects[base][subdomain];
 
+    // Check, if redirect for requested subdomain exists
     if(typeof redirectData !== "object") {
-        context.log(`Object for ${subdomain} not found. Redirecting to ${defaultURL}...`)
+        context.log(`Object for ${subdomain} not found. Redirecting to ${defaultURL}...`);
         context.res = {
             status:  302,
             body:    `Redirecting to ${defaultURL}...`,
@@ -54,15 +55,21 @@ module.exports = async function(context, req) {
         };
     }
 
-    context.log(`OK. Redirecting to ${redirectData.target} with ${redirectData.method}...`)
+    // Include requested path to the redirect URL
+    let fullRedirect = addTrailingSlash(redirectData.target);
 
-    // ToDo: build full address (including path)
+    if(req.params.path !== undefined) {
+        fullRedirect += req.params.path;
+    }
+
+    context.log(`OK. Redirecting to ${fullRedirect} with ${redirectData.method}...`);
+
     // Found redirect data for given URL - redirecting
     context.res = {
         status:  redirectData.method,
-        body:    `Redirecting to ${redirectData.target}...`,
+        body:    `Redirecting to ${fullRedirect}...`,
         headers: {
-            "Location": redirectData.target
+            "Location": fullRedirect
         }
     };
 };
@@ -71,10 +78,10 @@ module.exports = async function(context, req) {
  * Determines whether a string ends with the characters of any of the strings from the specified array. Returns
  * false if string doesn't end with any of the strings, or the matched string.
  *
- * @param {string[]} suffixes
- * @param {string} string
+ * @param {string[]} suffixes an array of suffixes to check
+ * @param {string} string string to check for
  *
- * @returns {(string|boolean)} The suffix that the string ends with, or false.
+ * @returns {(string|boolean)} the suffix that the string ends with, or false.
  */
 function endsWithAny(suffixes, string) {
     for(let suffix of suffixes) {
@@ -84,4 +91,19 @@ function endsWithAny(suffixes, string) {
     }
 
     return false;
+}
+
+/**
+ * Adds a trailing slash to an url, if already doesn't have it.
+ *
+ * @param {string} url
+ *
+ * @returns {string} url with trailing slash added, if needed.
+ */
+function addTrailingSlash(url) {
+    if(!url.endsWith("/")) {
+        return url + "/";
+    }
+
+    return url;
 }
