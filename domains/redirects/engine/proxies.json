@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json.schemastore.org/proxies",
+    "proxies": {
+        "IndexProxy": {
+            "matchCondition": {
+                "route": "",
+                "methods": [
+                    "GET"
+                ]
+            },
+            "backendUri": "https://localhost/api/redirect"
+        },
+        "PathProxy": {
+            "matchCondition": {
+                "route": "/{*anyPath}",
+                "methods": [
+                    "GET"
+                ]
+            },
+            "backendUri": "https://localhost/api/redirect?path={anyPath}"
+        }
+    }
+}
