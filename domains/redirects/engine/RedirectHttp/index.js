@@ -53,6 +53,7 @@ module.exports = async function(context, req) {
                 "Location": defaultURL
             }
         };
+        return;
     }
 
     // Include requested path to the redirect URL
