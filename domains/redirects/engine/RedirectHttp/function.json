@@ -8,7 +8,7 @@
             "methods": [
                 "get"
             ],
-            "route": "redirect"
+            "route": "/{*path}"
         },
         {
             "type": "http",
