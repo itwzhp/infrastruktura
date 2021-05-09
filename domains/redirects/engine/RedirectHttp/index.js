@@ -3,6 +3,7 @@
 const fs = require("fs");
 
 const filesDirectory = "./redirectFiles/";
+const defaultURL     = "https://zhp.pl";
 
 module.exports = async function(context, req) {
     let redirects = [], basedomains = [];
@@ -27,7 +28,15 @@ module.exports = async function(context, req) {
     let base = endsWithAny(basedomains, hostname);
 
     if(base === false) {
-        // ToDo: redirect to default URL
+        context.log(`Basedomain ${hostname} not supported. Redirecting to ${defaultURL}...`)
+        context.res = {
+            status:  302,
+            body:    `Redirecting to ${defaultURL}...`,
+            headers: {
+                "Location": defaultURL
+            }
+        };
+        return;
     }
 
     // Extract the subdomain
@@ -35,14 +44,23 @@ module.exports = async function(context, req) {
         redirectData = redirects[base][subdomain];
 
     if(typeof redirectData !== "object") {
-        // ToDo: redirect to default URL
+        context.log(`Object for ${subdomain} not found. Redirecting to ${defaultURL}...`)
+        context.res = {
+            status:  302,
+            body:    `Redirecting to ${defaultURL}...`,
+            headers: {
+                "Location": defaultURL
+            }
+        };
     }
+
+    context.log(`OK. Redirecting to ${redirectData.target} with ${redirectData.method}...`)
 
     // ToDo: build full address (including path)
     // Found redirect data for given URL - redirecting
     context.res = {
         status:  redirectData.method,
-        body: `Redirecting to ${redirectData.target}...`,
+        body:    `Redirecting to ${redirectData.target}...`,
         headers: {
             "Location": redirectData.target
         }
