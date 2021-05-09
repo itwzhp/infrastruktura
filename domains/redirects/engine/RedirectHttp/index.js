@@ -31,7 +31,7 @@ module.exports = async function(context, req) {
     }
 
     // Extract the subdomain
-    let subdomain    = hostname.substring(0, hostname.lastIndexOf(base)),
+    let subdomain    = hostname.substring(0, hostname.lastIndexOf(base) - 1), // -1 to include the dot before
         redirectData = redirects[base][subdomain];
 
     if(typeof redirectData !== "object") {
