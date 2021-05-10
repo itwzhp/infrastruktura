@@ -1,0 +1,27 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://json-schema.org/draft/2020-12/schema",
+    "title": "ZHP Redirect config",
+    "description": "Defines, how redirect schema should look like.",
+    "type": "object",
+    "properties": {
+        "<subdomain>": {
+            "description": "The subdomain the redirect should be matched.",
+            "type": "object",
+            "properties": {
+                "target": {
+                    "description": "Where the subdomain should redirect to.",
+                    "type": "string"
+                },
+                "method": {
+                    "description": "HTTP method used to redirect.",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "method",
+                "target"
+            ]
+        }
+    }
+}
