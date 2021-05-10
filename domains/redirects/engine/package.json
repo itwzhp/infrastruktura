@@ -2,8 +2,11 @@
   "name": "redirect-engine",
   "version": "1.0.0",
   "description": "Subdomains redirect engine for ZHP.pl",
-  "scripts" : {
-    "test": "echo \"No tests yet...\""
+  "scripts": {
+    "test": "jest"
   },
-  "author": "Stanisław Kowański <skowanski@f4dev.me>"
+  "author": "Stanisław Kowański <skowanski@f4dev.me>",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
 }
