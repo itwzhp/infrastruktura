@@ -6,7 +6,8 @@ const filesDirectory = "./redirectFiles/";
 const defaultURL     = "https://zhp.pl";
 
 module.exports = async function(context, req) {
-    let redirects = [], basedomains = [];
+    let redirects   = [], // Holds all redirects from files (basedomain => redirect object)
+        basedomains = []; // Holds redirects basedomains (array of domains)
 
     // Load redirects from files
     await fs.readdirSync(filesDirectory).forEach(filename => {
@@ -28,12 +29,15 @@ module.exports = async function(context, req) {
     let base = endsWithAny(basedomains, hostname);
 
     if(base === false) {
-        context.log(`Basedomain ${hostname} not supported. Redirecting to ${defaultURL}...`);
+        // Include requested path to the redirect URL
+        let redirect = addPathname(defaultURL, req);
+
+        context.log(`Basedomain ${hostname} not supported. Redirecting to ${redirect}...`);
         context.res = {
             status:  302,
-            body:    `Redirecting to ${defaultURL}...`,
+            body:    `Redirecting to ${redirect}...`,
             headers: {
-                "Location": defaultURL
+                location: redirect
             }
         };
         return;
@@ -45,35 +49,36 @@ module.exports = async function(context, req) {
 
     // Check, if redirect for requested subdomain exists
     if(typeof redirectData !== "object") {
-        context.log(`Object for ${subdomain} not found. Redirecting to ${defaultURL}...`);
+        // Include requested path to the redirect URL
+        let redirect = addPathname(defaultURL, req);
+
+        context.log(`Object for ${subdomain} not found. Redirecting to ${redirect}...`);
         context.res = {
             status:  302,
-            body:    `Redirecting to ${defaultURL}...`,
+            body:    `Redirecting to ${redirect}...`,
             headers: {
-                "Location": defaultURL
+                location: redirect
             }
         };
         return;
     }
 
     // Include requested path to the redirect URL
-    let fullRedirect = addTrailingSlash(redirectData.target);
+    let fullRedirect = addPathname(redirectData.target, req);
 
-    if(req.params.path !== undefined) {
-        fullRedirect += req.params.path;
-    }
-
-    context.log(`OK. Redirecting to ${fullRedirect} with ${redirectData.method}...`);
+    context.log(`OK. Redirecting ${hostname} to ${fullRedirect} using ${redirectData.method}...`);
 
     // Found redirect data for given URL - redirecting
     context.res = {
         status:  redirectData.method,
         body:    `Redirecting to ${fullRedirect}...`,
         headers: {
-            "Location": fullRedirect
+            location: fullRedirect
         }
     };
 };
+
+module.exports.defaultURL = defaultURL;
 
 /**
  * Determines whether a string ends with the characters of any of the strings from the specified array. Returns
@@ -107,4 +112,29 @@ function addTrailingSlash(url) {
     }
 
     return url;
+}
+
+/**
+ * If request URL path is not null, returns given URL with added path, or unmodified URL.
+ *
+ * @param {string} url to be modified.
+ * @param {Object} req object to read the incoming URL.
+ *
+ * @returns {string} url with added path, or unmodified url if path was null.
+ */
+function addPathname(url, req) {
+    let {pathname} = new URL(req.url),
+        resultUrl  = url;
+
+    if(req.params !== undefined && req.params.path !== undefined) {
+        // Path passed as a parameter from Azure Functions
+        resultUrl = addTrailingSlash(url);
+        resultUrl += req.params.path;
+    } else if(pathname !== "/") {
+        // Path got directly from the URL
+        resultUrl = addTrailingSlash(url);
+        resultUrl += pathname.substring(1);
+    }
+
+    return resultUrl;
 }
