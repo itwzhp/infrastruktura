@@ -3,7 +3,7 @@ name: Push redirect engine
 on:
     push:
         branches:
-            - "feature/redirect-ci-cd"
+            - "main"
         paths:
             - "domains/redirects/**"
 
