@@ -1,14 +1,7 @@
-name: Redirects tests
+name: Test redirects
 
 on:
     pull_request:
-        branches:
-            - "feature/redirect-ci-cd"
-        paths:
-            - "domains/redirects/**"
-    push:
-        branches:
-            - "feature/redirect-ci-cd"
         paths:
             - "domains/redirects/**"
 

@@ -1,0 +1,44 @@
+name: Push redirect engine
+
+on:
+    push:
+        branches:
+            - "feature/redirect-ci-cd"
+        paths:
+            - "domains/redirects/**"
+
+env:
+    AZURE_FUNCTIONAPP_NAME: RedirectEngine
+    AZURE_FUNCTIONAPP_PACKAGE_PATH: ./domains/redirects
+
+jobs:
+    test:
+        name: Test redirects
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v2
+            -   name: Setup Node
+                uses: actions/setup-node@v2
+                with:
+                    node-version: "14"
+            -   name: Install dependiences
+                run: npm install
+                working-directory: ./domains/redirects
+            -   name: Run tests
+                run: npm run test
+                working-directory: ./domains/redirects
+
+    deploy:
+        name: Deploy to Azure Functions
+        runs-on: ubuntu-latest
+        needs:
+            - test
+        steps:
+            -   name: Deploy
+                uses: Azure/functions-action@v1
+                with:
+                    app-name: ${{env.AZURE_FUNCTIONAPP_NAME}}
+                    package: ${{env.AZURE_FUNCTIONAPP_PACKAGE_PATH}}
+                    publish-profile: ${{secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE}}
+
