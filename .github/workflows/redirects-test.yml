@@ -23,7 +23,7 @@ jobs:
                 uses: actions/setup-node@v2
                 with:
                     node-version: "14"
-            -   name: Install dependiences
-                run: npm install
+            -   name: Move to redirects directory and install dependiences
+                run: cd domains/redirects && npm install
             -   name: Run tests
                 run: npm run test

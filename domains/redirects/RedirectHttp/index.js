@@ -11,7 +11,7 @@ module.exports = async function(context, req) {
 
     // Load redirects from files
     await fs.readdirSync(filesDirectory).forEach(filename => {
-        // Exclude schema
+        // Exclude schema files.
         if(filename.endsWith(".json") && !filename.endsWith(".schema.json")) {
             let file = fs.readFileSync(filesDirectory + filename);
 
