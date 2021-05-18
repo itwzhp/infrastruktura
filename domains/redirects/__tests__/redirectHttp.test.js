@@ -1,5 +1,5 @@
-const redirectFunction = require("../RedirectHttp/index"),
-      defaultURL     = require("../RedirectHttp/index").defaultURL,
+const redirectFunction = require("../RedirectHttp"),
+      defaultURL     = require("../RedirectHttp").defaultURL,
       redirectsFile    = require("../redirectFiles/zhp.net.pl.json");
 
 const context = {
