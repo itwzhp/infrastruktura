@@ -1,0 +1,24 @@
+name: Redirects tests
+
+on:
+    pull_request:
+        branches:
+            - "feature/redirect-ci-cd"
+        paths:
+            - "domains/redirects/**"
+
+jobs:
+    test:
+        name: Test
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Setup Node
+              uses: actions/setup-node@v2
+              with:
+                  node-version: "14"
+            - name: Install dependiences
+              run: npm install
+            - name: Run tests
+              run: npm run test
