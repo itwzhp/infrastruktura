@@ -46,7 +46,7 @@ const filesDirectory = "./redirectFiles/",
 test("redirect files should match schema", async() => {
     // Iterate through each file in redirect files directory
     await fs.readdirSync(filesDirectory).forEach(filename => {
-        // ...but exclude *.schema.json files
+        // ...but exclude *.schema.json files.
         if(filename.endsWith(".json") && !filename.endsWith(".schema.json")) {
             let file        = fs.readFileSync(filesDirectory + filename),
                 fileContent = JSON.parse(file.toString());

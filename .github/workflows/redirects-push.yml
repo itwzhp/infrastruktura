@@ -35,6 +35,8 @@ jobs:
         needs:
             - test
         steps:
+            -   name: Checkout
+                uses: actions/checkout@v2
             -   name: Deploy
                 uses: Azure/functions-action@v1
                 with:
