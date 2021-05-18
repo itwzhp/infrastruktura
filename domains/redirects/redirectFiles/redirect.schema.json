@@ -1,11 +1,10 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://json-schema.org/draft/2020-12/schema",
     "title": "ZHP Redirect config",
     "description": "Defines, how redirect schema should look like.",
     "type": "object",
-    "properties": {
-        "<subdomain>": {
+    "patternProperties": {
+        "^.+$": {
             "description": "The subdomain the redirect should be matched.",
             "type": "object",
             "properties": {
@@ -23,5 +22,6 @@
                 "target"
             ]
         }
-    }
+    },
+    "additionalProperties": false
 }
