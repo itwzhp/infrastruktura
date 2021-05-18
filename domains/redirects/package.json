@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Subdomains redirect engine for ZHP.pl",
     "scripts": {
-        "test": "node_modules/.bin/jest"
+        "test": "jest"
     },
     "author": "Stanisław Kowański <skowanski@f4dev.me>",
     "devDependencies": {
