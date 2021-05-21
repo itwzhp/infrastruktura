@@ -10,11 +10,13 @@
             "properties": {
                 "target": {
                     "description": "Where the subdomain should redirect to.",
-                    "type": "string"
+                    "type": "string",
+                    "format": "uri"
                 },
                 "method": {
                     "description": "HTTP method used to redirect.",
-                    "type": "number"
+                    "type": "number",
+                    "enum": [301, 302]
                 }
             },
             "required": [
