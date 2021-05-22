@@ -4,7 +4,7 @@
     "description": "Defines, how redirect schema should look like.",
     "type": "object",
     "patternProperties": {
-        "^.+$": {
+        "^[^$].*$": {
             "description": "The subdomain the redirect should be matched.",
             "type": "object",
             "properties": {
@@ -16,14 +16,25 @@
                 "method": {
                     "description": "HTTP method used to redirect.",
                     "type": "number",
-                    "enum": [301, 302]
+                    "enum": [
+                        301,
+                        302
+                    ]
+                },
+                "includePath": {
+                    "description": "True, if we should add a path to the suffix",
+                    "type": "boolean",
+                    "default": false
                 }
             },
             "required": [
                 "method",
                 "target"
-            ]
+            ],
+            "additionalProperties": false
         }
     },
-    "additionalProperties": false
+    "properties": {
+        "$schema": { "type": "string" }
+    }
 }

@@ -37,7 +37,10 @@ expect.extend({
 
 const fs      = require("fs"),
       Ajv2020 = require("ajv/dist/2020"),
+      addFormats = require("ajv-formats"),
       ajv     = new Ajv2020({allErrors: true});
+
+addFormats(ajv, ['uri']);
 
 const filesDirectory = "./redirectFiles/",
       schema         = require("../redirectFiles/redirect.schema.json"),

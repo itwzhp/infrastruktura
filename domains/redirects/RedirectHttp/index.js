@@ -10,8 +10,8 @@ module.exports = async function(context, req) {
         basedomains = []; // Holds redirects basedomains (array of domains)
 
     // Load redirects from files
-    await fs.readdirSync(filesDirectory).forEach(filename => {
-        if(filename.endsWith(".json") && !filename.endsWith(".schema.json")) {
+    fs.readdirSync(filesDirectory).forEach(filename => {
+        if (filename.endsWith(".json") && !filename.endsWith(".schema.json")) {
             let file = fs.readFileSync(filesDirectory + filename);
 
             let domain = filename.substring(0, filename.lastIndexOf(".json"));
@@ -29,15 +29,12 @@ module.exports = async function(context, req) {
     let base = endsWithAny(basedomains, hostname);
 
     if(base === false) {
-        // Include requested path to the redirect URL
-        let redirect = addPathname(defaultURL, req);
-
-        context.log(`Basedomain ${hostname} not supported. Redirecting to ${redirect}...`);
+        context.log(`Basedomain ${hostname} not supported. Redirecting to ${defaultURL}...`);
         context.res = {
             status:  302,
-            body:    `Redirecting to ${redirect}...`,
+            body:    `Redirecting to ${defaultURL}...`,
             headers: {
-                location: redirect
+                location: defaultURL
             }
         };
         return;
@@ -49,22 +46,21 @@ module.exports = async function(context, req) {
 
     // Check, if redirect for requested subdomain exists
     if(typeof redirectData !== "object") {
-        // Include requested path to the redirect URL
-        let redirect = addPathname(defaultURL, req);
-
-        context.log(`Object for ${subdomain} not found. Redirecting to ${redirect}...`);
+        context.log(`Object for ${subdomain} not found. Redirecting to ${defaultURL}...`);
         context.res = {
             status:  302,
-            body:    `Redirecting to ${redirect}...`,
+            body:    `Redirecting to ${defaultURL}...`,
             headers: {
-                location: redirect
+                location: defaultURL
             }
         };
         return;
     }
 
-    // Include requested path to the redirect URL
-    let fullRedirect = addPathname(redirectData.target, req);
+    // Include requested path to the redirect URL, if includePath enabled
+    let fullRedirect = redirectData.includePath === true
+                        ? addPathname(redirectData.target, req)
+                        : redirectData.target;
 
     context.log(`OK. Redirecting ${hostname} to ${fullRedirect} using ${redirectData.method}...`);
 
