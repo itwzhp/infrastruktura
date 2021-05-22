@@ -5,22 +5,22 @@ const fs = require("fs");
 const filesDirectory = "./redirectFiles/";
 const defaultURL     = "https://zhp.pl";
 
+const redirects   = [], // Holds all redirects from files (basedomain => redirect object)
+      basedomains = []; // Holds redirects basedomains (array of domains)
+
+// Load redirects from files
+fs.readdirSync(filesDirectory).forEach(filename => {
+    if (filename.endsWith(".json") && !filename.endsWith(".schema.json")) {
+        let file = fs.readFileSync(filesDirectory + filename);
+
+        let domain = filename.substring(0, filename.lastIndexOf(".json"));
+
+        redirects[domain] = JSON.parse(file.toString());
+        basedomains.push(domain);
+    }
+});
+
 module.exports = async function(context, req) {
-    let redirects   = [], // Holds all redirects from files (basedomain => redirect object)
-        basedomains = []; // Holds redirects basedomains (array of domains)
-
-    // Load redirects from files
-    fs.readdirSync(filesDirectory).forEach(filename => {
-        if (filename.endsWith(".json") && !filename.endsWith(".schema.json")) {
-            let file = fs.readFileSync(filesDirectory + filename);
-
-            let domain = filename.substring(0, filename.lastIndexOf(".json"));
-
-            redirects[domain] = JSON.parse(file.toString());
-            basedomains.push(domain);
-        }
-    });
-
     // Get request URL
     let url      = new URL(req.url),
         hostname = url.hostname;
