@@ -7,13 +7,13 @@ expect.extend({
                    * @param {string} [fileName=""] currently checked filename.
                    */
                   toBeValidJson(received, validator, fileName = "") {
-                      const valid = validator(received);
+                      const isValid = validator(received);
 
-                      if(valid) {
+                      if(isValid) {
                           return {
                               message: () =>
                                            `expected object to be valid JSON according to given schema`,
-                              pass:    valid
+                              pass:    true
                           };
                       } else {
                           let stringErrors = "";
@@ -29,7 +29,7 @@ expect.extend({
                           return {
                               message: () =>
                                            `expected object to be valid JSON according to given schema. Errors occurred:${stringErrors}`,
-                              pass:    valid
+                              pass:    false
                           };
                       }
                   }
