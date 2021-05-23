@@ -5,23 +5,22 @@ const fs = require("fs");
 const filesDirectory = "./redirectFiles/";
 const defaultURL     = "https://zhp.pl";
 
+const redirects   = [], // Holds all redirects from files (basedomain => redirect object)
+      basedomains = []; // Holds redirects basedomains (array of domains)
+
+// Load redirects from files
+fs.readdirSync(filesDirectory).forEach(filename => {
+    if (filename.endsWith(".json") && !filename.endsWith(".schema.json")) {
+        let file = fs.readFileSync(filesDirectory + filename);
+
+        let domain = filename.substring(0, filename.lastIndexOf(".json"));
+
+        redirects[domain] = JSON.parse(file.toString());
+        basedomains.push(domain);
+    }
+});
+
 module.exports = async function(context, req) {
-    let redirects   = [], // Holds all redirects from files (basedomain => redirect object)
-        basedomains = []; // Holds redirects basedomains (array of domains)
-
-    // Load redirects from files
-    await fs.readdirSync(filesDirectory).forEach(filename => {
-        // Exclude schema files.
-        if(filename.endsWith(".json") && !filename.endsWith(".schema.json")) {
-            let file = fs.readFileSync(filesDirectory + filename);
-
-            let domain = filename.substring(0, filename.lastIndexOf(".json"));
-
-            redirects[domain] = JSON.parse(file.toString());
-            basedomains.push(domain);
-        }
-    });
-
     // Get request URL
     let url      = new URL(req.url),
         hostname = url.hostname;
@@ -30,15 +29,12 @@ module.exports = async function(context, req) {
     let base = endsWithAny(basedomains, hostname);
 
     if(base === false) {
-        // Include requested path to the redirect URL
-        let redirect = addPathname(defaultURL, req);
-
-        context.log(`Basedomain ${hostname} not supported. Redirecting to ${redirect}...`);
+        context.log(`Basedomain ${hostname} not supported. Redirecting to ${defaultURL}...`);
         context.res = {
             status:  302,
-            body:    `Redirecting to ${redirect}...`,
+            body:    `Redirecting to ${defaultURL}...`,
             headers: {
-                location: redirect
+                location: defaultURL
             }
         };
         return;
@@ -50,22 +46,21 @@ module.exports = async function(context, req) {
 
     // Check, if redirect for requested subdomain exists
     if(typeof redirectData !== "object") {
-        // Include requested path to the redirect URL
-        let redirect = addPathname(defaultURL, req);
-
-        context.log(`Object for ${subdomain} not found. Redirecting to ${redirect}...`);
+        context.log(`Object for ${subdomain} not found. Redirecting to ${defaultURL}...`);
         context.res = {
             status:  302,
-            body:    `Redirecting to ${redirect}...`,
+            body:    `Redirecting to ${defaultURL}...`,
             headers: {
-                location: redirect
+                location: defaultURL
             }
         };
         return;
     }
 
-    // Include requested path to the redirect URL
-    let fullRedirect = addPathname(redirectData.target, req);
+    // Include requested path to the redirect URL, if includePath enabled
+    let fullRedirect = redirectData.includePath === true
+                        ? addPathname(redirectData.target, req)
+                        : redirectData.target;
 
     context.log(`OK. Redirecting ${hostname} to ${fullRedirect} using ${redirectData.method}...`);
 
@@ -124,17 +119,23 @@ function addTrailingSlash(url) {
  * @returns {string} url with added path, or unmodified url if path was null.
  */
 function addPathname(url, req) {
-    let {pathname} = new URL(req.url),
+    let {pathname, searchParams} = new URL(req.url),
         resultUrl  = url;
 
     if(req.params !== undefined && req.params.path !== undefined) {
         // Path passed as a parameter from Azure Functions
-        resultUrl = addTrailingSlash(url);
+        resultUrl = new addTrailingSlash(resultUrl);
         resultUrl += req.params.path;
     } else if(pathname !== "/") {
         // Path got directly from the URL
-        resultUrl = addTrailingSlash(url);
+        resultUrl = addTrailingSlash(resultUrl);
         resultUrl += pathname.substring(1);
+    }
+
+    if(searchParams.toString() !== "") {
+        if(new URL(resultUrl).pathname === "/")
+            resultUrl = addTrailingSlash(resultUrl);
+        resultUrl += `?${searchParams.toString()}`;
     }
 
     return resultUrl;
