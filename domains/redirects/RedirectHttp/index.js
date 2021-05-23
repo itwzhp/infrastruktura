@@ -119,7 +119,7 @@ function addTrailingSlash(url) {
  * @returns {string} url with added path, or unmodified url if path was null.
  */
 function addPathname(url, req) {
-    let {pathname} = new URL(req.url),
+    let {pathname, searchParams} = new URL(req.url),
         resultUrl  = url;
 
     if(req.params !== undefined && req.params.path !== undefined) {
@@ -130,6 +130,10 @@ function addPathname(url, req) {
         // Path got directly from the URL
         resultUrl = addTrailingSlash(url);
         resultUrl += pathname.substring(1);
+    }
+
+    if(searchParams.toString() !== "") {
+        resultUrl += `?${searchParams.toString()}`
     }
 
     return resultUrl;
