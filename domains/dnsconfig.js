@@ -8,3 +8,5 @@ require('./service-providers.js');
 // Strefy DNS
 require("./zhp.net.pl.zone.js");
 require("./zhp.pl.zone.js");
+require("./1procent.pl.zone.js");
+
