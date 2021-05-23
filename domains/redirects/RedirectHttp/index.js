@@ -124,16 +124,18 @@ function addPathname(url, req) {
 
     if(req.params !== undefined && req.params.path !== undefined) {
         // Path passed as a parameter from Azure Functions
-        resultUrl = addTrailingSlash(url);
+        resultUrl = new addTrailingSlash(resultUrl);
         resultUrl += req.params.path;
     } else if(pathname !== "/") {
         // Path got directly from the URL
-        resultUrl = addTrailingSlash(url);
+        resultUrl = addTrailingSlash(resultUrl);
         resultUrl += pathname.substring(1);
     }
 
     if(searchParams.toString() !== "") {
-        resultUrl += `?${searchParams.toString()}`
+        if(new URL(resultUrl).pathname === "/")
+            resultUrl = addTrailingSlash(resultUrl);
+        resultUrl += `?${searchParams.toString()}`;
     }
 
     return resultUrl;

@@ -7,7 +7,7 @@ const context = {
 }
 
 describe("should redirect to", () => {
-    test("matching URL without path with 301", async() => {
+    test("matching URL with 301", async() => {
         let testBasedomain = "example.com",
             testSubdomain  = "test301",
             testUrl        = `https://${testSubdomain}.${testBasedomain}`,
@@ -45,8 +45,6 @@ describe("should redirect to", () => {
             testUrl        = `https://${testSubdomain}.${testBasedomain}/test`,
             expected       = redirectsFile[testSubdomain];
 
-        expected.target = `${expected.target}`;
-
         const request = {
             url: testUrl
         };
@@ -57,13 +55,13 @@ describe("should redirect to", () => {
         expect(context.res.headers.location).toBe(expected.target);
     });
 
-    test("matching URL with path", async() => {
+    test("matching URL with path and query", async() => {
         let testBasedomain = "example.com",
             testSubdomain  = "testwithpath",
             testUrl        = `https://${testSubdomain}.${testBasedomain}/test?query=true&other=also`,
             expected       = redirectsFile[testSubdomain];
 
-        expected.target = `${expected.target}/test?query=true&other=also`;
+        let expectedTarget = `${expected.target}/test?query=true&other=also`;
 
         const request = {
             url: testUrl
@@ -72,7 +70,79 @@ describe("should redirect to", () => {
         await redirectFunction(context, request);
 
         expect(context.res.status).toBe(expected.method);
-        expect(context.res.headers.location).toBe(expected.target);
+        expect(context.res.headers.location).toBe(expectedTarget);
+    });
+
+    test("matching URL with path", async() => {
+        let testBasedomain = "example.com",
+            testSubdomain  = "testwithpath",
+            testUrl        = `https://${testSubdomain}.${testBasedomain}/test`,
+            expected       = redirectsFile[testSubdomain];
+
+        let expectedTarget = `${expected.target}/test`;
+
+        const request = {
+            url: testUrl
+        };
+
+        await redirectFunction(context, request);
+
+        expect(context.res.status).toBe(expected.method);
+        expect(context.res.headers.location).toBe(expectedTarget);
+    });
+
+    test("matching URL with path two paths", async() => {
+        let testBasedomain = "example.com",
+            testSubdomain  = "testwithpathandfolder",
+            testUrl        = `https://${testSubdomain}.${testBasedomain}/test2`,
+            expected       = redirectsFile[testSubdomain];
+
+        let expectedTarget = `${expected.target}/test2`;
+
+        const request = {
+            url: testUrl
+        };
+
+        await redirectFunction(context, request);
+
+        expect(context.res.status).toBe(expected.method);
+        expect(context.res.headers.location).toBe(expectedTarget);
+    });
+
+    test("matching URL with path two paths and query", async() => {
+        let testBasedomain = "example.com",
+            testSubdomain  = "testwithpathandfolder",
+            testUrl        = `https://${testSubdomain}.${testBasedomain}/test2?q=a`,
+            expected       = redirectsFile[testSubdomain];
+
+        let expectedTarget = `${expected.target}/test2?q=a`;
+
+        const request = {
+            url: testUrl
+        };
+
+        await redirectFunction(context, request);
+
+        expect(context.res.status).toBe(expected.method);
+        expect(context.res.headers.location).toBe(expectedTarget);
+    });
+
+    test("matching URL with query", async() => {
+        let testBasedomain = "example.com",
+            testSubdomain  = "testwithpath",
+            testUrl        = `https://${testSubdomain}.${testBasedomain}/?query=yes&other=also`,
+            expected       = redirectsFile[testSubdomain];
+
+        expectedTarget = `${expected.target}/?query=yes&other=also`;
+
+        const request = {
+            url: testUrl
+        };
+
+        await redirectFunction(context, request);
+
+        expect(context.res.status).toBe(expected.method);
+        expect(context.res.headers.location).toBe(expectedTarget);
     });
 
     describe("default URL because of", () => {
