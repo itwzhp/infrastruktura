@@ -116,9 +116,9 @@ D_EXTEND('zhp.pl',
     Delegation_A('hme', '109.95.157.35'),
     Ms365_Subdomain('hme', 'zhp.pl'), // MS365-8065
 
-    // Domenny pomocnicze i techniczne na serwery
-    Delegation_NS('sl', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    Delegation_NS('sl1', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    Delegation_NS('sl2', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.'])
-    Delegation_NS('sl3', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.'])    
+    // Domenny pomocnicze i techniczne na serwery - 4 serwery - usługi wykupione na choragiew
+    Delegation_NS('sl1', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']), //Slaska1
+    Delegation_NS('sl2', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']), // Slaska2
+    Delegation_NS('sl3', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']), //Slaska3
+    Delegation_NS('sl4', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.'])   //Slaska4 
 );
