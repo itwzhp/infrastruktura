@@ -23,5 +23,5 @@ D('zhp.net.pl', noneRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600)
     Ms365_Subdomain('grupy', 'zhp.net.pl'),
     Ms365_Root('zhp.net.pl'),
 
-    Redirects(require('./redirects/zhp.net.pl.json'))
+    Redirects(require('./redirects/redirectFiles/zhp.net.pl.json'))
 )

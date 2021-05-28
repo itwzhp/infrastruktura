@@ -1,0 +1,5 @@
+{
+    "$schema": "./redirect.schema.json",
+    "aktywacja": { "target": "https://helpdesk.zhp.pl", "method": 302 },
+    "poczta": { "target": "https://outlook.office.com", "method": 302 }
+}
