@@ -5,6 +5,10 @@ on:
         paths:
             - "domains/redirects/**"
 
+env:
+    AZURE_SUBSCRIPTION_ID: b537dc8c-8540-4cc7-86ca-149448265cfc
+    AZURE_RESOURCE_GROUP: test-rg
+
 jobs:
     test:
         name: Test
@@ -22,3 +26,21 @@ jobs:
             -   name: Run tests
                 run: npm run test
                 working-directory: ./domains/redirects
+
+    azure:
+        name: Azure ARM tests
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v2
+            -   name: Login to Azure
+                uses: azure/login@v1
+                with:
+                    creds: ${{ secrets.AZURE_CREDENTIALS }}
+            -   name: Test ARM
+                uses: azure/arm-deploy@v1
+                with:
+                    deploymentMode: Validate
+                    subscriptionId: ${{ env.AZURE_SUBSCRIPTION_ID }}
+                    resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP }}
+                    template: ./domains/redirects/redirects.arm.json
