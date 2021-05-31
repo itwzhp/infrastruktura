@@ -1,10 +1,7 @@
 name: Test redirects
 
 on:
-    push:
-        paths:
-            - "domains/redirects/**"
-    pull_request:
+    pull_request_target:
         paths:
             - "domains/redirects/**"
 
