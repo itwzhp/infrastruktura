@@ -9,8 +9,8 @@ on:
             - "domains/redirects/**"
 
 env:
-    AZURE_SUBSCRIPTION_ID: b537dc8c-8540-4cc7-86ca-149448265cfc
-    AZURE_RESOURCE_GROUP: tttest
+    AZURE_SUBSCRIPTION_ID: #insert subscription ID
+    AZURE_RESOURCE_GROUP: #insert resource group name
 
 jobs:
     test:

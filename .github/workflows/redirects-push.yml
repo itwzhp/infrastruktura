@@ -8,7 +8,7 @@ on:
             - "domains/redirects/**"
 
 env:
-    AZURE_FUNCTIONAPP_NAME: RedirectEngine
+    AZURE_FUNCTIONAPP_NAME: #insert function app name
     AZURE_FUNCTIONAPP_PACKAGE_PATH: ./domains/redirects # application path in repo
 
 jobs:
