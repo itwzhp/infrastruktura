@@ -56,9 +56,9 @@
             "location": "[resourceGroup().location]",
             "kind": "functionapp,linux",
             "dependsOn": [
-                "[resourceId('Microsoft.Web/storageAccounts', variables('storageAccountName'))]",
-                "[resourceId('microsoft.insights/components', variables('applicationInsightsName'))]",
-                "[resourceId('Microsoft.Web/serverfarms', variables('servicePlanName'))]"
+                "[variables('storageAccountName')]",
+                "[variables('applicationInsightsName')]",
+                "[variables('servicePlanName')]"
             ],
             "properties": {
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('servicePlanName'))]",
