@@ -40,6 +40,14 @@ jobs:
                 uses: azure/login@v1
                 with:
                     creds: ${{ secrets.AZURE_CREDENTIALS }}
+            - name: Check RG existance
+              uses: azure/CLI@v1
+              with:
+                  inlineScript: |
+                    #!/bin/bash
+                    if $(az group exists --name ${{env.AZURE_RESOURCE_GROUP}}); then
+                      echo "exists"
+                    fi
             -   name: Test ARM
                 uses: azure/arm-deploy@v1
                 with:
