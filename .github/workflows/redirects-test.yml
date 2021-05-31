@@ -10,7 +10,7 @@ on:
 
 env:
     AZURE_SUBSCRIPTION_ID: b537dc8c-8540-4cc7-86ca-149448265cfc
-    AZURE_RESOURCE_GROUP: RedirectEngine-rg
+    AZURE_RESOURCE_GROUP: test-rg
 
 jobs:
     test:
