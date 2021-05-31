@@ -18,6 +18,8 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           AZURE_DNS_MANAGEMENT_CREDENTIALS: ${{ secrets.AZURE_DNS_MANAGEMENT_CREDENTIALS }}
+          OVH_APP_SECRET_KEY: ${{ secrets.OVH_APP_SECRET_KEY }}
+          OVH_CONSUMER_KEY: ${{ secrets.OVH_CONSUMER_KEY }}
 
 # TODO when this works based on some other engine, move to separate workflow, where pwsh is available
     #   - name: Deploy redirects to Plesk
