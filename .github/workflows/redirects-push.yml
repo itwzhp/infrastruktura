@@ -12,28 +12,9 @@ env:
     AZURE_FUNCTIONAPP_PACKAGE_PATH: ./domains/redirects # application path in repo
 
 jobs:
-    test:
-        name: Test redirects
-        runs-on: ubuntu-latest
-        steps:
-            -   name: Checkout
-                uses: actions/checkout@v2
-            -   name: Setup Node
-                uses: actions/setup-node@v2
-                with:
-                    node-version: "14"
-            -   name: Install dependiences
-                run: npm install
-                working-directory: ./domains/redirects
-            -   name: Run tests
-                run: npm run test
-                working-directory: ./domains/redirects
-
     deploy:
         name: Deploy to Azure Functions
         runs-on: ubuntu-latest
-        needs:
-            - test
         steps:
             -   name: Checkout
                 uses: actions/checkout@v2

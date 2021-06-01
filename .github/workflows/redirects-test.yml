@@ -16,6 +16,7 @@ jobs:
         steps:
             -   name: Checkout
                 uses: actions/checkout@v2
+            # App (Node) tests
             -   name: Setup Node
                 uses: actions/setup-node@v2
                 with:
@@ -26,13 +27,7 @@ jobs:
             -   name: Run tests
                 run: npm run test
                 working-directory: ./domains/redirects
-
-    azure:
-        name: Azure ARM tests
-        runs-on: ubuntu-latest
-        steps:
-            -   name: Checkout
-                uses: actions/checkout@v2
+            # Azure ARM file tests
             -   name: Login to Azure
                 uses: azure/login@v1
                 with:
@@ -44,3 +39,4 @@ jobs:
                     subscriptionId: ${{ env.AZURE_SUBSCRIPTION_ID }}
                     resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP }}
                     template: ./domains/redirects/redirects.arm.json
+
