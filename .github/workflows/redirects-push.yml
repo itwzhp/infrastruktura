@@ -24,7 +24,7 @@ jobs:
                 uses: azure/login@v1
                 with:
                     creds: ${{ secrets.AZURE_REDIRECTS_DEPLOY_CREDENTIALS }}
-            -   name: Test ARM
+            -   name: Deploy ARM
                 uses: azure/arm-deploy@v1
                 with:
                     deploymentMode: Complete
