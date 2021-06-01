@@ -1,13 +1,13 @@
 name: Test redirects
 
 on:
-    pull_request_target:
+    pull_request: # TODO split it to make it work on forks
         paths:
             - "domains/redirects/**"
 
 env:
-    AZURE_SUBSCRIPTION_ID: #insert subscription ID
-    AZURE_RESOURCE_GROUP: #insert resource group name
+    AZURE_SUBSCRIPTION_ID: 35e22786-93ea-47c8-902a-16e9d0f03e17
+    AZURE_RESOURCE_GROUP: zhp-redirects-engine
 
 jobs:
     test:
@@ -16,6 +16,7 @@ jobs:
         steps:
             -   name: Checkout
                 uses: actions/checkout@v2
+
             # App (Node) tests
             -   name: Setup Node
                 uses: actions/setup-node@v2
@@ -27,11 +28,12 @@ jobs:
             -   name: Run tests
                 run: npm run test
                 working-directory: ./domains/redirects
+
             # Azure ARM file tests
             -   name: Login to Azure
                 uses: azure/login@v1
                 with:
-                    creds: ${{ secrets.AZURE_CREDENTIALS }}
+                    creds: ${{ secrets.AZURE_REDIRECTS_DEPLOY_CREDENTIALS }}
             -   name: Test ARM
                 uses: azure/arm-deploy@v1
                 with:

@@ -8,7 +8,7 @@ on:
             - "domains/redirects/**"
 
 env:
-    AZURE_FUNCTIONAPP_NAME: #insert function app name
+    AZURE_FUNCTIONAPP_NAME: zhp-redirects #insert function app name
     AZURE_FUNCTIONAPP_PACKAGE_PATH: ./domains/redirects # application path in repo
 
 jobs:
@@ -18,9 +18,12 @@ jobs:
         steps:
             -   name: Checkout
                 uses: actions/checkout@v2
+            -   name: Login to Azure
+                uses: azure/login@v1
+                with:
+                    creds: ${{ secrets.AZURE_REDIRECTS_DEPLOY_CREDENTIALS }}
             -   name: Deploy
                 uses: Azure/functions-action@v1
                 with:
                     app-name: ${{env.AZURE_FUNCTIONAPP_NAME}}
                     package: ${{env.AZURE_FUNCTIONAPP_PACKAGE_PATH}}
-                    publish-profile: ${{secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE}}

@@ -45,7 +45,6 @@
             "location": "[resourceGroup().location]",
             "properties": {
                 "Application_Type": "web",
-                "Request_Source": "IbizaWebAppExtensionCreate",
                 "ApplicationId": "[variables('applicationInsightsName')]"
             }
         },
