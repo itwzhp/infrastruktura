@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "ZHP Redirect config",
+    "title": "ZHP Redirects config",
     "description": "Defines, how redirect schema should look like.",
     "type": "object",
     "patternProperties": {

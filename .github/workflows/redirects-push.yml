@@ -1,0 +1,38 @@
+name: Push redirect engine
+
+on:
+    push:
+        branches:
+            - "main"
+        paths:
+            - "domains/redirects/**"
+
+env:
+    AZURE_FUNCTIONAPP_NAME: zhp-redirects #insert function app name
+    AZURE_FUNCTIONAPP_PACKAGE_PATH: ./domains/redirects # application path in repo
+    AZURE_SUBSCRIPTION_ID: 35e22786-93ea-47c8-902a-16e9d0f03e17
+    AZURE_RESOURCE_GROUP: zhp-redirects-engine
+
+jobs:
+    deploy:
+        name: Deploy to Azure Functions
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v2
+            -   name: Login to Azure
+                uses: azure/login@v1
+                with:
+                    creds: ${{ secrets.AZURE_REDIRECTS_DEPLOY_CREDENTIALS }}
+            -   name: Deploy ARM
+                uses: azure/arm-deploy@v1
+                with:
+                    deploymentMode: Complete
+                    subscriptionId: ${{ env.AZURE_SUBSCRIPTION_ID }}
+                    resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP }}
+                    template: ./domains/redirects/redirects.arm.json
+            -   name: Deploy
+                uses: Azure/functions-action@v1
+                with:
+                    app-name: ${{env.AZURE_FUNCTIONAPP_NAME}}
+                    package: ${{env.AZURE_FUNCTIONAPP_PACKAGE_PATH}}
