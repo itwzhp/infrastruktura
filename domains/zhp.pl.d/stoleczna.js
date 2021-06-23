@@ -20,7 +20,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('wola', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('zoliborz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('warszawazoliborz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Ms365_Subdomain('warszawazoliborz', 'zhp.pl'),
+    // Ms365_Subdomain('warszawazoliborz', 'zhp.pl'), TODO przenieść do hostingu
     Delegation_NS('wolomin', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('zabki', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('konstancin', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
@@ -32,7 +32,7 @@ D_EXTEND('zhp.pl',
 
     // Hufiec Milanowek 
     Delegation_NS('milanowek', ['ns5.webd.pl.', 'ns7.webd.pl.']),
-    Ms365_Subdomain('milanowek', 'zhp.pl'),
+    // Ms365_Subdomain('milanowek', 'zhp.pl'), TODO przenieść do hostingu
 
 
     // Hufiec Piaseczno
@@ -43,12 +43,12 @@ D_EXTEND('zhp.pl',
 
     // Hufiec Piastów
     Delegation_NS('piastow', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']),
-    Ms365_Subdomain('piastow', 'zhp.pl'),
+    // Ms365_Subdomain('piastow', 'zhp.pl'), TODO przenieść do hostingu
 
 
     // Hufiec Warszawa-Centrum
     Delegation_NS('warszawacentrum', ['dns10.linuxpl.com.', 'ns10.linuxpl.com.']),
-    Ms365_Subdomain('warszawacentrum', 'zhp.pl'),
+    // Ms365_Subdomain('warszawacentrum', 'zhp.pl'), TODO przenieść do hostingu
     
     Ms365_Subdomain('centrum', 'zhp.pl'),
 
@@ -63,7 +63,7 @@ D_EXTEND('zhp.pl',
     
     // Hufiec Warszawa-Praga-Północ
     Delegation_NS('pragapolnoc', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
-    Ms365_Subdomain('pragapolnoc', 'zhp.pl'),
+    // Ms365_Subdomain('pragapolnoc', 'zhp.pl'), TODO przenieść do hostingu
 
     
     // Hufiec Warszawa-Wawer
@@ -83,7 +83,7 @@ D_EXTEND('zhp.pl',
 
     AAAA('ipv6.nowydwormaz', '2a02:25a9:0:4893::1'),
     A('nowydwormaz', '62.129.232.147'),
-    MX('nowydwormaz', 10, 'nowydwormaz.zhp.pl.'),
+    // MX('nowydwormaz', 10, 'nowydwormaz.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.nowydwormaz', 'nowydwormaz.zhp.pl.'),
     
     AAAA('ipv6.zuchy.nowydwormaz', '2a02:25a9:0:4893::1'),
@@ -91,14 +91,14 @@ D_EXTEND('zhp.pl',
 
     AAAA('ipv6.mzkk.nowydwormaz', '2a02:25a9:0:4893::1'),
     A('mzkk.nowydwormaz', '62.129.232.147'),
-    MX('mzkk.nowydwormaz', 10, 'mzkk.nowydwormaz.zhp.pl.'),
-    TXT('mzkk.nowydwormaz', 'v=spf1 mx a ptr ~all'),
+    // MX('mzkk.nowydwormaz', 10, 'mzkk.nowydwormaz.zhp.pl.'), TODO usunąć skrzynki
+    // TXT('mzkk.nowydwormaz', 'v=spf1 mx a ptr ~all'),
     CNAME('*.mzkk.nowydwormaz', 'mzkk.nowydwormaz.zhp.pl.'),
 
     // HAL 2016
     AAAA('ipv6.wakacje.nowydwormaz', '2a02:25a9:0:4893::1'),
     A('wakacje.nowydwormaz', '62.129.232.147'),
-    MX('wakacje.nowydwormaz', 10, 'wakacje.nowydwormaz.zhp.pl.'),
+    // MX('wakacje.nowydwormaz', 10, 'wakacje.nowydwormaz.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.wakacje.nowydwormaz', 'wakacje.nowydwormaz.zhp.pl.'),
 
     // brak www, listing katalogow
@@ -108,54 +108,54 @@ D_EXTEND('zhp.pl',
     // brak www, listing katalogow
     AAAA('ipv6.1msdhiz.nowydwormaz', '2a02:25a9:0:4893::1'),
     A('1msdhiz.nowydwormaz', '62.129.232.147'),
-    MX('1msdhiz.nowydwormaz', 10, '1msdhiz.nowydwormaz.zhp.pl.'),
+    // MX('1msdhiz.nowydwormaz', 10, '1msdhiz.nowydwormaz.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.1msdhiz.nowydwormaz', '1msdhiz.nowydwormaz.zhp.pl.'),
     
     // brak www, listing katalogow
     AAAA('ipv6.22mdh.nowydwormaz', '2a02:25a9:0:4893::1'),
     A('22mdh.nowydwormaz', '62.129.232.147'),
-    MX('22mdh.nowydwormaz', 10, '22mdh.nowydwormaz.zhp.pl.'),
-    TXT('22mdh.nowydwormaz', 'v=spf1 mx a ptr ~all'),
+    // MX('22mdh.nowydwormaz', 10, '22mdh.nowydwormaz.zhp.pl.'), TODO usunąć skrzynki
+    // TXT('22mdh.nowydwormaz', 'v=spf1 mx a ptr ~all'),
     CNAME('*.22mdh.nowydwormaz', '22mdh.nowydwormaz.zhp.pl.'),
 
     // redirect na http://iphzn.blogspot.com
     AAAA('ipv6.izba.nowydwormaz', '2a02:25a9:0:4893::1'),
     A('izba.nowydwormaz', '62.129.232.147'),
-    MX('izba.nowydwormaz', 10, 'izba.nowydwormaz.zhp.pl.'),
+    // MX('izba.nowydwormaz', 10, 'izba.nowydwormaz.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.izba.nowydwormaz', 'izba.nowydwormaz.zhp.pl.'),
     
     // 404
     AAAA('ipv6.21mdh.nowydwormaz', '2a02:25a9:0:4893::1'),
     A('21mdh.nowydwormaz', '62.129.232.147'),
-    MX('21mdh.nowydwormaz', 10, '21mdh.nowydwormaz.zhp.pl.'),
-    TXT('21mdh.nowydwormaz', 'v=spf1 mx a ptr ~all'),
+    // MX('21mdh.nowydwormaz', 10, '21mdh.nowydwormaz.zhp.pl.'), TODO usunąć skrzynki
+    // TXT('21mdh.nowydwormaz', 'v=spf1 mx a ptr ~all'),
     CNAME('*.21mdh.nowydwormaz', '21mdh.nowydwormaz.zhp.pl.'),
 
     // 404
     AAAA('ipv6.2dh.nowydwormaz', '2a02:25a9:0:4893::1'),
     A('2dh.nowydwormaz', '62.129.232.147'),
-    MX('2dh.nowydwormaz', 10, '2dh.nowydwormaz.zhp.pl.'),
-    TXT('2dh.nowydwormaz', 'v=spf1 mx a ptr ~all'),
+    // MX('2dh.nowydwormaz', 10, '2dh.nowydwormaz.zhp.pl.'), TODO usunąć skrzynki
+    // TXT('2dh.nowydwormaz', 'v=spf1 mx a ptr ~all'),
     CNAME('*.2dh.nowydwormaz', '2dh.nowydwormaz.zhp.pl.'),
 
     // 404
     AAAA('ipv6.7nwgdhiz.nowydwormaz', '2a02:25a9:0:4893::1'),
     A('7nwgdhiz.nowydwormaz', '62.129.232.147'),
-    MX('7nwgdhiz.nowydwormaz', 10, '7nwgdhiz.nowydwormaz.zhp.pl.'),
-    TXT('7nwgdhiz.nowydwormaz', 'v=spf1 mx a ptr ~all'),
+    // MX('7nwgdhiz.nowydwormaz', 10, '7nwgdhiz.nowydwormaz.zhp.pl.'), TODO usunąć skrzynki
+    // TXT('7nwgdhiz.nowydwormaz', 'v=spf1 mx a ptr ~all'),
     CNAME('*.7nwgdhiz.nowydwormaz', '7nwgdhiz.nowydwormaz.zhp.pl.'),
 
     // 404
     AAAA('ipv6.bohater.nowydwormaz', '2a02:25a9:0:4893::1'),
     A('bohater.nowydwormaz', '62.129.232.147'),
-    MX('bohater.nowydwormaz', 10, 'bohater.nowydwormaz.zhp.pl.'),
-    TXT('bohater.nowydwormaz', 'v=spf1 mx a ptr ~all'),
+    // MX('bohater.nowydwormaz', 10, 'bohater.nowydwormaz.zhp.pl.'), TODO usunąć skrzynki
+    // TXT('bohater.nowydwormaz', 'v=spf1 mx a ptr ~all'),
     CNAME('*.bohater.nowydwormaz', 'bohater.nowydwormaz.zhp.pl.'), 
 
     // 404
     AAAA('ipv6.jas2010.nowydwormaz', '2a02:25a9:0:4893::1'),
     A('jas2010.nowydwormaz', '62.129.232.147'),
-    MX('jas2010.nowydwormaz', 10, 'jas2010.nowydwormaz.zhp.pl.'),
+    // MX('jas2010.nowydwormaz', 10, 'jas2010.nowydwormaz.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.jas2010.nowydwormaz', 'jas2010.nowydwormaz.zhp.pl.'),
 
 
@@ -177,64 +177,64 @@ D_EXTEND('zhp.pl',
     
     AAAA('ipv6.wosp.otwock', '2a02:25a9:0:2637::1'),
     A('wosp.otwock', '62.129.198.55'),
-    MX('wosp.otwock', 10, 'wosp.otwock.zhp.pl.'),
+    // MX('wosp.otwock', 10, 'wosp.otwock.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.wosp.otwock', 'wosp.otwock.zhp.pl.'),
 
     // pusta strona
     AAAA('ipv6.gala2012.otwock', '2a02:25a9:0:2637::1'),
     A('gala2012.otwock', '62.129.198.55'),
-    MX('gala2012.otwock', 10, 'gala2012.otwock.zhp.pl.'),
+    // MX('gala2012.otwock', 10, 'gala2012.otwock.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.gala2012.otwock', 'gala2012.otwock.zhp.pl.'),
     
     // pusta strona
     AAAA('ipv6.hkt.otwock', '2a02:25a9:0:2637::1'),
     A('hkt.otwock', '62.129.198.55'),
-    MX('hkt.otwock', 10, 'hkt.otwock.zhp.pl.'),
+    // MX('hkt.otwock', 10, 'hkt.otwock.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.hkt.otwock', 'hkt.otwock.zhp.pl.'),
 
     // fatal error
     AAAA('ipv6.rojsosny.otwock', '2a02:25a9:0:2637::1'),
     A('rojsosny.otwock', '62.129.198.55'),
-    MX('rojsosny.otwock', 10, 'rojsosny.otwock.zhp.pl.'),
+    // MX('rojsosny.otwock', 10, 'rojsosny.otwock.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.rojsosny.otwock', 'rojsosny.otwock.zhp.pl.'),
 
     // 404
     AAAA('ipv6.30plus.otwock', '2a02:25a9:0:2637::1'),
     A('30plus.otwock', '62.129.198.55'),
-    MX('30plus.otwock', 10, '30plus.otwock.zhp.pl.'),
-    TXT('30plus.otwock', 'v=spf1 mx a ptr ~all'),
+    // MX('30plus.otwock', 10, '30plus.otwock.zhp.pl.'), TODO usunąć skrzynki
+    // TXT('30plus.otwock', 'v=spf1 mx a ptr ~all'),
     CNAME('*.30plus.otwock', '30plus.otwock.zhp.pl.'),
     
     // 404
     AAAA('ipv6.7sdhs.otwock', '2a02:25a9:0:2637::1'),
     A('7sdhs.otwock', '62.129.198.55'),
-    MX('7sdhs.otwock', 10, '7sdhs.otwock.zhp.pl.'),
-    TXT('7sdhs.otwock', 'v=spf1 mx a ptr ~all'),
+    // MX('7sdhs.otwock', 10, '7sdhs.otwock.zhp.pl.'), TODO usunąć skrzynki
+    // TXT('7sdhs.otwock', 'v=spf1 mx a ptr ~all'),
     CNAME('*.7sdhs.otwock', '7sdhs.otwock.zhp.pl.'),
     
     // 404
     AAAA('ipv6.azymut.otwock', '2a02:25a9:0:2637::1'),
     A('azymut.otwock', '62.129.198.55'),
-    MX('azymut.otwock', 10, 'azymut.otwock.zhp.pl.'),
-    TXT('azymut.otwock', 'v=spf1 mx a ptr ~all'),
+    // MX('azymut.otwock', 10, 'azymut.otwock.zhp.pl.'), TODO usunąć skrzynki
+    // TXT('azymut.otwock', 'v=spf1 mx a ptr ~all'),
     CNAME('*.azymut.otwock', 'azymut.otwock.zhp.pl.'),
     
     // 404
     AAAA('ipv6.niesmiertelni.otwock', '2a02:25a9:0:2637::1'),
     A('niesmiertelni.otwock', '62.129.198.55'),
-    MX('niesmiertelni.otwock', 10, 'niesmiertelni.otwock.zhp.pl.'),
+    // MX('niesmiertelni.otwock', 10, 'niesmiertelni.otwock.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.niesmiertelni.otwock', 'niesmiertelni.otwock.zhp.pl.'),
     
     // 404
     AAAA('ipv6.sp5zdh.otwock', '2a02:25a9:0:2637::1'),
     A('sp5zdh.otwock', '62.129.198.55'),
-    MX('sp5zdh.otwock', 10, 'sp5zdh.otwock.zhp.pl.'),
+    // MX('sp5zdh.otwock', 10, 'sp5zdh.otwock.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.sp5zdh.otwock', 'sp5zdh.otwock.zhp.pl.'),
     
     // 404
     AAAA('ipv6.zawiszacy.otwock', '2a02:25a9:0:2637::1'),
     A('zawiszacy.otwock', '62.129.198.55'),
-    MX('zawiszacy.otwock', 10, 'zawiszacy.otwock.zhp.pl.'),
+    // MX('zawiszacy.otwock', 10, 'zawiszacy.otwock.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.zawiszacy.otwock', 'zawiszacy.otwock.zhp.pl.'),
 
     CNAME('kalendarz.otwock', 'ghs.google.com.'),
@@ -250,13 +250,13 @@ D_EXTEND('zhp.pl',
 
     AAAA('ipv6.pomoc.pruszkow', '2a02:25a9:0:5888::1'),
     A('pomoc.pruszkow', '89.161.136.136'),
-    MX('pomoc.pruszkow', 10, 'pomoc.pruszkow.zhp.pl.'),
+    // MX('pomoc.pruszkow', 10, 'pomoc.pruszkow.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.pomoc.pruszkow', 'pomoc.pruszkow.zhp.pl.'),
 
     // strona z odeslaniem na podstronę głównej
     AAAA('ipv6.historia.pruszkow', '2a02:25a9:0:5888::1'),
     A('historia.pruszkow', '89.161.136.136'),
-    MX('historia.pruszkow', 10, 'historia.pruszkow.zhp.pl.'),
+    // MX('historia.pruszkow', 10, 'historia.pruszkow.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.historia.pruszkow', 'historia.pruszkow.zhp.pl.'),
 
     AAAA('ipv6.14.pruszkow', '2a02:25a9:0:5888::1'),
@@ -266,49 +266,49 @@ D_EXTEND('zhp.pl',
 
     AAAA('ipv6.paderewski.pruszkow', '2a02:25a9:0:5888::1'),
     A('paderewski.pruszkow', '89.161.136.136'),
-    MX('paderewski.pruszkow', 10, 'paderewski.pruszkow.zhp.pl.'),
+    // MX('paderewski.pruszkow', 10, 'paderewski.pruszkow.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.paderewski.pruszkow', 'paderewski.pruszkow.zhp.pl.'),
 
     AAAA('ipv6.shds.pruszkow', '2a02:25a9:0:5888::1'),
     A('shds.pruszkow', '89.161.136.136'),
-    MX('shds.pruszkow', 10, 'shds.pruszkow.zhp.pl.'),
+    // MX('shds.pruszkow', 10, 'shds.pruszkow.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.shds.pruszkow', 'shds.pruszkow.zhp.pl.'),
     
     // szczep --> błędne kodowanie znaków
     AAAA('ipv6.shdw.pruszkow', '2a02:25a9:0:5888::1'),
     A('shdw.pruszkow', '89.161.136.136'),
-    MX('shdw.pruszkow', 10, 'shdw.pruszkow.zhp.pl.'),
+    // MX('shdw.pruszkow', 10, 'shdw.pruszkow.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.shdw.pruszkow', 'shdw.pruszkow.zhp.pl.'),
 
     AAAA('ipv6.knieja.pruszkow', '2a02:25a9:0:5888::1'),
     A('knieja.pruszkow', '89.161.136.136'),
-    MX('knieja.pruszkow', 10, 'knieja.pruszkow.zhp.pl.'),
-    TXT('knieja.pruszkow', 'v=spf1 mx a ptr ~all'),
+    // MX('knieja.pruszkow', 10, 'knieja.pruszkow.zhp.pl.'), TODO usunąć skrzynki
+    // TXT('knieja.pruszkow', 'v=spf1 mx a ptr ~all'),
     CNAME('*.knieja.pruszkow', 'knieja.pruszkow.zhp.pl.'),
 
     AAAA('ipv6.twierdza.pruszkow', '2a02:25a9:0:5888::1'),
     A('twierdza.pruszkow', '89.161.136.136'),
-    MX('twierdza.pruszkow', 10, 'twierdza.pruszkow.zhp.pl.'),
-    TXT('twierdza.pruszkow', 'v=spf1 mx a ptr ~all'),
+    // MX('twierdza.pruszkow', 10, 'twierdza.pruszkow.zhp.pl.'), TODO usunąć skrzynki
+    // TXT('twierdza.pruszkow', 'v=spf1 mx a ptr ~all'),
     CNAME('*.twierdza.pruszkow', 'twierdza.pruszkow.zhp.pl.'),
     
     // przekierowuje na glowna
     AAAA('ipv6.esh.pruszkow', '2a02:25a9:0:5888::1'),
     A('esh.pruszkow', '89.161.136.136'),
-    MX('esh.pruszkow', 10, 'esh.pruszkow.zhp.pl.'),
+    // MX('esh.pruszkow', 10, 'esh.pruszkow.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.esh.pruszkow', 'esh.pruszkow.zhp.pl.'),
     
     // ostatnie aktualizacje z 2014
     AAAA('ipv6.ewik.pruszkow', '2a02:25a9:0:5888::1'),
     A('ewik.pruszkow', '89.161.136.136'),
-    MX('ewik.pruszkow', 10, 'ewik.pruszkow.zhp.pl.'),
+    // MX('ewik.pruszkow', 10, 'ewik.pruszkow.zhp.pl.'), TODO usunąć skrzynki
     CNAME('*.ewik.pruszkow', 'ewik.pruszkow.zhp.pl.'),
 
     // jest strona, ale aktualności z 2007
     AAAA('ipv6.3pdh.pruszkow', '2a02:25a9:0:5888::1'),
     A('3pdh.pruszkow', '89.161.136.136'),
-    MX('3pdh.pruszkow', 10, '3pdh.pruszkow.zhp.pl.'),
-    TXT('3pdh.pruszkow', 'v=spf1 mx a ptr ~all'),
+    // MX('3pdh.pruszkow', 10, '3pdh.pruszkow.zhp.pl.'), TODO usunąć skrzynki
+    // TXT('3pdh.pruszkow', 'v=spf1 mx a ptr ~all'),
     CNAME('*.3pdh.pruszkow', '3pdh.pruszkow.zhp.pl.')
 
 );
