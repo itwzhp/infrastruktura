@@ -1,7 +1,9 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {},
+    "parameters": {
+        "domains": { "type": "array"}
+    },
     "variables": {
         "storageAccountName": "zhpredirectsstorage",
         "servicePlanName": "zhp-redirects-serviceplan",
@@ -86,6 +88,21 @@
                         }
                     ]
                 }
+            }
+        },
+
+        {
+            "apiVersion": "2018-11-01",
+            "name": "[concat(variables('functionAppName'),'/',parameters('domains')[copyIndex()])]",
+            "type": "Microsoft.Web/sites/hostNameBindings",
+            "location": "[resourceGroup().location]",
+            "dependsOn": [
+                "[variables('functionAppName')]"
+            ],
+            "copy": {"count": "[length(parameters('domains'))]", "name": "domains-loop"},
+            "properties": {
+                "hostNameType": "Verified",
+                "siteName": "[variables('functionAppName')]"
             }
         }
     ]

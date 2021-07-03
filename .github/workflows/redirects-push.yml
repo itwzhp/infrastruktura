@@ -31,6 +31,7 @@ jobs:
                     subscriptionId: ${{ env.AZURE_SUBSCRIPTION_ID }}
                     resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP }}
                     template: ./domains/redirects/redirects.arm.json
+                    #TODO params
             -   name: Deploy
                 uses: Azure/functions-action@v1
                 with:
