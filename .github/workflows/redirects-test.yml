@@ -39,7 +39,7 @@ jobs:
                 run: |
                     $domains = Get-Item domains/redirects/redirectFiles/*.json |
                         Where-Object { -not $_.Name.EndsWith('.schema.json') } |
-                        Where-Object { $_.Name -neq 'example.com.json') } |
+                        Where-Object { $_.Name -ne 'example.com.json') } |
                         Foreach-Object {
                             $base = $_.Name -replace '.json'
                             $subdomains = Get-Content $_ |
