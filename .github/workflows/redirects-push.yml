@@ -24,6 +24,9 @@ jobs:
                 uses: azure/login@v1
                 with:
                     creds: ${{ secrets.AZURE_REDIRECTS_DEPLOY_CREDENTIALS }}
+            -   name: Extract list of domains
+                shell: pwsh
+                run: .github/Create-ParamFile.ps1
             -   name: Deploy ARM
                 uses: azure/arm-deploy@v1
                 with:
@@ -31,7 +34,7 @@ jobs:
                     subscriptionId: ${{ env.AZURE_SUBSCRIPTION_ID }}
                     resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP }}
                     template: ./domains/redirects/redirects.arm.json
-                    #TODO params
+                    parameters: ./domain.parameters.json
             -   name: Deploy
                 uses: Azure/functions-action@v1
                 with:
