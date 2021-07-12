@@ -48,9 +48,18 @@ jobs:
                                 Where-Object {-not $_.Name.StartsWith('$') } |
                                 Foreach-Object { $_.Name + '.' + $base }
                         }
-                    $domainsJson = @{domains = $domains} | ConvertTo-Json -Compress
-                    echo "Domains: $domainsJson"
-                    echo "$domainsJson" | Out-File -FilePath domain.parameters.json -Encoding utf-8
+                    $domainsJson = $domains | ConvertTo-Json -Compress
+                    Write-Output "Domains: $domainsJson"
+                    Write-Output "
+                    {
+                        `"`$schema`": `"https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#`",
+                        `"contentVersion`": `"1.0.0.0`",
+                        `"parameters`": {
+                            `"domains`": {
+                                `"value`": $domainsJson
+                            }
+                        }
+                    }" > domain.parameters.json
 
             -   name: Test ARM
                 uses: azure/arm-deploy@v1
