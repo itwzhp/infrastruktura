@@ -39,16 +39,17 @@ jobs:
                 run: |
                     $domains = Get-Item domains/redirects/redirectFiles/*.json |
                         Where-Object { -not $_.Name.EndsWith('.schema.json') } |
-                        Where-Object { $_.Name -ne 'example.com.json') } |
+                        Where-Object { $_.Name -ne 'example.com.json' } |
                         Foreach-Object {
                             $base = $_.Name -replace '.json'
-                            $subdomains = Get-Content $_ |
+                            Get-Content $_ |
                                 ConvertFrom-Json |
                                 Get-Member -Type NoteProperty |
                                 Where-Object {-not $_.Name.StartsWith('$') } |
-                                Foreach-Object { $domains += $_.Name + '.' + $base }
+                                Foreach-Object { $_.Name + '.' + $base }
                         }
-                    echo "Domains: " + ($domains | ConvertTo-Json -Compress)
+                    $domainsJson = $domains | ConvertTo-Json -Compress
+                    echo "Domains: $domainsJson"
                     echo 'DOMAINS=' + ($domains | ConvertTo-Json -Compress) | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
 
             -   name: Test ARM
