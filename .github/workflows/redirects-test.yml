@@ -6,7 +6,7 @@ on:
             - "domains/redirects/**"
 
 env:
-    AZURE_SUBSCRIPTION_ID: 35e22786-93ea-47c8-902a-16e9d0f03e17
+    AZURE_SUBSCRIPTION_ID: 69111246-db23-463c-82b2-7815ed5f8a1a
     AZURE_RESOURCE_GROUP: zhp-redirects-engine
 
 jobs:
@@ -34,6 +34,9 @@ jobs:
                 uses: azure/login@v1
                 with:
                     creds: ${{ secrets.AZURE_REDIRECTS_DEPLOY_CREDENTIALS }}
+            -   name: Extract list of domains
+                shell: pwsh
+                run: .github/Create-ParamFile.ps1
             -   name: Test ARM
                 uses: azure/arm-deploy@v1
                 with:
@@ -41,4 +44,5 @@ jobs:
                     subscriptionId: ${{ env.AZURE_SUBSCRIPTION_ID }}
                     resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP }}
                     template: ./domains/redirects/redirects.arm.json
+                    parameters: ./domain.parameters.json
 
