@@ -6,6 +6,7 @@
         "test": "jest"
     },
     "author": "Stanisław Kowański <skowanski@f4dev.me>",
+    "repository": "https://github.com/itwzhp/infrastruktura",
     "devDependencies": {
         "ajv": "^8.5.0",
         "ajv-formats": "^2.1.0",

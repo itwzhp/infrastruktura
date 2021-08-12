@@ -20,10 +20,3 @@ jobs:
           AZURE_DNS_MANAGEMENT_CREDENTIALS: ${{ secrets.AZURE_DNS_MANAGEMENT_CREDENTIALS }}
           OVH_APP_SECRET_KEY: ${{ secrets.OVH_APP_SECRET_KEY }}
           OVH_CONSUMER_KEY: ${{ secrets.OVH_CONSUMER_KEY }}
-
-# TODO when this works based on some other engine, move to separate workflow, where pwsh is available
-    #   - name: Deploy redirects to Plesk
-    #     shell: pwsh
-    #     run: ./domains/redirects/deploy-redirects.ps1
-    #     env:
-    #       PLESK_API_KEY: ${{ secrets.PLESK_API_KEY }}
