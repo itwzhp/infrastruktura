@@ -99,7 +99,12 @@
             "dependsOn": [
                 "[variables('functionAppName')]"
             ],
-            "copy": {"count": "[length(parameters('domains'))]", "name": "domains-loop"},
+            "copy": {
+              "count": "[length(parameters('domains'))]",
+              "name": "domains-loop",
+              "mode": "Serial",
+              "batchSize": 1
+            },
             "properties": {
                 "hostNameType": "Verified",
                 "siteName": "[variables('functionAppName')]"
