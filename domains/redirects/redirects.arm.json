@@ -2,7 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "domains": { "type": "array"}
+        "domains": { "type": "array" }
     },
     "variables": {
         "storageAccountName": "zhpredirectsstorage",
@@ -90,7 +90,6 @@
                 }
             }
         },
-
         {
             "apiVersion": "2018-11-01",
             "name": "[concat(variables('functionAppName'),'/',parameters('domains')[copyIndex()])]",
@@ -100,14 +99,68 @@
                 "[variables('functionAppName')]"
             ],
             "copy": {
-              "count": "[length(parameters('domains'))]",
-              "name": "domains-loop",
-              "mode": "Serial",
-              "batchSize": 1
+                "count": "[length(parameters('domains'))]",
+                "name": "domains-loop",
+                "mode": "Serial",
+                "batchSize": 1
             },
             "properties": {
                 "hostNameType": "Verified",
                 "siteName": "[variables('functionAppName')]"
+            }
+        },
+        {
+            "apiVersion": "2020-12-01",
+            "type": "Microsoft.Web/certificates",
+            "location": "[resourceGroup().location]",
+            "name": "[parameters('domains')[copyIndex()]]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', variables('functionAppName'))]",
+                "[resourceId('Microsoft.Web/sites/hostNameBindings', variables('functionAppName'), parameters('domains')[copyIndex()])]"
+            ],
+            "copy": {
+                "count": "[length(parameters('domains'))]",
+                "name": "cert-loop",
+                "mode": "Serial",
+                "batchSize": 1
+            },
+            "properties": {
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('servicePlanName'))]",
+                "canonicalName": "[parameters('domains')[copyIndex()]]"
+            }
+        },
+        {
+            "apiVersion": "2021-04-01",
+            "type": "Microsoft.Resources/deployments",
+            "name": "[concat('linkedTemplate', parameters('domains')[copyIndex()])]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', variables('functionAppName'))]",
+                "[resourceId('Microsoft.Web/certificates', parameters('domains')[copyIndex()])]"
+            ],
+            "copy": {
+                "count": "[length(parameters('domains'))]",
+                "name": "domains-import-loop",
+                "mode": "Serial",
+                "batchSize": 1
+            },
+            "properties": {
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "resources": [
+                        {
+                            "apiVersion": "2018-11-01",
+                            "name": "[concat(variables('functionAppName'),'/',parameters('domains')[copyIndex()])]",
+                            "type": "Microsoft.Web/sites/hostNameBindings",
+                            "location": "[resourceGroup().location]",
+                            "properties": {
+                                "sslState": "SniEnabled",
+                                "thumbprint": "[reference(resourceId('Microsoft.Web/certificates', parameters('domains')[copyIndex()])).Thumbprint]"
+                            }
+                        }
+                    ]
+                }
             }
         }
     ]
