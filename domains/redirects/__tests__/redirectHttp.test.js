@@ -23,6 +23,22 @@ describe("should redirect to", () => {
         expect(context.res.headers.location).toBe(expected.target);
     });
 
+    test("matching URL with 301 truncating www. prefix", async() => {
+        let testBasedomain = "example.com",
+            testSubdomain  = "www.test301",
+            testUrl        = `https://${testSubdomain}.${testBasedomain}`,
+            expected       = redirectsFile[testSubdomain.replace("www.", "")];
+
+        const request = {
+            url: testUrl
+        };
+
+        await redirectFunction(context, request);
+
+        expect(context.res.status).toBe(expected.method);
+        expect(context.res.headers.location).toBe(expected.target);
+    });
+
     test("matching URL truncating path explicitly", async() => {
         let testBasedomain = "example.com",
             testSubdomain  = "testwithoutpath",
