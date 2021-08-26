@@ -17,5 +17,5 @@ D_EXTEND('zhp.pl',
   A('jira', '213.189.38.137'),
   A('pomoc', '213.189.38.137'),
 
-  Redirects(require('./redirects/redirectFiles/zhp.pl.json'))
+  Redirects(require('../redirects/redirectFiles/zhp.pl.json'))
 );
