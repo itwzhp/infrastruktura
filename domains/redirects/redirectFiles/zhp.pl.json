@@ -1,5 +1,4 @@
 {
     "$schema": "./redirect.schema.json",
-    "deklaracja": { "target": "https://tipi.zhp.pl", "method": 301 },
     "poczta": { "target": "https://outlook.office.com", "method": 301 }
 }
