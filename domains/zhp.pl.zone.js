@@ -1,6 +1,7 @@
 D('zhp.pl', noneRegistrar, DnsProvider(azureProvider), DefaultTTL(3600),
     A('@', '51.75.54.175'),
-    Ms365_Root('zhp.pl')
+    Ms365_Root('zhp.pl'),
+    Redirects(require('./redirects/redirectFiles/zhp.pl.json'))
 );
 
 require_glob('zhp.pl.d/');
