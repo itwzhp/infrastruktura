@@ -1,7 +1,8 @@
 D('zhp.pl', noneRegistrar, DnsProvider(azureProvider), DefaultTTL(3600),
     A('@', '51.75.54.175'),
     CNAME('www', 'zhp.pl.'),
-    Ms365_Root('zhp.pl')
+    Ms365_Root('zhp.pl'),
+    Redirects(require('./redirects/redirectFiles/zhp.pl.json'))
 );
 
 require_glob('zhp.pl.d/');
@@ -332,7 +333,6 @@ D_EXTEND('zhp.pl',
     A('poczta.bialostocka', '79.96.169.242'),
     CNAME('poczta.ostroda', 'ghs.google.com.'),
     A('poczta.worker', '46.101.240.55'),
-    Delegation_A('poczta', '51.75.54.175'),
     A('podcast.radio', '89.161.251.119'),
     Delegation_NS('podhalanski', ['dns12.linuxpl.com.', 'ns12.linuxpl.com.']),
     Delegation_NS('podkarpacka', ['dns8.linuxpl.com.', 'ns8.linuxpl.com.']),
