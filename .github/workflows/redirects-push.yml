@@ -30,7 +30,7 @@ jobs:
             -   name: Deploy ARM
                 uses: azure/arm-deploy@v1
                 with:
-                    deploymentMode: Complete
+                    deploymentMode: Incremental
                     subscriptionId: ${{ env.AZURE_SUBSCRIPTION_ID }}
                     resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP }}
                     template: ./domains/redirects/redirects.arm.json
