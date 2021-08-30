@@ -1,4 +1,6 @@
 {
     "$schema": "./redirect.schema.json",
-    "poczta": { "target": "https://outlook.office.com", "method": 301 }
+    "poczta": { "target": "https://outlook.office.com", "method": 301 },
+    "csi": { "target": "https://gkzhp.sharepoint.com/SitePages/Centralna-Szko%C5%82a-Instruktorska.aspx", "method": 301 },
+    "ksztalcenie": { "target": "https://gkzhp.sharepoint.com/SitePages/Centralna-Szko%C5%82a-Instruktorska.aspx", "method": 301 }
 }
