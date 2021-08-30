@@ -108,6 +108,26 @@
                 "hostNameType": "Verified",
                 "siteName": "[variables('functionAppName')]"
             }
-        }
+        },
+        {
+            "apiVersion": "2020-12-01",
+            "type": "Microsoft.Web/certificates",
+            "location": "[resourceGroup().location]",
+            "name": "[parameters('domains')[copyIndex()]]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', variables('functionAppName'))]",
+                "[resourceId('Microsoft.Web/sites/hostNameBindings', variables('functionAppName'), parameters('domains')[copyIndex()])]"
+            ],
+            "copy": {
+                "count": "[length(parameters('domains'))]",
+                "name": "cert-loop",
+                "mode": "Serial",
+                "batchSize": 1
+            },
+            "properties": {
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('servicePlanName'))]",
+                "canonicalName": "[parameters('domains')[copyIndex()]]"
+            }
+        },
     ]
 }

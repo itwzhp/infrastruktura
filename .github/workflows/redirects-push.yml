@@ -41,7 +41,7 @@ jobs:
                     deploymentMode: Incremental
                     subscriptionId: ${{ env.AZURE_SUBSCRIPTION_ID }}
                     resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP }}
-                    template: ./domains/redirects/certificates.arm.json
+                    template: ./domains/redirects/certificatesBind.arm.json
                     parameters: ./domain.parameters.json
             -   name: Deploy
                 uses: Azure/functions-action@v1
