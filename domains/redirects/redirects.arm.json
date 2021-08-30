@@ -128,6 +128,6 @@
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('servicePlanName'))]",
                 "canonicalName": "[parameters('domains')[copyIndex()]]"
             }
-        },
+        }
     ]
 }
