@@ -27,13 +27,21 @@ jobs:
             -   name: Extract list of domains
                 shell: pwsh
                 run: .github/Create-ParamFile.ps1
-            -   name: Deploy ARM
+            -   name: Deploy Application ARM
                 uses: azure/arm-deploy@v1
                 with:
                     deploymentMode: Incremental
                     subscriptionId: ${{ env.AZURE_SUBSCRIPTION_ID }}
                     resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP }}
                     template: ./domains/redirects/redirects.arm.json
+                    parameters: ./domain.parameters.json
+            -   name: Deploy SSL ARM
+                uses: azure/arm-deploy@v1
+                with:
+                    deploymentMode: Incremental
+                    subscriptionId: ${{ env.AZURE_SUBSCRIPTION_ID }}
+                    resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP }}
+                    template: ./domains/redirects/certificates.arm.json
                     parameters: ./domain.parameters.json
             -   name: Deploy
                 uses: Azure/functions-action@v1
