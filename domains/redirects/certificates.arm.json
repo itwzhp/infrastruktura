@@ -5,7 +5,8 @@
         "domains": { "type": "array" }
     },
     "variables": {
-        "functionAppName": "zhp-redirects"
+        "functionAppName": "zhp-redirects",
+        "servicePlanName": "zhp-redirects-serviceplan"
     },
     "resources": [
         {
