@@ -44,5 +44,5 @@ D_EXTEND('zhp.pl',
 
     A('swieto2011.lodzka', '89.161.255.29'),
     CNAME('*.swieto2011.lodzka', 'swieto2011.lodzka.zhp.pl.'),
-    MX('swieto2011.lodzka', 10, 'swieto2011.lodzka.zhp.pl.'),
+    MX('swieto2011.lodzka', 10, 'swieto2011.lodzka.zhp.pl.')
 );
