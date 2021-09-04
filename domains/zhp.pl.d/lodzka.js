@@ -11,7 +11,7 @@ D_EXTEND('zhp.pl',
 
     Delegation_NS('lodzsrodmiescie', ['ns1.oiq.pl.', 'ns2.oiq.pl.']),
     Delegation_NS('lodzwidzew', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('piotrkow', ['ns10.az.pl.', 'ns11.az.pl.', 'ns12.az.pl.']),
+    Delegation_NS('piotrkow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('kutno', ['dns1.mydevil.net.', 'dns2.mydevil.net.']),
     Delegation_NS('lask', ['ns1.iq.pl.', 'ns2.iq.pl.']),
     Delegation_NS('opoczno', ['dns12.linuxpl.com.', 'ns12.linuxpl.com.']),
