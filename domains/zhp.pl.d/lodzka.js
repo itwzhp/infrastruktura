@@ -25,24 +25,10 @@ D_EXTEND('zhp.pl',
     A('konstantynow', '85.232.255.122'),
     A('sieradz', '85.232.255.122'),
 
-    A('lowicz', '85.128.206.44'),
-    CNAME('www.lowicz', 'lowicz.zhp.pl.'),
+    DELEGATION_A('lowicz', '85.128.206.44'),
     MX('lowicz', 10, 'lowicz.zhp.pl.'),
 
     A('pabianice', '79.133.210.186'),
-    MX('pabianice', 0, 'pabianice-zhp-pl.mail.protection.outlook.com.'),
-    TXT('pabianice', 'v=spf1 include:spf.protection.outlook.com -all'),
-    Delegation_NS('zuchy.pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-
-    A('wypoczynek.lodzka', '89.161.255.31'),
-    CNAME('*.wypoczynek.lodzka', 'wypoczynek.lodzka.zhp.pl.'),
-    MX('wypoczynek.lodzka', 10, 'wypoczynek.lodzka.zhp.pl.'),
-
-    A('ratownicy.lodzka', '89.161.255.25'),
-    CNAME('*.ratownicy.lodzka', 'ratownicy.lodzka.zhp.pl.'),
-    MX('ratownicy.lodzka', 10, 'ratownicy.lodzka.zhp.pl.'),
-
-    A('swieto2011.lodzka', '89.161.255.29'),
-    CNAME('*.swieto2011.lodzka', 'swieto2011.lodzka.zhp.pl.'),
-    MX('swieto2011.lodzka', 10, 'swieto2011.lodzka.zhp.pl.')
+    Ms365_Subdomain('pabianice', 'zhp.pl'),
+    Delegation_NS('zuchy.pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])
 );
