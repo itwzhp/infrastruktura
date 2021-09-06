@@ -30,5 +30,11 @@ D_EXTEND('zhp.pl',
 
     A('pabianice', '79.133.210.186'),
     Ms365_Subdomain('pabianice', 'zhp.pl'),
-    Delegation_NS('zuchy.pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])
+    Delegation_NS('zuchy.pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_NS('2szczep.pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_NS('adm.pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_NS('instruktor.pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+
+    Delegation_NS('lodzka', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Ms365_Subdomain('lodzka', 'zhp.pl')
 );
