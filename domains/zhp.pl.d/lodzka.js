@@ -25,7 +25,7 @@ D_EXTEND('zhp.pl',
     A('konstantynow', '85.232.255.122'),
     A('sieradz', '85.232.255.122'),
 
-    DELEGATION_A('lowicz', '85.128.206.44'),
+    Delegation_A('lowicz', '85.128.206.44'),
     MX('lowicz', 10, 'lowicz.zhp.pl.'),
 
     A('pabianice', '79.133.210.186'),
