@@ -6,9 +6,9 @@ function Redirects(redirects) {
         .map(function(key) {
             return [
                 CNAME(key, 'zhp-redirects.azurewebsites.net.'),
-                TXT('asuid.' + key, '59AD87167F51C48A766AD27F7323B2C08FF48AE5A2B5C67D7CF6A80F216A7E66'),
+                TXT('asuid.' + key, '01E6941B3330DAACCE5A2B9E079EA3C6343C3AD74B23A3E47E8DD5503EAA2F87'),
                 CNAME('www.' + key, 'zhp-redirects.azurewebsites.net.'),
-                TXT('asuid.www.' + key, '59AD87167F51C48A766AD27F7323B2C08FF48AE5A2B5C67D7CF6A80F216A7E66')
+                TXT('asuid.www.' + key, '01E6941B3330DAACCE5A2B9E079EA3C6343C3AD74B23A3E47E8DD5503EAA2F87')
             ];
         });
 }
