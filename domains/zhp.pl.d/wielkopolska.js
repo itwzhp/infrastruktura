@@ -31,5 +31,5 @@ D_EXTEND('zhp.pl',
     A('gniezno', '178.32.205.96'),
 
     CNAME('www.poznangrunwald', 'poznangrunwald.zhp.pl.'),
-    A('poznangrunwald', '94.23.27.27'),
+    A('poznangrunwald', '94.23.27.27')
 );
