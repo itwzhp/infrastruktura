@@ -27,5 +27,5 @@ D_EXTEND('zhp.pl',
     A('hks.tuchola', '89.161.238.192'),
     MX('hks.tuchola', 10, 'hks.tuchola.zhp.pl.'),
 
-    Delegation_NS('festiwalbrodnica', ['ns1.manifo.org.', 'ns2.manifo.org.']),
+    Delegation_NS('festiwalbrodnica', ['ns1.manifo.org.', 'ns2.manifo.org.'])
 );
