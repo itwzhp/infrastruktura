@@ -110,7 +110,10 @@ D_EXTEND('zhp.pl',
     // Bazy
     Delegation_NS('kucoby', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Delegation_A('amonit', '109.95.158.82'),
+    A('wilczysko', '109.95.157.35'),
+    //który rekord poprawny ??
     Delegation_A('bazapajak', '91.211.221.203'),
+    Delegation_NS('bazapajak', ['dns3.trustnet.pl.', 'dns.trustnet.pl.', 'dns2.trustnet.pl.']),
 
     // Harcerskie Muzeum Etnograficzne
     Delegation_A('hme', '109.95.157.35'),

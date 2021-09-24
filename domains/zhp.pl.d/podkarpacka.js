@@ -1,4 +1,5 @@
 D_EXTEND('zhp.pl',
+    Delegation_NS('podkarpacka', ['dns8.linuxpl.com.', 'ns8.linuxpl.com.']),
 
     Delegation_NS('debica', ['dns1.mydevil.net.', 'dns2.mydevil.net.']),
     Delegation_NS('kolbuszowa', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']), // MS365-7389
@@ -12,6 +13,9 @@ D_EXTEND('zhp.pl',
     CNAME('*.jaroslaw', 'jaroslaw.zhp.pl.'),
     MX('jaroslaw', 10, 'jaroslaw.zhp.pl.'),
     A('jaroslaw', '79.96.163.93'),
+
+    //Baza Hufca Ziemi Sanockiej
+    Delegation_NS('berdo', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     CNAME('www.lancut', 'lancut.zhp.pl.')
 );

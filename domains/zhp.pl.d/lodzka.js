@@ -35,6 +35,11 @@ D_EXTEND('zhp.pl',
     Delegation_NS('adm.pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('instruktor.pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
+    // Bazy
+    Delegation_NS('malecz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_NS('zalecze', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+
+
     Delegation_NS('lodzka', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Ms365_Subdomain('lodzka', 'zhp.pl')
 );
