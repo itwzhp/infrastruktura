@@ -18,6 +18,8 @@ D_EXTEND('zhp.pl',
 
     CNAME('google46a5c5b885027ebd.kielcepowiat', 'google.com.'),
     Delegation_NS('festiwal-kielce', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('dhkielce', ['ns7.webd.pl.', 'ns5.webd.pl.'])
+    Delegation_NS('dhkielce', ['ns7.webd.pl.', 'ns5.webd.pl.']),
 
+    CNAME('www.rajdswietokrzyski', 'rajdswietokrzyski.zhp.pl.'),
+    Delegation_NS('rajdswietokrzyski', ['ns5.webd.pl.', 'ns7.webd.pl.'])
 );
