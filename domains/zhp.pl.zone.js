@@ -163,5 +163,5 @@ D_EXTEND('zhp.pl',
     Delegation_A('zgloszenia-rajdodkrywcow', '51.75.54.175'),
     Delegation_NS('zgloszenia.rajdgrunwaldzki', ['ns1.megiteam.pl.', 'ns2.megiteam.pl.']),
     A('zhpbaluty', '217.76.113.42'),
-    Delegation_NS('zielonanuta', ['ns1.he.net.', 'ns2.he.net.', 'ns3.he.net.']),
+    Delegation_NS('zielonanuta', ['ns1.he.net.', 'ns2.he.net.', 'ns3.he.net.'])
 );
