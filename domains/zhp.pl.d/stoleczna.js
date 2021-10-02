@@ -42,7 +42,6 @@ D_EXTEND('zhp.pl',
 
     // Hufiec Piastów
     Delegation_NS('piastow', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']),
-    Ms365_Subdomain('piastow', 'zhp.pl'),
 
 
     // Hufiec Warszawa-Centrum
