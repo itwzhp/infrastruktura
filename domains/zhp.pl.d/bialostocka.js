@@ -2,33 +2,28 @@ D_EXTEND('zhp.pl',
 
 	TXT('_github-challenge-bialostockazhp.bialostocka', '871ae7c463'),
 	CNAME('*.bialostocka', 'bialostocka.zhp.pl.'),
-	CNAME('autodiscover.bialostocka', 'autodiscover.outlook.com.'),
-	MX('bialostocka', 10, 'bialostocka-zhp-pl.mail.protection.outlook.com.'),
-	A('bialostocka', '79.96.169.242'),
-	TXT('bialostocka', 'v=spf1 include:spf.protection.outlook.com -all'),
-	CNAME('enterpriseenrollment.bialostocka', 'enterpriseenrollment.manage.microsoft.com.'),
-	CNAME('enterpriseregistration.bialostocka', 'enterpriseregistration.windows.net.'),
-	CNAME('msoid.bialostocka', 'clientconfig.microsoftonline-p.net.'),
-	
+    Ms365_Subdomain('bialostocka','zhp.pl'),
+	Delegation_A('bialostocka', '79.96.169.242'),
+
 	CNAME('*.by.bialostocka', 'by.bialostocka.zhp.pl.'),
 	A('by.bialostocka', '79.96.169.242'),
 	MX('by.bialostocka', 10, 'by.bialostocka.zhp.pl.'),
-	
+
 	CNAME('*.pilot.bialostocka', 'pilot.bialostocka.zhp.pl.'),
 	A('pilot.bialostocka', '79.96.169.242'),
 	MX('pilot.bialostocka', 10, 'pilot.bialostocka.zhp.pl.'),
-	
+
 	CNAME('*.poczta.bialostocka', 'poczta.bialostocka.zhp.pl.'),
 	MX('poczta.bialostocka', 10, 'poczta.bialostocka.zhp.pl.'),
 	A('poczta.bialostocka', '79.96.169.242'),
-	
+
 	A('wedrownicy.bialostocka', '79.96.169.242'),
 
-	
+
 	CNAME('*.augustow', 'augustow.zhp.pl.'),
 	A('augustow', '79.96.169.242'),
 	MX('augustow', 10, 'augustow.zhp.pl.'),
-	
+
 	CNAME('*.bielskpodlaski', 'bielskpodlaski.zhp.pl.'),
 	A('bielskpodlaski', '79.96.169.242'),
 	MX('bielskpodlaski', 10, 'bielskpodlaski.zhp.pl.'),
@@ -40,7 +35,7 @@ D_EXTEND('zhp.pl',
 	CNAME('*.suwalki', 'suwalki.zhp.pl.'),
 	A('suwalki', '79.96.169.242'),
 	MX('suwalki', 10, 'suwalki.zhp.pl.'),
-	
+
 	Delegation_NS('bialystok', ['dns11.linuxpl.com.', 'ns11.linuxpl.com.']),
 	Delegation_NS('kolno', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
 	Delegation_NS('lomza', ['ns1.datasferix.pl.', 'ns2.datasferix.pl.']),

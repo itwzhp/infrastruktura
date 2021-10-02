@@ -1,10 +1,10 @@
 D_EXTEND('zhp.pl',
     Delegation_NS('krakowska', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']),
-    
+
     Delegation_NS('andrychow', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']),
     Delegation_NS('bochnia', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
     Delegation_NS('brzesko', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
-    A('gorczanski', '188.128.203.43'),
+    Delegation_A('gorczanski', '188.128.203.43'),
     Delegation_NS('gorlice', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']),
     Delegation_NS('jordanow', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
     Delegation_NS('kety', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
@@ -25,11 +25,5 @@ D_EXTEND('zhp.pl',
     Delegation_NS('wieliczka', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
 
     Delegation_NS('kosarzyska', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']), // MS365-8116
-    Delegation_NS('piaskidruzkow', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']), // MS365-8117
-
-    //nie dzialają, do usunięcia?
-    CNAME('*.skrzaty.wadowice', 'skrzaty.wadowice.zhp.pl.'),
-    A('skrzaty.wadowice', '62.129.222.4'),
-    MX('skrzaty.wadowice', 10, 'skrzaty.wadowice.zhp.pl.'),
-    Delegation_NS('oboz.krzeszowice', ['ns1.hostdns.pl.', 'ns2.hostdns.pl.'])
+    Delegation_NS('piaskidruzkow', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']) // MS365-8117
 );

@@ -1,11 +1,11 @@
 D_EXTEND('zhp.pl',
-
     Delegation_NS('kp', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     // Bazy
     Delegation_NS('folusz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('polko', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
+    // Hufce
     Delegation_NS('brodnica', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('bydgoszcz', ['ns1.ibc.pl.', 'ns2.ibc.pl.']),
     Delegation_NS('chelmza', ['dns10.linuxpl.com.', 'ns10.linuxpl.com.']),
@@ -21,14 +21,6 @@ D_EXTEND('zhp.pl',
 
     Delegation_NS('powiatwloclawek', ['ns3.biznes-host.pl.', 'ns4.biznes-host.pl.']),
     CNAME('wloclawekpowiat', 'powiatwloclawek.zhp.pl.'),
-    
-    CNAME('*.tuchola', 'tuchola.zhp.pl.'),
-    A('tuchola', '89.161.238.192'),
-    MX('tuchola', 10, 'tuchola.zhp.pl.'),
-    
-    CNAME('*.hks.tuchola', 'hks.tuchola.zhp.pl.'),
-    A('hks.tuchola', '89.161.238.192'),
-    MX('hks.tuchola', 10, 'hks.tuchola.zhp.pl.'),
 
     Delegation_NS('kopernikanski', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('festiwalbrodnica', ['ns1.manifo.org.', 'ns2.manifo.org.'])

@@ -10,12 +10,9 @@ D_EXTEND('zhp.pl',
     Delegation_NS('rzeszow', ['ns1.datasferix.pl.', 'ns2.datasferix.pl.']), //MS365-9823
     Delegation_NS('stalowawola', ['ns1.domena.pl.', 'ns2.domena.pl.']),
 
-    CNAME('*.jaroslaw', 'jaroslaw.zhp.pl.'),
     MX('jaroslaw', 10, 'jaroslaw.zhp.pl.'),
-    A('jaroslaw', '79.96.163.93'),
+    Delegation_A('jaroslaw', '79.96.163.93'),
 
     //Baza Hufca Ziemi Sanockiej
-    Delegation_NS('berdo', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-
-    CNAME('www.lancut', 'lancut.zhp.pl.')
+    Delegation_NS('berdo', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])
 );

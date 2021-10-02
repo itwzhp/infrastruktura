@@ -31,12 +31,6 @@ D_EXTEND('zhp.pl',
     Delegation_NS('przerwanki', ['fns1.42.pl.', 'fns2.42.pl.']),
     Delegation_NS('baldy', ['ns1.cba.pl.', 'ns2.cba.pl.', 'ns3.cba.pl.']),
 
-    CNAME('autodiscover.grunwald', 'autodiscover.outlook.com.'),
-    TXT('grunwald', 'v=spf1 include:spf.protection.outlook.com -all'),
     Delegation_A('grunwald', '51.75.54.175'),
-    MX('grunwald', 0, 'grunwald-zhp-pl.mail.protection.outlook.com.'),
-
-    // Czy to potrzebne?
-    Delegation_NS('stronanidzica', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('nidzica2', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])
+    Ms365_Subdomain('grunwald','zhp.pl')
 );
