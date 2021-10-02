@@ -38,7 +38,6 @@ Describe "DNS Zone <zone.name>" -ForEach $zones {
                     $domain = $_
                     $delegatedDomains.Where({ $domain.EndsWith(".$_") }, 'First').Count -gt 0
                 } |
-                Where-Object { -not $_.StartsWith("warszawazoliborz")} | # TMP Hack, until they fix it
                 Should -BeNullOrEmpty
         }
     }
