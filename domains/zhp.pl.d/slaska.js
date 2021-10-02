@@ -5,95 +5,35 @@ D_EXTEND('zhp.pl',
 
     // Hufce (hosting chorągwi)
     Delegation_NS('bedzin', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('beskidzki', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-   
-
     Delegation_NS('bytom', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-  
-
     Delegation_NS('chorzow', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('chrzanow', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-  
-
     Delegation_NS('czechowice-dziedzice', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('czerwionka', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('dabrowagornicza', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('gliwice', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('jastrzebiezdroj', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('jaworzno', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('katowice', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-   
-
     Delegation_NS('klobuck', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('kuzniaraciborska', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('mikolow', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-  
-
     Delegation_NS('myslowice', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('myszkow', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('piekary', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-   
-
     Delegation_NS('rudaslaska', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-   
-
     Delegation_NS('rybnik', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-   
-
     Delegation_NS('rydultowy', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('siemianowice', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('sosnowiec', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('tarnowskiegory', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
- 
-
     Delegation_NS('tychy', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('wegierskagorka', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('wodzislaw', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('zabrze', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('zawiercie', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-   
-
     Delegation_NS('zory', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
-
     Delegation_NS('zywiec', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     
 
@@ -111,8 +51,6 @@ D_EXTEND('zhp.pl',
     Delegation_NS('kucoby', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Delegation_A('amonit', '109.95.158.82'),
     A('wilczysko', '109.95.157.35'),
-    //który rekord poprawny ??
-    Delegation_A('bazapajak', '91.211.221.203'),
     Delegation_NS('bazapajak', ['dns3.trustnet.pl.', 'dns.trustnet.pl.', 'dns2.trustnet.pl.']),
 
     // Harcerskie Muzeum Etnograficzne
