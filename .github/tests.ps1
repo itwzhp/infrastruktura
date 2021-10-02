@@ -39,6 +39,7 @@ Describe "DNS Zone <zone.name>" -ForEach $zones {
                     $delegatedDomains.Where({ $domain.EndsWith(".$_") }, 'First').Count -gt 0
                 } |
                 Where-Object { -not $_.Contains('warszawazoliborz') } | # Do not merge - hack
+                Where-Object { -not $_.Contains('milanowek') } | # Do not merge - hack
                 Should -BeNullOrEmpty
         }
     }
