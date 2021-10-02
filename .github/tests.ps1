@@ -31,7 +31,7 @@ Describe "DNS Zone <zone.name>" -ForEach $zones {
                 Should -BeNullOrEmpty
         }
 
-        It "should have no other entries with subdomain" -Skip {
+        It "should have no other entries with subdomain" {
             $allEntries |
                 ForEach-Object {$_.name} | Select-Object -Unique |
                 Where-Object {
