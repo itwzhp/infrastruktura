@@ -7,7 +7,7 @@ D_EXTEND('zhp.pl',
 	CNAME('pl.polkowice', 'www118.wixdns.net.'),
 
 	Delegation_NS('dolnoslaska', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
-	Delegation_NS('dolnoslaska2', ['ns1 .dhosting.pl.', 'ns2.dhosting.pl.']),
+	Delegation_NS('dolnoslaska2', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
 	Delegation_NS('dolnoslaska3', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
 
 	// Bazy
