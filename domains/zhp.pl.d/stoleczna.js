@@ -47,7 +47,6 @@ D_EXTEND('zhp.pl',
 
     // Hufiec Warszawa-Centrum
     Delegation_NS('warszawacentrum', ['dns10.linuxpl.com.', 'ns10.linuxpl.com.']),
-    Ms365_Subdomain('warszawacentrum', 'zhp.pl'),
     Ms365_Subdomain('centrum', 'zhp.pl'),
 
 
@@ -61,7 +60,6 @@ D_EXTEND('zhp.pl',
 
     // Hufiec Warszawa-Praga-Północ
     Delegation_NS('pragapolnoc', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
-    Ms365_Subdomain('pragapolnoc', 'zhp.pl'),
 
 
     // Hufiec Warszawa-Wawer

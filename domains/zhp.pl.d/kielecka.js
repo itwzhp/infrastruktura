@@ -16,7 +16,6 @@ D_EXTEND('zhp.pl',
     MX('opatow', 10, 'opatow.zhp.pl.'),
     Delegation_A('opatow', '62.129.228.173'),
 
-    CNAME('google46a5c5b885027ebd.kielcepowiat', 'google.com.'),
     Delegation_NS('festiwal-kielce', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('dhkielce', ['ns7.webd.pl.', 'ns5.webd.pl.']),
 

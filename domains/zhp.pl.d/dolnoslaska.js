@@ -6,11 +6,8 @@ D_EXTEND('zhp.pl',
 	CNAME('en.polkowice', 'www118.wixdns.net.'),
 	CNAME('pl.polkowice', 'www118.wixdns.net.'),
 
-	CNAME('autodiscover.dolnoslaska', 'autodiscover.outlook.com.'),
 	Delegation_NS('dolnoslaska', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
-	TXT('dolnoslaska', 'v=spf1 include:spf.protection.outlook.com -all'),
-	MX('dolnoslaska', 0, 'dolnoslaska-zhp-pl.mail.protection.outlook.com.'),
-	Delegation_NS('dolnoslaska2', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
+	Delegation_NS('dolnoslaska2', ['ns1 .dhosting.pl.', 'ns2.dhosting.pl.']),
 	Delegation_NS('dolnoslaska3', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
 
 	// Bazy
