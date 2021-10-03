@@ -1,5 +1,6 @@
 D_EXTEND('zhp.pl',
-    Delegation_NS('lodzbaluty', ['dns.home.pl.', 'dns2.home.pl.', 'dns3.home.pl.']), // MS365-8785
+    Delegation_NS('lodzbaluty', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Ms365_Subdomain('lodzbaluty', 'zhp.pl'),
     Delegation_NS('tomaszowmaz', ['ns1.he.net.', 'ns2.he.net.', 'ns3.he.net.']),
 
     Delegation_NS('dolinapilicy', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
