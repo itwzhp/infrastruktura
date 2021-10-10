@@ -28,8 +28,7 @@
                 },
                 "$comment": {
                     "description": "Optional description",
-                    "type": "string",
-                    "required": false
+                    "type": "string"
                 }
             },
             "required": [
