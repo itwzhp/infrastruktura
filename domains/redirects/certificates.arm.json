@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "domains": { "type": "array" }
+    },
+    "variables": {
+        "functionAppName": "zhp-redirects",
+        "servicePlanName": "zhp-redirects-serviceplan"
+    },
+    "resources": [
+        {
+            "apiVersion": "2020-12-01",
+            "type": "Microsoft.Web/certificates",
+            "location": "[resourceGroup().location]",
+            "name": "[parameters('domains')[copyIndex()]]",
+            "copy": {
+                "count": "[length(parameters('domains'))]",
+                "name": "cert-loop",
+                "mode": "Serial",
+                "batchSize": 1
+            },
+            "properties": {
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('servicePlanName'))]",
+                "canonicalName": "[parameters('domains')[copyIndex()]]"
+            }
+        },
+        {
+            "apiVersion": "2020-10-01",
+            "name": "[concat(variables('functionAppName'),'/',parameters('domains')[copyIndex()])]",
+            "type": "Microsoft.Web/sites/hostNameBindings",
+            "location": "[resourceGroup().location]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/certificates', parameters('domains')[copyIndex()])]"
+            ],
+            "copy": {
+                "count": "[length(parameters('domains'))]",
+                "name": "domains-import-loop",
+                "mode": "Serial",
+                "batchSize": 1
+            },
+            "properties": {
+                "sslState": "SniEnabled",
+                "thumbprint": "[reference(resourceId('Microsoft.Web/certificates', parameters('domains')[copyIndex()])).Thumbprint]"
+            }
+        }
+    ]
+}

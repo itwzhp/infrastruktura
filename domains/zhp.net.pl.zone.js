@@ -1,9 +1,4 @@
 D('zhp.net.pl', noneRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600),
-    A('@', '89.161.251.118'), // TODO it won't work after home.pl is down
-    CNAME('www', 'zhp.net.pl.'),
-    CNAME('*', 'zhp.net.pl.'),
-    AAAA('ipv6', '2a02:25a9:20:376::1'),
-
     Delegation_NS('14gzrafiki', ['ns1.cba.pl.', 'ns2.cba.pl.']),
     Delegation_NS('347', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('4szczep', ['dns1.slaskdatacenter.pl.', 'dns2.slaskdatacenter.pl.', 'dns3.slaskdatacenter.pl.']),
@@ -23,5 +18,6 @@ D('zhp.net.pl', noneRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600)
     Ms365_Subdomain('grupy', 'zhp.net.pl'),
     Ms365_Root('zhp.net.pl'),
 
-    Redirects(require('./redirects/zhp.net.pl.json'))
+    // Silnik przekierowań
+    Redirects(require('./redirects/redirectFiles/zhp.net.pl.json'))
 )

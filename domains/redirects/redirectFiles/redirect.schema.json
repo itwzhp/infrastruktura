@@ -1,0 +1,40 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "ZHP Redirects config",
+    "description": "Defines, how redirect schema should look like.",
+    "type": "object",
+    "patternProperties": {
+        "^[^$].*$": {
+            "description": "The subdomain the redirect should be matched.",
+            "type": "object",
+            "properties": {
+                "target": {
+                    "description": "Where the subdomain should redirect to.",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "method": {
+                    "description": "HTTP method used to redirect.",
+                    "type": "number",
+                    "enum": [
+                        301,
+                        302
+                    ]
+                },
+                "includePath": {
+                    "description": "True, if we should add a path to the suffix",
+                    "type": "boolean",
+                    "default": false
+                }
+            },
+            "required": [
+                "method",
+                "target"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "properties": {
+        "$schema": { "type": "string" }
+    }
+}
