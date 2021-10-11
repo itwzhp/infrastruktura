@@ -20,7 +20,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('wola', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('zoliborz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('warszawazoliborz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Ms365_Subdomain('warszawazoliborz', 'zhp.pl'),
+    Ms365_Subdomain('warszawazoliborz', 'zhp.pl'), // TODO Do usunięcia - czekamy na potwierdzenie
     Delegation_NS('wolomin', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('zabki', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('konstancin', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
