@@ -31,7 +31,7 @@ D_EXTEND('zhp.pl',
 
 
     // Hufiec Milanowek
-    Delegation_NS('milanowek', ['ns5.webd.pl.', 'ns7.webd.pl.']),
+    Delegation_A('milanowek', '194.181.228.45'),
     Ms365_Subdomain('milanowek', 'zhp.pl'),
 
 

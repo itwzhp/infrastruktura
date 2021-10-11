@@ -24,7 +24,7 @@ Describe "DNS Zone <zone.name>" -ForEach $zones {
                 Select-Object -Unique
         }
 
-        It "should have no other entries with the same domain" -Skip {
+        It "should have no other entries with the same domain" {
             $allEntries |
                 Where-Object {$_.type -ne 'NS' } |
                 Where-Object {$_.name -in $delegatedDomains} |
@@ -39,7 +39,6 @@ Describe "DNS Zone <zone.name>" -ForEach $zones {
                     $delegatedDomains.Where({ $domain.EndsWith(".$_") }, 'First').Count -gt 0
                 } |
                 Where-Object { -not $_.Contains('warszawazoliborz') } | # Do not merge - hack
-                Where-Object { -not $_.Contains('milanowek') } | # Do not merge - hack
                 Should -BeNullOrEmpty
         }
     }
