@@ -1,13 +1,14 @@
 D_EXTEND('zhp.pl',
+    // hufce
     Delegation_NS('lodzbaluty', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('tomaszowmaz', ['ns1.he.net.', 'ns2.he.net.', 'ns3.he.net.']),
     Delegation_NS('dolinapilicy', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('inowlodz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('lodzgorna', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-
+    Delegation_NS('osiemnastka', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_NS('reduta', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('lodzpolesie', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']),
     Delegation_NS('zkk.lodzpolesie', ['ns-pl.1and1-dns.pl.', 'ns-pl.1and1-dns.biz.']),
-
     Delegation_NS('lodzsrodmiescie', ['ns1.oiq.pl.', 'ns2.oiq.pl.']),
     Delegation_NS('lodzwidzew', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('piotrkow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
@@ -38,7 +39,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('malecz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('zalecze', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
-
+    //Chorągiew
     Delegation_NS('lodzka', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Ms365_Subdomain('lodzka', 'zhp.pl')
 );
