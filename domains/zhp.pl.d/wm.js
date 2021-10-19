@@ -1,4 +1,4 @@
-var hostingWm = ['ns1.cyberfolks.pl', 'ns2.cyberfolks.pl', 'ns3.cyberfolks.pl'];
+var hostingWm = ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.'];
 
 D_EXTEND('zhp.pl',
     // Chorągiew
