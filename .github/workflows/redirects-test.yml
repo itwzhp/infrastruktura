@@ -6,7 +6,7 @@ on:
             - "domains/redirects/**"
 
 env:
-    AZURE_SUBSCRIPTION_ID: 69111246-db23-463c-82b2-7815ed5f8a1a
+    AZURE_SUBSCRIPTION_ID: 35e22786-93ea-47c8-902a-16e9d0f03e17
     AZURE_RESOURCE_GROUP: zhp-redirects-engine
 
 jobs:

@@ -1,6 +1,5 @@
 {
     "$schema": "./redirect.schema.json",
-
     "testwithpath": { "target": "https://helpdesk.zhp.pl", "method": 302, "includePath": true },
     "testwithpathandfolder": { "target": "https://helpdesk.zhp.pl/test", "method": 302, "includePath": true },
     "testwithoutpath": { "target": "https://testy.zhp.pl", "method": 302, "includePath": false },

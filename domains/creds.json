@@ -3,10 +3,10 @@
         "apitoken": "$CLOUDFLARE_API_TOKEN"
     },
     "azuredns_main": {
-        "SubscriptionID": "69111246-db23-463c-82b2-7815ed5f8a1a",
+        "SubscriptionID": "35e22786-93ea-47c8-902a-16e9d0f03e17",
         "ResourceGroup": "zhp-dns",
         "TenantID": "e1368d1e-3975-4ce6-893d-fc351fd44dcd",
-        "ClientID": "e5bcc5f9-8cab-4fac-8278-ac2a7c77f02e",
+        "ClientID": "74a54ecc-8399-4a1c-8534-dbff15e0037a",
         "ClientSecret": "$AZURE_DNS_MANAGEMENT_CREDENTIALS"
     },
     "ovh":{

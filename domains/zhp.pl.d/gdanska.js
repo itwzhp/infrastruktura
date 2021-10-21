@@ -22,6 +22,7 @@ D_EXTEND('zhp.pl',
     Delegation_CNAME('malbork', 'zhp.malbork.net.pl.'),
 
     Ms365_Subdomain('gdynia','zhp.pl'),
+    Ms365_Subdomain('koscierzyna','zhp.pl'),
 
     // Bazy
     Delegation_NS('starekarpno', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']));

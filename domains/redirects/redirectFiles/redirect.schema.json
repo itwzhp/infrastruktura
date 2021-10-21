@@ -25,6 +25,10 @@
                     "description": "True, if we should add a path to the suffix",
                     "type": "boolean",
                     "default": false
+                },
+                "$comment": {
+                    "description": "Optional description",
+                    "type": "string"
                 }
             },
             "required": [
