@@ -24,6 +24,8 @@ D_EXTEND('zhp.pl',
 
     // Delegacja domeny hufca Sulęcin
     Ms365_Subdomain('sulecin','zhp.pl'),
+    CNAME('www.sulecin', 'zhpsul.jimdofree.com.'), // MS365-10341
+    A('sulecin', '51.75.54.175'), // MS365-10341
 
     //Delegacja domeny hufca Szprotawa
     Delegation_NS('szprotawa', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),

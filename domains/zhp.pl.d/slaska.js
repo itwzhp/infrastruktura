@@ -55,6 +55,8 @@ D_EXTEND('zhp.pl',
     // Harcerskie Muzeum Etnograficzne
     Delegation_A('hme', '109.95.157.35'),
     Ms365_Subdomain('hme', 'zhp.pl'), // MS365-8065
+    CNAME('k2._domainkey.hme', 'dkim2.mcsv.net.'),
+    CNAME('k3._domainkey.hme', 'dkim3.mcsv.net.'),
 
     // Domenny pomocnicze i techniczne na serwery - 4 serwery - usługi wykupione na choragiew
     Delegation_NS('sl1', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']), //Slaska1
