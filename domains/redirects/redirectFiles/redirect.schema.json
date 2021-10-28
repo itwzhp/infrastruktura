@@ -22,9 +22,14 @@
                     ]
                 },
                 "includePath": {
-                    "description": "True, if we should add a path to the suffix",
+                    "description": "True, if we should add a path to the suffix.",
                     "type": "boolean",
                     "default": false
+                },
+                "includeWww": {
+                    "description": "False to not generate the www-prefixed URL.",
+                    "type": "boolean",
+                    "default": true
                 },
                 "$comment": {
                     "description": "Optional description",
