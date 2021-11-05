@@ -2,7 +2,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('krakowska', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']),
 
     Delegation_NS('andrychow', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']),
-    Delegation_NS('bochnia', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
+    Delegation_NS('bochnia', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']),
     Delegation_NS('brzesko', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
     A('gorczanski', '188.128.203.43'), // w trakcie wyjaśniania
     Delegation_NS('gorlice', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']),
