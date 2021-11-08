@@ -1,4 +1,4 @@
-var cyberfolksNs = ['ns1.cyberfolks.pl', 'ns2.cyberfolks.pl', 'ns3.cyberfolks.pl'];
+var cyberfolksNs = ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.'];
 
 D_EXTEND('zhp.pl',
 	// WIX set-up for Polkowice (MS365-7672)
