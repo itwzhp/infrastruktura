@@ -1,3 +1,5 @@
+var cyberfolksNs = ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.'];
+
 D_EXTEND('zhp.pl',
 	// WIX set-up for Polkowice (MS365-7672)
 	CNAME('polkowice', 'www118.wixdns.net.'),
@@ -10,16 +12,16 @@ D_EXTEND('zhp.pl',
 	Delegation_NS('dolnoslaska', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
 	TXT('dolnoslaska', 'v=spf1 include:spf.protection.outlook.com -all'),
 	MX('dolnoslaska', 0, 'dolnoslaska-zhp-pl.mail.protection.outlook.com.'),
-	Delegation_NS('dolnoslaska2', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-	Delegation_NS('dolnoslaska3', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
+	Delegation_NS('dolnoslaska2', cyberfolksNs),
+	Delegation_NS('dolnoslaska3', cyberfolksNs),
 	CNAME('enterpriseenrollment.dolnoslaska', 'enterpriseenrollment.manage.microsoft.com.'),
 	CNAME('enterpriseregistration.dolnoslaska', 'enterpriseregistration.windows.net.'),
 	CNAME('msoid.dolnoslaska', 'clientconfig.microsoftonline-p.net.'),
 
 	// Bazy
-    Delegation_NS('czarna', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
+    Delegation_NS('czarna', cyberfolksNs),
     Delegation_NS('czarna2', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    Delegation_NS('pobierowo', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
+    Delegation_NS('pobierowo', cyberfolksNs),
     Delegation_NS('pobierowo2', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Delegation_NS('rozewie', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
 
