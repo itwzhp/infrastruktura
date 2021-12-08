@@ -1,8 +1,8 @@
-const cyberFolksNs = ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.'];
-const keiNs = ['ns1.kei.pl.', 'ns2.kei.pl.'];
-const nazwaNs = ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.'];
-const slaskDataCenterNs = ['dns1.slaskdatacenter.pl.', 'dns2.slaskdatacenter.pl.', 'dns3.slaskdatacenter.pl.'];
-const zenboxNs = ['ns1.zenbox.pl.', 'ns2.zenbox.pl.'];
+var cyberFolksNs = ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.'];
+var keiNs = ['ns1.kei.pl.', 'ns2.kei.pl.'];
+var nazwaNs = ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.'];
+var slaskDataCenterNs = ['dns1.slaskdatacenter.pl.', 'dns2.slaskdatacenter.pl.', 'dns3.slaskdatacenter.pl.'];
+var zenboxNs = ['ns1.zenbox.pl.', 'ns2.zenbox.pl.'];
 
 D_EXTEND('zhp.pl',
     Delegation_NS('krakowska', zenboxNs),
