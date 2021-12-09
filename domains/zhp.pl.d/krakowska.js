@@ -31,5 +31,5 @@ D_EXTEND('zhp.pl',
     Delegation_NS('wieliczka', nazwaNs),
 
     Delegation_NS('kosarzyska', zenboxNs), // MS365-8116
-    Delegation_NS('piaskidruzkow', zenboxNs), // MS365-8117
+    Delegation_NS('piaskidruzkow', zenboxNs) // MS365-8117
 );
