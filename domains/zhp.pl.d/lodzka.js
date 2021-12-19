@@ -19,6 +19,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('uniejow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('zdunskawola', ['fns1.42.pl.', 'fns2.42.pl.']),
     Delegation_NS('zgierz', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
+    Delegation_NS('pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     Delegation_A('brzeziny', '212.191.78.183'),
     Delegation_A('konstantynow', '85.232.255.122'),
@@ -26,13 +27,6 @@ D_EXTEND('zhp.pl',
 
     Delegation_A('lowicz', '85.128.206.44'),
     MX('lowicz', 10, 'lowicz.zhp.pl.'),
-
-    Delegation_A('pabianice', '79.133.210.186'),
-    Ms365_Subdomain('pabianice', 'zhp.pl'),
-    Delegation_NS('zuchy.pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('2szczep.pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('adm.pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('instruktor.pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     // Bazy
     Delegation_NS('malecz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
