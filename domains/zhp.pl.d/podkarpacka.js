@@ -9,6 +9,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('lezajsk', ['ns1.statnet.pl.', 'ns2.statnet.pl.']),
     Delegation_A('mielec', '79.133.210.186'), // MS365-7714
     Delegation_NS('rzeszow', ['ns1.datasferix.pl.', 'ns2.datasferix.pl.']), //MS365-9823
+    Ms365_Subdomain('sanok', 'zhp.pl'), //MS365-13468
     Delegation_NS('stalowawola', ['ns1.domena.pl.', 'ns2.domena.pl.']),
 
     //Baza Hufca Ziemi Sanockiej
