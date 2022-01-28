@@ -2,7 +2,6 @@ D_EXTEND('zhp.pl',
 
     A('redirect', '51.75.54.175'),
 
-    CNAME('42zjazd', 'redirect'),
     CNAME('arch.papiez', 'redirect'),
     CNAME('arch.pogranicze', 'redirect'),
     CNAME('arch.rajdgrunwaldzki', 'redirect'),

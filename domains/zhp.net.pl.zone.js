@@ -1,4 +1,9 @@
 D('zhp.net.pl', noneRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600),
+    A('@', '51.75.54.175'),
+    CNAME('www', 'zhp.net.pl.'),
+    Ms365_Root('zhp.net.pl'),
+    Ms365_Subdomain('grupy', 'zhp.net.pl'),
+
     Delegation_NS('14gzrafiki', ['ns1.cba.pl.', 'ns2.cba.pl.']),
     Delegation_NS('347', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('4szczep', ['dns1.slaskdatacenter.pl.', 'dns2.slaskdatacenter.pl.', 'dns3.slaskdatacenter.pl.']),
@@ -14,9 +19,6 @@ D('zhp.net.pl', noneRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600)
     Delegation_A('157pdh', '91.227.123.80'),
     Delegation_A('zlotaosemka', '185.54.184.244'),
     Delegation_A('1szdw', '188.40.77.144'), // MS365-5563
-
-    Ms365_Subdomain('grupy', 'zhp.net.pl'),
-    Ms365_Root('zhp.net.pl'),
 
     // Silnik przekierowań
     Redirects(require('./redirects/redirectFiles/zhp.net.pl.json'))

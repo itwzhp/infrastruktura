@@ -14,5 +14,10 @@ D_EXTEND('zhp.pl',
     Delegation_A('swiatlo', '51.75.54.175'),
     A('ej2020', '51.75.54.175'),
     A('jamboree2019', '51.75.54.175'),
-    Delegation_A('cej2022', '51.75.54.175')
+    Delegation_A('cej2022', '51.75.54.175'),
+         
+    // Ogólnoharcerskie przedsięwzięcia
+    Delegation_A('harc-quiz', '137.74.3.247'),
+         
+    Delegation_A('fsj', '51.75.54.175')
 );
