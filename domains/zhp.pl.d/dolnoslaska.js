@@ -25,6 +25,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('pobierowo2', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Delegation_NS('rozewie', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
 
+    // Hufce
 	Delegation_NS('bierutow', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
 	Delegation_NS('boleslawiec', ['ns1.cba.pl.', 'ns2.cba.pl.', 'ns3.cba.pl.']),
 	Delegation_NS('bystrzycaklodzka', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
@@ -34,6 +35,7 @@ D_EXTEND('zhp.pl',
 	Delegation_NS('karkonoski', ['ns1.ehost.pl.', 'ns2.ehost.pl.']),
 	Delegation_NS('katy', ['ns5.webd.pl.', 'ns7.webd.pl.']),
 	Delegation_NS('klodzko', ['dns8.linuxpl.com.', 'ns8.linuxpl.com.']),
+    Delegation_NS('legnica', cyberfolksNs),  // MS365-14080
 	Delegation_NS('luban', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
 	Delegation_NS('lubin', ['ns1.hostdmk.net.', 'ns2.hostdmk.net.']),
 	Delegation_NS('lagiewniki', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
@@ -47,10 +49,6 @@ D_EXTEND('zhp.pl',
 	Delegation_NS('wroclawpoludnie', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
 	Delegation_NS('wroclawwschod', ['ns.lh.pl.', 'ns2.lighthosting.net.']),
 	Delegation_NS('zmigrod', ['ns.lh.pl.', 'ns2.lighthosting.net.']),
-
-    CNAME('*.komenda.legnica', 'komenda.legnica.zhp.pl.'),
-    MX('komenda.legnica', 10, 'komenda.legnica.zhp.pl.'),
-    A('komenda.legnica', '89.161.255.27'),
 
     Delegation_NS('bumerang', ['ns20.ovh.net.', 'dns20.ovh.net.'])
 );
