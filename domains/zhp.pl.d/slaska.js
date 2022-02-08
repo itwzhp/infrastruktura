@@ -50,11 +50,11 @@ D_EXTEND('zhp.pl',
     // Bazy
     Delegation_NS('kucoby', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Delegation_A('amonit', '109.95.158.82'),
-    A('wilczysko', '109.95.157.35'),
+    A('wilczysko', '109.95.157.137'),
     Delegation_NS('bazapajak', ['dns3.trustnet.pl.', 'dns.trustnet.pl.', 'dns2.trustnet.pl.']),
 
     // Harcerskie Muzeum Etnograficzne
-    Delegation_A('hme', '109.95.157.35'),
+    Delegation_A('hme', '109.95.157.137'),
     Ms365_Subdomain('hme', 'zhp.pl'), // MS365-8065
     CNAME('k2._domainkey.hme', 'dkim2.mcsv.net.'),
     CNAME('k3._domainkey.hme', 'dkim3.mcsv.net.'),
