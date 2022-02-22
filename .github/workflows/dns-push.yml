@@ -9,7 +9,7 @@ jobs:
   dnscontrol:
     runs-on: ubuntu-latest
     container:
-      image: stackexchange/dnscontrol:v3.11.0
+      image: stackexchange/dnscontrol:v3.14.0
     steps:
       - uses: actions/checkout@v2
 
