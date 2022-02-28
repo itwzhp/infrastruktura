@@ -1,10 +1,9 @@
 D_EXTEND('zhp.pl',
 
 	TXT('_github-challenge-bialostockazhp.bialostocka', '871ae7c463'),
-	CNAME('*.bialostocka', 'bialostocka.zhp.pl.'),
 	CNAME('autodiscover.bialostocka', 'autodiscover.outlook.com.'),
 	MX('bialostocka', 10, 'bialostocka-zhp-pl.mail.protection.outlook.com.'),
-	A('bialostocka', '79.96.169.242'),
+	Delegation_A('bialostocka', '195.78.66.229'),
 	TXT('bialostocka', 'v=spf1 include:spf.protection.outlook.com -all'),
 	CNAME('enterpriseenrollment.bialostocka', 'enterpriseenrollment.manage.microsoft.com.'),
 	CNAME('enterpriseregistration.bialostocka', 'enterpriseregistration.windows.net.'),
