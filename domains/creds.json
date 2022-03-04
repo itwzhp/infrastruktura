@@ -10,7 +10,7 @@
         "ClientSecret": "$AZURE_DNS_MANAGEMENT_CREDENTIALS"
     },
     "ovh":{
-        "app-key": "qP8GPONKwzHovsF8",
+        "app-key": "JYkYbPMVPxBozhsI",
         "app-secret-key": "$OVH_APP_SECRET_KEY",
         "consumer-key": "$OVH_CONSUMER_KEY"
       }

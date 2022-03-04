@@ -66,8 +66,8 @@ D_EXTEND('zhp.pl',
 
 
     // Hufiec Zielonka
-    Delegation_NS('zielonka', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-
+    Delegation_A('zielonka', '185.255.40.35'),
+    Ms365_Subdomain('zielonka', 'zhp.pl'), // MS365-8313
 
 
     // Hufiec Nowy Dwór Mazowiecki

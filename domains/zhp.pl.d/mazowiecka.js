@@ -29,7 +29,7 @@ D_EXTEND('zhp.pl',
 	Delegation_NS('plock', ['dns113.ovh.net.', 'ns113.ovh.net.']),
 
 	Delegation_NS('przysucha', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-
-	Delegation_NS('100latgrojec', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
-	Delegation_NS('mazowieckazostajewdomu', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])
+	Delegation_NS('mazowieckazostajewdomu', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+         
+	Ms365_Subdomain('wegrow', 'zhp.pl') // MS365-14041
 );

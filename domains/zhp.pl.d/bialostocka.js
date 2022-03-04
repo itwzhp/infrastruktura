@@ -1,9 +1,8 @@
 D_EXTEND('zhp.pl',
 
 	TXT('_github-challenge-bialostockazhp.bialostocka', '871ae7c463'),
-	CNAME('*.bialostocka', 'bialostocka.zhp.pl.'),
-    Ms365_Subdomain('bialostocka','zhp.pl'),
-	Delegation_A('bialostocka', '79.96.169.242'),
+  Ms365_Subdomain('bialostocka','zhp.pl'),
+	Delegation_A('bialostocka', '195.78.66.229'),
 
 	CNAME('*.by.bialostocka', 'by.bialostocka.zhp.pl.'),
 	A('by.bialostocka', '79.96.169.242'),
