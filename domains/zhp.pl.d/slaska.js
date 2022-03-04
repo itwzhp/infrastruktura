@@ -1,7 +1,7 @@
 D_EXTEND('zhp.pl',
     // Chorągiew
     Delegation_NS('slaska', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-   
+
 
     // Hufce (hosting chorągwi)
     Delegation_NS('bedzin', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
@@ -35,11 +35,10 @@ D_EXTEND('zhp.pl',
     Delegation_NS('zawiercie', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Delegation_NS('zory', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Delegation_NS('zywiec', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    
+
 
     // Hufce (hosting zewnętrzny)
     Delegation_NS('lubliniec', ['ns1.ehost.pl.', 'ns2.ehost.pl.']),
-    Ms365_Subdomain('lubliniec', 'zhp.pl'),
 
     Delegation_NS('cieszyn', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
     Delegation_NS('czestochowa', ['dns.trustnet.pl.', 'dns2.trustnet.pl.']),
@@ -50,7 +49,7 @@ D_EXTEND('zhp.pl',
     // Bazy
     Delegation_NS('kucoby', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Delegation_A('amonit', '109.95.158.82'),
-    A('wilczysko', '109.95.157.137'),
+    Delegation_A('wilczysko', '109.95.157.137'),
     Delegation_NS('bazapajak', ['dns3.trustnet.pl.', 'dns.trustnet.pl.', 'dns2.trustnet.pl.']),
 
     // Harcerskie Muzeum Etnograficzne
@@ -63,5 +62,5 @@ D_EXTEND('zhp.pl',
     Delegation_NS('sl1', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']), //Slaska1
     Delegation_NS('sl2', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']), // Slaska2
     Delegation_NS('sl3', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']), //Slaska3
-    Delegation_NS('sl4', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.'])   //Slaska4 
+    Delegation_NS('sl4', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.'])  //Slaska4
 );

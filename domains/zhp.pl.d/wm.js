@@ -33,5 +33,5 @@ D_EXTEND('zhp.pl',
     Delegation_NS('perkoz', hostingWm),
 
     Delegation_A('grunwald', '51.75.54.175'),
-    Ms365_Subdomain('grunwald', 'zhp.pl')
+    Ms365_Subdomain('grunwald','zhp.pl')
 );

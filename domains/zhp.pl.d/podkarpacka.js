@@ -13,7 +13,5 @@ D_EXTEND('zhp.pl',
     Delegation_NS('stalowawola', ['ns1.domena.pl.', 'ns2.domena.pl.']),
 
     //Baza Hufca Ziemi Sanockiej
-    Delegation_NS('berdo', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-
-    CNAME('www.lancut', 'lancut.zhp.pl.')
+    Delegation_NS('berdo', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])
 );
