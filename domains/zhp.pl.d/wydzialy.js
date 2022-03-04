@@ -20,5 +20,5 @@ D_EXTEND('zhp.pl',
     Delegation_A('harc-quiz', '137.74.3.247'),
          
     Delegation_A('fsj', '51.75.54.175'),
-    Delegation_A('s4s', '51.75.54.175')
+    Delegation_CNAME('s4s', 'zhp-scouts4scouts-app.azurewebsites.net')
 );
