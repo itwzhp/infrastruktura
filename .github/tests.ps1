@@ -24,14 +24,14 @@ Describe "DNS Zone <zone.name>" -ForEach $zones {
                 Select-Object -Unique
         }
 
-        It "should have no other entries with the same domain" -Skip {
+        It "should have no other entries with the same domain" {
             $allEntries |
                 Where-Object {$_.type -ne 'NS' } |
                 Where-Object {$_.name -in $delegatedDomains} |
                 Should -BeNullOrEmpty
         }
 
-        It "should have no other entries with subdomain" -Skip {
+        It "should have no other entries with subdomain" {
             $allEntries |
                 ForEach-Object {$_.name} | Select-Object -Unique |
                 Where-Object {
@@ -41,6 +41,4 @@ Describe "DNS Zone <zone.name>" -ForEach $zones {
                 Should -BeNullOrEmpty
         }
     }
-
-
 }
