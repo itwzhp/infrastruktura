@@ -1,6 +1,6 @@
 D('zhp.pl', noneRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600),
-    A('@', '51.75.54.175'),
-    CNAME('www', 'zhp.pl.'),
+    A('@', '51.75.54.175', CF_PROXY_ON),
+    CNAME('www', 'zhp.pl.', CF_PROXY_ON),
     Ms365_Root('zhp.pl'),
     Redirects(require('./redirects/redirectFiles/zhp.pl.json'))
 );
@@ -146,7 +146,6 @@ D_EXTEND('zhp.pl',
     Delegation_NS('westerplatte', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
     A('wntgk', '213.189.38.130'),
     Delegation_NS('wolow', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.']),
-    Delegation_A('work', '51.75.54.175'),
     CNAME('youthwave', 'zhp.pl.'),
     Delegation_A('zapytaj', '51.75.54.175'),
     Delegation_A('zgloszenia-rajdodkrywcow', '51.75.54.175'),
