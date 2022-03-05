@@ -1,4 +1,5 @@
 var noneRegistrar = NewRegistrar('none', 'NONE');
+var ovhRegistrar = NewRegistrar('ovh', 'OVH');
 
 var cloudflareProvider = NewDnsProvider('cloudflare', 'CLOUDFLAREAPI');
 var azureProvider = NewDnsProvider('azuredns_main', 'AZURE_DNS');

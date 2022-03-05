@@ -1,4 +1,4 @@
-D('zhp.pl', noneRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600),
+D('zhp.pl', ovhRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600),
     A('@', '51.75.54.175', CF_PROXY_ON),
     CNAME('www', 'zhp.pl.', CF_PROXY_ON),
     Ms365_Root('zhp.pl'),
