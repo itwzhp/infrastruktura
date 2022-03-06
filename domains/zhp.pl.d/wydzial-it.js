@@ -3,6 +3,7 @@ D_EXTEND('zhp.pl',
     A('rundeck', '51.75.54.175'),
     A('work', '51.75.54.175', CF_PROXY_ON),
     CNAME('www.work', 'work', CF_PROXY_ON),
+    A('host', '51.75.54.175'), // dla nessus
 
     // 213.189.38.138
     A('preprod-tipi', '213.189.38.138'),
