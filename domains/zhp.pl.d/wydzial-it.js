@@ -1,11 +1,10 @@
 D_EXTEND('zhp.pl',
+    A('host', '51.75.54.175'), // dla nessus    
     A('emblematy', '51.75.54.175'),
     A('rundeck', '51.75.54.175'),
-    A('work', '51.75.54.175', CF_PROXY_ON),
-    CNAME('www.work', 'work', CF_PROXY_ON),
-    A('host', '51.75.54.175'), // dla nessus
-    A('bip', '51.75.54.175', CF_PROXY_ON),
-    A('zapytaj', '51.75.54.175', CF_PROXY_ON),
+    Delegation_A_CF('work', '51.75.54.175', CF_PROXY_ON),
+    Delegation_A_CF('bip', '51.75.54.175', CF_PROXY_ON),
+    Delegation_A_CF('zapytaj', '51.75.54.175', CF_PROXY_ON),
 
     // 213.189.38.138
     A('preprod-tipi', '213.189.38.138'),
