@@ -16,13 +16,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('admin', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),  //??
     Delegation_A('archiwum', '51.75.54.175'),                       //??
     
-    CNAME('autodiscover.jpt', 'autodiscover.outlook.com.'),         //??
-    CNAME('enterpriseenrollment.jpt', 'enterpriseenrollment.manage.microsoft.com.'),
-    CNAME('enterpriseregistration.jpt', 'enterpriseregistration.windows.net.'),
-    MX('jpt', 0, 'jpt-zhp-pl.mail.protection.outlook.com.'),
-    TXT('jpt', 'v=spf1 include:spf.protection.outlook.com -all'),
-    CNAME('msoid.jpt', 'clientconfig.microsoftonline-p.net.'),
-
+    Ms365_Subdomain('jpt', 'zhp.pl'),
     Delegation_A('bazy', '51.75.54.175'),
     Delegation_A('covid-zaswiadczenia', '51.75.54.175'),
     Delegation_A('czat', '51.75.54.175'),
