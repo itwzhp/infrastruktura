@@ -13,7 +13,6 @@ D_EXTEND('zhp.pl',
     Delegation_NS('staszow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     // Directory listing
-    MX('opatow', 10, 'opatow.zhp.pl.'),
     Delegation_A('opatow', '62.129.228.173'),
 
     Delegation_NS('festiwal-kielce', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),

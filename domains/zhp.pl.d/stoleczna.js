@@ -84,7 +84,6 @@ D_EXTEND('zhp.pl',
 
     AAAA('ipv6.wosp.otwock', '2a02:25a9:0:2637::1'),
     Delegation_A('wosp.otwock', '62.129.198.55', 'zhp.pl'),
-    MX('wosp.otwock', 10, 'wosp.otwock.zhp.pl.'),
 
     // ktoś tego używa?
     CNAME('kalendarz.otwock', 'ghs.google.com.'),
@@ -99,28 +98,20 @@ D_EXTEND('zhp.pl',
 
     AAAA('ipv6.14.pruszkow', '2a02:25a9:0:5888::1'),
     Delegation_A('14.pruszkow', '89.161.136.136', 'zhp.pl'),
-    MX('14.pruszkow', 10, '14.pruszkow.zhp.pl.'),
 
     AAAA('ipv6.paderewski.pruszkow', '2a02:25a9:0:5888::1'),
     Delegation_A('paderewski.pruszkow', '89.161.136.136', 'zhp.pl'),
-    MX('paderewski.pruszkow', 10, 'paderewski.pruszkow.zhp.pl.'),
 
     AAAA('ipv6.shds.pruszkow', '2a02:25a9:0:5888::1'),
     Delegation_A('shds.pruszkow', '89.161.136.136', 'zhp.pl'),
-    MX('shds.pruszkow', 10, 'shds.pruszkow.zhp.pl.'),
 
     // szczep --> błędne kodowanie znaków
     AAAA('ipv6.shdw.pruszkow', '2a02:25a9:0:5888::1'),
     Delegation_A('shdw.pruszkow', '89.161.136.136', 'zhp.pl'),
-    MX('shdw.pruszkow', 10, 'shdw.pruszkow.zhp.pl.'),
 
     AAAA('ipv6.knieja.pruszkow', '2a02:25a9:0:5888::1'),
     Delegation_A('knieja.pruszkow', '89.161.136.136', 'zhp.pl'),
-    MX('knieja.pruszkow', 10, 'knieja.pruszkow.zhp.pl.'),
-    TXT('knieja.pruszkow', 'v=spf1 mx a ptr ~all'),
 
     AAAA('ipv6.twierdza.pruszkow', '2a02:25a9:0:5888::1'),
-    Delegation_A('twierdza.pruszkow', '89.161.136.136', 'zhp.pl'),
-    MX('twierdza.pruszkow', 10, 'twierdza.pruszkow.zhp.pl.'),
-    TXT('twierdza.pruszkow', 'v=spf1 mx a ptr ~all')
+    Delegation_A('twierdza.pruszkow', '89.161.136.136', 'zhp.pl')
 );
