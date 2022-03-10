@@ -27,7 +27,6 @@ D_EXTEND('zhp.pl',
     Delegation_A('sieradz', '85.232.255.122'),
 
     Delegation_A('lowicz', '85.128.206.44'),
-    MX('lowicz', 10, 'lowicz.zhp.pl.'),
 
     // Bazy
     Delegation_NS('malecz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),

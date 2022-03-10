@@ -10,15 +10,22 @@ D_EXTEND('zhp.pl',
     A('cwm', '51.75.54.175'),
     Ms365_Subdomain('cwm', 'zhp.pl'),
 
+    // Muzeum Harcerstwa
+    Ms365_Subdomain('muzeumharcerstwa', 'zhp.pl'),
+    Delegation_A('muzeumharcerstwa', '185.36.169.152'),
+
+    // Wydział Inspiracji i Poradnictwa
+    Delegation_A('cbp', '51.75.54.175'),
+
     // Imprezy centralne
     Delegation_A('swiatlo', '51.75.54.175'),
     A('ej2020', '51.75.54.175'),
     A('jamboree2019', '51.75.54.175'),
     Delegation_A('cej2022', '51.75.54.175'),
-         
+
     // Ogólnoharcerskie przedsięwzięcia
     Delegation_A('harc-quiz', '137.74.3.247'),
-         
+
     Delegation_A('fsj', '51.75.54.175'),
     CNAME('s4s', 'zhp-scouts4scouts-app.azurewebsites.net.'),  // this is required for Azure certificates. Maybe this should be the implementation of Delegation_CNAME?
     CNAME('www.s4s', 'zhp-scouts4scouts-app.azurewebsites.net.')

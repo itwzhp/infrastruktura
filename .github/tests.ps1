@@ -9,7 +9,7 @@ Describe "DNS Zone <zone.name>" -ForEach $zones {
         $allEntries = $zone.records
     }
 
-    It "should have no MX outside MS 365" -Skip {
+    It "should have no MX outside MS 365" {
         $allEntries |
             Where-Object {$_.type -eq 'MX' } |
             Where-Object {$_.target -notlike '*.mail.protection.outlook.com.'} |
