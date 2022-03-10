@@ -25,8 +25,16 @@ D_EXTEND('zhp.pl',
 
     // Ogólnoharcerskie przedsięwzięcia
     Delegation_A('harc-quiz', '137.74.3.247'),
-
     Delegation_A('fsj', '51.75.54.175'),
+
+    // Sztab ZHP dla Ukrainy
     CNAME('s4s', 'zhp-scouts4scouts-app.azurewebsites.net.'),  // this is required for Azure certificates. Maybe this should be the implementation of Delegation_CNAME?
-    CNAME('www.s4s', 'zhp-scouts4scouts-app.azurewebsites.net.')
+    CNAME('www.s4s', 'zhp-scouts4scouts-app.azurewebsites.net.'),
+
+    // Władze naczelne
+    Ms365_Subdomain('gk', 'zhp.pl'),
+    Ms365_Subdomain('rn', 'zhp.pl'),
+    Ms365_Subdomain('nsh', 'zhp.pl'),
+    Ms365_Subdomain('ckr', 'zhp.pl'),
+    Delegation_A('ckr', '51.75.54.175')
 );
