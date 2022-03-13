@@ -3,6 +3,7 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('emblematy', '51.75.54.175'),
     Delegation_A_WithCfProxy('rundeck', '51.75.54.175'),
     Delegation_A_WithCfProxy('work', '51.75.54.175'),
+    Delegation_A_WithCfProxy('work-dev', '51.75.54.175'),
     Delegation_A_WithCfProxy('bip', '51.75.54.175'),
     Delegation_A_WithCfProxy('zapytaj', '51.75.54.175'),
 
