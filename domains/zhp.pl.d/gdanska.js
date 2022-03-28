@@ -27,7 +27,6 @@ D_EXTEND('zhp.pl',
 
     // Bazy
     Delegation_NS('starekarpno', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
-    Delegation_CNAME('nasiczne', 'gdanska.zhp.pl.'),
 
     // Przedsięwzięcia
     Delegation_CNAME('polkolonie.gdanska', 'gdanska.zhp.pl.'),
