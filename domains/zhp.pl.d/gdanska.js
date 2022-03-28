@@ -29,4 +29,4 @@ D_EXTEND('zhp.pl',
     Delegation_NS('starekarpno', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
 
     // Przedsięwzięcia
-    Delegation_CNAME('jott.gdanska', 'gdanska.zhp.pl.'));
+    Delegation_CNAME('jott.gdanska.zhp.pl.', 'gdanska.zhp.pl.'));
