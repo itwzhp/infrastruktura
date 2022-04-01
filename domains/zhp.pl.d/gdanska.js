@@ -2,7 +2,8 @@ var ogicom = ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.'];
 
 D_EXTEND('zhp.pl',
     // Chorągiew
-    Delegation_NS('gdanska', ogicom),
+    Delegation_A('gdanska', '93.157.100.67'),
+    Ms365_Subdomain('gdanska','zhp.pl'),
 
     // Hufce
     Delegation_NS('gdansk', ['dns1.thecamels.org.', 'dns2.thecamels.org.']),
@@ -25,4 +26,7 @@ D_EXTEND('zhp.pl',
     Ms365_Subdomain('slupsk','zhp.pl'),
 
     // Bazy
-    Delegation_NS('starekarpno', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']));
+    Delegation_NS('starekarpno', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
+
+    // Przedsięwzięcia
+    Delegation_CNAME('jott.gdanska.zhp.pl.', 'gdanska.zhp.pl.'));
