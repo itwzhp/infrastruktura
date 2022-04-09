@@ -17,5 +17,5 @@ D_EXTEND('zhp.pl',
 
     Delegation_NS('wzlot', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
-    Delegation_NS('wlkp', ['ns1.zenbox.pl', 'ns2.zenbox.pl'])
+    Delegation_NS('wlkp', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.'])
 );
