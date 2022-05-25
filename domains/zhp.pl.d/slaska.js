@@ -40,7 +40,7 @@ D_EXTEND('zhp.pl',
     // Hufce (hosting zewnętrzny)
     Delegation_NS('lubliniec', ['ns1.ehost.pl.', 'ns2.ehost.pl.']),
 
-    Delegation_NS('cieszyn', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
+    Delegation_NS('cieszyn', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('czestochowa', ['dns.trustnet.pl.', 'dns2.trustnet.pl.']),
 
     // Imprezy
