@@ -18,10 +18,10 @@ D_EXTEND('zhp.pl',
     A('tipi', '51.83.143.218'),
 
     // 213.189.38.139
-    A('mam-pomysl', '213.189.38.139'),
-    A('jira', '213.189.38.139'),
-    A('pomoc', '213.189.38.139'),
-    A('helpdesk', '213.189.38.139'),
+    Delegation_A_WithCfProxy('mam-pomysl', '213.189.38.139'),
+    Delegation_A_WithCfProxy('jira', '213.189.38.139'),
+    Delegation_A_WithCfProxy('pomoc', '213.189.38.139'),
+    Delegation_A_WithCfProxy('helpdesk', '213.189.38.139'),
 
     // 213.189.38.137
     A('zeus', '213.189.38.137'),
