@@ -2,6 +2,8 @@ name: Deploy dns zone
 
 on:
   push:
+    branches:
+      - main
 
 jobs:
   dnscontrol:
