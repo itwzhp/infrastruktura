@@ -2,14 +2,12 @@ name: Deploy dns zone
 
 on:
   push:
-    branches:
-      - main
 
 jobs:
   dnscontrol:
     runs-on: ubuntu-latest
     container:
-      image: stackexchange/dnscontrol:v3.14.0
+      image: jauderho/dnscontrol:v3.17.0
     steps:
       - uses: actions/checkout@v2
 
