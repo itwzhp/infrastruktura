@@ -12,7 +12,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('lodzwidzew', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('piotrkow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('kutno', ['dns1.mydevil.net.', 'dns2.mydevil.net.']),
-    Delegation_NS('lask', ['ns1.iq.pl.', 'ns2.iq.pl.']),
+    Delegation_NS('lask', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('opoczno', ['dns12.linuxpl.com.', 'ns12.linuxpl.com.']),
     Delegation_NS('radomsko', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('skierniewice', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
@@ -24,9 +24,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('lowicz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     Delegation_A('brzeziny', '212.191.78.183'),
-    //Delegation_A('konstantynow', '85.232.255.122'), //do usuniecia po potwierdzeniu migracji
     Delegation_A('sieradz', '85.232.255.122'),
-    //Delegation_A('lowicz', '85.128.206.44'), //do usuniecia po potwierdzeniu migracji
 
     // Bazy
     Delegation_NS('malecz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
