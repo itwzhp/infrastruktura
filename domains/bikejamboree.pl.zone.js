@@ -3,5 +3,6 @@ D('bikejamboree.pl', noneRegistrar, DnsProvider(ovhProvider), DefaultTTL(3600),
     CNAME('www', '@'),
 
     A('a', '51.75.54.175'),
+    A('dev', '51.75.54.175'),
     Ms365_Root('bikejamboree.pl')
 );
