@@ -29,6 +29,9 @@ D_EXTEND('zhp.pl',
     // Bazy
     Delegation_NS('malecz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('zalecze', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+         
+    // Wydarzenia
+    Delegation_NS('zielonanuta', ['ns1.he.net.', 'ns2.he.net.', 'ns3.he.net.']),
 
     //Chorągiew
     Delegation_NS('lodzka', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])
