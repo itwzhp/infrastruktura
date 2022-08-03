@@ -25,6 +25,6 @@ D_EXTEND('zhp.pl',
 
     Delegation_NS('bialystok', ['dns11.linuxpl.com.', 'ns11.linuxpl.com.']),
     Delegation_NS('kolno', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
-    Delegation_NS('lomza', ['ns1.datasferix.pl.', 'ns2.datasferix.pl.']),
+    // Delegation_NS('lomza', ['ns1.datasferix.pl.', 'ns2.datasferix.pl.']),
     Delegation_NS('sokolka', ['ns1.getspace.us.', 'ns2.getspace.us.'])
 );
