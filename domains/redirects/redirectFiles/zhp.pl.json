@@ -9,5 +9,6 @@
 
     "wedrownicy.gdanska": { "target": "https://www.facebook.com/wedrownicygd", "method": 301 },
     "nasiczne.gdanska": { "target": "http://nasiczne.bieszczady.pl/", "method": 302 },
-    "polkolonie.gdanska": { "target": "http://gdanska.zhp.pl/polkolonie/", "method": 301 }
+    "polkolonie.gdanska": { "target": "https://gdanska.zhp.pl/polkolonie/", "method": 301 },
+    "czernica": { "target": "https://hboczernica.pl", "method": 301}
 }
