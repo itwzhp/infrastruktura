@@ -29,6 +29,7 @@ D_EXTEND('zhp.pl',
     // Bazy
     Delegation_NS('starekarpno', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
     Ms365_Subdomain('czernica','zhp.pl'),
+    A('czernica', '51.75.54.175'),
 
     // Przedsięwzięcia
     Delegation_CNAME('jott.gdanska.zhp.pl.', 'gdanska.zhp.pl.'));
