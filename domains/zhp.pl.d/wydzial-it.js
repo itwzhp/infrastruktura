@@ -25,10 +25,11 @@ D_EXTEND('zhp.pl',
     // 213.189.38.137
     A('zeus', '213.189.38.137'),
     Delegation_A_WithCfProxy('checkmk', '213.189.38.137'),
-    Delegation_A_WithCfProxy('mail-auto', '213.189.38.138'),
-    MX('mail-auto', 0, '213.189.38.138'),
-    TXT('mail-auto', "v=spf1 mx -all"),
 
+    // Mailu na zeus - usługa pocztowa pozwalająca wysyłać maile do domen ZHP
+    Delegation_A_WithCfProxy('mail-auto', '213.189.38.137'),
+    MX('mail-auto', 0, '213.189.38.137'),
+    TXT('mail-auto', "v=spf1 mx -all"),
     SRV('_submission._tcp.mail-auto', 1, 1, 587, 'mail-auto.zhp.pl.'),
     SRV('_imaps._tcp.mail-auto', 1, 1, 993, 'mail-auto.zhp.pl.'),
     SRV('_pop3s._tcp.mail-auto', 1, 1, 995, 'mail-auto.zhp.pl.'),
