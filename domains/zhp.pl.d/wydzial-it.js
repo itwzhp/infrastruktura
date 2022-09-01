@@ -12,7 +12,6 @@ D_EXTEND('zhp.pl',
     A('demo-tipi', '213.189.38.138'),
     Delegation_A_WithCfProxy('nessus', '213.189.38.138'),
     A('vault', '213.189.38.138'),
-    A('mail-auto', '213.189.38.138'),
 
     // 51.83.143.218
     A('tipi', '51.83.143.218'),
@@ -26,6 +25,19 @@ D_EXTEND('zhp.pl',
     // 213.189.38.137
     A('zeus', '213.189.38.137'),
     Delegation_A_WithCfProxy('checkmk', '213.189.38.137'),
+
+    // Mailu na zeus - usługa pocztowa pozwalająca wysyłać maile do domen ZHP
+    Delegation_A_WithCfProxy('mail-auto', '213.189.38.137'),
+    A('mail-auto-mx', '213.189.38.137'),
+    MX('mail-auto', 0, 'mail-auto-mx.zhp.pl.'),
+    TXT('mail-auto', "v=spf1 mx -all"),
+    SRV('_submission._tcp.mail-auto', 1, 1, 587, 'mail-auto-mx.zhp.pl.'),
+    SRV('_imaps._tcp.mail-auto', 1, 1, 993, 'mail-auto-mx.zhp.pl.'),
+    SRV('_pop3s._tcp.mail-auto', 1, 1, 995, 'mail-auto-mx.zhp.pl.'),
+    // musze ustalić czy poniższe są potrzebne
+    // SRV('_imap._tcp.mail-auto', 1, 1, 143, 'mail-auto.zhp.pl.'),
+    // SRV('_pop3._tcp.mail-auto', 1, 1, 110, 'mail-auto.zhp.pl.'),
+
 
     // Azure Edek
     Delegation_A_WithCfProxy('ed', '104.214.218.237'),
