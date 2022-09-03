@@ -9,7 +9,7 @@ D_EXTEND('zhp.pl',
 
     // 213.189.38.138
     Delegation_A_WithCfProxy('preprod-tipi', '213.189.38.138'),
-    A('demo-tipi', '213.189.38.138'),
+    Delegation_A_WithCfProxy('demo-tipi', '213.189.38.138'),
     Delegation_A_WithCfProxy('nessus', '213.189.38.138'),
     A('vault', '213.189.38.138'),
 
