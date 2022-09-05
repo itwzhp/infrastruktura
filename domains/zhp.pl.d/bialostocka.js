@@ -3,7 +3,7 @@ D_EXTEND('zhp.pl',
     TXT('_github-challenge-bialostockazhp.bialostocka', '871ae7c463'),
     Ms365_Subdomain('bialostocka', 'zhp.pl'),
     Delegation_A('bialostocka', '195.78.66.229'),
-    TXT('bialostocka.zhp.pl', '2dba839a6c6818d7fdf723ebd6d8e63043e9551062e5cbf742191658359995a'), //weryfikacja do SSL
+    TXT('bialostocka', '2dba839a6c6818d7fdf723ebd6d8e63043e9551062e5cbf742191658359995a'), //weryfikacja do SSL
 
     CNAME('*.by.bialostocka', 'by.bialostocka.zhp.pl.'),
     A('by.bialostocka', '79.96.169.242'),
