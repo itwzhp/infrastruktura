@@ -13,8 +13,7 @@ D_EXTEND('zhp.pl',
     A('wedrownicy.bialostocka', '79.96.169.242'),
 
     Ms365_Subdomain('augustow', 'zhp.pl'),  // MS365-16444
-    CNAME('*.augustow', 'augustow.zhp.pl.'),
-    A('augustow', '195.78.66.229'),
+    Delegation_A('augustow', '195.78.66.229'),
 
     CNAME('*.bielskpodlaski', 'bielskpodlaski.zhp.pl.'),
     A('bielskpodlaski', '79.96.169.242'),
