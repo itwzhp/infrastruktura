@@ -21,7 +21,6 @@ D_EXTEND('zhp.pl',
     //Delegacja domeny hufca Strzelce
     Ms365_Subdomain('strzelce','zhp.pl'),
     Delegation_A('strzelce','185.135.90.126'),
-    A('*.strzelce', '185.135.90.126'),
 
     // Delegacja domeny hufca Sulęcin
     Ms365_Subdomain('sulecin','zhp.pl'),
