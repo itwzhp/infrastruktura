@@ -26,7 +26,7 @@ D_EXTEND('zhp.pl',
 
 	
 	CNAME('*.augustow', 'augustow.zhp.pl.'),
-	A('augustow', '79.96.169.242'),
+    A('augustow', '195.78.66.229'),
 	MX('augustow', 10, 'augustow.zhp.pl.'),
 	
 	CNAME('*.bielskpodlaski', 'bielskpodlaski.zhp.pl.'),
