@@ -38,6 +38,7 @@ D_EXTEND('zhp.pl',
     // SRV('_imap._tcp.mail-auto', 1, 1, 143, 'mail-auto.zhp.pl.'),
     // SRV('_pop3._tcp.mail-auto', 1, 1, 110, 'mail-auto.zhp.pl.'),
 
+    Delegation_A_WithCfProxy('chat', '51.75.54.175'),  // MS365-18876
 
     // Azure Edek
     Delegation_A_WithCfProxy('ed', '104.214.218.237'),
