@@ -13,7 +13,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('piotrkow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('kutno', ['dns1.mydevil.net.', 'dns2.mydevil.net.']),
     Delegation_NS('lask', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('opoczno', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_NS('opoczno', ['dns12.linuxpl.com.', 'ns12.linuxpl.com.']),
     Delegation_NS('radomsko', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('skierniewice', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
     Delegation_NS('uniejow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
@@ -29,6 +29,9 @@ D_EXTEND('zhp.pl',
     // Bazy
     Delegation_NS('malecz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('zalecze', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+         
+    // Wydarzenia
+    Delegation_NS('zielonanuta', ['ns1.he.net.', 'ns2.he.net.', 'ns3.he.net.']),
 
     //Chorągiew
     Delegation_NS('lodzka', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])
