@@ -31,11 +31,6 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('fsj', '51.75.54.175'),
     Delegation_A_WithCfProxy('archiwum.fsj.zhp.pl.', '51.75.54.175'), // MS365-16341
 
-
-    // Sztab ZHP dla Ukrainy
-    CNAME('s4s', 'zhp-scouts4scouts-app.azurewebsites.net.'),  // this is required for Azure certificates. Maybe this should be the implementation of Delegation_CNAME?
-    CNAME('www.s4s', 'zhp-scouts4scouts-app.azurewebsites.net.'),
-
     // Władze naczelne
     Ms365_Subdomain('gk', 'zhp.pl'),
     Ms365_Subdomain('rn', 'zhp.pl'),
