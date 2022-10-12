@@ -42,7 +42,7 @@ D_EXTEND('zhp.pl',
 
     // Azure Edek
     Delegation_A_WithCfProxy('ed', '104.214.218.237'),
-    Delegation_A('edek', '104.214.218.237'),
+    Delegation_A_WithCfProxy('edek', '104.214.218.237'),
 
     // A zhp.pl 
     // TODO Ustalić czyje to
