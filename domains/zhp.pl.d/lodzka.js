@@ -32,6 +32,7 @@ D_EXTEND('zhp.pl',
 
     // Wydarzenia
     Delegation_NS('zielonanuta', ['ns1.he.net.', 'ns2.he.net.', 'ns3.he.net.']),
+    Ms365_Subdomain('harcerskafantazjada','zhp.pl'),
 
     //Chorągiew
     Delegation_NS('lodzka', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])
