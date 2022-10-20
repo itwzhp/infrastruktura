@@ -1,5 +1,5 @@
 D_EXTEND('zhp.pl',
-    A('host', '51.75.54.175'), // dla nessus    
+    A('host', '51.75.54.175'), // dla nessus
     Delegation_A_WithCfProxy('emblematy', '51.75.54.175'),
     Delegation_A_WithCfProxy('rundeck', '51.75.54.175'),
     Delegation_A_WithCfProxy('work', '51.75.54.175'),
@@ -44,7 +44,7 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('ed', '104.214.218.237'),
     Delegation_A_WithCfProxy('edek', '104.214.218.237'),
 
-    // A zhp.pl 
+    // A zhp.pl
     // TODO Ustalić czyje to
     Delegation_A_WithCfProxy('archiwum', '51.75.54.175'),
     Delegation_A_WithCfProxy('bazy', '51.75.54.175'),
@@ -54,7 +54,6 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('e', '51.75.54.175'),
     Delegation_A_WithCfProxy('ekodruzyna', '51.75.54.175'),
     Delegation_A_WithCfProxy('haliz', '51.75.54.175'),
-    Delegation_A_WithCfProxy('harc2o', '51.75.54.175'),
     Delegation_A_WithCfProxy('hib', '51.75.54.175'),
     Delegation_A_WithCfProxy('intranet', '51.75.54.175'),
     Delegation_A_WithCfProxy('komunikaty.gk', '51.75.54.175', 'zhp.pl'),
