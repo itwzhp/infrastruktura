@@ -21,7 +21,8 @@ D_EXTEND('zhp.pl',
     Delegation_NS('tczew', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
     Delegation_NS('wejherowo', ['ns1.iq.pl.', 'ns2.iq.pl.']),
     Delegation_CNAME('malbork', 'zhp.malbork.net.pl.'),
-
+    Delegation_NS('test1', ['test1.test2.pl.']),
+         
     Ms365_Subdomain('gdynia','zhp.pl'),
     Ms365_Subdomain('koscierzyna','zhp.pl'),
     Ms365_Subdomain('slupsk','zhp.pl'),
