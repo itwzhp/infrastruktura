@@ -16,9 +16,6 @@ D_EXTEND('zhp.pl',
 
     // Wydział Inspiracji i Poradnictwa
     Delegation_A_WithCfProxy('cbp', '51.75.54.175'),
-         
-    // Biuro GK ZHP
-    Delegation_A_WithCfProxy('epracownik', '213.189.38.136'),
 
     // Imprezy centralne
     Delegation_A_WithCfProxy('swiatlo', '51.75.54.175'),
