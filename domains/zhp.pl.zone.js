@@ -27,7 +27,7 @@ D('zhp.pl', ovhRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600),
     A('ftp', '51.75.54.175'), // pozwala ominąć proxy CF
 
     // Ignore cloudflare zerotrust records
-    IGNORE_TARGET("cfargotunnel.com.")
+    IGNORE_TARGET("**.cfargotunnel.com.", "CNAME")
 );
 
 require_glob('zhp.pl.d/');
