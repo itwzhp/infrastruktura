@@ -24,7 +24,10 @@ D('zhp.pl', ovhRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600),
     A('integrationservice', '104.214.218.237'), // serwer edka ale do czego ta domena?
     A('qnapgk', '213.189.38.134'),
     A('vpngk', '213.189.38.130'), // ?
-    A('ftp', '51.75.54.175') // pozwala ominąć proxy CF
+    A('ftp', '51.75.54.175'), // pozwala ominąć proxy CF
+
+    // Ignore cloudflare zerotrust records
+    IGNORE_TARGET("cfargotunnel.com.")
 );
 
 require_glob('zhp.pl.d/');
