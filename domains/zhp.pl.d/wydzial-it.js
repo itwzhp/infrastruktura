@@ -73,5 +73,6 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('strony', '51.75.54.175'),
     Delegation_A_WithCfProxy('turniejgromad', '51.75.54.175'),
     Delegation_A_WithCfProxy('watra', '51.75.54.175'),
+    Ms365_Subdomain('watra','zhp.pl'),
     Delegation_A_WithCfProxy('youthwave', '51.75.54.175')
 );
