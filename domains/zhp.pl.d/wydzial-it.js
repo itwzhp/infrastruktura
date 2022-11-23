@@ -14,7 +14,7 @@ D_EXTEND('zhp.pl',
     A('vault', '213.189.38.138'),
 
     // 51.83.143.218
-    A('tipi', '51.83.143.218'),
+    Delegation_A_WithCfProxy('tipi', '51.83.143.218'),
 
     // 213.189.38.139
     Delegation_A_WithCfProxy('mam-pomysl', '213.189.38.139'),
