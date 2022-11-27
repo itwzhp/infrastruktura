@@ -35,5 +35,5 @@ D_EXTEND('zhp.pl',
     Delegation_NS('chojnice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     // Imprezy Ogólnopolskie
-    Delegation_NS('kopernikanski', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_NS('kopernikanski', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])
 );
