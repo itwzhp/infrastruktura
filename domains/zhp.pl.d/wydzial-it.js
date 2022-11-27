@@ -12,7 +12,6 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('preprod-tipi', '213.189.38.138'),
     Delegation_A_WithCfProxy('demo-tipi', '213.189.38.138'),
     Delegation_A_WithCfProxy('nessus', '213.189.38.138'),
-    A('vault', '213.189.38.138'),
 
     // 51.83.143.218
     Delegation_A_WithCfProxy('tipi', '51.83.143.218'),
@@ -72,7 +71,6 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('stock', '51.75.54.175'),
     Delegation_A_WithCfProxy('stopka', '51.75.54.175'),
     Delegation_A_WithCfProxy('strony', '51.75.54.175'),
-    Delegation_A_WithCfProxy('turniejgromad', '51.75.54.175'),
     Delegation_A_WithCfProxy('watra', '51.75.54.175'),
     Ms365_Subdomain('watra','zhp.pl'),
     Delegation_A_WithCfProxy('youthwave', '51.75.54.175')
