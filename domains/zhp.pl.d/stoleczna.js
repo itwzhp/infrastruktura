@@ -4,7 +4,6 @@ D_EXTEND('zhp.pl',
     Delegation_NS('stoleczna', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     // Ogólnopolskie
-    Delegation_NS('abc', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('arsenal', ['ns1.unixstorm.org.', 'ns2.unixstorm.org.']),
 
 

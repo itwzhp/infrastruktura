@@ -1,7 +1,6 @@
 D_EXTEND('zhp.pl',
 
 	Delegation_NS('mazowiecka', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-	Delegation_NS('tezm-mazowiecka', ['ns1.x14.eu.', 'ns3.x25.pl.']),
 	Delegation_NS('e-mazowiecka', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
 	Delegation_NS('ciechanow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
@@ -30,6 +29,6 @@ D_EXTEND('zhp.pl',
 
 	Delegation_NS('przysucha', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	Delegation_NS('mazowieckazostajewdomu', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-         
+
 	Ms365_Subdomain('wegrow', 'zhp.pl') // MS365-14041
 );
