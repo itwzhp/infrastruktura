@@ -23,8 +23,7 @@ D_EXTEND('zhp.pl',
     Delegation_A('strzelce','185.135.90.126'),
     Ms365_Subdomain('hsd','zhp.pl'), // Rekordy potrzebne do dodania nowej domeny do offica
     Delegation_A('hsd','185.135.90.126'), // delegacja nowej domeny
-    // Delegacja domeny hufca Sulęcin
-         
+    // Delegacja domeny hufca Sulęcin 
     Ms365_Subdomain('sulecin','zhp.pl'),
 
     //Delegacja domeny hufca Szprotawa
