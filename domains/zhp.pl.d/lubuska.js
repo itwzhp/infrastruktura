@@ -18,15 +18,17 @@ D_EXTEND('zhp.pl',
     // Delegacja domeny hufca Słubice
     Delegation_NS('slubice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
-    //Delegacja domeny hufca Strzelce
+    //Delegacja domeny hufca Strzelce (zmienili nazwę na hufiec Strzelecko-Drezdenecki)
     Ms365_Subdomain('strzelce','zhp.pl'),
     Delegation_A('strzelce','185.135.90.126'),
-
+    Ms365_Subdomain('hsd','zhp.pl'), // Rekordy potrzebne do dodania nowej domeny do offica
+    Delegation_A('hsd','185.135.90.126'), // delegacja nowej domeny
     // Delegacja domeny hufca Sulęcin
+         
     Ms365_Subdomain('sulecin','zhp.pl'),
 
     //Delegacja domeny hufca Szprotawa
-    Delegation_NS('szprotawa', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
+    Delegation_NS('szprotawa', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']), //Hufiec został rozwiazany, dogaduję z chorągwią co dalej robimy
 
     // Delegacja domeny hufca Zielona Góra
     Delegation_NS('zielonagora', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']),
