@@ -9,4 +9,5 @@ require('./service-providers.js');
 require("./zhp.net.pl.zone.js");
 require("./zhp.pl.zone.js");
 require("./1procent.pl.zone.js");
+require("./bikejamboree.pl.zone.js");
 

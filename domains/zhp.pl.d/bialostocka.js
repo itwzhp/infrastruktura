@@ -1,48 +1,27 @@
 D_EXTEND('zhp.pl',
+    TXT('_github-challenge-bialostockazhp.bialostocka', '871ae7c463'),
+    Ms365_Subdomain('bialostocka', 'zhp.pl'),
+    Delegation_A('bialostocka', '195.78.66.229'),
+    TXT('bialostocka', '2dba839a6c6818d7fdf723ebd6d8e63043e9551062e5cbf742191658359995a'), //weryfikacja do SSL
 
-	TXT('_github-challenge-bialostockazhp.bialostocka', '871ae7c463'),
-	CNAME('*.bialostocka', 'bialostocka.zhp.pl.'),
-	CNAME('autodiscover.bialostocka', 'autodiscover.outlook.com.'),
-	MX('bialostocka', 10, 'bialostocka-zhp-pl.mail.protection.outlook.com.'),
-	A('bialostocka', '79.96.169.242'),
-	TXT('bialostocka', 'v=spf1 include:spf.protection.outlook.com -all'),
-	CNAME('enterpriseenrollment.bialostocka', 'enterpriseenrollment.manage.microsoft.com.'),
-	CNAME('enterpriseregistration.bialostocka', 'enterpriseregistration.windows.net.'),
-	CNAME('msoid.bialostocka', 'clientconfig.microsoftonline-p.net.'),
-	
-	CNAME('*.by.bialostocka', 'by.bialostocka.zhp.pl.'),
-	A('by.bialostocka', '79.96.169.242'),
-	MX('by.bialostocka', 10, 'by.bialostocka.zhp.pl.'),
-	
-	CNAME('*.pilot.bialostocka', 'pilot.bialostocka.zhp.pl.'),
-	A('pilot.bialostocka', '79.96.169.242'),
-	MX('pilot.bialostocka', 10, 'pilot.bialostocka.zhp.pl.'),
-	
-	CNAME('*.poczta.bialostocka', 'poczta.bialostocka.zhp.pl.'),
-	MX('poczta.bialostocka', 10, 'poczta.bialostocka.zhp.pl.'),
-	A('poczta.bialostocka', '79.96.169.242'),
-	
-	A('wedrownicy.bialostocka', '79.96.169.242'),
+    Ms365_Subdomain('augustow', 'zhp.pl'),  // MS365-16444
+    Delegation_A('augustow', '195.78.66.229'),
 
-	
-	CNAME('*.augustow', 'augustow.zhp.pl.'),
-	A('augustow', '79.96.169.242'),
-	MX('augustow', 10, 'augustow.zhp.pl.'),
-	
-	CNAME('*.bielskpodlaski', 'bielskpodlaski.zhp.pl.'),
-	A('bielskpodlaski', '79.96.169.242'),
-	MX('bielskpodlaski', 10, 'bielskpodlaski.zhp.pl.'),
+    CNAME('*.bielskpodlaski', 'bielskpodlaski.zhp.pl.'),
+    A('bielskpodlaski', '79.96.169.242'),
 
-	CNAME('*.grajewo', 'grajewo.zhp.pl.'),
-	A('grajewo', '79.96.169.242'),
-	MX('grajewo', 10, 'grajewo.zhp.pl.'),
+    CNAME('*.grajewo', 'grajewo.zhp.pl.'),
+    A('grajewo', '79.96.169.242'),
 
-	CNAME('*.suwalki', 'suwalki.zhp.pl.'),
-	A('suwalki', '79.96.169.242'),
-	MX('suwalki', 10, 'suwalki.zhp.pl.'),
-	
-	Delegation_NS('bialystok', ['dns11.linuxpl.com.', 'ns11.linuxpl.com.']),
-	Delegation_NS('kolno', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
-	Delegation_NS('lomza', ['ns1.datasferix.pl.', 'ns2.datasferix.pl.']),
-	Delegation_NS('sokolka', ['ns1.getspace.us.', 'ns2.getspace.us.'])
+    CNAME('*.suwalki', 'suwalki.zhp.pl.'),
+    A('suwalki', '79.96.169.242'),
+
+    Delegation_NS('bialystok', ['dns11.linuxpl.com.', 'ns11.linuxpl.com.']),
+    // development nowej strony białegostoku
+    Delegation_A('dev-bialystok', '195.78.66.229'),
+
+    Delegation_NS('kolno', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
+    // Delegation_NS('lomza', ['ns1.datasferix.pl.', 'ns2.datasferix.pl.']),
+    Ms365_Subdomain('lomza', 'zhp.pl'),
+    Delegation_NS('sokolka', ['ns1.getspace.us.', 'ns2.getspace.us.'])
 );

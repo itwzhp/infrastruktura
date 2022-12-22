@@ -1,3 +1,5 @@
+var cyberfolksNs = ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.'];
+
 D_EXTEND('zhp.pl',
 	// WIX set-up for Polkowice (MS365-7672)
 	CNAME('polkowice', 'www118.wixdns.net.'),
@@ -5,33 +7,29 @@ D_EXTEND('zhp.pl',
 	CNAME('de.polkowice', 'www118.wixdns.net.'),
 	CNAME('en.polkowice', 'www118.wixdns.net.'),
 	CNAME('pl.polkowice', 'www118.wixdns.net.'),
-	
-	CNAME('autodiscover.dolnoslaska', 'autodiscover.outlook.com.'),
+
 	Delegation_NS('dolnoslaska', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
-	TXT('dolnoslaska', 'v=spf1 include:spf.protection.outlook.com -all'),
-	MX('dolnoslaska', 0, 'dolnoslaska-zhp-pl.mail.protection.outlook.com.'),
-	Delegation_NS('dolnoslaska2', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-	Delegation_NS('dolnoslaska3', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-	CNAME('enterpriseenrollment.dolnoslaska', 'enterpriseenrollment.manage.microsoft.com.'),
-	CNAME('enterpriseregistration.dolnoslaska', 'enterpriseregistration.windows.net.'),
-	CNAME('msoid.dolnoslaska', 'clientconfig.microsoftonline-p.net.'),
+	Delegation_NS('dolnoslaska2', cyberfolksNs),
+	Delegation_NS('dolnoslaska3', cyberfolksNs),
 
 	// Bazy
-    Delegation_NS('czarna', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
+    Delegation_NS('czarna', cyberfolksNs),
     Delegation_NS('czarna2', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    Delegation_NS('pobierowo', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
+    Delegation_NS('pobierowo', cyberfolksNs),
     Delegation_NS('pobierowo2', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Delegation_NS('rozewie', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
 
+    // Hufce
 	Delegation_NS('bierutow', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
 	Delegation_NS('boleslawiec', ['ns1.cba.pl.', 'ns2.cba.pl.', 'ns3.cba.pl.']),
 	Delegation_NS('bystrzycaklodzka', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
-    Delegation_NS('dzierzoniow', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
+    Ms365_Subdomain('dzierzoniow', 'zhp.pl'),
 	Delegation_NS('glogow', ['ns1.netart.pl.', 'ns2.netart.pl.']),
 	Delegation_NS('jawor', ['dns11.linuxpl.com.', 'ns11.linuxpl.com.']),
 	Delegation_NS('karkonoski', ['ns1.ehost.pl.', 'ns2.ehost.pl.']),
 	Delegation_NS('katy', ['ns5.webd.pl.', 'ns7.webd.pl.']),
 	Delegation_NS('klodzko', ['dns8.linuxpl.com.', 'ns8.linuxpl.com.']),
+    Delegation_NS('legnica', cyberfolksNs),  // MS365-14080
 	Delegation_NS('luban', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
 	Delegation_NS('lubin', ['ns1.hostdmk.net.', 'ns2.hostdmk.net.']),
 	Delegation_NS('lagiewniki', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
@@ -44,11 +42,8 @@ D_EXTEND('zhp.pl',
 	Delegation_NS('wroclawpolnoc', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	Delegation_NS('wroclawpoludnie', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
 	Delegation_NS('wroclawwschod', ['ns.lh.pl.', 'ns2.lighthosting.net.']),
+    Ms365_Subdomain('zgorzelec', 'zhp.pl'),
 	Delegation_NS('zmigrod', ['ns.lh.pl.', 'ns2.lighthosting.net.']),
-
-    CNAME('*.komenda.legnica', 'komenda.legnica.zhp.pl.'),
-    MX('komenda.legnica', 10, 'komenda.legnica.zhp.pl.'),
-    A('komenda.legnica', '89.161.255.27'),
 
     Delegation_NS('bumerang', ['ns20.ovh.net.', 'dns20.ovh.net.'])
 );

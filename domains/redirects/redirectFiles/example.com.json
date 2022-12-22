@@ -4,5 +4,8 @@
     "testwithpathandfolder": { "target": "https://helpdesk.zhp.pl/test", "method": 302, "includePath": true },
     "testwithoutpath": { "target": "https://testy.zhp.pl", "method": 302, "includePath": false },
     "test301": { "target": "http://test.test.com", "method": 301 },
-    "testdefaultpath": { "target": "https://outlook.office.com", "method": 302 }
+    "testdefaultpath": { "target": "https://outlook.office.com", "method": 302 },
+    "testnowww": { "target": "https://whatever.com", "method": 301, "includeWww": false },
+    "testimplictwww": { "target": "https://whatever.com", "method":  301, "includeWww": true },
+    "www.testwwwonly": { "target": "https://whatever.com", "method": 301, "includeWww": false }
 }

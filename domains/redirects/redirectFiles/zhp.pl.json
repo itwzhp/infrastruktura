@@ -1,7 +1,41 @@
 {
     "$schema": "./redirect.schema.json",
+    "42zjazd": {
+        "target": "https://gkzhp.sharepoint.com/SitePages/42.-Zjazd-ZHP(1).aspx",
+        "method": 301
+    },
+    "csi": {
+        "target": "https://gkzhp.sharepoint.com/SitePages/Centralna-Szko%C5%82a-Instruktorska.aspx",
+        "method": 301
+    },
+    "deklaracja": {
+        "target": "https://tipi.zhp.pl",
+        "method": 301
+    },
+    "harc2o": {
+        "target": "https://gkzhp.sharepoint.com/sites/woda",
+        "method": 301,
+        "$comment": "MS365-19840"
+    },
+    "ksztalcenie": {
+        "target": "https://gkzhp.sharepoint.com/SitePages/Centralna-Szko%C5%82a-Instruktorska.aspx",
+        "method": 301
+    },
+    "poczta": {
+        "target": "https://outlook.office.com",
+        "method": 301
+    },
 
-    "poczta": { "target": "https://outlook.office.com", "method": 301 },
-    "csi": { "target": "https://gkzhp.sharepoint.com/SitePages/Centralna-Szko%C5%82a-Instruktorska.aspx", "method": 301 },
-    "ksztalcenie": { "target": "https://gkzhp.sharepoint.com/SitePages/Centralna-Szko%C5%82a-Instruktorska.aspx", "method": 301 }
+    "wedrownicy.gdanska": {
+        "target": "https://www.facebook.com/wedrownicygd",
+        "method": 301
+    },
+    "nasiczne.gdanska": {
+        "target": "http://nasiczne.bieszczady.pl/",
+        "method": 302
+    },
+    "polkolonie.gdanska": {
+        "target": "http://gdanska.zhp.pl/polkolonie/",
+        "method": 301
+    }
 }
