@@ -7,8 +7,7 @@ function Delegation_A(domain, record, suffix) {
 
 function Delegation_A_WithCfProxy(domain, record, suffix) {
     return [
-        A(domain, record, CF_PROXY_ON),
-        CNAME("www." + domain, suffix ? domain + '.' + suffix + '.' : domain, CF_PROXY_ON)
+        A(domain, record, CF_PROXY_ON)
     ];
 }
 
