@@ -56,7 +56,7 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('haliz', '51.75.54.175'),
     Delegation_A_WithCfProxy('hib', '51.75.54.175'),
     Delegation_A_WithCfProxy('intranet', '51.75.54.175'),
-    Delegation_A_WithCfProxy('komunikaty.gk', '51.75.54.175', 'zhp.pl'),
+    Delegation_A_WithCfProxy('komunikaty.gk', '51.75.54.175', 'zhp.pl'), // BUG CF SSL ERROR
     Delegation_A_WithCfProxy('kursy', '51.75.54.175'),
     Delegation_A_WithCfProxy('lacznosc', '51.75.54.175'),
     Delegation_A_WithCfProxy('lesneplemiona', '51.75.54.175'),
