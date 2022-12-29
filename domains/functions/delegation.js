@@ -5,7 +5,7 @@ function Delegation_A(domain, record, suffix) {
     ];
 }
 
-function Delegation_A_WithCfProxy(domain, record, suffix) {
+function Delegation_A_WithCfProxy(domain, record) {
     return [
         A(domain, record, CF_PROXY_ON)
     ];
