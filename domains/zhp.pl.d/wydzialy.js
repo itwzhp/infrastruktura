@@ -27,7 +27,6 @@ D_EXTEND('zhp.pl',
     // Ogólnoharcerskie przedsięwzięcia
     Delegation_A('harc-quiz', '137.74.3.247'),
     Delegation_A_WithCfProxy('fsj', '51.75.54.175'),
-    Delegation_A_WithCfProxy('archiwum.fsj.zhp.pl.', '51.75.54.175'), // MS365-16341 // BUG CF SSL ERROR
 
     // Władze naczelne
     Ms365_Subdomain('gk', 'zhp.pl'),
