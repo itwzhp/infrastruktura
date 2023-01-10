@@ -57,7 +57,8 @@ D_EXTEND('zhp.pl',
 
 
     // Hufiec Warszawa-Praga-Północ
-    Delegation_NS('pragapolnoc', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
+    Delegation_A('pragapolnoc', '185.255.40.53'),
+    Ms365_Subdomain('pragapolnoc', 'zhp.pl'),
 
 
     // Hufiec Warszawa-Wawer
