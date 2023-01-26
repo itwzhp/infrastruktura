@@ -22,7 +22,8 @@ D_EXTEND('zhp.pl',
     Delegation_NS('pabianice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('konstantynow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('lowicz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-
+    Delegation_NS('glowno', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+         
     Delegation_A('brzeziny', '212.191.78.183'),
     Delegation_A('sieradz', '85.232.255.122'),
 
