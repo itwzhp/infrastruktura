@@ -13,5 +13,4 @@ D_EXTEND('zhp.pl',
 	Delegation_NS('police', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	Delegation_NS('stargard', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	Delegation_NS('mysliborz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-	
-	Delegation_NS('slawno', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']))
+	Delegation_NS('slawno', ['ns1.atthost.pl.', 'ns2.atthost.pl.']))
