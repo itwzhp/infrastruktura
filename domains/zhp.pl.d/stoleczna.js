@@ -4,7 +4,32 @@ D_EXTEND('zhp.pl',
     Delegation_NS('stoleczna', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     // Ogólnopolskie
-    Delegation_NS('arsenal', ['ns1.unixstorm.org.', 'ns2.unixstorm.org.']),
+    Delegation_A('arsenal', '91.227.122.220'),
+    Delegation_A('2013.arsenal', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('2014.arsenal', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('2016.arsenal', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('2017.arsenal', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('2018.arsenal', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('2019.arsenal', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('2020.arsenal', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('2021.arsenal', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('podajdalej.arsenal', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('pytania.arsenal', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('rejestracja.arsenal', '91.227.122.220', 'zhp.pl'),
+
+    // Dobre pytanie, potrzebna migracja do Office365 - w pierwszej kolejności chcemy odzyskać dane z Google Workspace
+    CNAME('dokumenty.arsenal', 'ghs.google.com.'),
+    CNAME('kalendarz.arsenal', 'ghs.google.com.'),
+    CNAME('poczta.arsenal', 'ghs.google.com.'),
+    CNAME('strony.arsenal', 'ghs.google.com.'),
+    MX('arsenal', 10, 'ASPMX.L.GOOGLE.COM.'),
+    MX('arsenal', 20, 'ALT1.ASPMX.L.GOOGLE.COM.'),
+    MX('arsenal', 30, 'ASPMX2.GOOGLEMAIL.COM.'),
+    MX('arsenal', 40, 'ASPMX3.GOOGLEMAIL.COM.'),
+    MX('arsenal', 50, 'ASPMX4.GOOGLEMAIL.COM.'),
+    MX('arsenal', 60, 'ASPMX5.GOOGLEMAIL.COM.'),
+    TXT('arsenal', '"v=spf1 include:_spf.google.com ~all"'),
+    TXT('google._domainkey.arsenal', '"v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDD6QASh2jZ4WgKUAOBtvYl9yOmanGPN75ET/SCCHigkJIY5Mp0og6hka9c1ExqAYWhaWOf+GxBQk7vtoy5rXzGA6UxFFB5sYX2OWhQWrHhSjo1eA6QgkeXZ0p7w09f8bP7JeiHVy2vPL/DDEuWEpzupEwfb1wWw/gK+5c2tt89lwIDAQAB"'),
 
 
     // Hufce (hosting chorągwi)
