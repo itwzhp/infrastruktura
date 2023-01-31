@@ -49,7 +49,50 @@ D_EXTEND('zhp.pl',
 
 
     // Hufiec Warszawa-Mokotów
-    Delegation_NS('mokotow', ['ns1.unixstorm.org.', 'ns2.unixstorm.org.']),
+    Delegation_A('mokotow', '91.227.122.220'),
+    Delegation_A('154.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('208.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('40naobozie.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('50.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('60i148.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('60wdh.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('69wdhiz.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('dok.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('e-rajd.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('gra.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('hkr.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('marek.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('new.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('oboz.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('old.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('postoj.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('spacer.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('stopa.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('szczep40.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('szczep413.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('wedrownicy.mokotow', '91.227.122.220', 'zhp.pl'),
+
+    // Google Sites
+    CNAME('1procent.mokotow', 'ghs.google.com.'),
+    CNAME('ksh.mokotow', 'ghs.google.com.'),
+    CNAME('przewodnikowski.mokotow', 'ghs.google.com.'),
+
+    // Ktoś tego używa?
+    CNAME('dokumenty.mokotow', 'ghs.google.com.'),
+    CNAME('kalendarz.mokotow', 'ghs.google.com.'),
+    CNAME('poczta.mokotow', 'ghs.google.com.'),
+    CNAME('strony.mokotow', 'ghs.google.com.'),
+
+    // Microsoft 365
+    CNAME('autodiscover.mokotow', 'autodiscover.outlook.com.'),
+    CNAME('enterpriseenrollment.mokotow', 'enterpriseenrollment.manage.microsoft.com.'),
+    CNAME('enterpriseregistration.mokotow', 'enterpriseregistration.windows.net.'),
+    CNAME('lyncdiscover.mokotow', 'webdir.online.lync.com.'),
+    CNAME('sip.mokotow', 'sipdir.online.lync.com.'),
+    MX('mokotow', 0, 'mokotow-zhp-pl.mail.protection.outlook.com.'),
+    SRV('_sip._tls.mokotow', 1, 100, 443, 'sipdir.online.lync.com.'),
+    SRV('_sipfederationtls._tcp.mokotow', 1, 100, 5061, 'sipfed.online.lync.com.'),
+    TXT('mokotow', 'v=spf1 include:spf.protection.outlook.com -all'),
 
 
     // Hufiec Warszawa-Ochota
