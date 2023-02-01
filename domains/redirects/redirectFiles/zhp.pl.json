@@ -37,5 +37,15 @@
     "polkolonie.gdanska": {
         "target": "http://gdanska.zhp.pl/polkolonie/",
         "method": 301
+    },
+    
+    // Zachodniopomorska
+    "e.zachpom": {
+        "target": "https://gkzhp.sharepoint.com/sites/e-zachpom/",
+        "method": 301
+    },
+    "e.szczecin": {
+        "target": "https://gkzhp.sharepoint.com/sites/szczecin/",
+        "method": 301
     }
 }
