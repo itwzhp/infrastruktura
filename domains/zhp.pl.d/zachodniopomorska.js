@@ -1,10 +1,17 @@
 var atthost = '185.255.40.43';
 
 D_EXTEND('zhp.pl',
+    // Chorągiew
     Delegation_A('zachpom', atthost),
     Delegation_A('zachodniopomorska', atthost),
     Ms365_Subdomain('zachpom','zhp.pl'),
+             
+    Delegation_A('parasol.zachpom', atthost),
+    Delegation_A('portal.zachpom', atthost),
     
+    Delegation_A('zlot.zachpom', atthost),
+    
+    // Hufce
     Delegation_A('swinoujscie', atthost),
     Ms365_Subdomain('swinoujscie','zhp.pl'),
 	
