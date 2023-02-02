@@ -10,7 +10,7 @@ Describe "DNS Zone <zone.name>" -ForEach $zones {
     }
 
     It "should have no MX outside MS 365" {
-        $externalMxWhitelist = @('mail-auto')
+        $externalMxWhitelist = @('mail-auto', 'no-reply')
 
         $allEntries |
             Where-Object {$_.type -eq 'MX' } |
