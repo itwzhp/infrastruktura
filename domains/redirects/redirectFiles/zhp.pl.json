@@ -39,7 +39,6 @@
         "method": 301
     },
     
-    // Zachodniopomorska
     "e.zachpom": {
         "target": "https://gkzhp.sharepoint.com/sites/e-zachpom/",
         "method": 301
