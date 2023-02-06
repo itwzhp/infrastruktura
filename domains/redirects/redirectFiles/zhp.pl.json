@@ -46,5 +46,9 @@
     "e.szczecin": {
         "target": "https://gkzhp.sharepoint.com/sites/szczecin/",
         "method": 301
+    },
+    "aktywacja": {
+        "target": "https://pomoc.zhp.pl/display/PUB",
+        "method": 302
     }
 }

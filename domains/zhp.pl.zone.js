@@ -20,7 +20,6 @@ D('zhp.pl', ovhRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600),
     Delegation_NS('westerplatte', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']), // cert error ale coś za nim stoi
 
     // TODO ustalić co to
-    A('integrationservice', '104.214.218.237'), // serwer edka ale do czego ta domena?
     A('qnapgk', '213.189.38.134'),
     A('vpngk', '213.189.38.130'), // ?
     A('ftp', '51.75.54.175'), // pozwala ominąć proxy CF
