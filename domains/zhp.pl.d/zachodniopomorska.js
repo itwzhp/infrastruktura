@@ -6,12 +6,12 @@ D_EXTEND('zhp.pl',
     Delegation_A('zachodniopomorska', atthost),
     Ms365_Subdomain('zachpom','zhp.pl'),
          
-    Delegation_A('main.zachpom.zhp.pl.', atthost),
+    Delegation_A('main.zachpom', atthost, 'zhp.pl'),
          
-    Delegation_A('parasol.zachpom.zhp.pl.', atthost),
-    Delegation_A('portal.zachpom.zhp.pl.', atthost),
+    Delegation_A('parasol.zachpom', atthost, 'zhp.pl'),
+    Delegation_A('portal.zachpom', atthost, 'zhp.pl'),
          
-    Delegation_A('zlot.zachpom.zhp.pl.', atthost),
+    Delegation_A('zlot.zachpom', atthost, 'zhp.pl'),
     
     // Hufce
     Delegation_A('swinoujscie', atthost),
