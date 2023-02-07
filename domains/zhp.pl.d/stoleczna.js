@@ -5,23 +5,8 @@ D_EXTEND('zhp.pl',
 
     // Ogólnopolskie
     Delegation_A('arsenal', '91.227.122.220'),
-    Delegation_A('2013.arsenal', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('2014.arsenal', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('2016.arsenal', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('2017.arsenal', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('2018.arsenal', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('2019.arsenal', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('2020.arsenal', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('2021.arsenal', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('podajdalej.arsenal', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('pytania.arsenal', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('rejestracja.arsenal', '91.227.122.220', 'zhp.pl'),
 
     // Dobre pytanie, potrzebna migracja do Office365 - w pierwszej kolejności chcemy odzyskać dane z Google Workspace
-    CNAME('dokumenty.arsenal', 'ghs.google.com.'),
-    CNAME('kalendarz.arsenal', 'ghs.google.com.'),
-    CNAME('poczta.arsenal', 'ghs.google.com.'),
-    CNAME('strony.arsenal', 'ghs.google.com.'),
     MX('arsenal', 10, 'ASPMX.L.GOOGLE.COM.'),
     MX('arsenal', 20, 'ALT1.ASPMX.L.GOOGLE.COM.'),
     MX('arsenal', 30, 'ASPMX2.GOOGLEMAIL.COM.'),
