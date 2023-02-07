@@ -85,12 +85,6 @@ D_EXTEND('zhp.pl',
     CNAME('ksh.mokotow', 'ghs.google.com.'),
     CNAME('przewodnikowski.mokotow', 'ghs.google.com.'),
 
-    // Ktoś tego używa?
-    CNAME('dokumenty.mokotow', 'ghs.google.com.'),
-    CNAME('kalendarz.mokotow', 'ghs.google.com.'),
-    CNAME('poczta.mokotow', 'ghs.google.com.'),
-    CNAME('strony.mokotow', 'ghs.google.com.'),
-
 
     // Hufiec Warszawa-Ochota
     Delegation_NS('warszawaochota', ['ns100.ovh.net.', 'dns100.ovh.net.']),
