@@ -6,6 +6,7 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('work-dev', '51.75.54.175'),
     Delegation_A_WithCfProxy('bip', '51.75.54.175'),
     Delegation_A_WithCfProxy('zapytaj', '51.75.54.175'),
+    Delegation_A_WithCfProxy('edu', '51.75.54.175'),
     A('plesk', '51.75.54.175'),
 
     // 213.189.38.138
