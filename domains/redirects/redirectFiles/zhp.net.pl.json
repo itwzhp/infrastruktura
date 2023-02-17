@@ -1,5 +1,6 @@
 {
     "$schema": "./redirect.schema.json",
     "poczta": { "target": "https://outlook.office.com", "method": 301 },
+    "zlotaosemka": { "target": "https://zlotaosemka.dabrowagornicza.zhp.pl/", "method": 301 },
     "aktywacja": { "target": "https://pomoc.zhp.pl/display/PUB", "method": 302 }
 }

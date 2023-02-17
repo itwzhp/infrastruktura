@@ -15,8 +15,7 @@ D('zhp.net.pl', noneRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600)
     Delegation_NS('jott', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.']), // MS365-6517
 
     Delegation_A('157pdh', '91.227.123.80'),
-    Delegation_A('zlotaosemka', '185.54.184.244'),
-
+    
     // Silnik przekierowań
     Redirects(require('./redirects/redirectFiles/zhp.net.pl.json'))
 )
