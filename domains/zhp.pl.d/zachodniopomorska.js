@@ -12,6 +12,8 @@ D_EXTEND('zhp.pl',
     Delegation_A('portal.zachpom', atthost, 'zhp.pl'),
          
     Delegation_A('zlot.zachpom', atthost, 'zhp.pl'),
+         
+    Delegation_A('test.zachpom', atthost, 'zhp.pl'),
     
     // Hufce
     Delegation_A('swinoujscie', atthost),
