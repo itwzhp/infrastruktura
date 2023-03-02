@@ -91,27 +91,15 @@ D_EXTEND('zhp.pl',
     CNAME('dokumenty.otwock', 'ghs.google.com.'),
 
 
-    // Hufiec Pruszków
-    AAAA('ipv6.pruszkow', '2a02:25a9:0:5888::1'),
-    Delegation_A('pruszkow', '89.161.136.136'),
+    // Hufiec Pruszków - MS365-24169
+    Delegation_A('pruszkow', '185.255.40.54'),
     Ms365_Subdomain('pruszkow', 'zhp.pl'),
 
-    AAAA('ipv6.14.pruszkow', '2a02:25a9:0:5888::1'),
-    Delegation_A('14.pruszkow', '89.161.136.136', 'zhp.pl'),
-
-    AAAA('ipv6.paderewski.pruszkow', '2a02:25a9:0:5888::1'),
-    Delegation_A('paderewski.pruszkow', '89.161.136.136', 'zhp.pl'),
-
-    AAAA('ipv6.shds.pruszkow', '2a02:25a9:0:5888::1'),
-    Delegation_A('shds.pruszkow', '89.161.136.136', 'zhp.pl'),
-
+    Delegation_A('14.pruszkow', '185.255.40.54', 'zhp.pl'),
+    Delegation_A('paderewski.pruszkow', '185.255.40.54', 'zhp.pl'),
+    Delegation_A('shds.pruszkow', '185.255.40.54', 'zhp.pl'),
     // szczep --> błędne kodowanie znaków
-    AAAA('ipv6.shdw.pruszkow', '2a02:25a9:0:5888::1'),
-    Delegation_A('shdw.pruszkow', '89.161.136.136', 'zhp.pl'),
-
-    AAAA('ipv6.knieja.pruszkow', '2a02:25a9:0:5888::1'),
-    Delegation_A('knieja.pruszkow', '89.161.136.136', 'zhp.pl'),
-
-    AAAA('ipv6.twierdza.pruszkow', '2a02:25a9:0:5888::1'),
-    Delegation_A('twierdza.pruszkow', '89.161.136.136', 'zhp.pl')
+    Delegation_A('shdw.pruszkow', '185.255.40.54', 'zhp.pl'),
+    Delegation_A('knieja.pruszkow', '185.255.40.54', 'zhp.pl'),
+    Delegation_A('twierdza.pruszkow', '185.255.40.54', 'zhp.pl')
 );
