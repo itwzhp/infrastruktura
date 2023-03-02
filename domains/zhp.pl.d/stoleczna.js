@@ -97,9 +97,5 @@ D_EXTEND('zhp.pl',
 
     Delegation_A('14.pruszkow', '185.255.40.54', 'zhp.pl'),
     Delegation_A('paderewski.pruszkow', '185.255.40.54', 'zhp.pl'),
-    Delegation_A('shds.pruszkow', '185.255.40.54', 'zhp.pl'),
-    // szczep --> błędne kodowanie znaków
-    Delegation_A('shdw.pruszkow', '185.255.40.54', 'zhp.pl'),
-    Delegation_A('knieja.pruszkow', '185.255.40.54', 'zhp.pl'),
-    Delegation_A('twierdza.pruszkow', '185.255.40.54', 'zhp.pl')
+    Delegation_A('shds.pruszkow', '185.255.40.54', 'zhp.pl')
 );
