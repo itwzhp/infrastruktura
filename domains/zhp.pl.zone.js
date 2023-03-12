@@ -13,12 +13,12 @@ D('zhp.pl', ovhRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600),
     Redirects(require('./redirects/redirectFiles/zhp.pl.json')),
 
     // NS
-    Delegation_NS('limev3', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('pielgrzymka', ['dns.smarthost.pl.', 'dns2.smarthost.pl.', 'dns3.smarthost.pl.']), // ?
     Delegation_NS('rajdgranica', ['dns1.linuxpl.com.', 'dns2.linuxpl.com.', 'dns3.linuxpl.com.']), // cert error ale coś za nim jest
     Delegation_NS('westerplatte', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']), // cert error ale coś za nim stoi
 
     // TODO ustalić co to
+    Delegation_A_WithCfProxy('limev3', '51.75.54.175'),
     Delegation_A_WithCfProxy('e-aos', '51.75.54.175'),
     A('qnapgk', '213.189.38.134'),
     A('vpngk', '213.189.38.130'), // ?
