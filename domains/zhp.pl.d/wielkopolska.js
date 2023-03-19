@@ -6,7 +6,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('poznanwilda', ['ns1.hostdmk.net.', 'ns2.hostdmk.net.']),
     Delegation_NS('siodemka', ['ns1.cal.pl.', 'ns2.cal.pl.']),
 
-    Delegation_NS('turek', ['ns1.kylos.pl.', 'ns2.kylos.pl.']),
+    Delegation_A('turek', '195.162.24.10'),
     Delegation_NS('wolsztyn', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('wrzesnia', ['ns1.interian.pl.', 'ns3.tomkii.net.']),
     Delegation_NS('wschowa', ['ns1.atthost.pl.', 'ns2.atthost.pl.']), // MS365-9328
