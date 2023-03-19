@@ -7,6 +7,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('siodemka', ['ns1.cal.pl.', 'ns2.cal.pl.']),
 
     Delegation_A('turek', '195.162.24.10'),
+    Ms365_Subdomain('turek','zhp.pl'),
     Delegation_NS('wolsztyn', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('wrzesnia', ['ns1.interian.pl.', 'ns3.tomkii.net.']),
     Delegation_NS('wschowa', ['ns1.atthost.pl.', 'ns2.atthost.pl.']), // MS365-9328
