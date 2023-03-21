@@ -4,7 +4,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('stoleczna', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     // Ogólnopolskie
-    Delegation_A('arsenal', '91.227.122.220'),
+    Delegation_A('arsenal', '109.95.158.227'),
     Ms365_Subdomain('arsenal', 'zhp.pl'),
 
 
@@ -50,12 +50,12 @@ D_EXTEND('zhp.pl',
 
 
     // Hufiec Warszawa-Mokotów
-    Delegation_A('mokotow', '91.227.122.220'),
+    Delegation_A('mokotow', '109.95.158.227'),
     Delegation_A('154.mokotow', '91.227.122.220', 'zhp.pl'),
     Delegation_A('208.mokotow', '91.227.122.220', 'zhp.pl'),
     Delegation_A('40naobozie.mokotow', '91.227.122.220', 'zhp.pl'),
     Delegation_A('50.mokotow', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('60wdh.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('60wdh.mokotow', '109.95.158.227', 'zhp.pl'),
     Delegation_A('69wdhiz.mokotow', '91.227.122.220', 'zhp.pl'),
     Delegation_A('dok.mokotow', '91.227.122.220', 'zhp.pl'),
     Delegation_A('e-rajd.mokotow', '91.227.122.220', 'zhp.pl'),
@@ -67,7 +67,7 @@ D_EXTEND('zhp.pl',
     Delegation_A('spacer.mokotow', '91.227.122.220', 'zhp.pl'),
     Delegation_A('stopa.mokotow', '91.227.122.220', 'zhp.pl'),
     Delegation_A('szczep40.mokotow', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('szczep413.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('szczep413.mokotow', '109.95.158.227', 'zhp.pl'),
     Delegation_A('wedrownicy.mokotow', '91.227.122.220', 'zhp.pl'),
     Ms365_Subdomain('mokotow', 'zhp.pl'),
 
