@@ -51,30 +51,16 @@ D_EXTEND('zhp.pl',
 
     // Hufiec Warszawa-Mokotów
     Delegation_A('mokotow', '109.95.158.227'),
-    Delegation_A('154.mokotow', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('208.mokotow', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('40naobozie.mokotow', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('50.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('208.mokotow', '109.95.158.227', 'zhp.pl'),
+    Delegation_A('50.mokotow', '109.95.158.227', 'zhp.pl'),
     Delegation_A('60wdh.mokotow', '109.95.158.227', 'zhp.pl'),
-    Delegation_A('69wdhiz.mokotow', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('dok.mokotow', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('e-rajd.mokotow', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('gra.mokotow', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('hkr.mokotow', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('marek.mokotow', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('oboz.mokotow', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('postoj.mokotow', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('spacer.mokotow', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('stopa.mokotow', '91.227.122.220', 'zhp.pl'),
-    Delegation_A('szczep40.mokotow', '91.227.122.220', 'zhp.pl'),
+    Delegation_A('69wdhiz.mokotow', '109.95.158.227', 'zhp.pl'),
+    Delegation_A('e-rajd.mokotow', '109.95.158.227', 'zhp.pl'),
+    Delegation_A('spacer.mokotow', '109.95.158.227', 'zhp.pl'),
+    Delegation_A('stopa.mokotow', '109.95.158.227', 'zhp.pl'),
+    Delegation_A('szczep40.mokotow', '109.95.158.227', 'zhp.pl'),
     Delegation_A('szczep413.mokotow', '109.95.158.227', 'zhp.pl'),
-    Delegation_A('wedrownicy.mokotow', '91.227.122.220', 'zhp.pl'),
     Ms365_Subdomain('mokotow', 'zhp.pl'),
-
-    // Google Sites
-    CNAME('1procent.mokotow', 'ghs.google.com.'),
-    CNAME('ksh.mokotow', 'ghs.google.com.'),
-    CNAME('przewodnikowski.mokotow', 'ghs.google.com.'),
 
 
     // Hufiec Warszawa-Ochota
