@@ -4,7 +4,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('stoleczna', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     // Ogólnopolskie
-    Delegation_A('arsenal', '109.95.158.227'),
+    Delegation_A_WithCfProxy('arsenal', '109.95.158.227'),
     Ms365_Subdomain('arsenal', 'zhp.pl'),
 
 
@@ -50,7 +50,7 @@ D_EXTEND('zhp.pl',
 
 
     // Hufiec Warszawa-Mokotów
-    Delegation_A('mokotow', '109.95.158.227'),
+    Delegation_A_WithCfProxy('mokotow', '109.95.158.227'),
     Delegation_A('208.mokotow', '109.95.158.227', 'zhp.pl'),
     Delegation_A('50.mokotow', '109.95.158.227', 'zhp.pl'),
     Delegation_A('60wdh.mokotow', '109.95.158.227', 'zhp.pl'),
