@@ -50,4 +50,8 @@ D_EXTEND('zhp.pl',
     Ms365_Subdomain('mysliborz','zhp.pl'),
 
     Delegation_A('slawno', atthost),
-    Ms365_Subdomain('slawno','zhp.pl'))
+    Ms365_Subdomain('slawno','zhp.pl'),
+        
+    //Pozostałe
+    Delegation_A('poczta.szczecin', '185.255.40.54', 'zhp.pl') // MS365-25188
+)
