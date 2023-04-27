@@ -45,5 +45,6 @@ D_EXTEND('zhp.pl',
     Ms365_Subdomain('zgorzelec', 'zhp.pl'),
 	Delegation_NS('zmigrod', ['ns.lh.pl.', 'ns2.lighthosting.net.']),
 
-    Delegation_NS('bumerang', ['ns.lh.pl.', 'ns2.lighthosting.net.', 'ns2.lh.pl.'])
+    Delegation_NS('bumerang', ['ns.lh.pl.', 'ns2.lighthosting.net.', 'ns2.lh.pl.']),
+    Delegation_NS('rajdgranica', ['dns1.linuxpl.com.', 'dns2.linuxpl.com.', 'dns3.linuxpl.com.'])
 );
