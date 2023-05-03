@@ -30,6 +30,7 @@ D_EXTEND('zhp.pl',
 	Delegation_NS('olawa', ['ns12.linuxpl.com.', 'dns12.linuxpl.com.']),
 	Ms365_Subdomain('polkowice', 'zhp.pl'),
 	Delegation_NS('srodaslaska', ['dns8.linuxpl.com.', 'ns8.linuxpl.com.']), // TODO poprawić wpisy MS365
+	Ms365_Subdomain('sycow', 'zhp.pl'),
 	Delegation_NS('swidnica', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
 	Delegation_NS('walbrzych', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']), // TODO poprawić wpisy MS365
 	Delegation_NS('wroclaw', ['dns20.ovh.net.', 'ns20.ovh.net.']),
