@@ -7,7 +7,6 @@ D_EXTEND('zhp.pl',
     TXT('@', 'google-site-verification=3EJuMBYjCQrS-ZAOYHkyxjweNONPhVoGS8ONaOKSY14'), // MS365-8164
 
     // Centrum Wychowania Morskiego
-    Delegation_A_WithCfProxy('cwm', '51.75.54.175'),
     Ms365_Subdomain('cwm', 'zhp.pl'),
 
     // Muzeum Harcerstwa
