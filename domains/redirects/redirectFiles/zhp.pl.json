@@ -48,7 +48,11 @@
         "method": 301
     },
     "aktywacja": {
-        "target": "https://pomoc.zhp.pl/display/PUB",
+        "target": "https://zhp.pl/microsoft-365-w-zhp/",
+        "method": 302
+    },
+    "konto": {
+        "target": "https://zhp.pl/microsoft-365-w-zhp/",
         "method": 302
     }
 }
