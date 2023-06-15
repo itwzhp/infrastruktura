@@ -10,6 +10,7 @@ D_EXTEND('zhp.pl',
     Ms365_Subdomain('nowytomysl','zhp.pl'),
     Delegation_A('nowytomysl', '2.57.138.154'), // MS365-26904
     Ms365_Subdomain('turek','zhp.pl'),
+    Ms365_Subdomain('srem','zhp.pl'),
     Delegation_NS('wolsztyn', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('wrzesnia', ['ns1.interian.pl.', 'ns3.tomkii.net.']),
     Delegation_NS('wschowa', ['ns1.atthost.pl.', 'ns2.atthost.pl.']), // MS365-9328
