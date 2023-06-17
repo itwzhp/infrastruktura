@@ -8,7 +8,8 @@ D_EXTEND('zhp.pl',
 	CNAME('en.polkowice', 'www118.wixdns.net.'),
 	CNAME('pl.polkowice', 'www118.wixdns.net.'),
 
-	Delegation_NS('dolnoslaska', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
+	Delegation_NS('dolnoslaska', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']),
+    Delegation_NS('archiwumdolnoslaska', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']),     
 	Delegation_NS('dolnoslaska2', cyberfolksNs),
 	Delegation_NS('dolnoslaska3', cyberfolksNs),
 
