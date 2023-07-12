@@ -35,8 +35,12 @@
         "method": 302
     },
     "polkolonie.gdanska": {
-        "target": "http://gdanska.zhp.pl/polkolonie/",
+        "target": "https://gdanska.zhp.pl/polkolonie/",
         "method": 301
+    },
+    "sprawnosci.gdanska":{
+        "target": "https://sprawnosci-harcerskie.netlify.app/",
+        "method": 302
     },
     
     "e.zachpom": {
