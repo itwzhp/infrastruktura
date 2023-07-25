@@ -28,7 +28,7 @@ D_EXTEND('zhp.pl',
   	Delegation_NS('glogow', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']),
 	Delegation_NS('jawor', ['dns11.linuxpl.com.', 'ns11.linuxpl.com.']),
 	Delegation_NS('karkonoski', ['ns1.ehost.pl.', 'ns2.ehost.pl.']),
-	Delegation_NS('katy', ['ns5.webd.pl.', 'ns7.webd.pl.']),
+	// Delegation_NS('katy', ['ns5.webd.pl.', 'ns7.webd.pl.']), // wyłączone tymczasowo do czasu naprawienia strony
 	Delegation_NS('klodzko', ['dns8.linuxpl.com.', 'ns8.linuxpl.com.']),
     Delegation_NS('legnica', cyberfolksNs),  // MS365-14080
 	Delegation_NS('luban', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
