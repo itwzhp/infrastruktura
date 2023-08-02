@@ -4,7 +4,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('stoleczna', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     // Ogólnopolskie
-    Delegation_A_WithCfProxy('arsenal', '109.95.158.227'),
+    Delegation_A_WithCfProxy('arsenal', '109.95.159.40'),
     Ms365_Subdomain('arsenal', 'zhp.pl'),
 
 
@@ -50,16 +50,16 @@ D_EXTEND('zhp.pl',
 
 
     // Hufiec Warszawa-Mokotów
-    Delegation_A_WithCfProxy('mokotow', '109.95.158.227'),
-    Delegation_A('208.mokotow', '109.95.158.227', 'zhp.pl'),
-    Delegation_A('50.mokotow', '109.95.158.227', 'zhp.pl'),
-    Delegation_A('60wdh.mokotow', '109.95.158.227', 'zhp.pl'),
-    Delegation_A('69wdhiz.mokotow', '109.95.158.227', 'zhp.pl'),
-    Delegation_A('e-rajd.mokotow', '109.95.158.227', 'zhp.pl'),
-    Delegation_A('spacer.mokotow', '109.95.158.227', 'zhp.pl'),
-    Delegation_A('stopa.mokotow', '109.95.158.227', 'zhp.pl'),
-    Delegation_A('szczep40.mokotow', '109.95.158.227', 'zhp.pl'),
-    Delegation_A('szczep413.mokotow', '109.95.158.227', 'zhp.pl'),
+    Delegation_A_WithCfProxy('mokotow', '109.95.159.40'),
+    Delegation_A('208.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('50.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('60wdh.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('69wdhiz.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('e-rajd.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('spacer.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('stopa.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('szczep40.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('szczep413.mokotow', '109.95.159.40', 'zhp.pl'),
     Ms365_Subdomain('mokotow', 'zhp.pl'),
 
 
