@@ -8,7 +8,8 @@ D_EXTEND('zhp.pl',
 	CNAME('en.polkowice', 'www118.wixdns.net.'),
 	CNAME('pl.polkowice', 'www118.wixdns.net.'),
 
-	Delegation_NS('dolnoslaska', ['ns1.nazwa.pl.', 'ns2.nazwa.pl.', 'ns3.nazwa.pl.']),
+	Delegation_NS('dolnoslaska', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']),
+    Delegation_NS('archiwumdolnoslaska', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']),     
 	Delegation_NS('dolnoslaska2', cyberfolksNs),
 	Delegation_NS('dolnoslaska3', cyberfolksNs),
 
@@ -23,11 +24,11 @@ D_EXTEND('zhp.pl',
 	Delegation_NS('bierutow', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
 	Delegation_NS('boleslawiec', ['ns1.cba.pl.', 'ns2.cba.pl.', 'ns3.cba.pl.']),
 	Delegation_NS('bystrzycaklodzka', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
-    Ms365_Subdomain('dzierzoniow', 'zhp.pl'),
-	Delegation_NS('glogow', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']),
+    Delegation_NS('dzierzoniow', ['ns.lh.pl.', 'ns2.lighthosting.net.', 'ns2.lh.pl.']),
+  	Delegation_NS('glogow', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']),
 	Delegation_NS('jawor', ['dns11.linuxpl.com.', 'ns11.linuxpl.com.']),
 	Delegation_NS('karkonoski', ['ns1.ehost.pl.', 'ns2.ehost.pl.']),
-	Delegation_NS('katy', ['ns5.webd.pl.', 'ns7.webd.pl.']),
+	// Delegation_NS('katy', ['ns5.webd.pl.', 'ns7.webd.pl.']), // wyłączone tymczasowo do czasu naprawienia strony
 	Delegation_NS('klodzko', ['dns8.linuxpl.com.', 'ns8.linuxpl.com.']),
     Delegation_NS('legnica', cyberfolksNs),  // MS365-14080
 	Delegation_NS('luban', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
@@ -45,5 +46,6 @@ D_EXTEND('zhp.pl',
     Ms365_Subdomain('zgorzelec', 'zhp.pl'),
 	Delegation_NS('zmigrod', ['ns.lh.pl.', 'ns2.lighthosting.net.']),
 
-    Delegation_NS('bumerang', ['ns.lh.pl.', 'ns2.lighthosting.net.', 'ns2.lh.pl.'])
+    Delegation_NS('bumerang', ['ns.lh.pl.', 'ns2.lighthosting.net.', 'ns2.lh.pl.']),
+    Delegation_NS('rajdgranica', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.'])
 );
