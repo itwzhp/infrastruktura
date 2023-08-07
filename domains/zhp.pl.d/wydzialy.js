@@ -30,6 +30,7 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('cej2022', '51.75.54.175'),
     Delegation_NS('pielgrzymka', ['dns.smarthost.pl.', 'dns2.smarthost.pl.', 'dns3.smarthost.pl.']),
     Delegation_A_WithCfProxy('watra', '51.75.54.175'),
+    Delegation_A('watrapp.watra', '185.209.228.136'), // MS365-27745
     Ms365_Subdomain('watra','zhp.pl'),
 
     // Ogólnoharcerskie przedsięwzięcia
