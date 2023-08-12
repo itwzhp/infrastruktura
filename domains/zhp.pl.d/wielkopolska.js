@@ -13,6 +13,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('wolsztyn', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('wrzesnia', ['ns1.interian.pl.', 'ns3.tomkii.net.']),
     Delegation_NS('wschowa', ['ns1.atthost.pl.', 'ns2.atthost.pl.']), // MS365-9328
+    Ms365_Subdomain('wagrowiec','zhp.pl'),
     Delegation_A('nowemiasto', '185.23.21.18'),
     Delegation_A('gniezno', '178.32.205.96'),
     Delegation_A('poznangrunwald', '94.23.27.27'),
