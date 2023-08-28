@@ -88,7 +88,9 @@ D_EXTEND('zhp.pl',
 
     AAAA('ipv6.nowydwormaz', '2a02:25a9:0:4893::1'),
     Delegation_A('nowydwormaz', '62.129.232.147'),
+    
 
+    // Hufiec Otwock
     AAAA('ipv6.otwock', '2a02:25a9:0:2637::1'),
     Delegation_A('otwock', '62.129.198.55'),
     Ms365_Subdomain('otwock', 'zhp.pl'),
@@ -96,10 +98,8 @@ D_EXTEND('zhp.pl',
     AAAA('ipv6.wosp.otwock', '2a02:25a9:0:2637::1'),
     Delegation_A('wosp.otwock', '62.129.198.55', 'zhp.pl'),
 
-    // ktoś tego używa?
-    CNAME('kalendarz.otwock', 'ghs.google.com.'),
-    CNAME('mail.otwock', 'ghs.google.com.'),
-    CNAME('dokumenty.otwock', 'ghs.google.com.'),
+    AAAA('ipv6.szareszeregi.otwock', '2a02:25a9:0:2637::1'),
+    Delegation_A('szareszeregi.otwock', '62.129.198.55', 'zhp.pl'),
 
 
     // Hufiec Pruszków - MS365-24169
