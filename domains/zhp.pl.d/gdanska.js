@@ -20,7 +20,7 @@ D_EXTEND('zhp.pl',
     Ms365_Subdomain('sopot','zhp.pl'),
     Delegation_NS('tczew', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
     Delegation_NS('wejherowo', ['ns1.iq.pl.', 'ns2.iq.pl.']),
-    Delegation_CNAME('malbork', 'zhp.malbork.net.pl.'),
+    Delegation_A('malbork','178.32.203.125'),
 
     Ms365_Subdomain('gdynia','zhp.pl'),
     Ms365_Subdomain('koscierzyna','zhp.pl'),
@@ -32,4 +32,10 @@ D_EXTEND('zhp.pl',
     A('czernica', '51.75.54.175'),
 
     // Przedsięwzięcia
-    Delegation_CNAME('jott.gdanska.zhp.pl.', 'gdanska.zhp.pl.'));
+    Delegation_CNAME('jott.gdanska.zhp.pl.', 'gdanska.zhp.pl.'),
+    
+    // System ewidencji sprzętu
+    CNAME("sprzet.gdanska", "ewidencja-sprzetu-frontend-prod.azurewebsites.net."),
+    TXT("asuid.sprzet.gdanska", "32C40316E8FAC62EFA8E6E3D389D40A0B14DC868D7E81E727355CE362026592A"),
+    CNAME("api.sprzet.gdanska", "ewidencja-sprzetu-prod.azurewebsites.net."),
+    TXT("asuid.api.sprzet.gdanska", "32C40316E8FAC62EFA8E6E3D389D40A0B14DC868D7E81E727355CE362026592A"));

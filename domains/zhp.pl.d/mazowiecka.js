@@ -4,6 +4,7 @@ D_EXTEND('zhp.pl',
 	Delegation_NS('e-mazowiecka', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
 	Delegation_NS('ciechanow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+	Delegation_NS('dolinyliwca', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),  // MS365-25907
 	Delegation_NS('gostynin', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	Delegation_NS('grojec', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	Delegation_NS('jaktorow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),

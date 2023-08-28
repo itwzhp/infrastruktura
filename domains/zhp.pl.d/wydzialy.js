@@ -7,22 +7,31 @@ D_EXTEND('zhp.pl',
     TXT('@', 'google-site-verification=3EJuMBYjCQrS-ZAOYHkyxjweNONPhVoGS8ONaOKSY14'), // MS365-8164
 
     // Centrum Wychowania Morskiego
-    Delegation_A_WithCfProxy('cwm', '51.75.54.175'),
     Ms365_Subdomain('cwm', 'zhp.pl'),
 
     // Muzeum Harcerstwa
     Ms365_Subdomain('muzeumharcerstwa', 'zhp.pl'),
-    Delegation_A('muzeumharcerstwa', '185.36.169.152'),
+    Delegation_A_WithCfProxy('muzeumharcerstwa', '185.36.169.152'),
 
     // Wydział Inspiracji i Poradnictwa
     Delegation_A_WithCfProxy('cbp', '51.75.54.175'),
     Delegation_A_WithCfProxy('cbp-dev', '51.75.54.175'),
+
+    // Harcerski Instytut Badawczy
+    Delegation_A_WithCfProxy('limev3', '51.75.54.175'),
+    Delegation_A_WithCfProxy('limev4', '51.75.54.175'),
+    Delegation_A_WithCfProxy('hib', '51.75.54.175'),
+    Delegation_A_WithCfProxy('panel', '51.75.54.175'),
 
     // Imprezy centralne
     Delegation_A_WithCfProxy('swiatlo', '51.75.54.175'),
     Delegation_A_WithCfProxy('ej2020', '51.75.54.175'),
     Delegation_A_WithCfProxy('jamboree2019', '51.75.54.175'),
     Delegation_A_WithCfProxy('cej2022', '51.75.54.175'),
+    Delegation_NS('pielgrzymka', ['dns.smarthost.pl.', 'dns2.smarthost.pl.', 'dns3.smarthost.pl.']),
+    Delegation_A_WithCfProxy('watra', '51.75.54.175'),
+    Delegation_A('watrapp.watra', '185.209.228.136', 'zhp.pl'), // MS365-27745
+    Ms365_Subdomain('watra','zhp.pl'),
 
     // Ogólnoharcerskie przedsięwzięcia
     Delegation_A('harc-quiz', '137.74.3.247'),

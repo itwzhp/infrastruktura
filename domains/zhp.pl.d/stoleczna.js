@@ -4,7 +4,8 @@ D_EXTEND('zhp.pl',
     Delegation_NS('stoleczna', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     // Ogólnopolskie
-    Delegation_NS('arsenal', ['ns1.unixstorm.org.', 'ns2.unixstorm.org.']),
+    Delegation_A_WithCfProxy('arsenal', '109.95.159.40'),
+    Ms365_Subdomain('arsenal', 'zhp.pl'),
 
 
     // Hufce (hosting chorągwi)
@@ -49,7 +50,17 @@ D_EXTEND('zhp.pl',
 
 
     // Hufiec Warszawa-Mokotów
-    Delegation_NS('mokotow', ['ns1.unixstorm.org.', 'ns2.unixstorm.org.']),
+    Delegation_A_WithCfProxy('mokotow', '109.95.159.40'),
+    Delegation_A('208.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('50.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('60wdh.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('69wdhiz.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('e-rajd.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('spacer.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('stopa.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('szczep40.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('szczep413.mokotow', '109.95.159.40', 'zhp.pl'),
+    Ms365_Subdomain('mokotow', 'zhp.pl'),
 
 
     // Hufiec Warszawa-Ochota
@@ -91,27 +102,11 @@ D_EXTEND('zhp.pl',
     CNAME('dokumenty.otwock', 'ghs.google.com.'),
 
 
-    // Hufiec Pruszków
-    AAAA('ipv6.pruszkow', '2a02:25a9:0:5888::1'),
-    Delegation_A('pruszkow', '89.161.136.136'),
+    // Hufiec Pruszków - MS365-24169
+    Delegation_A('pruszkow', '185.255.40.54'),
     Ms365_Subdomain('pruszkow', 'zhp.pl'),
 
-    AAAA('ipv6.14.pruszkow', '2a02:25a9:0:5888::1'),
-    Delegation_A('14.pruszkow', '89.161.136.136', 'zhp.pl'),
-
-    AAAA('ipv6.paderewski.pruszkow', '2a02:25a9:0:5888::1'),
-    Delegation_A('paderewski.pruszkow', '89.161.136.136', 'zhp.pl'),
-
-    AAAA('ipv6.shds.pruszkow', '2a02:25a9:0:5888::1'),
-    Delegation_A('shds.pruszkow', '89.161.136.136', 'zhp.pl'),
-
-    // szczep --> błędne kodowanie znaków
-    AAAA('ipv6.shdw.pruszkow', '2a02:25a9:0:5888::1'),
-    Delegation_A('shdw.pruszkow', '89.161.136.136', 'zhp.pl'),
-
-    AAAA('ipv6.knieja.pruszkow', '2a02:25a9:0:5888::1'),
-    Delegation_A('knieja.pruszkow', '89.161.136.136', 'zhp.pl'),
-
-    AAAA('ipv6.twierdza.pruszkow', '2a02:25a9:0:5888::1'),
-    Delegation_A('twierdza.pruszkow', '89.161.136.136', 'zhp.pl')
+    Delegation_A('14.pruszkow', '185.255.40.54', 'zhp.pl'),
+    Delegation_A('paderewski.pruszkow', '185.255.40.54', 'zhp.pl'),
+    Delegation_A('shds.pruszkow', '185.255.40.54', 'zhp.pl')
 );
