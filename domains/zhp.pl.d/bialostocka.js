@@ -16,9 +16,10 @@ D_EXTEND('zhp.pl',
     CNAME('*.suwalki', 'suwalki.zhp.pl.'),
     A('suwalki', '79.96.169.242'),
 
-    Delegation_NS('bialystok', ['dns11.linuxpl.com.', 'ns11.linuxpl.com.']),
-    // development nowej strony białegostoku
-    Delegation_A('dev-bialystok', '195.78.66.229'),
+    // stara strona h. Białystok
+    Delegation_NS('old-bialystok', ['dns11.linuxpl.com.', 'ns11.linuxpl.com.']),
+    // nowa strona h. Białystok
+    Delegation_A('bialystok', '195.78.66.229'),
 
     Delegation_NS('kolno', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
     // Delegation_NS('lomza', ['ns1.datasferix.pl.', 'ns2.datasferix.pl.']),
