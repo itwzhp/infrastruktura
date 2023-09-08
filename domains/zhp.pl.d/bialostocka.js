@@ -19,6 +19,7 @@ D_EXTEND('zhp.pl',
     // stara strona h. Białystok
     Delegation_NS('old-bialystok', ['dns11.linuxpl.com.', 'ns11.linuxpl.com.']),
     // nowa strona h. Białystok
+    Ms365_Subdomain('bialystok', 'zhp.pl'),
     Delegation_A('bialystok', '195.78.66.229'),
 
     Delegation_NS('kolno', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
