@@ -5,7 +5,7 @@ D_EXTEND('zhp.pl',
 
     // Wydział Komunikacji i Promocji
     TXT('@', 'google-site-verification=3EJuMBYjCQrS-ZAOYHkyxjweNONPhVoGS8ONaOKSY14'), // MS365-8164
-    Delegation_A_WithCfProxy('simson', '51.75.54.175'),
+    Delegation_NS('simson', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
 
     // Centrum Wychowania Morskiego
     Ms365_Subdomain('cwm', 'zhp.pl'),
