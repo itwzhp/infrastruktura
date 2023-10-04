@@ -59,6 +59,7 @@ D_EXTEND('zhp.pl',
     Delegation_A('stopa.mokotow', '109.95.159.40', 'zhp.pl'),
     Delegation_A('szczep40.mokotow', '109.95.159.40', 'zhp.pl'),
     Delegation_A('szczep413.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('nowy.szczep413.mokotow', '109.95.159.40', 'zhp.pl'),
     Ms365_Subdomain('mokotow', 'zhp.pl'),
 
 
