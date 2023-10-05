@@ -17,8 +17,7 @@ D_EXTEND('zhp.pl',
     // Wydział Inspiracji i Poradnictwa
     Delegation_A_WithCfProxy('cbp', '51.75.54.175'),
     Delegation_A_WithCfProxy('cbp-dev', '51.75.54.175'),
-    Delegation_CNAME('sim', 'zhp-sim-prod.azurewebsites.net.'),
-    TXT('asuid.sim.zhp.pl.', '01E6941B3330DAACCE5A2B9E079EA3C6343C3AD74B23A3E47E8DD5503EAA2F87'),
+    Delegation_A_WithCfProxy('sim', '213.189.38.139'),
 
     // Zespołu ds. CZR
     Delegation_A_WithCfProxy('yunga', '51.75.54.175'),
