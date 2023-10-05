@@ -1,13 +1,5 @@
 var cyberfolksNs = ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.'];
 
-D_EXTEND('zhp.pl',
-	// WIX set-up for Polkowice (MS365-7672)
-	CNAME('polkowice', 'www118.wixdns.net.'),
-	CNAME('www.polkowice', 'www118.wixdns.net.'),
-	CNAME('de.polkowice', 'www118.wixdns.net.'),
-	CNAME('en.polkowice', 'www118.wixdns.net.'),
-	CNAME('pl.polkowice', 'www118.wixdns.net.'),
-
 	Delegation_NS('dolnoslaska', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']),
     Delegation_NS('archiwumdolnoslaska', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']),     
 	Delegation_NS('dolnoslaska2', cyberfolksNs),
@@ -21,23 +13,26 @@ D_EXTEND('zhp.pl',
     Delegation_NS('rozewie', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']),
 
     // Hufce
-	Delegation_NS('bierutow', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
+	Ms365_Subdomain('bierutow', 'zhp.pl'),
 	Delegation_NS('boleslawiec', ['ns1.cba.pl.', 'ns2.cba.pl.', 'ns3.cba.pl.']),
 	Delegation_NS('bystrzycaklodzka', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
     Delegation_NS('dzierzoniow', ['ns.lh.pl.', 'ns2.lighthosting.net.', 'ns2.lh.pl.']),
   	Delegation_NS('glogow', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']),
 	Delegation_NS('jawor', ['dns11.linuxpl.com.', 'ns11.linuxpl.com.']),
 	Delegation_NS('karkonoski', ['ns1.ehost.pl.', 'ns2.ehost.pl.']),
-	// Delegation_NS('katy', ['ns5.webd.pl.', 'ns7.webd.pl.']), // wyłączone tymczasowo do czasu naprawienia strony
+	Ms365_Subdomain('katy', 'zhp.pl'),
 	Delegation_NS('klodzko', ['dns8.linuxpl.com.', 'ns8.linuxpl.com.']),
     Delegation_NS('legnica', cyberfolksNs),  // MS365-14080
 	Delegation_NS('luban', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
 	Delegation_NS('lubin', ['ns1.hostdmk.net.', 'ns2.hostdmk.net.']),
 	Delegation_NS('lagiewniki', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
+    Ms365_Subdomain('zgorzelec', 'zhp.pl'),
 	Delegation_NS('olesnica', ['ns1.datanet.pl.', 'ns2.datanet.pl.']),
 	Delegation_NS('olawa', ['ns12.linuxpl.com.', 'dns12.linuxpl.com.']),
+    Ms365_Subdomain('polkowice', 'zhp.pl'),
 	Delegation_NS('srodaslaska', ['dns8.linuxpl.com.', 'ns8.linuxpl.com.']),
 	Delegation_NS('swidnica', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
+    Ms365_Subdomain('sycow', 'zhp.pl'),
 	Delegation_NS('walbrzych', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
 	Delegation_NS('wroclaw', ['dns20.ovh.net.', 'ns20.ovh.net.']),
 	Delegation_NS('wroclawpolnoc', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
