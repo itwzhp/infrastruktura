@@ -8,6 +8,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('kielcepowiat', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('konskie', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_A('ostrowiec', '185.255.40.49'), // MS365-16889
+    Delegation_NS('ostrowiecswietokrzyski', ['ns1.atthost.pl.', 'ns2.atthost.pl.']), // MS365-29519
     Delegation_NS('skarzysko', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('starachowice', ['ns5.webd.pl.', 'ns7.webd.pl.']),
     Delegation_NS('staszow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
