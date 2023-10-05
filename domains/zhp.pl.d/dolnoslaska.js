@@ -42,7 +42,7 @@ D_EXTEND('zhp.pl',
 	Delegation_NS('wroclaw', ['dns20.ovh.net.', 'ns20.ovh.net.']),
 	Delegation_NS('wroclawpolnoc', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 	Delegation_NS('wroclawpoludnie', ['ns.lh.pl.', 'ns2.lighthosting.net.', 'ns2.lh.pl.']),
-	Delegation_NS('wroclawwschod', ['ns.lh.pl.', 'ns2.lighthosting.net.']),
+	Delegation_NS('wroclawwschod', ['ns1.hostido.net.pl.','ns2.hostido.net.pl.', 'ns3.hostido.net.pl.']),
     Ms365_Subdomain('zgorzelec', 'zhp.pl'),
 	Delegation_NS('zmigrod', ['ns.lh.pl.', 'ns2.lighthosting.net.']),
 
