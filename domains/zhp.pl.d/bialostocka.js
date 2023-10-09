@@ -7,9 +7,6 @@ D_EXTEND('zhp.pl',
     Ms365_Subdomain('augustow', 'zhp.pl'),  // MS365-16444
     Delegation_A('augustow', '195.78.66.229'),
 
-    CNAME('*.bielskpodlaski', 'bielskpodlaski.zhp.pl.'),
-    A('bielskpodlaski', '79.96.169.242'),
-
     CNAME('*.grajewo', 'grajewo.zhp.pl.'),
     A('grajewo', '79.96.169.242'),
 
