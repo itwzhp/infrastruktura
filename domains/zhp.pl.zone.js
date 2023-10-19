@@ -9,7 +9,7 @@ D('zhp.pl', ovhRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600),
     TXT('_acme-challenge.haliz', 'jd-YDJYrtRp7nynl5NEJyNrHqwrtfpm7j1H-rOJ5LfQ'),
     TXT('_github-challenge-itwzhp.gk', 'e9917cb777'),
     TXT('_github-challenge-itwzhp', 'da1510325a'),
-    TXT('ovhcontrol', 'aoRqdwWKKnTDamiIqv6uqQ'),
+    TXT('ovhcontrol', 'NP3Bj12omhML0lDqx2cEmw'),
     Redirects(require('./redirects/redirectFiles/zhp.pl.json')),
 
     // TODO ustalić co to
