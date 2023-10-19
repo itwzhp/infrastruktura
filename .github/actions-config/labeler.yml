@@ -4,3 +4,5 @@ component/DNS:
 component/ACTIONS:
 - .github/actions-config/**/*
 - .github/workflows/**/*
+component/REDIRECTS:
+- domains/redirects/**/*

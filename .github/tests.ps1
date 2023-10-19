@@ -9,10 +9,13 @@ Describe "DNS Zone <zone.name>" -ForEach $zones {
         $allEntries = $zone.records
     }
 
-    It "should have no MX outside MS 365" -Skip {
+    It "should have no MX outside MS 365" {
+        $externalMxWhitelist = @('mail-auto', 'no-reply')
+
         $allEntries |
             Where-Object {$_.type -eq 'MX' } |
             Where-Object {$_.target -notlike '*.mail.protection.outlook.com.'} |
+            Where-Object {$_.name -notin $externalMxWhitelist} |
             Should -BeNullOrEmpty
     }
 
@@ -24,14 +27,14 @@ Describe "DNS Zone <zone.name>" -ForEach $zones {
                 Select-Object -Unique
         }
 
-        It "should have no other entries with the same domain" -Skip {
+        It "should have no other entries with the same domain" {
             $allEntries |
                 Where-Object {$_.type -ne 'NS' } |
                 Where-Object {$_.name -in $delegatedDomains} |
                 Should -BeNullOrEmpty
         }
 
-        It "should have no other entries with subdomain" -Skip {
+        It "should have no other entries with subdomain" {
             $allEntries |
                 ForEach-Object {$_.name} | Select-Object -Unique |
                 Where-Object {
@@ -41,6 +44,4 @@ Describe "DNS Zone <zone.name>" -ForEach $zones {
                 Should -BeNullOrEmpty
         }
     }
-
-
 }

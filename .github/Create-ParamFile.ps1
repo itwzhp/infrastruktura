@@ -3,12 +3,31 @@ $domains = Get-Item domains/redirects/redirectFiles/*.json |
     Where-Object { $_.Name -ne 'example.com.json' } |
     Foreach-Object {
         $base = $_.Name -replace '.json'
-        Get-Content $_ |
-            ConvertFrom-Json |
+
+        $content = Get-Content $_ |
+            ConvertFrom-Json
+
+        $content |
             Get-Member -Type NoteProperty |
-            Where-Object { -not $_.Name.StartsWith('$') } |
-            Foreach-Object -Begin $null -Process { $_.Name + '.' + $base } { 'www.' + $_.Name + '.' + $base } -End $null
+            Where-Object { $_.Name.StartsWith('$') } |
+            Foreach-Object { $content.PSObject.Properties.Remove($_.Name) }
+
+        $content.PSObject.Properties.Name |
+            Foreach-Object {
+                $addWww = $content |
+                Select-Object -ExpandProperty $_ |
+                Select includeWww
+
+                $addWww = $addWww.includeWww
+
+                if($null -eq $addWww -or $true -eq $addWww) {
+                    'www.' + $_ + '.' + $base
+                }
+
+                $_ + '.' + $base
+            }
     }
+
 $domainsJson = $domains | ConvertTo-Json -Compress
 Write-Output "Domains: $domainsJson"
 Write-Output "
