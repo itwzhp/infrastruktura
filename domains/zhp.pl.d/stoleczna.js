@@ -38,6 +38,7 @@ D_EXTEND('zhp.pl',
     // Hufiec Piaseczno
     Delegation_A('piaseczno', '178.32.203.125'),
     Ms365_Subdomain('piaseczno', 'zhp.pl'),
+    Delegation_A('wataha.piaseczno', '178.32.203.125', 'zhp.pl'),
 
 
     // Hufiec Piastów
