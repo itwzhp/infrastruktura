@@ -15,7 +15,7 @@ jobs:
       ${{ github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion == 'success' }}
     container:
-      image: stackexchange/dnscontrol
+      image: stackexchange/dnscontrol:v3.14.0
     steps:
       - uses: actions/checkout@v2
 

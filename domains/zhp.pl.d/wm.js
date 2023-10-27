@@ -10,9 +10,9 @@ D_EXTEND('zhp.pl',
     Delegation_NS('biskupiec', hostingWm),
     Delegation_NS('braniewo', hostingWm),
     Delegation_NS('dzialdowo', hostingWm),
-    Delegation_NS('elblag', ['dns1.82-300.pl.', 'dns2.82-300.pl.']),
+    Delegation_NS('elblag', hostingWm),
     Delegation_NS('elk', hostingWm),
-    Delegation_NS('gizycko', ['ns1.fc.pl.', 'ns2.fc.pl.']),
+    Delegation_NS('gizycko', hostingWm), // MS365-30881
     Delegation_NS('goldap', hostingWm),
     Delegation_NS('ilawa', hostingWm),
     Delegation_NS('ketrzyn', hostingWm),
@@ -25,7 +25,9 @@ D_EXTEND('zhp.pl',
     Delegation_NS('ostroda', ['fns1.42.pl.', 'fns2.42.pl.']),
     Delegation_NS('pisz', hostingWm),
     Delegation_NS('rodlo', hostingWm),
+    Delegation_NS('szczytno', hostingWm), // MS365-30881
     Delegation_NS('warminski', hostingWm),
+    Delegation_NS('ziemialidzbarska', hostingWm), // MS365-30881
 
     // Bazy
     Delegation_NS('przerwanki', hostingWm),
@@ -33,5 +35,5 @@ D_EXTEND('zhp.pl',
     Delegation_NS('perkoz', hostingWm),
 
     Delegation_A('grunwald', '51.75.54.175'),
-    Ms365_Subdomain('grunwald', 'zhp.pl')
+    Ms365_Subdomain('grunwald','zhp.pl')
 );
