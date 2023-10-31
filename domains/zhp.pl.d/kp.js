@@ -12,7 +12,7 @@ D_EXTEND('zhp.pl',
 
     // Hufce (hosting chorągwi)
     Delegation_NS('brodnica', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('bydgoszcz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_A('bydgoszcz', '185.255.40.51'),
     Delegation_NS('golubdobrzyn', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('grudziadz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('inowroclaw', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
@@ -21,8 +21,12 @@ D_EXTEND('zhp.pl',
     Delegation_NS('paluki', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('swiecie', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('wloclawek', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('tuchola', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_A('tuchola', '185.255.40.51'),
 
+    // MS365
+    Ms365_Subdomain('bydgoszcz','zhp.pl'),
+    Ms365_Subdomain('koronowo','zhp.pl'),
+    Ms365_Subdomain('tuchola','zhp.pl'),
 
     // Hufiec Toruń (hosting hufca)
     Delegation_NS('torun', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),

@@ -4,7 +4,10 @@ D_EXTEND('zhp.pl',
     Delegation_NS('stoleczna', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     // Ogólnopolskie
-    Delegation_NS('arsenal', ['ns1.unixstorm.org.', 'ns2.unixstorm.org.']),
+    Delegation_A_WithCfProxy('arsenal', '109.95.159.40'),
+    Ms365_Subdomain('arsenal', 'zhp.pl'),
+    CNAME('47649812.arsenal', 'google.com.', TTL(3600)),
+    TXT('arsenal', 'google-gws-recovery-domain-verification=47649812', TTL(3600)),
 
 
     // Hufce (hosting chorągwi)
@@ -37,6 +40,7 @@ D_EXTEND('zhp.pl',
     // Hufiec Piaseczno
     Delegation_A('piaseczno', '178.32.203.125'),
     Ms365_Subdomain('piaseczno', 'zhp.pl'),
+    Delegation_A('wataha.piaseczno', '178.32.203.125', 'zhp.pl'),
 
 
     // Hufiec Piastów
@@ -49,7 +53,17 @@ D_EXTEND('zhp.pl',
 
 
     // Hufiec Warszawa-Mokotów
-    Delegation_NS('mokotow', ['ns1.unixstorm.org.', 'ns2.unixstorm.org.']),
+    Delegation_A_WithCfProxy('mokotow', '109.95.159.40'),
+    Delegation_A('208.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('50.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('60wdh.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('e-rajd.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('spacer.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('stopa.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('szczep40.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('szczep413.mokotow', '109.95.159.40', 'zhp.pl'),
+    Delegation_A('nowy.szczep413.mokotow', '109.95.159.40', 'zhp.pl'),
+    Ms365_Subdomain('mokotow', 'zhp.pl'),
 
 
     // Hufiec Warszawa-Ochota
@@ -77,7 +91,9 @@ D_EXTEND('zhp.pl',
 
     AAAA('ipv6.nowydwormaz', '2a02:25a9:0:4893::1'),
     Delegation_A('nowydwormaz', '62.129.232.147'),
+    
 
+    // Hufiec Otwock
     AAAA('ipv6.otwock', '2a02:25a9:0:2637::1'),
     Delegation_A('otwock', '62.129.198.55'),
     Ms365_Subdomain('otwock', 'zhp.pl'),
@@ -85,10 +101,8 @@ D_EXTEND('zhp.pl',
     AAAA('ipv6.wosp.otwock', '2a02:25a9:0:2637::1'),
     Delegation_A('wosp.otwock', '62.129.198.55', 'zhp.pl'),
 
-    // ktoś tego używa?
-    CNAME('kalendarz.otwock', 'ghs.google.com.'),
-    CNAME('mail.otwock', 'ghs.google.com.'),
-    CNAME('dokumenty.otwock', 'ghs.google.com.'),
+    AAAA('ipv6.szareszeregi.otwock', '2a02:25a9:0:2637::1'),
+    Delegation_A('szareszeregi.otwock', '62.129.198.55', 'zhp.pl'),
 
 
     // Hufiec Pruszków - MS365-24169

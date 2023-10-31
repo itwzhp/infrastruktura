@@ -7,15 +7,15 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('bip', '51.75.54.175'),
     Delegation_A_WithCfProxy('zapytaj', '51.75.54.175'),
     Delegation_A_WithCfProxy('edu', '51.75.54.175'),
-    A('plesk', '51.75.54.175'),
+    Delegation_A_WithCfProxy('plesk', '51.75.54.175'),
 
     // 213.189.38.138
     Delegation_A_WithCfProxy('preprod-tipi', '213.189.38.138'),
     Delegation_A_WithCfProxy('demo-tipi', '213.189.38.138'),
     Delegation_A_WithCfProxy('nessus', '213.189.38.138'),
 
-    // 51.83.143.218
-    Delegation_A_WithCfProxy('tipi', '51.83.143.218'),
+    // 57.128.200.21
+    Delegation_A_WithCfProxy('tipi', '57.128.200.21'),
 
     // 213.189.38.139
     Delegation_A_WithCfProxy('mam-pomysl', '213.189.38.139'),
@@ -59,15 +59,12 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('e', '51.75.54.175'),
     Delegation_A_WithCfProxy('ekodruzyna', '51.75.54.175'),
     Delegation_A_WithCfProxy('haliz', '51.75.54.175'),
-    Delegation_A_WithCfProxy('hib', '51.75.54.175'),
     Delegation_A_WithCfProxy('intranet', '51.75.54.175'),
     Delegation_A_WithCfProxy('kursy', '51.75.54.175'),
     Delegation_A_WithCfProxy('lacznosc', '51.75.54.175'),
     Delegation_A_WithCfProxy('lesneplemiona', '51.75.54.175'),
-    Delegation_A_WithCfProxy('limev4', '51.75.54.175'),
     Delegation_A_WithCfProxy('natropie', '51.75.54.175'),
     Delegation_A_WithCfProxy('odkrywcy', '51.75.54.175'),
-    Delegation_A_WithCfProxy('panel', '51.75.54.175'),
     Delegation_A_WithCfProxy('rajdodkrywcow', '51.75.54.175'),
     Delegation_A_WithCfProxy('repozytorium', '51.75.54.175'),
     Delegation_A_WithCfProxy('sluzba', '51.75.54.175'),
@@ -75,7 +72,5 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('stock', '51.75.54.175'),
     Delegation_A_WithCfProxy('stopka', '51.75.54.175'),
     Delegation_A_WithCfProxy('strony', '51.75.54.175'),
-    Delegation_A_WithCfProxy('watra', '51.75.54.175'),
-    Ms365_Subdomain('watra','zhp.pl'),
     Delegation_A_WithCfProxy('youthwave', '51.75.54.175')
 );

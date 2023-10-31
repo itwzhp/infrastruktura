@@ -35,8 +35,12 @@
         "method": 302
     },
     "polkolonie.gdanska": {
-        "target": "http://gdanska.zhp.pl/polkolonie/",
+        "target": "https://gdanska.zhp.pl/polkolonie/",
         "method": 301
+    },
+    "sprawnosci.gdanska":{
+        "target": "https://sprawnosci-harcerskie.netlify.app/",
+        "method": 302
     },
     
     "e.zachpom": {
@@ -48,7 +52,11 @@
         "method": 301
     },
     "aktywacja": {
-        "target": "https://pomoc.zhp.pl/display/PUB",
+        "target": "https://zhp.pl/microsoft-365-w-zhp/",
+        "method": 302
+    },
+    "konto": {
+        "target": "https://zhp.pl/microsoft-365-w-zhp/",
         "method": 302
     }
 }

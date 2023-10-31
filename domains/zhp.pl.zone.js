@@ -9,17 +9,11 @@ D('zhp.pl', ovhRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600),
     TXT('_acme-challenge.haliz', 'jd-YDJYrtRp7nynl5NEJyNrHqwrtfpm7j1H-rOJ5LfQ'),
     TXT('_github-challenge-itwzhp.gk', 'e9917cb777'),
     TXT('_github-challenge-itwzhp', 'da1510325a'),
-    TXT('ovhcontrol', 'aoRqdwWKKnTDamiIqv6uqQ'),
+    TXT('ovhcontrol', 'NP3Bj12omhML0lDqx2cEmw'),
     Redirects(require('./redirects/redirectFiles/zhp.pl.json')),
 
-    // NS
-    Delegation_NS('e-aos', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('limev3', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('pielgrzymka', ['dns.smarthost.pl.', 'dns2.smarthost.pl.', 'dns3.smarthost.pl.']), // ?
-    Delegation_NS('rajdgranica', ['dns1.linuxpl.com.', 'dns2.linuxpl.com.', 'dns3.linuxpl.com.']), // cert error ale coś za nim jest
-    Delegation_NS('westerplatte', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']), // cert error ale coś za nim stoi
-
     // TODO ustalić co to
+    Delegation_A_WithCfProxy('e-aos', '51.75.54.175'),
     A('qnapgk', '213.189.38.134'),
     A('vpngk', '213.189.38.130'), // ?
     A('ftp', '51.75.54.175'), // pozwala ominąć proxy CF

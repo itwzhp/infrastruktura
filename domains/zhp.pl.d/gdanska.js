@@ -32,4 +32,10 @@ D_EXTEND('zhp.pl',
     A('czernica', '51.75.54.175'),
 
     // Przedsięwzięcia
-    Delegation_CNAME('jott.gdanska.zhp.pl.', 'gdanska.zhp.pl.'));
+    Delegation_CNAME('jott.gdanska.zhp.pl.', 'gdanska.zhp.pl.'),
+    
+    // System ewidencji sprzętu
+    CNAME("sprzet.gdanska", "ewidencja-sprzetu-frontend-prod.azurewebsites.net."),
+    TXT("asuid.sprzet.gdanska", "32C40316E8FAC62EFA8E6E3D389D40A0B14DC868D7E81E727355CE362026592A"),
+    CNAME("api.sprzet.gdanska", "ewidencja-sprzetu-prod.azurewebsites.net."),
+    TXT("asuid.api.sprzet.gdanska", "32C40316E8FAC62EFA8E6E3D389D40A0B14DC868D7E81E727355CE362026592A"));

@@ -48,7 +48,7 @@ D_EXTEND('zhp.pl',
 
     // Bazy
     Delegation_NS('kucoby', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    Delegation_A('amonit', '109.95.158.82'),
+    Delegation_A('amonit', '109.95.159.36'),  // MS365-28967
     Delegation_A('wilczysko', '109.95.157.137'),
     Delegation_NS('bazapajak', ['dns3.trustnet.pl.', 'dns.trustnet.pl.', 'dns2.trustnet.pl.']),
 
