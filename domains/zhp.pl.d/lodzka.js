@@ -26,6 +26,7 @@ D_EXTEND('zhp.pl',
          
     Delegation_A('brzeziny', '212.191.78.183'),
     Delegation_A('sieradz', '85.232.255.122'),
+    Ms365_Subdomain('sieradz','zhp.pl'), // MS365-31162
 
     // Bazy
     Delegation_NS('malecz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
