@@ -15,6 +15,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('lask', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('opoczno', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('radomsko', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_NS('sieradz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),     
     Delegation_NS('skierniewice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('uniejow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('zdunskawola', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
@@ -25,8 +26,6 @@ D_EXTEND('zhp.pl',
     Delegation_NS('glowno', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
          
     Delegation_A('brzeziny', '212.191.78.183'),
-    Delegation_A('sieradz', '85.232.255.122'),
-    Ms365_Subdomain('sieradz','zhp.pl'), // MS365-31162
 
     // Bazy
     Delegation_NS('malecz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
