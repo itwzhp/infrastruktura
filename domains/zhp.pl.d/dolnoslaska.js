@@ -2,7 +2,10 @@ var cyberfolksNs = ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.
 
 D_EXTEND('zhp.pl',
 
-	Delegation_NS('dolnoslaska', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']),
+    //Strona chorągwi     
+    Ms365_Subdomain('dolnoslaska','zhp.pl'),
+    Delegation_A_WithCfProxy('dolnoslaska', '213.32.10.111'),
+    Delegation_A_WithCfProxy('www.dolnoslaska', '213.32.10.111'),
     Delegation_NS('archiwumdolnoslaska', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']),     
 	Delegation_NS('dolnoslaska2', cyberfolksNs),
 	Delegation_NS('dolnoslaska3', cyberfolksNs),
