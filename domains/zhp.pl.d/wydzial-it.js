@@ -49,6 +49,9 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('ed', '104.214.218.237'),
     Delegation_A_WithCfProxy('edek', '104.214.218.237'),
 
+    // Synology
+    Delegation_A_WithCfProxy('krecik', '213.189.38.130'),
+
     // A zhp.pl
     // TODO Ustalić czyje to
     Delegation_A_WithCfProxy('archiwum', '51.75.54.175'),
