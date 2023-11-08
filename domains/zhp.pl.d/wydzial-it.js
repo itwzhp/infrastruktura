@@ -35,6 +35,7 @@ D_EXTEND('zhp.pl',
     SRV('_submission._tcp.mail-auto', 1, 1, 587, 'mail-auto-mx.zhp.pl.'),
     SRV('_imaps._tcp.mail-auto', 1, 1, 993, 'mail-auto-mx.zhp.pl.'),
     SRV('_pop3s._tcp.mail-auto', 1, 1, 995, 'mail-auto-mx.zhp.pl.'),
+    TXT("_dmarc.mail-auto", "v=DMARC1; p=reject; rua=mailto:dmarc_agg@vali.email; ruf=mailto:dmarc-ruf@zhp.pl; fo=1; adkim=s; aspf=s;"),
 
     // no-reply - jak wyżej ale również poza ZHP
     Delegation_A_WithCfProxy('no-reply', '213.189.38.137'),
