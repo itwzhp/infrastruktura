@@ -1,6 +1,5 @@
 D_EXTEND('zhp.pl',
   //Strony i podstrony chorągwi
-  Ms365_Subdomain('opolska','zhp.pl'),
   Delegation_A_WithCfProxy('opolska', '149.56.30.175'),
   Delegation_A_WithCfProxy('przekierowania.opolska', '149.56.30.175'),
   
@@ -11,6 +10,7 @@ D_EXTEND('zhp.pl',
   Delegation_A_WithCfProxy('nysa', '149.56.30.175'),
   Delegation_A_WithCfProxy('opole', '149.56.30.175'),
 
+  Ms365_Subdomain('opolska','zhp.pl'),
   Ms365_Subdomain('brzeg','zhp.pl'),
   Ms365_Subdomain('kedzierzynkozle','zhp.pl'),
   Ms365_Subdomain('krapkowice','zhp.pl'),
