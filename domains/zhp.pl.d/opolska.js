@@ -1,15 +1,22 @@
 D_EXTEND('zhp.pl',
-  Delegation_NS('opolska', ['a.eco.atman.pl.', 'b.eco.atman.pl.']),
+  //Strony i podstrony chorągwi
+  Ms365_Subdomain('opolska','zhp.pl'),
+  Delegation_A_WithCfProxy('opolska', '149.56.30.175'),
+  Delegation_A_WithCfProxy('przekierowania.opolska', '149.56.30.175'),
+  
+  //Strony i podstrony chorągwi
+  Delegation_A_WithCfProxy('brzeg', '149.56.30.175'),
+  Delegation_A_WithCfProxy('kedzierzynkozle', '149.56.30.175'),
+  Delegation_A_WithCfProxy('krapkowice', '149.56.30.175'),
+  Delegation_A_WithCfProxy('nysa', '149.56.30.175'),
+  Delegation_A_WithCfProxy('opole', '149.56.30.175'),
 
-  Delegation_NS('brzeg', ['a.eco.atman.pl.', 'b.eco.atman.pl.']),
-  Delegation_NS('glubczyce', ['ns1.ehost.pl.', 'ns2.ehost.pl.']),
-  Delegation_NS('kedzierzynkozle', ['a.eco.atman.pl.', 'b.eco.atman.pl.']),
-  Delegation_NS('krapkowice', ['a.eco.atman.pl.', 'b.eco.atman.pl.']),
-  Delegation_NS('nysa', ['a.eco.atman.pl.', 'b.eco.atman.pl.']),
-  Delegation_NS('opole', ['a.eco.atman.pl.', 'b.eco.atman.pl.']),
-  Delegation_NS('praszka', ['a.eco.atman.pl.', 'b.eco.atman.pl.']),
-  Delegation_NS('harcezastepow', ['a.eco.atman.pl.', 'b.eco.atman.pl.']),       
-         
-
-  CNAME('opolemiasto', 'opole.zhp.pl.')
+  Ms365_Subdomain('brzeg','zhp.pl'),
+  Ms365_Subdomain('kedzierzynkozle','zhp.pl'),
+  Ms365_Subdomain('krapkowice','zhp.pl'),
+  Ms365_Subdomain('nysa','zhp.pl'),
+  Ms365_Subdomain('opole','zhp.pl'),
+  Ms365_Subdomain('praszka','zhp.pl'),
+    
+  Delegation_NS('glubczyce', ['ns1.ehost.pl.', 'ns2.ehost.pl.']),   
 );
