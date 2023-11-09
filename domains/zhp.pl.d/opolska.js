@@ -1,6 +1,7 @@
 D_EXTEND('zhp.pl',
   //Strona chorągwi
   Delegation_A_WithCfProxy('opolska', '149.56.30.175'),
+  Delegation_A('ninja.opolska', '149.56.30.175'),
   
   //Strony hufców
   Delegation_A_WithCfProxy('brzeg', '149.56.30.175'),
