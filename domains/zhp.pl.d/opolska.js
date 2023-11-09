@@ -19,5 +19,5 @@ D_EXTEND('zhp.pl',
   Ms365_Subdomain('opole','zhp.pl'),
   Ms365_Subdomain('praszka','zhp.pl'),
     
-  Delegation_NS('glubczyce', ['ns1.ehost.pl.', 'ns2.ehost.pl.']),
+  Delegation_NS('glubczyce', ['ns1.ehost.pl.', 'ns2.ehost.pl.'])
 );
