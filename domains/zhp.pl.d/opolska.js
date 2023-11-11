@@ -1,9 +1,9 @@
 D_EXTEND('zhp.pl',
   //Strona chorągwi
   Delegation_A_WithCfProxy('opolska', '149.56.30.175'),
-  Delegation_A('ninja.opolska', '149.56.30.175'),
-  Delegation_A('przekierowania.opolska', '149.56.30.175'),
-  Delegation_A('dokumenty.opolska', '149.56.30.175'),
+  Delegation_A('ninja.opolska.zhp.pl.', '149.56.30.175'),
+  Delegation_A('przekierowania.opolska.zhp.pl.', '149.56.30.175'),
+  Delegation_A('dokumenty.opolska.zhp.pl.', '149.56.30.175'),
   
   //Strony hufców
   Delegation_A_WithCfProxy('brzeg', '149.56.30.175'),
