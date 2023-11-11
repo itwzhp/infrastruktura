@@ -2,6 +2,8 @@ D_EXTEND('zhp.pl',
   //Strona chorągwi
   Delegation_A_WithCfProxy('opolska', '149.56.30.175'),
   Delegation_A('ninja.opolska', '149.56.30.175'),
+  Delegation_A('przekierowania.opolska', '149.56.30.175'),
+  Delegation_A('dokumenty.opolska', '149.56.30.175'),
   
   //Strony hufców
   Delegation_A_WithCfProxy('brzeg', '149.56.30.175'),
@@ -9,7 +11,7 @@ D_EXTEND('zhp.pl',
   Delegation_A_WithCfProxy('krapkowice', '149.56.30.175'),
   Delegation_A_WithCfProxy('nysa', '149.56.30.175'),
   Delegation_A_WithCfProxy('opole', '149.56.30.175'),
-
+         
   //Rekordy pod Office365.
   Ms365_Subdomain('opolska','zhp.pl'),
   Ms365_Subdomain('brzeg','zhp.pl'),
