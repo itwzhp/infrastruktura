@@ -6,8 +6,6 @@ D_EXTEND('zhp.pl',
     // Ogólnopolskie
     Delegation_A_WithCfProxy('arsenal', '109.95.159.40'),
     Ms365_Subdomain('arsenal', 'zhp.pl'),
-    CNAME('47649812.arsenal', 'google.com.', TTL(3600)),
-    TXT('arsenal', 'google-gws-recovery-domain-verification=47649812', TTL(3600)),
 
 
     // Hufce (hosting chorągwi)
