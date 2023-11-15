@@ -21,7 +21,8 @@ D_EXTEND('zhp.pl',
     //h. nadnarwianski w łomży
         Ms365_Subdomain('lomza', 'zhp.pl'),
     //h. sokółka
-        Delegation_NS('sokolka', ['ns1.getspace.us.', 'ns2.getspace.us.']),
+        Delegation_A('sokolka', '178.63.30.0'),
+        Ms365_Subdomain('sokolka', 'zhp.pl')
     //h. suwałki
         CNAME('*.suwalki', 'suwalki.zhp.pl.'),
         A('suwalki', '79.96.169.242'),
