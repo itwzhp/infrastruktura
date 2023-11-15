@@ -14,14 +14,12 @@ D_EXTEND('zhp.pl',
     A('suwalki', '79.96.169.242'),
     Ms365_Subdomain('suwalki', 'zhp.pl'), // MS365-32120
 
-    // stara strona h. Białystok
-    Delegation_NS('old-bialystok', ['dns11.linuxpl.com.', 'ns11.linuxpl.com.']),
-    // nowa strona h. Białystok
     Ms365_Subdomain('bialystok', 'zhp.pl'),
     Delegation_A('bialystok', '195.78.66.229'),
 
     Delegation_NS('kolno', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
-    // Delegation_NS('lomza', ['ns1.datasferix.pl.', 'ns2.datasferix.pl.']),
-    Ms365_Subdomain('lomza', 'zhp.pl'),
-    Delegation_NS('sokolka', ['ns1.getspace.us.', 'ns2.getspace.us.'])
+    Delegation_NS('sokolka', ['ns1.getspace.us.', 'ns2.getspace.us.']),
+
+    Ms365_Subdomain('biebrzanski', 'zhp.pl'), // MS365-32124
+    Ms365_Subdomain('lomza', 'zhp.pl')
 );
