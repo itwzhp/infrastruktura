@@ -12,6 +12,7 @@ D_EXTEND('zhp.pl',
 
     CNAME('*.suwalki', 'suwalki.zhp.pl.'),
     A('suwalki', '79.96.169.242'),
+    Ms365_Subdomain('suwalki', 'zhp.pl'), // MS365-32120
 
     // stara strona h. Białystok
     Delegation_NS('old-bialystok', ['dns11.linuxpl.com.', 'ns11.linuxpl.com.']),
