@@ -17,12 +17,13 @@ D_EXTEND('zhp.pl',
     //h. bielsk podlaski
         //brak
     //h. kolno
-        Delegation_NS('kolno', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
+        Delegation_A('kolno', '185.204.219.239'),
+        Ms365_Subdomain('kolno', 'zhp.pl'),
     //h. nadnarwianski w łomży
         Ms365_Subdomain('lomza', 'zhp.pl'),
     //h. sokółka
         Delegation_A('sokolka', '178.63.30.0'),
-        Ms365_Subdomain('sokolka', 'zhp.pl')
+        Ms365_Subdomain('sokolka', 'zhp.pl'),
     //h. suwałki
         CNAME('*.suwalki', 'suwalki.zhp.pl.'),
         A('suwalki', '79.96.169.242'),
