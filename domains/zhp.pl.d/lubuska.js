@@ -7,7 +7,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('gorzow', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
 
     // Delegacja domeny hufca Międzychód
-    s365_Subdomain('miedzychod','zhp.pl'),
+    Ms365_Subdomain('miedzychod','zhp.pl'),
 
     // Delegacja domeny hufca Międzyrzecz
     Ms365_Subdomain('miedzyrzecz','zhp.pl'),
