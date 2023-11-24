@@ -22,6 +22,6 @@ D_EXTEND('zhp.pl',
          
     Ms365_Subdomain('piast','zhp.pl'),  // MS365-32528
     Delegation_A('101pdh.piast', '2.57.138.154', 'zhp.pl'),  // MS365-32528
-
+    Delegation_A('commando.piast', '2.57.138.154', 'zhp.pl'),  // MS365-32536
     Delegation_NS('wzlot', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])
 );
