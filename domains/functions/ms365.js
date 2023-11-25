@@ -29,7 +29,18 @@ function Ms365_Root(domain) {
 
         // Basic Mobility + Security records
         CNAME("enterpriseregistration", "enterpriseregistration.windows.net."),
-        CNAME("enterpriseenrollment", "enterpriseenrollment.manage.microsoft.com."),
-        TXT("_dmarc", "v=DMARC1; p=none; rua=mailto:dmarc_agg@vali.email; ruf=mailto:dmarc-ruf@zhp.pl; fo=1; adkim=s; aspf=s;")
+        CNAME("enterpriseenrollment", "enterpriseenrollment.manage.microsoft.com.")
     ];
 };
+
+function DMARC(policy = "none", subdomainPolicy = "none", domainPrefix) {
+    if (domainPrefix) {
+        domainPrefix = "_dmarc." + domainPrefix
+    } else {
+        domainPrefix = "_dmarc"
+    }
+
+    return [
+        TXT(domainPrefix, `v=DMARC1; p=${policy}; sp=${subdomainPolicy}; rua=mailto:dmarc_agg@vali.email,mailto:dmarc@zhp.pl; ruf=mailto:dmarc@zhp.pl; fo=0:1:s:d; adkim=s; aspf=s; pct=100;`)
+    ]
+}
