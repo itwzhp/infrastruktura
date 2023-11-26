@@ -46,7 +46,8 @@ function DMARC(policy, subdomainPolicy, domainPrefix) {
     }
 
     // create record
+    var dmarcRecordValue = 'v=DMARC1; p=' + policy + '; sp=' + subdomainPolicy + '; rua=mailto:dmarc_agg@vali.email,mailto:dmarc@zhp.pl; ruf=mailto:dmarc@zhp.pl; fo=0:1:s:d; adkim=s; aspf=s; pct=100;'
     return [
-        TXT(domainPrefix, `v=DMARC1; p=${policy}; sp=${subdomainPolicy}; rua=mailto:dmarc_agg@vali.email,mailto:dmarc@zhp.pl; ruf=mailto:dmarc@zhp.pl; fo=0:1:s:d; adkim=s; aspf=s; pct=100;`)
+        TXT(domainPrefix, dmarcRecordValue)
     ]
 }
