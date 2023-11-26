@@ -38,16 +38,22 @@ function DMARC(policy, subdomainPolicy, domainPrefix) {
     if (!policy) policy = "none"
     if (!subdomainPolicy) subdomainPolicy = "none"
 
-    // construct domain prefix
-    if (domainPrefix) {
-        domainPrefix = "_dmarc." + domainPrefix
-    } else {
-        domainPrefix = "_dmarc"
-    }
-
-    // create record
-    var dmarcRecordValue = 'v=DMARC1; p=' + policy + '; sp=' + subdomainPolicy + '; rua=mailto:dmarc_agg@vali.email,mailto:dmarc@zhp.pl; ruf=mailto:dmarc@zhp.pl; fo=0:1:s:d; adkim=s; aspf=s; pct=100;'
     return [
-        TXT(domainPrefix, dmarcRecordValue)
+        DMARC_BUILDER({
+            label: domainPrefix,
+            policy: policy,
+            subdomainPolicy: subdomainPolicy,
+            percent: 100,
+            alignmentSPF: "s",
+            alignmentDKIM: "s",
+            rua: [
+              "mailto:dmarc_agg@vali.email",
+              "mailto:dmarc@zhp.pl",
+            ],
+            ruf: [
+              "mailto:dmarc@zhp.pl",
+            ],
+            failureOptions: "0:1:s:d"
+          })
     ]
 }
