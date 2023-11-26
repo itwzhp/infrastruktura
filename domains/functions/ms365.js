@@ -33,13 +33,19 @@ function Ms365_Root(domain) {
     ];
 };
 
-function DMARC(policy = "none", subdomainPolicy = "none", domainPrefix) {
+function DMARC(policy, subdomainPolicy, domainPrefix) {
+    // default values
+    if (!policy) policy = "none"
+    if (!subdomainPolicy) subdomainPolicy = "none"
+
+    // construct domain prefix
     if (domainPrefix) {
         domainPrefix = "_dmarc." + domainPrefix
     } else {
         domainPrefix = "_dmarc"
     }
 
+    // create record
     return [
         TXT(domainPrefix, `v=DMARC1; p=${policy}; sp=${subdomainPolicy}; rua=mailto:dmarc_agg@vali.email,mailto:dmarc@zhp.pl; ruf=mailto:dmarc@zhp.pl; fo=0:1:s:d; adkim=s; aspf=s; pct=100;`)
     ]
