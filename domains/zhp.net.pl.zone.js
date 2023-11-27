@@ -1,9 +1,15 @@
 D('zhp.net.pl', noneRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600),
     A('@', '51.75.54.175'),
     CNAME('www', 'zhp.net.pl.'),
-    Ms365_Root('zhp.net.pl'),
-    Ms365_Subdomain('grupy', 'zhp.net.pl'),
 
+    Ms365_Root('zhp.net.pl'),
+    DMARC('reject'),
+    
+    // grupy.zhp.net.pl
+    Ms365_Subdomain('grupy', 'zhp.net.pl'),
+    DMARC('reject', 'reject', 'grupy'), // strict DMARC - only Office 365 in this subdomain
+
+    // other subdomains
     Delegation_NS('347', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('4szczep', ['dns1.slaskdatacenter.pl.', 'dns2.slaskdatacenter.pl.', 'dns3.slaskdatacenter.pl.']),
     Delegation_NS('czarna5', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
