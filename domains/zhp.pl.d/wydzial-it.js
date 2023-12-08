@@ -67,7 +67,6 @@ D_EXTEND('zhp.pl',
     // A zhp.pl
     // TODO Ustalić czyje to
     Delegation_A_WithCfProxy('archiwum', '51.75.54.175'),
-    Delegation_A_WithCfProxy('bazy', '51.75.54.175'),
     Delegation_A_WithCfProxy('covid-zaswiadczenia', '51.75.54.175'),
     Delegation_A_WithCfProxy('czuwaj', '51.75.54.175'),
     Delegation_A_WithCfProxy('dokumenty', '51.75.54.175'),
