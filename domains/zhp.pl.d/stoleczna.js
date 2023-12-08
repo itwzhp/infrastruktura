@@ -20,7 +20,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('ursynow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('wola', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('zoliborz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_A('warszawazoliborz', '185.255.40.28'),
+    Delegation_A('warszawazoliborz', '185.255.40.57'),
     Ms365_Subdomain('warszawazoliborz', 'zhp.pl'),
     Delegation_NS('wolomin', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('zabki', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
@@ -28,7 +28,8 @@ D_EXTEND('zhp.pl',
 
 
     // Hufiec Legionowo
-    Delegation_NS('legionowo', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_A('legionowo', '185.255.40.34'),
+    Ms365_Subdomain('legionowo', 'zhp.pl'),    
 
 
     // Hufiec Milanowek
