@@ -5,7 +5,7 @@ D('zhp.pl', ovhRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600),
     Ms365_Root('zhp.pl'),
 
     // DMARC
-    DMARC(),
+    DMARC('reject'),
     TXT("zhp.net.pl._report._dmarc", "v=DMARC1"), // to comply with https://dmarc.org/2015/08/receiving-dmarc-reports-outside-your-domain/
     TXT("grupy.zhp.net.pl._report._dmarc", "v=DMARC1"), // #TODO Remove after DMARC record for grupy.zhp.net.pl was removed
 
