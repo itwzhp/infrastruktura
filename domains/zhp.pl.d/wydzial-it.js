@@ -28,7 +28,7 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('checkmk', '213.189.38.137'),
 
     // CloudFlare Pages
-    CNAME('konta-sfh', 'konta-sfh.pages.dev'),
+    CNAME('konta-sfh', 'konta-sfh.pages.dev.'),
 
     // Maile z monitoringu
     TXT('monitoring', "v=spf1 ip4:213.189.38.137 -all"),
