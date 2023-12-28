@@ -5,7 +5,6 @@ D_EXTEND('zhp.pl',
 
     // Ogólnopolskie
     Delegation_A_WithCfProxy('arsenal', '109.95.159.40'),
-    A('www.arsenal', '109.95.159.40'),
     Ms365_Subdomain('arsenal', 'zhp.pl'),
 
 
