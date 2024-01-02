@@ -64,7 +64,7 @@
             "properties": {
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('servicePlanName'))]",
                 "siteConfig": {
-                    "linuxFxVersion": "NODE|14-lts",
+                    "linuxFxVersion": "NODE|16-lts",
                     "appSettings": [
                         {
                             "name": "AzureWebJobsStorage",
