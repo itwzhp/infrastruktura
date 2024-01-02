@@ -1,17 +1,86 @@
 "use strict";
 
-const fs = require("fs");
+const { app } = require('@azure/functions');
+
+const { readdirSync, readFileSync } = require("fs");
 
 const filesDirectory = "./redirectFiles/";
-const defaultURL     = "https://zhp.pl";
+const defaultURL = "https://zhp.pl";
 
-const redirects   = [], // Holds all redirects from files (basedomain => redirect object)
-      basedomains = []; // Holds redirects basedomains (array of domains)
+const redirects = [], // Holds all redirects from files (basedomain => redirect object)
+    basedomains = []; // Holds redirects basedomains (array of domains)
+
+app.http('httpTrigger1', {
+    methods: ['GET'],
+    route: '/{*path}',
+    authLevel: 'anonymous',
+    handler: async (req, context) => {
+        // Get request URL
+        let url = new URL(req.url),
+            hostname = url.hostname;
+
+        // Check, if URL is in one of supported basedomains
+        let base = endsWithAny(basedomains, hostname);
+
+        if (base === false) {
+            context.log(
+                `Basedomain ${hostname} not supported. Redirecting to ${defaultURL}...`);
+            return {
+                status: 302,
+                body: `Redirecting to ${defaultURL}...`,
+                headers: {
+                    location: defaultURL
+                }
+            }
+        }
+
+        // Extract the subdomain
+        let subdomain = hostname.substring(0, hostname.lastIndexOf(base) - 1). // -1 to include the dot before
+            replace("www.", ""); // Remove "www." prefix, if exists
+
+        let redirectData = redirects[base][subdomain];
+
+        // Check, if redirect for requested subdomain exists
+        if (typeof redirectData !== "object") {
+            // Try with www - in case the redirect is added as www-only
+            subdomain = "www." + subdomain;
+
+            redirectData = redirects[base][subdomain];
+
+            if (typeof redirectData !== "object") {
+                context.log(
+                    `Object for ${subdomain} not found. Redirecting to ${defaultURL}...`);
+                return {
+                    status: 302,
+                    body: `Redirecting to ${defaultURL}...`,
+                    headers: {
+                        location: defaultURL
+                    }
+                 }
+            }
+        }
+
+        // Include requested path to the redirect URL, if includePath enabled
+        let fullRedirect = redirectData.includePath === true
+            ? addPathname(redirectData.target, req)
+            : redirectData.target;
+
+        context.log(
+            `OK. Redirecting ${hostname} to ${fullRedirect} using ${redirectData.method}...`);
+
+        // Found redirect data for given URL - redirecting
+        return {
+            headers: { 'location': fullRedirect },
+            status: redirectData.method,
+            body: `Redirecting to ${fullRedirect}...`,
+          };
+    },
+});
 
 // Load redirects from files
-fs.readdirSync(filesDirectory).forEach(filename => {
-    if(filename.endsWith(".json") && !filename.endsWith(".schema.json")) {
-        let file = fs.readFileSync(filesDirectory + filename);
+readdirSync(filesDirectory).forEach(filename => {
+    if (filename.endsWith(".json") && !filename.endsWith(".schema.json")) {
+        let file = readFileSync(filesDirectory + filename);
 
         let domain = filename.substring(0, filename.lastIndexOf(".json"));
 
@@ -20,73 +89,8 @@ fs.readdirSync(filesDirectory).forEach(filename => {
     }
 });
 
-module.exports = async function(context, req) {
-    // Get request URL
-    let url      = new URL(req.url),
-        hostname = url.hostname;
-
-    // Check, if URL is in one of supported basedomains
-    let base = endsWithAny(basedomains, hostname);
-
-    if(base === false) {
-        context.log(
-            `Basedomain ${hostname} not supported. Redirecting to ${defaultURL}...`);
-        context.res = {
-            status:  302,
-            body:    `Redirecting to ${defaultURL}...`,
-            headers: {
-                location: defaultURL
-            }
-        };
-        return;
-    }
-
-    // Extract the subdomain
-    let subdomain = hostname.substring(0, hostname.lastIndexOf(base) - 1). // -1 to include the dot before
-                            replace("www.", ""); // Remove "www." prefix, if exists
-
-    let redirectData = redirects[base][subdomain];
-
-    // Check, if redirect for requested subdomain exists
-    if(typeof redirectData !== "object") {
-        // Try with www - in case the redirect is added as www-only
-        subdomain = "www." + subdomain;
-
-        redirectData = redirects[base][subdomain];
-
-        if(typeof redirectData !== "object") {
-            context.log(
-                `Object for ${subdomain} not found. Redirecting to ${defaultURL}...`);
-            context.res = {
-                status:  302,
-                body:    `Redirecting to ${defaultURL}...`,
-                headers: {
-                    location: defaultURL
-                }
-            };
-            return;
-        }
-    }
-
-    // Include requested path to the redirect URL, if includePath enabled
-    let fullRedirect = redirectData.includePath === true
-        ? addPathname(redirectData.target, req)
-        : redirectData.target;
-
-    context.log(
-        `OK. Redirecting ${hostname} to ${fullRedirect} using ${redirectData.method}...`);
-
-    // Found redirect data for given URL - redirecting
-    context.res = {
-        status:  redirectData.method,
-        body:    `Redirecting to ${fullRedirect}...`,
-        headers: {
-            location: fullRedirect
-        }
-    };
-};
-
-module.exports.defaultURL = defaultURL;
+const _defaultURL = defaultURL;
+export { _defaultURL as defaultURL };
 
 /**
  * Determines whether a string ends with the characters of any of the strings from the specified array. Returns
@@ -98,8 +102,8 @@ module.exports.defaultURL = defaultURL;
  * @returns {(string|boolean)} the suffix that the string ends with, or false.
  */
 function endsWithAny(suffixes, string) {
-    for(let suffix of suffixes) {
-        if(string.endsWith(suffix)) {
+    for (let suffix of suffixes) {
+        if (string.endsWith(suffix)) {
             return suffix;
         }
     }
@@ -115,7 +119,7 @@ function endsWithAny(suffixes, string) {
  * @returns {string} url with trailing slash added, if needed.
  */
 function addTrailingSlash(url) {
-    if(!url.endsWith("/")) {
+    if (!url.endsWith("/")) {
         return url + "/";
     }
 
@@ -131,21 +135,21 @@ function addTrailingSlash(url) {
  * @returns {string} url with added path, or unmodified url if path was null.
  */
 function addPathname(url, req) {
-    let {pathname, searchParams} = new URL(req.url),
-        resultUrl                = url;
+    let { pathname, searchParams } = new URL(req.url),
+        resultUrl = url;
 
-    if(req.params !== undefined && req.params.path !== undefined) {
+    if (req.params !== undefined && req.params.path !== undefined) {
         // Path passed as a parameter from Azure Functions
         resultUrl = new addTrailingSlash(resultUrl);
         resultUrl += req.params.path;
-    } else if(pathname !== "/") {
+    } else if (pathname !== "/") {
         // Path got directly from the URL
         resultUrl = addTrailingSlash(resultUrl);
         resultUrl += pathname.substring(1);
     }
 
-    if(searchParams.toString() !== "") {
-        if(new URL(resultUrl).pathname === "/") {
+    if (searchParams.toString() !== "") {
+        if (new URL(resultUrl).pathname === "/") {
             resultUrl = addTrailingSlash(resultUrl);
         }
         resultUrl += `?${searchParams.toString()}`;

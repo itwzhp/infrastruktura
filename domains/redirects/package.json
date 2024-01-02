@@ -7,10 +7,14 @@
     },
     "author": "Stanisław Kowański <skowanski@f4dev.me>",
     "repository": "https://github.com/itwzhp/infrastruktura",
+    "dependencies": {
+
+        "@azure/functions": "^4.1.0"
+
+    },
     "devDependencies": {
         "ajv": "^8.5.0",
         "ajv-formats": "^2.1.0",
-        "jest": "^27.3.1",
-        "azure-functions-core-tools": "^4.x"
+        "jest": "^27.3.1"
     }
 }
