@@ -1,7 +1,6 @@
 "use strict";
 
 const { app } = require('@azure/functions');
-
 const { readdirSync, readFileSync } = require("fs");
 
 const filesDirectory = "./redirectFiles/";
@@ -9,73 +8,6 @@ const defaultURL = "https://zhp.pl";
 
 const redirects = [], // Holds all redirects from files (basedomain => redirect object)
     basedomains = []; // Holds redirects basedomains (array of domains)
-
-app.http('httpTrigger1', {
-    methods: ['GET'],
-    route: '/{*path}',
-    authLevel: 'anonymous',
-    handler: async (req, context) => {
-        // Get request URL
-        let url = new URL(req.url),
-            hostname = url.hostname;
-
-        // Check, if URL is in one of supported basedomains
-        let base = endsWithAny(basedomains, hostname);
-
-        if (base === false) {
-            context.log(
-                `Basedomain ${hostname} not supported. Redirecting to ${defaultURL}...`);
-            return {
-                status: 302,
-                body: `Redirecting to ${defaultURL}...`,
-                headers: {
-                    location: defaultURL
-                }
-            }
-        }
-
-        // Extract the subdomain
-        let subdomain = hostname.substring(0, hostname.lastIndexOf(base) - 1). // -1 to include the dot before
-            replace("www.", ""); // Remove "www." prefix, if exists
-
-        let redirectData = redirects[base][subdomain];
-
-        // Check, if redirect for requested subdomain exists
-        if (typeof redirectData !== "object") {
-            // Try with www - in case the redirect is added as www-only
-            subdomain = "www." + subdomain;
-
-            redirectData = redirects[base][subdomain];
-
-            if (typeof redirectData !== "object") {
-                context.log(
-                    `Object for ${subdomain} not found. Redirecting to ${defaultURL}...`);
-                return {
-                    status: 302,
-                    body: `Redirecting to ${defaultURL}...`,
-                    headers: {
-                        location: defaultURL
-                    }
-                 }
-            }
-        }
-
-        // Include requested path to the redirect URL, if includePath enabled
-        let fullRedirect = redirectData.includePath === true
-            ? addPathname(redirectData.target, req)
-            : redirectData.target;
-
-        context.log(
-            `OK. Redirecting ${hostname} to ${fullRedirect} using ${redirectData.method}...`);
-
-        // Found redirect data for given URL - redirecting
-        return {
-            headers: { 'location': fullRedirect },
-            status: redirectData.method,
-            body: `Redirecting to ${fullRedirect}...`,
-          };
-    },
-});
 
 // Load redirects from files
 readdirSync(filesDirectory).forEach(filename => {
@@ -88,9 +20,6 @@ readdirSync(filesDirectory).forEach(filename => {
         basedomains.push(domain);
     }
 });
-
-const _defaultURL = defaultURL;
-export { _defaultURL as defaultURL };
 
 /**
  * Determines whether a string ends with the characters of any of the strings from the specified array. Returns
@@ -157,3 +86,70 @@ function addPathname(url, req) {
 
     return resultUrl;
 }
+
+app.http('index', {
+    methods: ['GET'],
+    authLevel: 'anonymous',
+    route: '{*path}',
+    handler: async (request, context) => {
+        // Get request URL
+        let url = new URL(request.url),
+            hostname = url.hostname;
+
+        // Check, if URL is in one of supported basedomains
+        let base = endsWithAny(basedomains, hostname);
+
+        if (base === false) {
+            context.log(
+                `Basedomain ${hostname} not supported. Redirecting to ${defaultURL}...`);
+            return {
+                status: 302,
+                body: `Redirecting to ${defaultURL}...`,
+                headers: {
+                    location: defaultURL
+                }
+            }
+        }
+
+        // Extract the subdomain
+        let subdomain = hostname.substring(0, hostname.lastIndexOf(base) - 1) // -1 to include the dot before
+            .replace("www.", ""); // Remove "www." prefix, if exists
+
+        let redirectData = redirects[base][subdomain];
+
+        // Check, if redirect for requested subdomain exists
+        if (typeof redirectData !== "object") {
+            // Try with www - in case the redirect is added as www-only
+            subdomain = "www." + subdomain;
+
+            redirectData = redirects[base][subdomain];
+
+            if (typeof redirectData !== "object") {
+                context.log(
+                    `Object for ${subdomain} not found. Redirecting to ${defaultURL}...`);
+                return {
+                    status: 302,
+                    body: `Redirecting to ${defaultURL}...`,
+                    headers: {
+                        location: defaultURL
+                    }
+                 }
+            }
+        }
+
+        // Include requested path to the redirect URL, if includePath enabled
+        let fullRedirect = redirectData.includePath === true
+            ? addPathname(redirectData.target, request)
+            : redirectData.target;
+
+        context.log(
+            `OK. Redirecting ${hostname} to ${fullRedirect} using ${redirectData.method}...`);
+
+        // Found redirect data for given URL - redirecting
+        return {
+            headers: { 'location': fullRedirect },
+            status: redirectData.method,
+            body: `Redirecting to ${fullRedirect}...`,
+            };
+    }
+});

@@ -4,9 +4,10 @@
 .vscode
 local.settings.json
 test
-__tests__
 getting_started.md
-README.md
 node_modules/@types/
 node_modules/azure-functions-core-tools/
 node_modules/typescript/
+
+README.md
+*.arm.json
