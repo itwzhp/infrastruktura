@@ -3,7 +3,13 @@
  * https://jestjs.io/docs/en/configuration.html
  */
 
-export const clearMocks = true;
-export const coverageDirectory = "coverage";
-export const coverageProvider = "v8";
-export const testEnvironment = "node";
+module.exports = {
+    // Automatically clear mock calls and instances between every test
+    clearMocks: true,
+    // The directory where Jest should output its coverage files
+    coverageDirectory: "coverage",
+    // Indicates which provider should be used to instrument code for coverage
+    coverageProvider: "v8",
+    // The test environment that will be used for testing
+    testEnvironment: "node"
+};

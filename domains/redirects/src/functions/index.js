@@ -69,7 +69,7 @@ function addPathname(url, req) {
 
     if (req.params !== undefined && req.params.path !== undefined) {
         // Path passed as a parameter from Azure Functions
-        resultUrl = new addTrailingSlash(resultUrl);
+        resultUrl = addTrailingSlash(resultUrl);
         resultUrl += req.params.path;
     } else if (pathname !== "/") {
         // Path got directly from the URL
@@ -86,6 +86,7 @@ function addPathname(url, req) {
 
     return resultUrl;
 }
+module.exports = { addPathname };
 
 app.http('index', {
     methods: ['GET'],
