@@ -15,7 +15,7 @@ D_EXTEND('zhp.pl',
         A('grajewo', '79.96.169.242'),
         Ms365_Subdomain('biebrzanski', 'zhp.pl'), // MS365-32124
     //h. bielsk podlaski
-        //brak
+        Ms365_Subdomain('bielskpodlaski', 'zhp.pl'),
     //h. kolno
         Delegation_A('kolno', '185.204.219.239'),
         Ms365_Subdomain('kolno', 'zhp.pl'),
@@ -27,7 +27,7 @@ D_EXTEND('zhp.pl',
     //h. suwałki
         CNAME('*.suwalki', 'suwalki.zhp.pl.'),
         A('suwalki', '79.96.169.242'),
-        Ms365_Subdomain('suwalki', 'zhp.pl') // MS365-32120
+        Ms365_Subdomain('suwalki', 'zhp.pl'), // MS365-32120
     //h. wschodniomazowiecki w zambrowie
-        //brak
+        Ms365_Subdomain('wschodniomazowiecki', 'zhp.pl')
 );
