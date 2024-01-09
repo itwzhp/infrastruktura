@@ -49,11 +49,12 @@ D_EXTEND('zhp.pl',
     // Bazy
     Delegation_NS('kucoby', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
     Delegation_A('amonit', '109.95.159.36'),  // MS365-28967
-    Delegation_A('wilczysko', '109.95.157.137'),
+    Delegation_A('wilczysko', '109.95.156.188'), // MS365-33992
     Delegation_NS('bazapajak', ['dns3.trustnet.pl.', 'dns.trustnet.pl.', 'dns2.trustnet.pl.']),
+    Delegation_A('pogorzelica', '109.95.158.127'), // MS365-33992
 
     // Harcerskie Muzeum Etnograficzne
-    Delegation_A('hme', '109.95.157.137'),
+    Delegation_A('hme', '109.95.156.188'), // MS365-33992
     Ms365_Subdomain('hme', 'zhp.pl'), // MS365-8065
     CNAME('k2._domainkey.hme', 'dkim2.mcsv.net.'),
     CNAME('k3._domainkey.hme', 'dkim3.mcsv.net.'),
@@ -62,5 +63,6 @@ D_EXTEND('zhp.pl',
     Delegation_NS('sl1', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']), //Slaska1
     Delegation_NS('sl2', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']), // Slaska2
     Delegation_NS('sl3', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']), //Slaska3
-    Delegation_NS('sl4', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.'])  //Slaska4
+    Delegation_NS('sl4', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),  //Slaska4
+    Delegation_NS('sl5', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.'])  // Slaska5
 );

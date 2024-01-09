@@ -1,15 +1,19 @@
 {
-    "name": "redirect-engine",
-    "version": "1.0.0",
-    "description": "Subdomains redirect engine for ZHP.pl",
-    "scripts": {
-        "test": "jest"
-    },
-    "author": "Stanisław Kowański <skowanski@f4dev.me>",
-    "repository": "https://github.com/itwzhp/infrastruktura",
-    "devDependencies": {
-        "ajv": "^8.5.0",
-        "ajv-formats": "^2.1.0",
-        "jest": "^27.3.1"
-    }
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/functions/*.js",
+  "scripts": {
+    "test": "jest",
+    "start": "func start"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0"
+  },
+  "devDependencies": {
+    "ajv": "^8.5.0",
+    "ajv-formats": "^2.1.0",
+    "jest": "^27.3.1",
+    "azure-functions-core-tools": "^4.x"
+  }
 }

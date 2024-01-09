@@ -58,5 +58,11 @@
     "konto": {
         "target": "https://zhp.pl/microsoft-365-w-zhp/",
         "method": 302
+    },
+    "www.arsenal": {
+        "target": "https://arsenal.zhp.pl/",
+        "method": 301,
+        "includePath": true,
+        "includeWww": false
     }
 }
