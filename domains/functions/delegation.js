@@ -1,5 +1,5 @@
 function Delegation_A(domain, record, suffix) {
-    const records = Array.isArray(record) ? record : [record];
+    var records = Array.isArray(record) ? record : [record];
 
     return [
         records.map(function (el) { return A(domain, el); }),
