@@ -17,6 +17,7 @@ D_EXTEND('zhp.pl',
     // Wydział Inspiracji i Poradnictwa
     Delegation_A_WithCfProxy('cbp', '51.75.54.175'),
     Delegation_A_WithCfProxy('cbp-dev', '51.75.54.175'),
+    Delegation_A_WithCfProxy('arch.cbp', '51.75.54.175'),
     Delegation_A_WithCfProxy('sim', '213.189.38.139'),
     Delegation_A_WithCfProxy('api-sim', '213.189.38.139'),
 
