@@ -28,5 +28,5 @@ D_EXTEND('zhp.pl',
 			Ms365_Subdomain('opole','zhp.pl'),
 		//Praszka
 			Delegation_A('opole', '149.56.30.175'),
-			Ms365_Subdomain('praszka','zhp.pl'),
+			Ms365_Subdomain('praszka','zhp.pl')
 );
