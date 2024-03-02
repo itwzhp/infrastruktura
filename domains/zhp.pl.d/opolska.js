@@ -1,25 +1,32 @@
 D_EXTEND('zhp.pl',
-  //Strona chorągwi
-  Delegation_A_WithCfProxy('opolska', '149.56.30.175'),
-  Delegation_A('ninja.opolska.zhp.pl.', '149.56.30.175'),
-  Delegation_A('przekierowania.opolska.zhp.pl.', '149.56.30.175'),
-  Delegation_A('dokumenty.opolska.zhp.pl.', '149.56.30.175'),
+	//opolska.zhp.pl i subdomeny
+		Delegation_A('opolska', '149.56.30.175'),
+		Delegation_A('ninja.opolska.zhp.pl.', '149.56.30.175'),
+		Delegation_A('przekierowania.opolska.zhp.pl.', '149.56.30.175'),
+		Delegation_A('zabbix.opolska.zhp.pl.', '149.56.30.175'),
+		Delegation_A('dokumenty.opolska.zhp.pl.', '149.56.30.175'),
+		Ms365_Subdomain('opolska','zhp.pl'),
   
-  //Strony hufców
-  Delegation_A_WithCfProxy('brzeg', '149.56.30.175'),
-  Delegation_A_WithCfProxy('kedzierzynkozle', '149.56.30.175'),
-  Delegation_A_WithCfProxy('krapkowice', '149.56.30.175'),
-  Delegation_A_WithCfProxy('nysa', '149.56.30.175'),
-  Delegation_A_WithCfProxy('opole', '149.56.30.175'),
-         
-  //Rekordy pod Office365.
-  Ms365_Subdomain('opolska','zhp.pl'),
-  Ms365_Subdomain('brzeg','zhp.pl'),
-  Ms365_Subdomain('kedzierzynkozle','zhp.pl'),
-  Ms365_Subdomain('krapkowice','zhp.pl'),
-  Ms365_Subdomain('nysa','zhp.pl'),
-  Ms365_Subdomain('opole','zhp.pl'),
-  Ms365_Subdomain('praszka','zhp.pl'),
-    
-  Delegation_NS('glubczyce', ['ns1.ehost.pl.', 'ns2.ehost.pl.'])
+	//Strony hufców
+		//Brzeg
+			Delegation_A('brzeg', '149.56.30.175'),
+			Ms365_Subdomain('brzeg','zhp.pl'),
+		//Głubczyce
+			Delegation_A('glubczyce', '193.143.77.14'),
+			Ms365_Subdomain('glubczyce','zhp.pl'),
+		//Kędzierzyn-Koźle
+			Delegation_A('kedzierzynkozle', '149.56.30.175'),
+			Ms365_Subdomain('kedzierzynkozle','zhp.pl'),
+		//Krapkowice
+			Delegation_A('krapkowice', '149.56.30.175'),
+			Ms365_Subdomain('krapkowice','zhp.pl'),
+		//Nysa
+			Delegation_A('nysa', '149.56.30.175'),
+			Ms365_Subdomain('nysa','zhp.pl'),
+		//Opole
+			Delegation_A('opole', '149.56.30.175'),
+			Ms365_Subdomain('opole','zhp.pl'),
+		//Praszka
+			Delegation_A('opole', '149.56.30.175'),
+			Ms365_Subdomain('praszka','zhp.pl'),
 );
