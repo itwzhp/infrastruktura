@@ -14,7 +14,7 @@ D_EXTEND('zhp.pl',
 
     // Imprezy
         Delegation_NS('bumerang', ['ns.lh.pl.', 'ns2.lighthosting.net.', 'ns2.lh.pl.']),
-        Delegation_NS('rajdgranica', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.'])
+        Delegation_NS('rajdgranica', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']),
          
     // Hufce
          // Bolesławiec
@@ -65,5 +65,5 @@ D_EXTEND('zhp.pl',
         // Hufiec Ziemi Trzebnickiej
             Delegation_NS('zmigrod', ['ns.lh.pl.', 'ns2.lighthosting.net.']),
   	        Delegation_A('ziemitrzebnickiej', '213.32.10.111'),
-	        Ms365_Subdomain('ziemitrzebnickiej', 'zhp.pl'),
+	        Ms365_Subdomain('ziemitrzebnickiej', 'zhp.pl')
 );
