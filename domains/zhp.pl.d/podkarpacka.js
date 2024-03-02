@@ -8,6 +8,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('lancut', ['ns1.kylos.pl.', 'ns2.kylos.pl.']),
     Delegation_NS('lezajsk', ['ns1.statnet.pl.', 'ns2.statnet.pl.']),
     Delegation_A('mielec', '79.133.210.186'), // MS365-7714
+    Ms365_Subdomain('nisko', 'zhp.pl'), //MS365-36698
     Delegation_NS('rzeszow', ['1.dns.zetohosting.pl.', '2.dns.zetohosting.pl.']), // MS365-26673
     Ms365_Subdomain('sanok', 'zhp.pl'), //MS365-13468
     Delegation_NS('stalowawola', ['ns1.domena.pl.', 'ns2.domena.pl.']),

@@ -4,29 +4,46 @@ D_EXTEND('zhp.pl',
     Delegation_NS('kp', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     // Bazy (hosting chorągwi)
-    Delegation_NS('folusz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('polko', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('funka', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('biala', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('ciche', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_A('biala', '185.255.40.51'),
+    Delegation_A('funka', '185.255.40.51'),
+    Delegation_A('polko', '185.255.40.51'),
+    Delegation_A('folusz', '185.255.40.51'),
+    Delegation_A('smerzyn', '185.255.40.51'),
+    Delegation_A('krowka', '185.255.40.51'),
+    Delegation_A('ciche', '185.255.40.51'),
 
-    // Hufce (hosting chorągwi)
-    Delegation_NS('brodnica', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    // Hufce WWW (hosting chorągwi)
+    Delegation_A('brodnica', '185.255.40.51'),
     Delegation_A('bydgoszcz', '185.255.40.51'),
-    Delegation_NS('golubdobrzyn', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('grudziadz', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('inowroclaw', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_A('chojnice', '185.255.40.51'),
+    Delegation_A('golubdobrzyn', '185.255.40.51'),
+    Delegation_A('grudziadz', '185.255.40.51'),
+    Delegation_A('inowroclaw', '185.255.40.51'),
     Delegation_A('koronowo', '185.255.40.51'),
-    Delegation_NS('nml', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('paluki', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('swiecie', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('wloclawek', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_A('nml', '185.255.40.51'),
+    Delegation_A('paluki', '185.255.40.51'),
+    Delegation_A('swiecie', '185.255.40.51'),
     Delegation_A('tuchola', '185.255.40.51'),
+    Delegation_A('wloclawek', '185.255.40.51'),
 
-    // MS365
+    // Hufce MS365
+    Ms365_Subdomain('aleksandrowkujawski','zhp.pl'),
+    Ms365_Subdomain('brodnica','zhp.pl'),
     Ms365_Subdomain('bydgoszcz','zhp.pl'),
+    Ms365_Subdomain('chelmza','zhp.pl'),
+    Ms365_Subdomain('chojnice','zhp.pl'),
+    Ms365_Subdomain('golubdobrzyn','zhp.pl'),
+    Ms365_Subdomain('grudziadz','zhp.pl'),
+    Ms365_Subdomain('inowroclaw','zhp.pl'),
     Ms365_Subdomain('koronowo','zhp.pl'),
+    Ms365_Subdomain('mogilno','zhp.pl'),
+    Ms365_Subdomain('naklo','zhp.pl'),
+    Ms365_Subdomain('nml','zhp.pl'),
+    Ms365_Subdomain('paluki','zhp.pl'),
+    Ms365_Subdomain('rypin','zhp.pl'),
+    Ms365_Subdomain('swiecie','zhp.pl'),
     Ms365_Subdomain('tuchola','zhp.pl'),
+    Ms365_Subdomain('wloclawek','zhp.pl'),
 
     // Hufiec Toruń (hosting hufca)
     Delegation_NS('torun', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
@@ -34,9 +51,6 @@ D_EXTEND('zhp.pl',
     // Hufiec Powiatu Włocławskiego (hosting hufca)
     Delegation_NS('powiatwloclawek', ['ns3.biznes-host.pl.', 'ns4.biznes-host.pl.']),
     CNAME('wloclawekpowiat', 'powiatwloclawek.zhp.pl.'),
-
-    // Hufiec Chojnice (hosting hufca)
-    Delegation_NS('chojnice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     // Imprezy Ogólnopolskie
     Delegation_NS('kopernikanski', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])

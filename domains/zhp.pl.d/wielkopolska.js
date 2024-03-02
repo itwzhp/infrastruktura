@@ -17,8 +17,12 @@ D_EXTEND('zhp.pl',
     Delegation_A('nowemiasto', '185.23.21.18'),
     Delegation_A('gniezno', '178.32.205.96'),
     Delegation_A('poznangrunwald', '94.23.27.27'),
+    Ms365_Subdomain('poznangrunwald','zhp.pl'),
     Ms365_Subdomain('jarocin','zhp.pl'),  // MS365-26038
     Ms365_Subdomain('srem','zhp.pl'),  // MS365-27185
-
+         
+    Ms365_Subdomain('piast','zhp.pl'),  // MS365-32528
+    Delegation_A('101pdh.piast', '2.57.138.154', 'zhp.pl'),  // MS365-32528
+    Delegation_A('commando.piast', '2.57.138.154', 'zhp.pl'),  // MS365-32536
     Delegation_NS('wzlot', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])
 );

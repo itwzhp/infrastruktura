@@ -24,9 +24,11 @@ jobs:
                 uses: azure/login@v1
                 with:
                     creds: ${{ secrets.AZURE_REDIRECTS_DEPLOY_CREDENTIALS }}
+
             -   name: Extract list of domains
                 shell: pwsh
                 run: .github/Create-ParamFile.ps1
+
             -   name: Deploy Application ARM
                 uses: azure/arm-deploy@v1
                 with:
@@ -35,6 +37,7 @@ jobs:
                     resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP }}
                     template: ./domains/redirects/redirects.arm.json
                     parameters: ./domain.parameters.json
+
             -   name: Deploy SSL ARM
                 uses: azure/arm-deploy@v1
                 with:
@@ -43,6 +46,16 @@ jobs:
                     resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP }}
                     template: ./domains/redirects/certificates.arm.json
                     parameters: ./domain.parameters.json
+
+            -   name: Setup Node
+                uses: actions/setup-node@v2
+                with:
+                    node-version: "18"
+
+            -   name: Install dependencies
+                run: npm ci --omit=dev
+                working-directory: ./domains/redirects
+
             -   name: Deploy
                 uses: Azure/functions-action@v1
                 with:

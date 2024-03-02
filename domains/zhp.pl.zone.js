@@ -4,6 +4,12 @@ D('zhp.pl', ovhRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600),
     CNAME('www', 'zhp.pl.', CF_PROXY_ON),
     Ms365_Root('zhp.pl'),
 
+    // DMARC
+    DMARC('reject'),
+    TXT("zhp.net.pl._report._dmarc", "v=DMARC1"), // to comply with https://dmarc.org/2015/08/receiving-dmarc-reports-outside-your-domain/
+    TXT("grupy.zhp.net.pl._report._dmarc", "v=DMARC1"), // #TODO Remove after DMARC record for grupy.zhp.net.pl was removed
+
+
     // Special
     Ms365_Subdomain('jpt', 'zhp.pl'),
     TXT('_acme-challenge.haliz', 'jd-YDJYrtRp7nynl5NEJyNrHqwrtfpm7j1H-rOJ5LfQ'),

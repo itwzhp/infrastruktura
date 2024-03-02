@@ -7,13 +7,14 @@ D_EXTEND('zhp.pl',
     Delegation_NS('gorzow', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
 
     // Delegacja domeny hufca Międzychód
-    Delegation_NS('miedzychod', ['ns1.hostinghouse.pl.', 'ns2.hostinghouse.pl.']),
+    Ms365_Subdomain('miedzychod','zhp.pl'),
 
     // Delegacja domeny hufca Międzyrzecz
     Ms365_Subdomain('miedzyrzecz','zhp.pl'),
 
     //Delegacja domeny hufca Nowa Sól
-    Delegation_CNAME('nowasol', 'ghs.google.com.'),
+    Delegation_A('nowasol', ['216.239.32.21', '216.239.34.21', '216.239.36.21', '216.239.38.21']), // W oparciu o https://support.google.com/blogger/answer/1233387?hl=en
+    Ms365_Subdomain('nowasol','zhp.pl'), // MS365-35854
 
     // Delegacja domeny hufca Słubice
     Delegation_NS('slubice', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
@@ -21,9 +22,8 @@ D_EXTEND('zhp.pl',
     //Delegacja domeny hufca Strzelce (zmienili nazwę na hufiec Strzelecko-Drezdenecki)
     Ms365_Subdomain('strzelce','zhp.pl'),
     Delegation_A('strzelce','185.135.90.126'),
-    Ms365_Subdomain('hsd','zhp.pl'), // Rekordy potrzebne do dodania nowej domeny do offica
-    Delegation_A('hsd','185.135.90.126'), // delegacja nowej domeny
-    // Delegacja domeny hufca Sulęcin 
+
+    // Delegacja domeny hufca Sulęcin
     Ms365_Subdomain('sulecin','zhp.pl'),
 
     //Delegacja domeny hufca Szprotawa
