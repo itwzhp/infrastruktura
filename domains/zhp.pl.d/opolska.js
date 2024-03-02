@@ -11,10 +11,10 @@ D_EXTEND('zhp.pl',
 		//Brzeg
 			Delegation_A('brzeg', '149.56.30.175'),
 			Ms365_Subdomain('brzeg','zhp.pl'),
-		//Głubczyce
+		//Glubczyce
 			Delegation_A('glubczyce', '193.143.77.14'),
 			Ms365_Subdomain('glubczyce','zhp.pl'),
-		//Kędzierzyn-Koźle
+		//Kedzierzyn-Kozle
 			Delegation_A('kedzierzynkozle', '149.56.30.175'),
 			Ms365_Subdomain('kedzierzynkozle','zhp.pl'),
 		//Krapkowice
