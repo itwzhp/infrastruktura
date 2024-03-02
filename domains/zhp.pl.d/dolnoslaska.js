@@ -64,6 +64,6 @@ D_EXTEND('zhp.pl',
             Delegation_NS('wroclawwschod', ['ns1.hostido.net.pl.','ns2.hostido.net.pl.', 'ns3.hostido.net.pl.']),
         // Hufiec Ziemi Trzebnickiej
             Delegation_NS('zmigrod', ['ns.lh.pl.', 'ns2.lighthosting.net.']),
-  	        Delegation_A('ziemitrzebnickiej', '213.32.10.111'),
-	        Ms365_Subdomain('ziemitrzebnickiej', 'zhp.pl')
+  	        Delegation_A('trzebnica', '213.32.10.111'),
+	        Ms365_Subdomain('trzebnica', 'zhp.pl')
 );
