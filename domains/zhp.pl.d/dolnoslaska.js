@@ -4,7 +4,7 @@ D_EXTEND('zhp.pl',
 
     //Strona chorągwi     
     Ms365_Subdomain('dolnoslaska','zhp.pl'),
-    Delegation_A('dolnoslaska', '213.32.10.111'),
+    Delegation_A_WithCfProxy('dolnoslaska', '213.32.10.111'),
     Delegation_NS('archiwumdolnoslaska', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']),     
 	Delegation_NS('dolnoslaska2', cyberfolksNs),
 	Delegation_NS('dolnoslaska3', cyberfolksNs),
@@ -27,9 +27,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('legnica', cyberfolksNs),  // MS365-14080
 	Delegation_NS('luban', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
 	Delegation_NS('lubin', ['ns1.hostdmk.net.', 'ns2.hostdmk.net.']),
-	//Delegation_NS('lagiewniki', ['dns3.hitme.net.pl.', 'dns4.hitme.net.pl.']), - Poprzednia delegacja
-    Delegation_A('lagiewniki', '213.32.10.111'),
-    Ms365_Subdomain('lagiewniki', 'zhp.pl'),
+	Delegation_NS('lagiewniki', ['dns3.hitme.net.pl.', 'dns4.hitme.net.pl.']),
 	Ms365_Subdomain('milicz', 'zhp.pl'),
 	Delegation_NS('olesnica', ['ns1.datanet.pl.', 'ns2.datanet.pl.']),
 	Delegation_NS('olawa', ['ns12.linuxpl.com.', 'dns12.linuxpl.com.']),
