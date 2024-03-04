@@ -11,13 +11,17 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('plesk', '51.75.54.175'),
     Delegation_A_WithCfProxy('beta', '51.75.54.175'),
 
+    // 54.38.195.155
+    Delegation_A_WithCfProxy('tipi', '54.38.195.155'),
+
+    // 213.189.38.137
+    A('zeus', '213.189.38.137'),
+    Delegation_A_WithCfProxy('checkmk', '213.189.38.137'),
+
     // 213.189.38.138
     Delegation_A_WithCfProxy('preprod-tipi', '213.189.38.138'),
     Delegation_A_WithCfProxy('demo-tipi', '213.189.38.138'),
     Delegation_A_WithCfProxy('nessus', '213.189.38.138'),
-
-    // 54.38.195.155
-    Delegation_A_WithCfProxy('tipi', '54.38.195.155'),
 
     // 213.189.38.139
     Delegation_A_WithCfProxy('mam-pomysl', '213.189.38.139'),
@@ -25,9 +29,19 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('pomoc', '213.189.38.139'),
     Delegation_A_WithCfProxy('helpdesk', '213.189.38.139'),
 
-    // 213.189.38.137
-    A('zeus', '213.189.38.137'),
-    Delegation_A_WithCfProxy('checkmk', '213.189.38.137'),
+    // 213.189.38.141
+    A('lasica', '213.189.38.141'),
+
+    // 213.189.38.142
+
+    // 213.189.38.143
+    Delegation_A_WithCfProxy('test-1', '213.189.38.143'),
+    Delegation_A_WithCfProxy('test-2', '213.189.38.143'),
+    Delegation_A_WithCfProxy('test-3', '213.189.38.143'),
+    Delegation_A_WithCfProxy('test-4', '213.189.38.143'),
+
+    // 213.189.38.144
+    A('krecik', '213.189.38.144'),
 
     // CloudFlare Pages
     CNAME('konta-sfh', 'konta-sfh.pages.dev.'),
@@ -65,9 +79,6 @@ D_EXTEND('zhp.pl',
     // Azure Edek
     Delegation_A_WithCfProxy('ed', '104.214.218.237'),
     Delegation_A_WithCfProxy('edek', '104.214.218.237'),
-
-    // Synology
-    Delegation_A_WithCfProxy('krecik', '213.189.38.130'),
 
     // A zhp.pl
     // TODO Ustalić czyje to
