@@ -35,6 +35,6 @@ D_EXTEND('zhp.pl',
     Delegation_NS('perkoz', hostingWm),
 
     Delegation_A_WithCfProxy('grunwald', '51.75.54.175'),
-    CNAME('www', 'grunwald'),
+    CNAME('www.grunwald', 'grunwald'),
     Ms365_Subdomain('grunwald','zhp.pl')
 );
