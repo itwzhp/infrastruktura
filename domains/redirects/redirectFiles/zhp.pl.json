@@ -4,6 +4,10 @@
         "target": "https://gkzhp.sharepoint.com/SitePages/42.-Zjazd-ZHP(1).aspx",
         "method": 301
     },
+	"aktywacja": {
+        "target": "https://zhp.pl/microsoft-365-w-zhp/",
+        "method": 302
+    },
     "csi": {
         "target": "https://gkzhp.sharepoint.com/SitePages/Centralna-Szko%C5%82a-Instruktorska.aspx",
         "method": 301
@@ -12,27 +16,38 @@
         "target": "https://tipi.zhp.pl",
         "method": 301
     },
+    "e-lodzka": {
+        "target": "https://gkzhp.sharepoint.com/sites/e-lodzkazhp/",
+        "method": 301
+    },
+    "e.szczecin": {
+        "target": "https://gkzhp.sharepoint.com/sites/szczecin/",
+        "method": 301
+    },
+    "e.zachpom": {
+        "target": "https://gkzhp.sharepoint.com/sites/e-zachpom/",
+        "method": 301
+    },
     "harc2o": {
         "target": "https://gkzhp.sharepoint.com/sites/woda",
         "method": 301,
         "$comment": "MS365-19840"
     },
+    "konto": {
+        "target": "https://zhp.pl/microsoft-365-w-zhp/",
+        "method": 302
+    },
     "ksztalcenie": {
         "target": "https://gkzhp.sharepoint.com/SitePages/Centralna-Szko%C5%82a-Instruktorska.aspx",
-        "method": 301
-    },
-    "poczta": {
-        "target": "https://outlook.office.com",
-        "method": 301
-    },
-
-    "wedrownicy.gdanska": {
-        "target": "https://www.facebook.com/wedrownicygd",
         "method": 301
     },
     "nasiczne.gdanska": {
         "target": "http://nasiczne.bieszczady.pl/",
         "method": 302
+    },
+    "poczta": {
+        "target": "https://outlook.office.com",
+        "method": 301
     },
     "polkolonie.gdanska": {
         "target": "https://gdanska.zhp.pl/polkolonie/",
@@ -41,27 +56,11 @@
     "sprawnosci.gdanska":{
         "target": "https://sprawnosci-harcerskie.netlify.app/",
         "method": 302
-    },   
-    "e.zachpom": {
-        "target": "https://gkzhp.sharepoint.com/sites/e-zachpom/",
+    }, 
+    "wedrownicy.gdanska": {
+        "target": "https://www.facebook.com/wedrownicygd",
         "method": 301
-    },
-    "e.szczecin": {
-        "target": "https://gkzhp.sharepoint.com/sites/szczecin/",
-        "method": 301
-    },
-    "e-lodzka": {
-        "target": "https://gkzhp.sharepoint.com/sites/e-lodzkazhp/",
-        "method": 301
-    },
-    "aktywacja": {
-        "target": "https://zhp.pl/microsoft-365-w-zhp/",
-        "method": 302
-    },
-    "konto": {
-        "target": "https://zhp.pl/microsoft-365-w-zhp/",
-        "method": 302
-    },
+    },  
     "www.arsenal": {
         "target": "https://arsenal.zhp.pl/",
         "method": 301,
