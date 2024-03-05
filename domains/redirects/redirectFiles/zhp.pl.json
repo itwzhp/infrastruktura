@@ -4,6 +4,10 @@
         "target": "https://gkzhp.sharepoint.com/SitePages/42.-Zjazd-ZHP(1).aspx",
         "method": 301
     },
+	"adresy": {
+        "target": "https://zhp.pl/",
+        "method": 302
+    },
 	"aktywacja": {
         "target": "https://zhp.pl/microsoft-365-w-zhp/",
         "method": 302
@@ -12,8 +16,20 @@
         "target": "https://gkzhp.sharepoint.com/SitePages/Centralna-Szko%C5%82a-Instruktorska.aspx",
         "method": 301
     },
+    "czuwaj": {
+        "target": "https://czuwaj.pl",
+        "method": 301
+    },
     "deklaracja": {
         "target": "https://tipi.zhp.pl",
+        "method": 301
+    },
+    "dokumenty": {
+        "target": "https://apps.powerapps.com/play/3aa72b2f-ee91-473f-833b-6f0085a13c1",
+        "method": 301
+    },
+    "e": {
+        "target": "https://gkzhp.sharepoint.com",
         "method": 301
     },
     "e-lodzka": {
@@ -28,8 +44,18 @@
         "target": "https://gkzhp.sharepoint.com/sites/e-zachpom/",
         "method": 301
     },
+    "haliz": {
+        "target": "https://gkzhp.sharepoint.com/SitePages/HALiZ.aspx",
+        "method": 301,
+        "$comment": "MS365-19840"
+    },
     "harc2o": {
         "target": "https://gkzhp.sharepoint.com/sites/woda",
+        "method": 301,
+        "$comment": "MS365-19840"
+    },
+    "intranet": {
+        "target": "https://gkzhp.sharepoint.com",
         "method": 301,
         "$comment": "MS365-19840"
     },
@@ -40,6 +66,10 @@
     "ksztalcenie": {
         "target": "https://gkzhp.sharepoint.com/SitePages/Centralna-Szko%C5%82a-Instruktorska.aspx",
         "method": 301
+    },
+    "kursy": {
+        "target": "https://gkzhp.sharepoint.com/_layouts/15/Events.aspx",
+        "method": 302
     },
     "nasiczne.gdanska": {
         "target": "http://nasiczne.bieszczady.pl/",
@@ -53,10 +83,22 @@
         "target": "https://gdanska.zhp.pl/polkolonie/",
         "method": 301
     },
+    "repozytorium": {
+        "target": "https://gkzhp.sharepoint.com/Repozytorium/Forms/AllItems.aspx",
+        "method": 301
+    },
     "sprawnosci.gdanska":{
         "target": "https://sprawnosci-harcerskie.netlify.app/",
         "method": 302
-    }, 
+    },
+    "sluzba": {
+        "target": "https://zhp.pl/sluzba",
+        "method": 301
+    },
+    "stock": {
+        "target": "https://apps.powerapps.com/play/3e114260-a361-4ee8-8329-62d7ddb50678",
+        "method": 301
+    },
     "wedrownicy.gdanska": {
         "target": "https://www.facebook.com/wedrownicygd",
         "method": 301
