@@ -2,7 +2,6 @@ D_EXTEND('zhp.pl',
     A('host', '51.75.54.175'), // dla nessus
     Delegation_A_WithCfProxy('archive', '51.75.54.175'),
     Delegation_A_WithCfProxy('emblematy', '51.75.54.175'),
-    Delegation_A_WithCfProxy('rundeck', '51.75.54.175'),
     Delegation_A_WithCfProxy('work', '51.75.54.175'),
     Delegation_A_WithCfProxy('work-dev', '51.75.54.175'),
     Delegation_A_WithCfProxy('bip', '51.75.54.175'),
