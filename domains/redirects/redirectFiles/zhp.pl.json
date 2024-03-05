@@ -41,14 +41,17 @@
     "sprawnosci.gdanska":{
         "target": "https://sprawnosci-harcerskie.netlify.app/",
         "method": 302
-    },
-    
+    },   
     "e.zachpom": {
         "target": "https://gkzhp.sharepoint.com/sites/e-zachpom/",
         "method": 301
     },
     "e.szczecin": {
         "target": "https://gkzhp.sharepoint.com/sites/szczecin/",
+        "method": 301
+    },
+    "e-lodzka": {
+        "target": "https://gkzhp.sharepoint.com/sites/e-lodzkazhp/",
         "method": 301
     },
     "aktywacja": {
