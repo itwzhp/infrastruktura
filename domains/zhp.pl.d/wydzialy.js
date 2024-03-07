@@ -32,8 +32,6 @@ D_EXTEND('zhp.pl',
 
     // Imprezy centralne
     Delegation_A_WithCfProxy('swiatlo', '51.75.54.175'),
-    Delegation_A_WithCfProxy('ej2020', '51.75.54.175'),
-    Delegation_A_WithCfProxy('jamboree2019', '51.75.54.175'),
     Delegation_A_WithCfProxy('cej2022', '51.75.54.175'),
     Delegation_NS('pielgrzymka', ['dns.smarthost.pl.', 'dns2.smarthost.pl.', 'dns3.smarthost.pl.']),
     Delegation_A_WithCfProxy('watra', '51.75.54.175'),
