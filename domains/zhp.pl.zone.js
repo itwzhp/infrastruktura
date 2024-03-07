@@ -1,6 +1,6 @@
 D('zhp.pl', ovhRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600),
     // Main domain
-    A('@', '51.75.54.175', CF_PROXY_ON),
+    Delegation_A_WithCfProxy('@', '51.75.54.175'),
     CNAME('www', 'zhp.pl.', CF_PROXY_ON),
     Ms365_Root('zhp.pl'),
 
