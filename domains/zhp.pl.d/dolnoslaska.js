@@ -32,8 +32,10 @@ Delegation_A('trzebnica', '213.32.10.111'),
 Ms365_Subdomain('trzebnica', 'zhp.pl'),
 Delegation_NS('bumerang', ['ns.lh.pl.', 'ns2.lighthosting.net.', 'ns2.lh.pl.']),
 Delegation_NS('rajdgranica', ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.pl.']),
-Delegation_NS('czarna', cyberfolksNs),
-Delegation_NS('pobierowo', cyberfolksNs),
+Delegation_A('czarna', '213.32.10.111'),
+Ms365_Subdomain('czarna', 'zhp.pl'),
+Delegation_A('pobierowo', '213.32.10.111'),
+Ms365_Subdomain('pobierowo', 'zhp.pl'),
 Delegation_A('rozewie', '213.32.10.111'),
 Ms365_Subdomain('rozewie', 'zhp.pl')
 );
