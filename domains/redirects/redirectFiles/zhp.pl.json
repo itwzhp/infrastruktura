@@ -103,10 +103,6 @@
         "target": "https://www.facebook.com/wedrownicygd",
         "method": 301
     },
-    "wroclaw": {
-        "target": "https://dolnoslaska.zhp.pl",
-        "method": 302
-    },
     "www.arsenal": {
         "target": "https://arsenal.zhp.pl/",
         "method": 301,

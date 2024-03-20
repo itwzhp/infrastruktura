@@ -25,6 +25,7 @@ Delegation_NS('swidnica', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']
 Delegation_NS('walbrzych', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
 // Delegation_NS('wroclaw', ['dns20.ovh.net.', 'ns20.ovh.net.']), - tymczasowe wyłączenie ze względu na kompromitację strony
 Ms365_Subdomain('wroclaw', 'zhp.pl'),
+Delegation_A_WithCfProxy('wroclaw', '51.75.54.175'),
 Delegation_NS('wroclawpolnoc', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 Delegation_NS('wroclawpoludnie', ['ns.lh.pl.', 'ns2.lighthosting.net.', 'ns2.lh.pl.']),
 Delegation_NS('wroclawwschod', ['ns1.hostido.net.pl.','ns2.hostido.net.pl.', 'ns3.hostido.net.pl.']),
