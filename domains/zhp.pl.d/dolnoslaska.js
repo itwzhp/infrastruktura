@@ -14,7 +14,7 @@ Delegation_NS('klodzko', ['dns8.linuxpl.com.', 'ns8.linuxpl.com.']),
 Delegation_NS('legnica', cyberfolksNs),  // MS365-14080
 Delegation_NS('luban', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
 Delegation_NS('lubin', ['ns1.hostdmk.net.', 'ns2.hostdmk.net.']),
-Delegation_A('lagiewniki', '109.95.156.188'),
+Delegation_A('lagiewniki', '188.165.209.195'),
 Ms365_Subdomain('lagiewniki', 'zhp.pl'),
 Delegation_A('milicz', '213.32.10.111'),
 Ms365_Subdomain('milicz', 'zhp.pl'),
