@@ -44,12 +44,13 @@ D_EXTEND('zhp.pl',
     Ms365_Subdomain('powiatwloclawek','zhp.pl'),   
     Ms365_Subdomain('rypin','zhp.pl'),
     Ms365_Subdomain('swiecie','zhp.pl'),
+    Ms365_Subdomain('torun','zhp.pl'),
     Ms365_Subdomain('tuchola','zhp.pl'),
     Ms365_Subdomain('wloclawek','zhp.pl'),
 
     // Hufiec Toruń (hosting hufca)
-    Delegation_NS('torun', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_A('torun', '188.210.222.130'),
 
     // Imprezy Ogólnopolskie
-    Delegation_NS('kopernikanski', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])
+    Delegation_A('kopernikanski', '188.210.222.130')
 );
