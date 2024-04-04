@@ -13,15 +13,16 @@ D_EXTEND('zhp.pl',
     Delegation_A('ciche', '185.255.40.51'),
 
     // Hufce WWW (hosting chorągwi)
-    Delegation_A('brodnica', '185.255.40.51'),
+    Delegation_A_WithCfProxy('brodnica', '185.255.40.51'),
     Delegation_A('bydgoszcz', '185.255.40.51'),
     Delegation_A('chojnice', '185.255.40.51'),
     Delegation_A('golubdobrzyn', '185.255.40.51'),
     Delegation_A('grudziadz', '185.255.40.51'),
     Delegation_A('inowroclaw', '185.255.40.51'),
-    Delegation_A('koronowo', '185.255.40.51'),
+    Delegation_A_WithCfProxy('koronowo', '185.255.40.51'),
     Delegation_A('nml', '185.255.40.51'),
     Delegation_A('paluki', '185.255.40.51'),
+    Delegation_A('powiatwloclawek', '185.255.40.51'),    
     Delegation_A('swiecie', '185.255.40.51'),
     Delegation_A('tuchola', '185.255.40.51'),
     Delegation_A('wloclawek', '185.255.40.51'),
@@ -40,18 +41,16 @@ D_EXTEND('zhp.pl',
     Ms365_Subdomain('naklo','zhp.pl'),
     Ms365_Subdomain('nml','zhp.pl'),
     Ms365_Subdomain('paluki','zhp.pl'),
+    Ms365_Subdomain('powiatwloclawek','zhp.pl'),   
     Ms365_Subdomain('rypin','zhp.pl'),
     Ms365_Subdomain('swiecie','zhp.pl'),
+    Ms365_Subdomain('torun','zhp.pl'),
     Ms365_Subdomain('tuchola','zhp.pl'),
     Ms365_Subdomain('wloclawek','zhp.pl'),
 
     // Hufiec Toruń (hosting hufca)
-    Delegation_NS('torun', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-
-    // Hufiec Powiatu Włocławskiego (hosting hufca)
-    Delegation_NS('powiatwloclawek', ['ns3.biznes-host.pl.', 'ns4.biznes-host.pl.']),
-    CNAME('wloclawekpowiat', 'powiatwloclawek.zhp.pl.'),
+    Delegation_A('torun', '188.210.222.130'),
 
     // Imprezy Ogólnopolskie
-    Delegation_NS('kopernikanski', ['ns1.atthost.pl.', 'ns2.atthost.pl.'])
+    Delegation_A('kopernikanski', '188.210.222.130')
 );
