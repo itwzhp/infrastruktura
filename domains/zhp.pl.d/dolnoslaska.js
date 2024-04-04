@@ -9,6 +9,7 @@ Delegation_NS('dzierzoniow', ['ns.lh.pl.', 'ns2.lighthosting.net.', 'ns2.lh.pl.'
 Delegation_A('glogow', '213.32.10.111'),
 Ms365_Subdomain('glogow', 'zhp.pl'),
 Delegation_NS('jawor', ['dns11.linuxpl.com.', 'ns11.linuxpl.com.']),
+Delegation_A('kajaki.dolnoslaska', '213.32.10.111'),
 Delegation_NS('karkonoski', ['ns1.ehost.pl.', 'ns2.ehost.pl.']),
 Delegation_NS('klodzko', ['dns8.linuxpl.com.', 'ns8.linuxpl.com.']),
 Delegation_NS('legnica', cyberfolksNs),  // MS365-14080
