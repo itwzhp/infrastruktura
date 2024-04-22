@@ -4,13 +4,13 @@ D_EXTEND('zhp.pl',
     Delegation_NS('kp', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
 
     // Bazy (hosting chorągwi)
-    Delegation_A('biala', '185.255.40.51'),
-    Delegation_A('funka', '185.255.40.51'),
-    Delegation_A('polko', '185.255.40.51'),
-    Delegation_A('folusz', '185.255.40.51'),
-    Delegation_A('smerzyn', '185.255.40.51'),
-    Delegation_A('krowka', '185.255.40.51'),
-    Delegation_A('ciche', '185.255.40.51'),
+    Delegation_A('biala', '188.210.222.87'),
+    Delegation_A('funka', '188.210.222.87'),
+    Delegation_A('polko', '188.210.222.87'),
+    Delegation_A('folusz', '188.210.222.87'),
+    Delegation_A('smerzyn', '188.210.222.87'),
+    Delegation_A('krowka', '188.210.222.87'),
+    Delegation_A('ciche', '188.210.222.87'),
 
     // Hufce WWW (hosting chorągwi)
     Delegation_A_WithCfProxy('brodnica', '185.255.40.51'),
