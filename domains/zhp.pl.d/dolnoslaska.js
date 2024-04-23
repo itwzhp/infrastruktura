@@ -3,7 +3,7 @@ var cyberfolksNs = ['ns1.cyberfolks.pl.', 'ns2.cyberfolks.pl.', 'ns3.cyberfolks.
 D_EXTEND('zhp.pl',  
 Delegation_A('dolnoslaska', '213.32.10.111'),
 Ms365_Subdomain('dolnoslaska','zhp.pl'),
-Delegation_A('kajaki.dolnoslaska', '213.32.10.111'),
+Delegation_A('kajaki.dolnoslaska.zhp.pl.', '213.32.10.111'),
 Delegation_NS('boleslawiec', ['ns1.cba.pl.', 'ns2.cba.pl.', 'ns3.cba.pl.']),
 Delegation_NS('bystrzycaklodzka', ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.']),
 Delegation_NS('dzierzoniow', ['ns.lh.pl.', 'ns2.lighthosting.net.', 'ns2.lh.pl.']),
