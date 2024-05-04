@@ -13,7 +13,7 @@
         "method": 302
     },
     "csi": {
-        "target": "https://gkzhp.sharepoint.com/SitePages/Centralna-Szko%C5%82a-Instruktorska.aspx",
+        "target": "https://gkzhp.sharepoint.com/sites/CSI",
         "method": 301
     },
     "czuwaj": {
@@ -64,7 +64,7 @@
         "method": 302
     },
     "ksztalcenie": {
-        "target": "https://gkzhp.sharepoint.com/SitePages/Centralna-Szko%C5%82a-Instruktorska.aspx",
+        "target": "https://gkzhp.sharepoint.com/sites/CSI",
         "method": 301
     },
     "kursy": {
