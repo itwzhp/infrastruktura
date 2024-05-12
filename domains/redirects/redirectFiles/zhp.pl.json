@@ -49,6 +49,10 @@
         "method": 301,
         "$comment": "MS365-19840"
     },
+    "helpdesk": {
+        "target": "https://jira.zhp.pl/plugins/servlet/desk",
+        "method": 301
+    },
     "harc2o": {
         "target": "https://gkzhp.sharepoint.com/sites/woda",
         "method": 301,
