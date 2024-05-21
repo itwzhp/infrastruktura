@@ -23,7 +23,6 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('nessus', '213.189.38.138'),
 
     // 213.189.38.139
-    Delegation_A_WithCfProxy('mam-pomysl', '213.189.38.139'),
 
     // 213.189.38.141
     A('lasica', '213.189.38.141'),
@@ -32,6 +31,7 @@ D_EXTEND('zhp.pl',
 
     // 213.189.38.143
     Delegation_A_WithCfProxy('jira', '213.189.38.143'),
+    Delegation_A_WithCfProxy('mam-pomysl', '213.189.38.143'),
     Delegation_A_WithCfProxy('pomoc', '213.189.38.143'),
 
     // 213.189.38.144
