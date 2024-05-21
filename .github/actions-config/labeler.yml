@@ -1,8 +1,8 @@
 # Add 'component/DNS' label to any change within the DNS zones
 component/DNS:
-- domains/**/*
+  - domains/**/*
 component/ACTIONS:
-- .github/actions-config/**/*
-- .github/workflows/**/*
+  - .github/actions-config/**/*
+  - .github/workflows/**/*
 component/REDIRECTS:
-- domains/redirects/**/*
+  - domains/redirects/**/*
