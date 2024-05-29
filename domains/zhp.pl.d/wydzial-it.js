@@ -15,7 +15,6 @@ D_EXTEND('zhp.pl',
 
     // 213.189.38.137
     A('zeus', '213.189.38.137'),
-    Delegation_A_WithCfProxy('checkmk', '213.189.38.137'),
 
     // 213.189.38.138
     Delegation_A_WithCfProxy('preprod-tipi', '213.189.38.138'),
@@ -30,6 +29,7 @@ D_EXTEND('zhp.pl',
     // 213.189.38.142
 
     // 213.189.38.143
+    Delegation_A_WithCfProxy('checkmk', '213.189.38.143'),
     Delegation_A_WithCfProxy('jira', '213.189.38.143'),
     Delegation_A_WithCfProxy('mam-pomysl', '213.189.38.143'),
     Delegation_A_WithCfProxy('pomoc', '213.189.38.143'),
@@ -41,7 +41,7 @@ D_EXTEND('zhp.pl',
     CNAME('konta-sfh', 'konta-sfh.pages.dev.'),
 
     // Maile z monitoringu
-    TXT('monitoring', "v=spf1 ip4:213.189.38.137 -all"),
+    TXT('monitoring', "v=spf1 ip4:213.189.38.143 -all"),
     DMARC('reject', 'reject', 'monitoring'), // strict DMARC - only this server
 
     // Mailu na zeus - usługa pocztowa pozwalająca wysyłać maile do domen ZHP
