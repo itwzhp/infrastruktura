@@ -18,8 +18,8 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('cbp', '51.75.54.175'),
     Delegation_A_WithCfProxy('cbp-dev', '51.75.54.175'),
     Delegation_A_WithCfProxy('cbp-arch', '51.75.54.175'),
-    Delegation_A_WithCfProxy('sim', '213.189.38.139'),
-    Delegation_A_WithCfProxy('api-sim', '213.189.38.139'),
+    Delegation_A_WithCfProxy('sim', '213.189.38.143'),
+    Delegation_A_WithCfProxy('api-sim', '213.189.38.143'),
 
     // Zespołu ds. CZR
     Delegation_A_WithCfProxy('yunga', '51.75.54.175'),
