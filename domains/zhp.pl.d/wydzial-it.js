@@ -15,7 +15,7 @@ D_EXTEND('zhp.pl',
     TXT('tipi', "v=spf1 ip4:54.38.195.155 -all"),
     A('tipi-mx', '54.38.195.155'),
     MX('tipi', 0, 'tipi-mx.zhp.pl.'),
-    // TXT('dkim._domainkey.tipi', "v=DKIM1;"), # TODO add key
+    TXT('dkim._domainkey.tipi', "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA16PihE0BwtTfHT3dGfsDIAuzcBK/Nbd5MxS60zGxbXe/7xL+B84uq+GB67g1T7UTfck+NQI0Evu0PDKejvtilDT0EwDzUoJdbMHWrOL6Y3U/Q14htCDzTZFYOxcktqzWAA45xH8m8WrCjqw61rudmPPur5AxiiZqNw75Aht080bqGF/psWQqVK7Ot9vZVdI23a1/TwxPn7Ib3i/MyipAyWkPXzPhPWJiFSnWkMfhowYcnIze0et47Vg+EZ8A8bXljvpz6nRMlPFQ4M3XMtb1dx4vhXXcZ+luG66Rg1m3lF/i3pMmyaZjch0RbjA5/NvmROn51Qc6ssKSfxs7JRqkjwIDAQAB"),
     DMARC('reject', 'reject', 'tipi'), // strict DMARC
 
     // 213.189.38.137
