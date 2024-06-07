@@ -13,6 +13,8 @@ D_EXTEND('zhp.pl',
     // 54.38.195.155
     Delegation_A_WithCfProxy('tipi', '54.38.195.155'),
     TXT('tipi', "v=spf1 ip4:54.38.195.155 -all"),
+    A('tipi-mx', '54.38.195.155'),
+    MX('tipi', 0, 'tipi-mx.zhp.pl.'),
     // TXT('dkim._domainkey.tipi', "v=DKIM1;"), # TODO add key
     DMARC('reject', 'reject', 'tipi'), // strict DMARC
 
