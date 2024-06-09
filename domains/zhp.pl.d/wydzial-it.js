@@ -54,7 +54,7 @@ D_EXTEND('zhp.pl',
     A('mail-auto-mx', '213.189.38.137'),
     MX('mail-auto', 0, 'mail-auto-mx.zhp.pl.'),
     TXT('mail-auto', "v=spf1 ip4:213.189.38.137 -all"),
-    TXT('dkim._domainkey.no-reply', "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt9rsaVad7OjUi0U6YR59XeshkTiB0tjqo5T+mQa9QaeWGIV71eL1VP9qS4p6m4U21rRPF75N0XKpt9hrD0xfC0dPsevbFbZKvASAr6u2Fm723OttgwA1N1SxA6DpFuSJzuf9PDVP4guOOYZi6pfpl79LGVmTldRjdrxnE+bFzKAHQm9xHFWFvt64Jr4JcipiIWi1DCajpizLFE+OqQ6m3cjJylkged83PP4fd64Gl3Cr2QPVxuEmaEvauxp6DXdYnXJM7WOkwj23GXeo+vfSWa4tHyQSw3XlSoTVEYa/h0Y90KqnfnvdCLuzQyxQsiezJBTbDSSDmoJMJB48i9YutQIDAQAB"),
+    TXT('dkim._domainkey.mail-auto', "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt9rsaVad7OjUi0U6YR59XeshkTiB0tjqo5T+mQa9QaeWGIV71eL1VP9qS4p6m4U21rRPF75N0XKpt9hrD0xfC0dPsevbFbZKvASAr6u2Fm723OttgwA1N1SxA6DpFuSJzuf9PDVP4guOOYZi6pfpl79LGVmTldRjdrxnE+bFzKAHQm9xHFWFvt64Jr4JcipiIWi1DCajpizLFE+OqQ6m3cjJylkged83PP4fd64Gl3Cr2QPVxuEmaEvauxp6DXdYnXJM7WOkwj23GXeo+vfSWa4tHyQSw3XlSoTVEYa/h0Y90KqnfnvdCLuzQyxQsiezJBTbDSSDmoJMJB48i9YutQIDAQAB"),
     DMARC('reject', 'reject', 'mail-auto'), // strict DMARC - only this server
 
     SRV('_submission._tcp.mail-auto', 1, 1, 587, 'mail-auto-mx.zhp.pl.'),
