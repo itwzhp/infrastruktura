@@ -9,7 +9,8 @@ D_EXTEND('zhp.pl',
     Delegation_NS('gdansk', ['dns1.thecamels.org.', 'dns2.thecamels.org.']),
     Delegation_NS('gdanskportowa', ['dns1.thecamels.org.', 'dns2.thecamels.org.']),
     Delegation_NS('gdanskwrzeszczoliwa', ['ns10.ovh.net.', 'dns10.ovh.net.']),
-    Delegation_NS('starogard', ['ns108.ovh.net.', 'dns108.ovh.net.']), // MS365-7432
+    Delegation_A('starogard', '128.204.216.115'), // MS365-43838
+    Ms365_Subdomain('starogard','zhp.pl'),
     Delegation_NS('czarnawoda', ['ns7.webd.pl.', 'ns5.webd.pl.']),
     Delegation_NS('kartuzy', ['ns1.hostbox.pl.', 'ns2.hostbox.pl.']),
     Delegation_NS('kwidzyn', ['ns1.netmark.pl.', 'ns2.netmark.pl.', 'ns3.netmark.pl.', 'ns4.netmark.pl.']),
