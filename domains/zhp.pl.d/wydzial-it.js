@@ -46,7 +46,7 @@ D_EXTEND('zhp.pl',
     CNAME('konta-sfh', 'konta-sfh.pages.dev.'),
 
     // Azure Static Web Apps
-    CNAME('sfh', 'nice-island-0dd931303.5.azurestaticapps.net'),
+    CNAME('sfh', 'nice-island-0dd931303.5.azurestaticapps.net.'),
 
     // Maile z monitoringu
     TXT('monitoring', "v=spf1 ip4:213.189.38.143 -all"),
