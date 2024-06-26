@@ -6,8 +6,6 @@ D_EXTEND('zhp.pl',
     Delegation_NS('warminskomazurska', hostingWm),
 
     // Hufce
-    Delegation_A_WithCfProxy('baldy', '195.78.67.34'), // MS365-44426
-    A('ftp.baldy', '195.78.67.34'),
     Delegation_NS('bartoszyce', hostingWm),
     Delegation_NS('biskupiec', hostingWm),
     Delegation_NS('braniewo', hostingWm),
@@ -37,7 +35,8 @@ D_EXTEND('zhp.pl',
 
     // Bazy
     Delegation_NS('przerwanki', hostingWm),
-    Delegation_NS('baldy', ['ns1.cba.pl.', 'ns2.cba.pl.', 'ns3.cba.pl.']),
+    Delegation_A_WithCfProxy('baldy', '195.78.67.34'), // MS365-44426
+    A('ftp.baldy', '195.78.67.34'),
     Delegation_NS('perkoz', hostingWm),
 
     Delegation_A_WithCfProxy('grunwald', '51.75.54.175'),
