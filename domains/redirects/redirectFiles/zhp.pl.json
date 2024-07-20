@@ -4,16 +4,16 @@
         "target": "https://gkzhp.sharepoint.com/SitePages/42.-Zjazd-ZHP(1).aspx",
         "method": 301
     },
-	"adresy": {
+    "adresy": {
         "target": "https://zhp.pl/",
         "method": 302
     },
-	"aktywacja": {
+    "aktywacja": {
         "target": "https://zhp.pl/microsoft-365-w-zhp/",
         "method": 302
     },
     "csi": {
-        "target": "https://gkzhp.sharepoint.com/SitePages/Centralna-Szko%C5%82a-Instruktorska.aspx",
+        "target": "https://gkzhp.sharepoint.com/sites/CSI",
         "method": 301
     },
     "czuwaj": {
@@ -49,6 +49,14 @@
         "method": 301,
         "$comment": "MS365-19840"
     },
+    "helpdesk": {
+        "target": "https://jira.zhp.pl/plugins/servlet/desk",
+        "method": 301
+    },
+    "helpdeskgk": {
+        "target": "https://jira.zhp.pl/plugins/servlet/desk/site/gk",
+        "method": 301
+    },
     "harc2o": {
         "target": "https://gkzhp.sharepoint.com/sites/woda",
         "method": 301,
@@ -64,7 +72,7 @@
         "method": 302
     },
     "ksztalcenie": {
-        "target": "https://gkzhp.sharepoint.com/SitePages/Centralna-Szko%C5%82a-Instruktorska.aspx",
+        "target": "https://gkzhp.sharepoint.com/sites/CSI",
         "method": 301
     },
     "kursy": {
@@ -87,7 +95,7 @@
         "target": "https://gkzhp.sharepoint.com/Repozytorium/Forms/AllItems.aspx",
         "method": 301
     },
-    "sprawnosci.gdanska":{
+    "sprawnosci.gdanska": {
         "target": "https://sprawnosci-harcerskie.netlify.app/",
         "method": 302
     },
