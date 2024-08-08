@@ -1,4 +1,1 @@
-D('bikejamboree.pl', noneRegistrar, DnsProvider(ovhProvider), DefaultTTL(3600),
-  
-
-);
+D('bikejamboree.pl', noneRegistrar, DnsProvider(ovhProvider), DefaultTTL(3600));
