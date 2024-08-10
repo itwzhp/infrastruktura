@@ -40,7 +40,6 @@ D_EXTEND('zhp.pl',
 
     // Ogólnoharcerskie przedsięwzięcia
     Delegation_A('harc-quiz', '137.74.3.247'),
-    Delegation_A_WithCfProxy('fsj', '51.75.54.175'),
 
     // Władze naczelne
     Ms365_Subdomain('gk', 'zhp.pl'),
