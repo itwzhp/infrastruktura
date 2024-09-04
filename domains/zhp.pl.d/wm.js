@@ -26,7 +26,8 @@ D_EXTEND('zhp.pl',
     Delegation_A_WithCfProxy('olsztyn', '195.78.67.34'), // MS365-44451
     A('ftp.olsztyn', '195.78.67.34'),
     Delegation_NS('orneta', ['ns11.linuxpl.com.', 'dns11.linuxpl.com.']),
-    Delegation_NS('ostroda', ['fns1.42.pl.', 'fns2.42.pl.']),
+    Delegation_A('ostroda', ['195.78.67.34']),
+    A('ftp.ostroda', ['195.78.67.34']),
     Delegation_NS('pisz', hostingWm),
     Delegation_NS('rodlo', hostingWm),
     Delegation_NS('szczytno', hostingWm), // MS365-30881
