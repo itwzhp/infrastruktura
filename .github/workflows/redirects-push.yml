@@ -19,9 +19,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             -   name: Checkout
-                uses: actions/checkout@v2
+                uses: actions/checkout@v4
             -   name: Login to Azure
-                uses: azure/login@v1
+                uses: azure/login@v2
                 with:
                     creds: ${{ secrets.AZURE_REDIRECTS_DEPLOY_CREDENTIALS }}
 
@@ -30,7 +30,7 @@ jobs:
                 run: .github/Create-ParamFile.ps1
 
             -   name: Deploy Application ARM
-                uses: azure/arm-deploy@v1
+                uses: azure/arm-deploy@v2
                 with:
                     deploymentMode: Incremental
                     subscriptionId: ${{ env.AZURE_SUBSCRIPTION_ID }}
@@ -39,7 +39,7 @@ jobs:
                     parameters: ./domain.parameters.json
 
             -   name: Deploy SSL ARM
-                uses: azure/arm-deploy@v1
+                uses: azure/arm-deploy@v2
                 with:
                     deploymentMode: Incremental
                     subscriptionId: ${{ env.AZURE_SUBSCRIPTION_ID }}
@@ -48,7 +48,7 @@ jobs:
                     parameters: ./domain.parameters.json
 
             -   name: Setup Node
-                uses: actions/setup-node@v2
+                uses: actions/setup-node@v4
                 with:
                     node-version: "18"
 

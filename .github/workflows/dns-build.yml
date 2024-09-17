@@ -9,7 +9,7 @@ jobs:
     container:
       image: stackexchange/dnscontrol:v3.14.0
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Generate DNS config
         run: |
@@ -18,7 +18,7 @@ jobs:
             echo ${{ github.event.number }} > dns-config/pr-number
 
       - name: Publish DNS zone as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: dns-config
           path: dns-config
@@ -28,10 +28,10 @@ jobs:
     needs: dnscontrol
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Get DNS zone artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: dns-config
 

@@ -11,7 +11,7 @@ jobs:
     container:
       image: jauderho/dnscontrol:v3.17.0
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Deploy DNS config
         run: dnscontrol push --config domains/dnsconfig.js --creds domains/creds.json
