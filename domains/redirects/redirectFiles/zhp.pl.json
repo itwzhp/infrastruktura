@@ -116,5 +116,9 @@
         "method": 301,
         "includePath": true,
         "includeWww": false
-    }
+    },
+    "e-mokotow": {
+        "target": "https://gkzhp.sharepoint.com/sites/mokotow",
+        "method": 301
+    }   
 }
