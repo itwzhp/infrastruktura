@@ -17,8 +17,9 @@ D_EXTEND('zhp.pl',
     // Wydział Inspiracji i Poradnictwa
     Delegation_A_WithCfProxy('cbp', '51.75.54.175'),
     Delegation_A_WithCfProxy('cbp-dev', '51.75.54.175'),
-    Delegation_A_WithCfProxy('sim', '213.189.38.139'),
-    Delegation_A_WithCfProxy('api-sim', '213.189.38.139'),
+    Delegation_A_WithCfProxy('cbp-arch', '51.75.54.175'),
+    Delegation_A_WithCfProxy('sim', '213.189.38.143'),
+    Delegation_A_WithCfProxy('api-sim', '213.189.38.143'),
 
     // Zespołu ds. CZR
     Delegation_A_WithCfProxy('yunga', '51.75.54.175'),
@@ -31,8 +32,6 @@ D_EXTEND('zhp.pl',
 
     // Imprezy centralne
     Delegation_A_WithCfProxy('swiatlo', '51.75.54.175'),
-    Delegation_A_WithCfProxy('ej2020', '51.75.54.175'),
-    Delegation_A_WithCfProxy('jamboree2019', '51.75.54.175'),
     Delegation_A_WithCfProxy('cej2022', '51.75.54.175'),
     Delegation_NS('pielgrzymka', ['dns.smarthost.pl.', 'dns2.smarthost.pl.', 'dns3.smarthost.pl.']),
     Delegation_A_WithCfProxy('watra', '51.75.54.175'),
@@ -41,7 +40,6 @@ D_EXTEND('zhp.pl',
 
     // Ogólnoharcerskie przedsięwzięcia
     Delegation_A('harc-quiz', '137.74.3.247'),
-    Delegation_A_WithCfProxy('fsj', '51.75.54.175'),
 
     // Władze naczelne
     Ms365_Subdomain('gk', 'zhp.pl'),

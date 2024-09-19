@@ -1,6 +1,8 @@
 function Delegation_A(domain, record, suffix) {
+    var records = Array.isArray(record) ? record : [record];
+
     return [
-        A(domain, record),
+        records.map(function (el) { return A(domain, el); }),
         CNAME("www." + domain, suffix ? domain + '.' + suffix + '.' : domain)
     ];
 }

@@ -9,7 +9,8 @@ D_EXTEND('zhp.pl',
     Delegation_NS('gdansk', ['dns1.thecamels.org.', 'dns2.thecamels.org.']),
     Delegation_NS('gdanskportowa', ['dns1.thecamels.org.', 'dns2.thecamels.org.']),
     Delegation_NS('gdanskwrzeszczoliwa', ['ns10.ovh.net.', 'dns10.ovh.net.']),
-    Delegation_NS('starogard', ['ns108.ovh.net.', 'dns108.ovh.net.']), // MS365-7432
+    Delegation_A('starogard', '128.204.216.115'), // MS365-43838
+    Ms365_Subdomain('starogard','zhp.pl'),
     Delegation_NS('czarnawoda', ['ns7.webd.pl.', 'ns5.webd.pl.']),
     Delegation_NS('kartuzy', ['ns1.hostbox.pl.', 'ns2.hostbox.pl.']),
     Delegation_NS('kwidzyn', ['ns1.netmark.pl.', 'ns2.netmark.pl.', 'ns3.netmark.pl.', 'ns4.netmark.pl.']),
@@ -29,13 +30,11 @@ D_EXTEND('zhp.pl',
     // Bazy
     Delegation_NS('starekarpno', ['ns1.hekko.net.pl.', 'ns2.hekko.net.pl.']),
     Ms365_Subdomain('czernica','zhp.pl'),
-    A('czernica', '51.75.54.175'),
+    Delegation_A_WithCfProxy('czernica', '51.75.54.175'),
 
     // Przedsięwzięcia
     Delegation_CNAME('jott.gdanska.zhp.pl.', 'gdanska.zhp.pl.'),
     
     // System ewidencji sprzętu
-    CNAME("sprzet.gdanska", "ewidencja-sprzetu-frontend-prod.azurewebsites.net."),
-    TXT("asuid.sprzet.gdanska", "32C40316E8FAC62EFA8E6E3D389D40A0B14DC868D7E81E727355CE362026592A"),
-    CNAME("api.sprzet.gdanska", "ewidencja-sprzetu-prod.azurewebsites.net."),
-    TXT("asuid.api.sprzet.gdanska", "32C40316E8FAC62EFA8E6E3D389D40A0B14DC868D7E81E727355CE362026592A"));
+    CNAME("sprzet.gdanska", "server3.mountdevs.net."),
+    CNAME("api.sprzet.gdanska", "server3.mountdevs.net."));

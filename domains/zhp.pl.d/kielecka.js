@@ -11,6 +11,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('skarzysko', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('starachowice', ['ns5.webd.pl.', 'ns7.webd.pl.']),
     Delegation_NS('staszow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_A_WithCfProxy('szczekociny', '185.255.40.22'),
 
     // Directory listing
     Delegation_A('opatow', '62.129.228.173'),

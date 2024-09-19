@@ -53,10 +53,10 @@ D_EXTEND('zhp.pl',
 
     // Hufiec Warszawa-Mokotów
     Delegation_A_WithCfProxy('mokotow', '109.95.159.40'),
+    Delegation_A_WithCfProxy('moko', '109.95.159.40'),
     Delegation_A('208.mokotow', '109.95.159.40', 'zhp.pl'),
     Delegation_A('50.mokotow', '109.95.159.40', 'zhp.pl'),
     Delegation_A('60wdh.mokotow', '109.95.159.40', 'zhp.pl'),
-    Delegation_A('e-rajd.mokotow', '109.95.159.40', 'zhp.pl'),
     Delegation_A('spacer.mokotow', '109.95.159.40', 'zhp.pl'),
     Delegation_A('stopa.mokotow', '109.95.159.40', 'zhp.pl'),
     Delegation_A('szczep40.mokotow', '109.95.159.40', 'zhp.pl'),

@@ -48,10 +48,11 @@ D_EXTEND('zhp.pl',
 
     // Bazy
     Delegation_NS('kucoby', ['ns1.dhosting.pl.', 'ns2.dhosting.pl.']),
-    Delegation_A('amonit', '109.95.159.36'),  // MS365-28967
+    Delegation_A('amonit', '109.95.159.30'),  // MS365-45264
     Delegation_A('wilczysko', '109.95.156.188'), // MS365-33992
     Delegation_NS('bazapajak', ['dns3.trustnet.pl.', 'dns.trustnet.pl.', 'dns2.trustnet.pl.']),
     Delegation_A('pogorzelica', '109.95.158.127'), // MS365-33992
+    Delegation_A_WithCfProxy('dwerniczek', '109.95.158.127'), // MS365-45265
 
     // Harcerskie Muzeum Etnograficzne
     Delegation_A('hme', '109.95.156.188'), // MS365-33992

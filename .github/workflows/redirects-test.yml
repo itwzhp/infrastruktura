@@ -15,15 +15,15 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             -   name: Checkout
-                uses: actions/checkout@v2
+                uses: actions/checkout@v4
 
             # App (Node) tests
             -   name: Setup Node
-                uses: actions/setup-node@v2
+                uses: actions/setup-node@v4
                 with:
                     node-version: "18"
             -   name: Install dependiences
-                run: npm install
+                run: npm ci
                 working-directory: ./domains/redirects
             -   name: Run tests
                 run: npm run test
@@ -31,14 +31,14 @@ jobs:
 
             # Azure ARM file tests
             -   name: Login to Azure
-                uses: azure/login@v1
+                uses: azure/login@v2
                 with:
                     creds: ${{ secrets.AZURE_REDIRECTS_DEPLOY_CREDENTIALS }}
             -   name: Extract list of domains
                 shell: pwsh
                 run: .github/Create-ParamFile.ps1
             -   name: Test ARM
-                uses: azure/arm-deploy@v1
+                uses: azure/arm-deploy@v2
                 with:
                     deploymentMode: Validate
                     subscriptionId: ${{ env.AZURE_SUBSCRIPTION_ID }}

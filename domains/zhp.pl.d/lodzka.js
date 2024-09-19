@@ -7,8 +7,10 @@ D_EXTEND('zhp.pl',
     Delegation_NS('lodzgorna', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('osiemnastka', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('reduta', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('lodzpolesie', ['ns1.zenbox.pl.', 'ns2.zenbox.pl.']),
-    Delegation_NS('lodzsrodmiescie', ['ns1.oiq.pl.', 'ns2.oiq.pl.']),
+
+    Delegation_A('lodzpolesie', '185.255.40.34'),
+    Ms365_Subdomain('lodzpolesie','zhp.pl'),
+    
     Delegation_NS('lodzwidzew', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('piotrkow', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('kutno', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
