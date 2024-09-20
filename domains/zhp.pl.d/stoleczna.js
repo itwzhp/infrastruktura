@@ -110,5 +110,6 @@ D_EXTEND('zhp.pl',
 
     Delegation_A('14.pruszkow', '185.255.40.54', 'zhp.pl'),
     Delegation_A('paderewski.pruszkow', '185.255.40.54', 'zhp.pl'),
-    Delegation_A('shds.pruszkow', '185.255.40.54', 'zhp.pl')
+    Delegation_A('shds.pruszkow', '185.255.40.54', 'zhp.pl'),
+    Delegation_A('szaniec.pruszkow', '185.255.40.54', 'zhp.pl')
 );
