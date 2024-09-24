@@ -1,8 +1,9 @@
 var ogicom = ['ns1.ogicom.pl.', 'ns2.ogicom.pl.', 'ns3.ogicom.pl.'];
+var thecamels = ['dns1.thecamels.org.', 'dns2.thecamels.org.'];
 
 D_EXTEND('zhp.pl',
     // Chorągiew
-    Delegation_A('gdanska', '93.157.100.67'),
+    Delegation_A('gdanska', '5.252.231.221'), 
     Ms365_Subdomain('gdanska','zhp.pl'),
 
     // Hufce
