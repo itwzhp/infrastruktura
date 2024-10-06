@@ -95,6 +95,10 @@
         "target": "https://gkzhp.sharepoint.com/Repozytorium/Forms/AllItems.aspx",
         "method": 301
     },
+    "sprawnosci.gdanska": {
+        "target": "https://sprawnosci-harcerskie.netlify.app/",
+        "method": 302
+    },
     "sluzba": {
         "target": "https://zhp.pl/sluzba",
         "method": 301
