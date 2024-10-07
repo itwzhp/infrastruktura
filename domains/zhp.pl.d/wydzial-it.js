@@ -44,7 +44,7 @@ D_EXTEND('zhp.pl',
     A('krecik', '213.189.38.144'),
 
     // Sejf on azure
-    CNAME('sejf-test', 'sejf.graycliff-21fa13ac.northeurope.azurecontainerapps.io'),
+    CNAME('sejf-test', 'sejf.graycliff-21fa13ac.northeurope.azurecontainerapps.io.'),
     TXT('asuid.sejf-test', '01E6941B3330DAACCE5A2B9E079EA3C6343C3AD74B23A3E47E8DD5503EAA2F87'),
 
     // CloudFlare Pages
