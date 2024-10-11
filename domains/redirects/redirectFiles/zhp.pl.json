@@ -116,5 +116,9 @@
     "e-mokotow": {
         "target": "https://gkzhp.sharepoint.com/sites/mokotow",
         "method": 301
-    }   
+    },
+    "swiatlo": {
+        "target": "https://zhp.pl/bsp",
+        "method": 301
+    }
 }
