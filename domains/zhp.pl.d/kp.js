@@ -11,6 +11,8 @@ D_EXTEND('zhp.pl',
     Delegation_A('smerzyn', '188.210.222.87'),
     Delegation_A('krowka', '188.210.222.87'),
     Delegation_A('ciche', '188.210.222.87'),
+    Delegation_A('gaj', '188.210.222.87'),
+    Delegation_A('roscimin', '188.210.222.87'),
 
     // Hufce WWW (hosting chorągwi)
     Delegation_A('brodnica', '185.255.40.51'),
