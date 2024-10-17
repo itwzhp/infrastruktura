@@ -23,11 +23,8 @@ D_EXTEND(
     DMARC("reject", "reject", "tipi"), // strict DMARC
 
     // 213.189.38.137
-    A("zeus", "213.189.38.137"),
 
     // 213.189.38.138
-    Delegation_A_WithCfProxy("preprod-tipi", "213.189.38.138"),
-    Delegation_A_WithCfProxy("demo-tipi", "213.189.38.138"),
 
     // 213.189.38.139
 
@@ -37,11 +34,13 @@ D_EXTEND(
     // 213.189.38.142
 
     // 213.189.38.143
+    Delegation_A_WithCfProxy("demo-tipi", "213.189.38.143"),
     Delegation_A_WithCfProxy("checkmk", "213.189.38.143"),
     Delegation_A_WithCfProxy("jira", "213.189.38.143"),
     Delegation_A_WithCfProxy("mam-pomysl", "213.189.38.143"),
     Delegation_A_WithCfProxy("nessus", "213.189.38.143"),
     Delegation_A_WithCfProxy("pomoc", "213.189.38.143"),
+    Delegation_A_WithCfProxy("preprod-tipi", "213.189.38.143"),
     Delegation_A_WithCfProxy("sejf", "213.189.38.143"),
 
     // 213.189.38.144
