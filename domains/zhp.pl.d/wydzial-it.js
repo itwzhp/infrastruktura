@@ -22,40 +22,23 @@ D_EXTEND(
     ),
     DMARC("reject", "reject", "tipi"), // strict DMARC
 
-    // 213.189.38.137
-    A("zeus", "213.189.38.137"),
-
-    // 213.189.38.138
-    Delegation_A_WithCfProxy("preprod-tipi", "213.189.38.138"),
-    Delegation_A_WithCfProxy("demo-tipi", "213.189.38.138"),
-
-    // 213.189.38.139
-
     // 213.189.38.141
     A("lasica", "213.189.38.141"),
 
     // 213.189.38.142
 
     // 213.189.38.143
+    Delegation_A_WithCfProxy("demo-tipi", "213.189.38.143"),
     Delegation_A_WithCfProxy("checkmk", "213.189.38.143"),
     Delegation_A_WithCfProxy("jira", "213.189.38.143"),
     Delegation_A_WithCfProxy("mam-pomysl", "213.189.38.143"),
     Delegation_A_WithCfProxy("nessus", "213.189.38.143"),
     Delegation_A_WithCfProxy("pomoc", "213.189.38.143"),
+    Delegation_A_WithCfProxy("preprod-tipi", "213.189.38.143"),
     Delegation_A_WithCfProxy("sejf", "213.189.38.143"),
 
     // 213.189.38.144
     A("krecik", "213.189.38.144"),
-
-    // Sejf on azure
-    CNAME(
-        "sejf-test",
-        "sejf.graycliff-21fa13ac.northeurope.azurecontainerapps.io."
-    ),
-    TXT(
-        "asuid.sejf-test",
-        "01E6941B3330DAACCE5A2B9E079EA3C6343C3AD74B23A3E47E8DD5503EAA2F87"
-    ),
 
     // CloudFlare Pages
     CNAME("konta-sfh", "konta-sfh.pages.dev."),
