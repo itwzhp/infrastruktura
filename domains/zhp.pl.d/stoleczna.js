@@ -27,7 +27,7 @@ D_EXTEND('zhp.pl',
 
 
     // Hufiec Legionowo
-    Delegation_A('legionowo', '185.255.40.34'),
+    Delegation_A('legionowo', '77.55.253.56'),
     Ms365_Subdomain('legionowo', 'zhp.pl'),    
 
 
