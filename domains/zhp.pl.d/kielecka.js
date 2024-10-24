@@ -6,7 +6,7 @@ D_EXTEND('zhp.pl',
     Delegation_NS('kielcemiasto', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('kielcepoludnie', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
     Delegation_NS('kielcepowiat', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
-    Delegation_NS('konskie', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
+    Delegation_A_WithCfProxy('konskie', '193.143.77.14'), // MS365-46307
     Delegation_A_WithCfProxy('ostrowiecswietokrzyski', '185.255.40.22'), // MS365-47109
     Ms365_Subdomain('ostrowiecswietokrzyski','zhp.pl'),
     Delegation_NS('skarzysko', ['ns1.atthost.pl.', 'ns2.atthost.pl.']),
