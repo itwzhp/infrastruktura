@@ -4,6 +4,8 @@ D_EXTEND('zhp.pl',
         Delegation_A('bialostocka', '195.78.66.229'),
         TXT('bialostocka', '2fdcbf72616cbfc6c32cb3b0e135eba136f945747962f8eb78addcb7603d5fa'), //weryfikacja do SSL
         Ms365_Subdomain('bialostocka', 'zhp.pl'),
+        CNAME('','uskrzydleni2024-crf6dhaaadhahvcm.canadacentral-01.azurewebsites.net')
+        TXT('uskrzydleni.bialostocka', 'FA6C7891B686D83BD39C01C3933ECF3718D5E4E3D4045FAD095DFA10279DA424')
     //h. augustów
         Ms365_Subdomain('augustow', 'zhp.pl'),  // MS365-16444
         Delegation_A('augustow', '195.78.66.229'),
